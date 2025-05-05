@@ -29,4 +29,26 @@
 - Minimize the use of absolute positioning unless required for specific design needs.  
 - Use descriptive alt attributes for images and icons to improve accessibility.  
 - Ensure that all interactive elements are keyboard-navigable and focusable.  
-- Test components for performance and optimize rendering where possible.
+- Test components for performance and optimize rendering where possible.  
+- Use consistent file and folder naming conventions to improve project organization.  
+- Avoid duplicating styles across components; extract shared styles into reusable modules.  
+- Ensure that global styles are minimal and only include truly global rules.  
+- Use Astro's built-in features effectively, such as slots and scoped styles, to enhance maintainability.  
+- Test the integration of components within the overall application to ensure seamless functionality.  
+- Document the purpose and usage of each component to assist future developers.  
+- Ensure that all meta tags in the HTML head are relevant and optimized for SEO and performance.  
+- Use meaningful and descriptive names for CSS variables to improve readability and maintainability.  
+- Regularly audit the project for unused components or assets and remove them to reduce clutter.  
+- Ensure that all components are designed with scalability in mind to accommodate future requirements.  
+- Use fallback fonts in font-family declarations to ensure consistent rendering across platforms.  
+- Test for proper rendering of custom fonts in various browsers and operating systems.  
+- Ensure that hover and focus states are visually distinct to improve usability and accessibility.  
+- Use animations sparingly and ensure they are smooth and non-distracting.  
+- Optimize the loading of external resources, such as fonts and icons, to improve performance.  
+- Use lazy loading for images and other heavy assets to enhance page load times.  
+- Ensure that all CSS variables are documented and grouped logically for easier reference.  
+- Test the application for responsiveness on a variety of devices, including tablets and smartphones.  
+- Use a consistent approach to handling z-index values to avoid stacking context issues.  
+- Ensure that all form elements are styled consistently and are easy to interact with.  
+- Use modern CSS features, such as clamp() and min(), max(), for better responsiveness and maintainability.  
+- Regularly review and update the code style guide to incorporate new best practices and technologies.  

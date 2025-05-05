@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 /* Define CSS variables based on the VS Code theme */
 :root {
   --background-primary: #292a2b;
@@ -17,7 +19,7 @@
 body {
   background-color: var(--background-primary);
   color: var(--text-primary);
-  font-family: var(--font-family-sans);
+  font-family: "Noto Sans", var(--font-family-sans);
   margin: 0;
   padding: 0;
   line-height: 1.6;
