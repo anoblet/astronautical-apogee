@@ -1,54 +1,18 @@
-- Ensure all SVG icons used in components are optimized for performance and accessibility, following the same principles as standalone SVGs.  
-- Use descriptive and consistent naming conventions for imported components to improve readability and maintainability.  
-- Avoid hardcoding sizes for icons; use scalable units or props to allow flexibility and responsiveness.  
-- Ensure CSS styles are scoped appropriately to avoid unintended side effects on other components.  
-- Use semantic HTML elements and attributes to improve accessibility and SEO.  
-- Test components for compatibility with various screen readers and assistive technologies.  
-- Ensure consistent spacing and alignment in CSS for a polished and professional appearance.  
-- Regularly review and refactor CSS to remove unused styles and improve maintainability.  
-- Use CSS variables for reusable values like colors, spacing, and font sizes to ensure consistency.  
-- Validate CSS and HTML against W3C standards to ensure compliance and avoid rendering issues.  
-- Test components in both light and dark mode environments to ensure proper visibility and contrast.  
-- Use comments to explain non-intuitive CSS rules or component logic for better maintainability.  
-- Ensure all components are responsive and adaptable to different screen sizes and resolutions.  
-- Avoid inline styles unless absolutely necessary; prefer external or scoped styles for better scalability.  
-- Use tools like Prettier or ESLint to enforce consistent formatting and code quality.  
-- Ensure all components are compatible with modern browsers and fallback gracefully for older ones.  
-- Use props effectively in components to allow customization and reusability.  
-- Test components in isolation to ensure they work as expected without dependencies.  
-- Consider using a design system or component library to maintain consistency across the project.  
-- Use BEM (Block Element Modifier) naming conventions for CSS classes to improve readability and avoid conflicts.  
-- Ensure that all CSS selectors are as specific as necessary to avoid unintended overrides.  
-- Use media queries to handle responsiveness instead of relying on JavaScript for layout adjustments.  
-- Optimize the use of flexbox or grid for layout to ensure better alignment and spacing.  
-- Avoid nesting CSS selectors too deeply to maintain clarity and performance.  
-- Ensure that all imported components are used in a way that adheres to the single responsibility principle.  
-- Test the visual hierarchy of components to ensure clarity and usability.  
-- Use ARIA roles and attributes where necessary to enhance accessibility.  
-- Ensure that all text content is readable and has sufficient contrast against its background.  
-- Minimize the use of absolute positioning unless required for specific design needs.  
-- Use descriptive alt attributes for images and icons to improve accessibility.  
-- Ensure that all interactive elements are keyboard-navigable and focusable.  
-- Test components for performance and optimize rendering where possible.  
-- Use consistent file and folder naming conventions to improve project organization.  
-- Avoid duplicating styles across components; extract shared styles into reusable modules.  
-- Ensure that global styles are minimal and only include truly global rules.  
-- Use Astro's built-in features effectively, such as slots and scoped styles, to enhance maintainability.  
-- Test the integration of components within the overall application to ensure seamless functionality.  
-- Document the purpose and usage of each component to assist future developers.  
-- Ensure that all meta tags in the HTML head are relevant and optimized for SEO and performance.  
-- Use meaningful and descriptive names for CSS variables to improve readability and maintainability.  
-- Regularly audit the project for unused components or assets and remove them to reduce clutter.  
-- Ensure that all components are designed with scalability in mind to accommodate future requirements.  
-- Use fallback fonts in font-family declarations to ensure consistent rendering across platforms.  
-- Test for proper rendering of custom fonts in various browsers and operating systems.  
-- Ensure that hover and focus states are visually distinct to improve usability and accessibility.  
-- Use animations sparingly and ensure they are smooth and non-distracting.  
-- Optimize the loading of external resources, such as fonts and icons, to improve performance.  
-- Use lazy loading for images and other heavy assets to enhance page load times.  
-- Ensure that all CSS variables are documented and grouped logically for easier reference.  
-- Test the application for responsiveness on a variety of devices, including tablets and smartphones.  
-- Use a consistent approach to handling z-index values to avoid stacking context issues.  
-- Ensure that all form elements are styled consistently and are easy to interact with.  
-- Use modern CSS features, such as clamp() and min(), max(), for better responsiveness and maintainability.  
-- Regularly review and update the code style guide to incorporate new best practices and technologies.  
+- Ensure CSS variables are grouped logically (e.g., colors, fonts, spacing) and documented for clarity and maintainability.  
+- Use fallback values for CSS variables to ensure compatibility with older browsers.  
+- Avoid hardcoding color values directly in styles; always use defined CSS variables for consistency.  
+- Ensure all font imports are optimized and only include necessary weights and styles to reduce load time.  
+- Use semantic HTML elements and ensure styles align with their intended purpose for better accessibility.  
+- Avoid using overly generic selectors that might unintentionally affect other elements.  
+- Use a consistent naming convention for CSS classes, such as BEM (Block Element Modifier), to improve readability and maintainability.  
+- Minimize the use of `!important` to avoid specificity issues and maintain clean cascading styles.  
+- Regularly audit and remove unused CSS rules to keep the stylesheet lean and efficient.  
+- Test styles across multiple browsers and devices to ensure consistent rendering.  
+- Use media queries to ensure responsive design and test styles on various screen sizes.  
+- Document the purpose of complex or non-obvious CSS rules to aid future developers.  
+- Ensure all interactive elements (e.g., links, buttons) have clear hover and focus states for better user experience.  
+- Use CSS preprocessors like SCSS or PostCSS for better organization and maintainability of stylesheets.  
+- Optimize animations and transitions for performance, avoiding excessive use of heavy effects.  
+- Ensure all styles adhere to the project's theming system, supporting both light and dark modes.  
+- Use tools like CSS linting or formatting to enforce consistent style rules and detect potential issues.  
+- Regularly review and update the CSS style guide to align with evolving best practices and project requirements.

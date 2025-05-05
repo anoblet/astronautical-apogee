@@ -3,6 +3,7 @@
 /* Define CSS variables based on the VS Code theme */
 :root {
   --background-primary: #292a2b;
+  --border-color: #666666;
   --text-primary: #e6e6e6;
   --text-secondary: #676B79;
   --accent-primary: #19f9d8;
@@ -13,6 +14,9 @@
   /* Font families */
   --font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --font-family-mono: 'Courier New', Courier, monospace;
+
+  --grey-900: hsl(0.00,0.00%,12.94%);
+  --grey-darken-4: #212121;
 }
 
 /* Apply basic global styles */

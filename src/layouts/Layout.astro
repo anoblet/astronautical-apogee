@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Header from "../components/Header.astro"; // Import the new Header component
+import Footer from "../components/Footer.astro"; // Import the Footer component
 
 interface Props {
   title: string;
@@ -21,23 +22,11 @@ const { title } = Astro.props;
   </head>
   <body>
     <Header />
-    <!-- Add the Header component here -->
-    <slot />
+    <main>
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>
 <style is:global>
-  /* Moved most global styles to global.css */
-  html {
-    font-family: var(--font-family-sans);
-    background: var(--background-primary);
-    background-size: 224px;
-  }
-
-  body {
-    margin: 0;
-    /* Ensure body takes full height if needed, though often handled by content */
-    min-height: 100vh;
-  }
-
-  /* Keep specific layout adjustments if necessary */
 </style>
