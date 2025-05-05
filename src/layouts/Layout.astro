@@ -1,22 +1,39 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+			<title>{title}</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
+<style is:global>
+	/* Moved most global styles to global.css */
+	html {
+		font-family: var(--font-family-sans);
+		background: var(--background-primary);
+		background-size: 224px;
+	}
 
-<style>
-	html,
 	body {
 		margin: 0;
-		width: 100%;
-		height: 100%;
+		/* Ensure body takes full height if needed, though often handled by content */
+		min-height: 100vh; 
 	}
+
+	/* Keep specific layout adjustments if necessary */
 </style>
