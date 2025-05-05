@@ -9,9 +9,14 @@ import { Icon } from "astro-icon/components";
 </nav>
 <style>
   a {
-    color: var(--accent-tertiary);
+    color: var(--color-teal-200);
     display: inline-flex;
     align-items: center;
     padding: 0.5rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--color-rose-400);
+    }
   }
 </style>
