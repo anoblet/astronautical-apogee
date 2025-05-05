@@ -1,0 +1,32 @@
+- Ensure all SVG icons used in components are optimized for performance and accessibility, following the same principles as standalone SVGs.  
+- Use descriptive and consistent naming conventions for imported components to improve readability and maintainability.  
+- Avoid hardcoding sizes for icons; use scalable units or props to allow flexibility and responsiveness.  
+- Ensure CSS styles are scoped appropriately to avoid unintended side effects on other components.  
+- Use semantic HTML elements and attributes to improve accessibility and SEO.  
+- Test components for compatibility with various screen readers and assistive technologies.  
+- Ensure consistent spacing and alignment in CSS for a polished and professional appearance.  
+- Regularly review and refactor CSS to remove unused styles and improve maintainability.  
+- Use CSS variables for reusable values like colors, spacing, and font sizes to ensure consistency.  
+- Validate CSS and HTML against W3C standards to ensure compliance and avoid rendering issues.  
+- Test components in both light and dark mode environments to ensure proper visibility and contrast.  
+- Use comments to explain non-intuitive CSS rules or component logic for better maintainability.  
+- Ensure all components are responsive and adaptable to different screen sizes and resolutions.  
+- Avoid inline styles unless absolutely necessary; prefer external or scoped styles for better scalability.  
+- Use tools like Prettier or ESLint to enforce consistent formatting and code quality.  
+- Ensure all components are compatible with modern browsers and fallback gracefully for older ones.  
+- Use props effectively in components to allow customization and reusability.  
+- Test components in isolation to ensure they work as expected without dependencies.  
+- Consider using a design system or component library to maintain consistency across the project.  
+- Use BEM (Block Element Modifier) naming conventions for CSS classes to improve readability and avoid conflicts.  
+- Ensure that all CSS selectors are as specific as necessary to avoid unintended overrides.  
+- Use media queries to handle responsiveness instead of relying on JavaScript for layout adjustments.  
+- Optimize the use of flexbox or grid for layout to ensure better alignment and spacing.  
+- Avoid nesting CSS selectors too deeply to maintain clarity and performance.  
+- Ensure that all imported components are used in a way that adheres to the single responsibility principle.  
+- Test the visual hierarchy of components to ensure clarity and usability.  
+- Use ARIA roles and attributes where necessary to enhance accessibility.  
+- Ensure that all text content is readable and has sufficient contrast against its background.  
+- Minimize the use of absolute positioning unless required for specific design needs.  
+- Use descriptive alt attributes for images and icons to improve accessibility.  
+- Ensure that all interactive elements are keyboard-navigable and focusable.  
+- Test components for performance and optimize rendering where possible.

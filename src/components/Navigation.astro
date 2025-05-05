@@ -1,13 +1,27 @@
 ---
+import Menu from "./Menu.astro";
 import SocialLinks from "./SocialLinks.astro";
 ---
 <nav>
-  <!-- Navigation links will go here -->
+  <Menu></Menu>
+  <h1>Andrew Noblet</h1>
   <SocialLinks />
 </nav>
 
 <style>
     nav {
+        display: flex;
+        justify-content: space-between;
         padding: 1rem;
+
+        > * {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        h1 {
+          margin-block-start: 0;
+          margin-block-end: 0;
+        }
     }
 </style>
