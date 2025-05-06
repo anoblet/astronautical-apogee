@@ -1,0 +1,54 @@
+---
+interface Props {
+  variant?: "primary" | "secondary";
+}
+
+const { variant = "primary" } = Astro.props;
+---
+
+<button class:list={[variant]}>
+  <slot />
+</button>
+
+<style>
+  button {
+    border-radius: var(--border-radius);
+    color: var(--color-neutral-900);
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+  }
+
+  .primary {
+    background: var(--color-teal-200);
+
+    &:hover {
+      background-color: color-mix(
+        in oklab,
+        var(--color-sky-300) 100%,
+        var(--color-neutral-900) 20%
+      );
+      color: var(--color-neutral-900);
+    }
+  }
+
+  .secondary {
+    background: unset;
+    border: 1px solid var(--color-teal-200);
+    color: var(--color-teal-200);
+
+    &:hover {
+      background-color: color-mix(
+        in oklab,
+        var(--color-teal-200) 10%,
+        var(--color-neutral-900) 100%
+      );
+    }
+  }
+</style>

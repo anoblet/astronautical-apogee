@@ -1,9 +1,17 @@
 ---
-
+import Button from "./Button.astro";
 ---
 
 <section>
-  <h1>Andrew Noblet | Software Developer</h1>
+  <h1>Andrew Noblet | <span class="bold">Software Developer</span></h1>
+  <div class="grid padding">
+    <div>
+      <Button>Projects</Button>
+    </div>
+    <div>
+      <Button variant="secondary">Contact</Button>
+    </div>
+  </div>
 </section>
 
 <style>
@@ -13,12 +21,29 @@
     flex: 1;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
     h1 {
       color: #fff;
+      font-weight: 500;
       margin: 0;
-      padding: 10rem;
-      text-align: center;
+      padding: 2rem;
+    }
+
+    .bold {
+      font-weight: 800;
+    }
+
+    .grid {
+      min-width: 50%;
+
+      > * {
+        display: flex;
+
+        button {
+          flex: 1;
+        }
+      }
     }
   }
 </style>
