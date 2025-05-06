@@ -45,7 +45,7 @@ class MenuComponent extends LitElement {
           &:hover {
             cursor: pointer;
             /* background-color: hsla(0, 0%, 100%, 0.1); */
-            color: var(--color-teal-200);
+            color: var(--color-rose-400);
           }
 
           /* border-right: 1px solid var(--color-neutral-600); */
