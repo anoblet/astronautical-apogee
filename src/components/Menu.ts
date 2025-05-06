@@ -8,6 +8,7 @@ class MenuComponent extends LitElement {
   static styles = css`
     [hidden] {
       opacity: 0;
+      transition: opacity 0.2s ease-in-out;
     }
 
     :not([hidden]) {
@@ -31,16 +32,20 @@ class MenuComponent extends LitElement {
         padding-inline-start: unset;
 
         display: flex;
-        gap: 2rem;
         list-style: none;
 
         li {
-          padding: 0.5rem 1rem;
+          padding: 0.5rem 2rem;
+          font-weight: 500;
 
           &:hover {
             cursor: pointer;
             /* background-color: hsla(0, 0%, 100%, 0.1); */
             color: var(--color-rose-400);
+          }
+
+          &:not(:last-child) {
+            border-right: 1px solid var(--color-neutral-600);
           }
         }
       }
