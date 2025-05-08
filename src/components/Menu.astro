@@ -1,10 +1,14 @@
 ---
 import { Icon } from "astro-icon/components";
+import SocialLinks from "./SocialLinks.astro";
 ---
 
 <nav>
   <menu-component>
     <Icon name="mdi:menu" size={32} slot="icon" />
+    <div slot="social">
+      <SocialLinks />
+    </div>
   </menu-component>
 </nav>
 <style>
@@ -17,6 +21,11 @@ import { Icon } from "astro-icon/components";
 
     svg {
       color: var(--color-teal-200);
+    }
+
+    [slot="social"] {
+      display: flex;
+      align-items: center;
     }
   }
 </style>

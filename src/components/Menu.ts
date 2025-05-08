@@ -18,9 +18,11 @@ class MenuComponent extends LitElement {
     }
 
     :host {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
       align-items: center;
       height: 100%;
+      justify-content: space-between;
 
       #icon {
         display: flex;
@@ -35,6 +37,7 @@ class MenuComponent extends LitElement {
         display: flex;
         list-style: none;
         height: 100%;
+        overflow-x: auto;
 
         li {
           display: flex;
@@ -54,6 +57,8 @@ class MenuComponent extends LitElement {
     }
 
     :host([opened]) {
+      grid-template-columns: max-content 1fr max-content;
+
       #icon {
         /* border-right: 1px solid var(--color-neutral-600); */
       }
@@ -81,10 +86,17 @@ class MenuComponent extends LitElement {
       <div id="icon">
         <slot name="icon"></slot>
       </div>
-      <ul ?hidden=${!this.opened}>
-        <li>Projects</li>
-        <li>Services</li>
-      </ul>
+      ${this.opened
+        ? html`
+            <ul class="overflow-x" ?hidden=${!this.opened}>
+              <li>Projects</li>
+              <li>Services</li>
+            </ul>
+          `
+        : nothing}
+        <div id="social">
+          <slot name="social"></slot>
+        </div>
     `;
   }
 }
