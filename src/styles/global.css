@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -107,4 +109,22 @@ pre {
 
 .text-align-center {
   text-align: center;
+}
+
+body {
+  &[data-media="desktop"] {
+    .hidden-desktop {
+      display: none;
+    }
+  }
+
+  &[data-media="mobile"] {
+    .hidden-mobile {
+      display: none;
+    }
+  }
+}
+
+.grid {
+  display: grid;
 }

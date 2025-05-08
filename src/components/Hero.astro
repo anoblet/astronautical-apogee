@@ -3,17 +3,22 @@ import Button from "./Button.astro";
 ---
 
 <section>
-  <h1 class="text-align-center">Andrew Noblet | <span class="bold">Software Developer</span></h1>
-  <div class="grid padding">
+  <h1 class="grid text-align-center hidden-desktop">
+    <span class="text-align-center">Andrew Noblet</span>
+    <span class="bold">Software Developer</span>
+  </h1>
+  <h1 class="text-align-center hidden-mobile">
+    Andrew Noblet | <span class="bold">Software Developer</span>
+  </h1>
+  <div class="grid min-width-50 padding" id="buttons">
     <div>
-      <Button>Projects</Button>
+      <Button>Schedule</Button>
     </div>
     <div>
-      <Button variant="secondary">Contact</Button>
+      <Button variant="secondary">Projects</Button>
     </div>
   </div>
 </section>
-
 <style>
   section {
     background: var(--grey-900);
@@ -22,6 +27,7 @@ import Button from "./Button.astro";
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 2rem;
 
     h1 {
       color: #fff;
@@ -34,7 +40,7 @@ import Button from "./Button.astro";
       font-weight: 800;
     }
 
-    .grid {
+    #buttons {
       min-width: 50%;
 
       > * {
@@ -47,3 +53,43 @@ import Button from "./Button.astro";
     }
   }
 </style>
+<script>
+  import { css, html, LitElement } from "lit";
+  import { customElement } from "lit/decorators.js";
+  import { globalStyles } from "../styles/global.ts";
+
+  @customElement("hero-component")
+  class HeroComponent extends LitElement {
+    static styles = [
+      globalStyles,
+      css`
+        :host {
+          display: block;
+        }
+      `,
+    ];
+
+    render() {
+      return html`
+        <section>
+          <h1 class="grid text-align-center hidden-desktop">
+            <span class="text-align-center">Andrew Noblet</span>
+            <hr />
+            <span class="bold">Software Developer</span>
+          </h1>
+          <h1 class="text-align-center hidden-mobile">
+            Andrew Noblet | <span class="bold">Software Developer</span>
+          </h1>
+          <div class="grid min-width-50 padding">
+            <div>
+              <button>Projects</button>
+            </div>
+            <div>
+              <button variant="secondary">Contact</button>
+            </div>
+          </div>
+        </section>
+      `;
+    }
+  }
+</script>
