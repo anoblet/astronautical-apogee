@@ -63,6 +63,11 @@ class MenuComponent extends LitElement {
         /* border-right: 1px solid var(--color-neutral-600); */
       }
     }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
   `;
 
   firstUpdated() {
@@ -89,14 +94,15 @@ class MenuComponent extends LitElement {
       ${this.opened
         ? html`
             <ul class="overflow-x" ?hidden=${!this.opened}>
-              <li>Projects</li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/projects">Projects</a></li>
               <li>Services</li>
             </ul>
           `
         : nothing}
-        <div id="social">
-          <slot name="social"></slot>
-        </div>
+      <div id="social">
+        <slot name="social"></slot>
+      </div>
     `;
   }
 }
