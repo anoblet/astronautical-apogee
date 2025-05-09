@@ -58,10 +58,6 @@ class MenuComponent extends LitElement {
 
     :host([opened]) {
       grid-template-columns: max-content 1fr max-content;
-
-      #icon {
-        /* border-right: 1px solid var(--color-neutral-600); */
-      }
     }
 
     a {
