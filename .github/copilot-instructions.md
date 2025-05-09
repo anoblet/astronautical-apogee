@@ -1,0 +1,10 @@
+- Create as many new components as neccessary
+- Components should be simple and composible
+- Move as much reusable structure to the layout as apossible.
+- The goal of the structure should be to be reusable.
+- Use CSS variables whenever possible
+- Keep your changes as minimal as possible
+- Always ask if you are unsure of anything
+- Always adhere to the global color scheme
+- Remove unnecesary comments
+- Do not add comments
