@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 import { globalStyles } from "../styles/global";
 
 @customElement("chip-component")
-class Chipomponent extends LitElement {
+class ChipoCmponent extends LitElement {
   @property({ type: String }) accessor image = "";
   @property({ type: String }) accessor title = "";
   @property({ type: String }) accessor content = "";
