@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 
 @customElement("menu-component")
 class MenuComponent extends LitElement {
-  @property({ reflect: true, type: Boolean }) accessor opened = false;
+  @property({ reflect: true, type: Boolean }) accessor opened = true;
 
   static styles = css`
     [hidden] {
