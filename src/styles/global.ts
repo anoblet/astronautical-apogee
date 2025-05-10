@@ -1,6 +1,16 @@
 import { css } from "lit";
 
 export const globalStyles = css`
+  a {
+    svg {
+      color: var(--color-teal-200);
+
+      &:hover {
+        color: var(--color-rose-400);
+      }
+    }
+  }
+  
   h1,
   h2,
   h3,

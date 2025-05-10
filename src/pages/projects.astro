@@ -9,23 +9,82 @@ import Layout from "../layouts/Layout.astro";
     title="CXL"
     link="https://cxl.com/"
   >
-    <p slot="content">Description of project 1.</p>
+    <div id="chips" slot="chips">
+      <chip-component>HTML</chip-component>
+      <chip-component>CSS</chip-component>
+      <chip-component>JavaScript</chip-component>
+      <chip-component>Web Components</chip-component>
+      <chip-component>Lit</chip-component>
+      <chip-component>Wordpress</chip-component>
+      <chip-component>WooCommerce</chip-component>
+    </div>
+    <p slot="content">
+      Contributed to the development of CXL.com, a premier online training
+      platform for B2B marketers. This project showcased skills in building a
+      feature-rich e-learning system, including dynamic content management for a
+      vast library of courses, user authentication and progression tracking, and
+      a subscription-based e-commerce model. Emphasis was placed on creating a
+      responsive, high-performance user experience for on-demand and live course
+      delivery.
+    </p>
   </card-component>
   <card-component
     image="/src/assets/graduationsource.com_.png"
     title="Graduation Source"
     link="https://graduationsource.com/"
   >
-    <p slot="content">Description of project 2.</p>
+    <div id="chips" slot="chips">
+      <chip-component>HTML</chip-component>
+      <chip-component>CSS</chip-component>
+      <chip-component>JS</chip-component>
+      <chip-component>PHP</chip-component>
+      <chip-component>Magento</chip-component>
+    </div>
+    <p slot="content">
+      Developed and maintained a comprehensive e-commerce platform for
+      GraduationSource, a leading supplier of academic regalia, serving over
+      500,000 graduates annually. Key contributions included enhancing the
+      product catalog system with diverse categories and customization options,
+      implementing robust order management and inventory tracking, and
+      developing secure user account functionalities. The project involved
+      creating specialized student ordering portals, integrating multiple
+      payment gateways, and ensuring a scalable, high-performance online
+      shopping experience across various educational levels, from kindergarten
+      to university.
+    </p>
   </card-component>
   <card-component
     image="/src/assets/avantisystemsusa.com_.png"
     title="Avanti Systems USA"
     link="https://avantisystemsusa.com/"
   >
-    <p slot="content">Description of project 3.</p>
+    <p slot="content">
+      Developed a comprehensive web presence for Avanti Systems USA, a leading
+      manufacturer of commercial interior glass wall systems. This project
+      involved creating a visually appealing and informative platform to
+      showcase their diverse product lines, including frameless, freestanding,
+      and high wall systems. Key contributions included implementing a
+      user-friendly navigation and information architecture to cater to
+      architects, designers, and contractors. The site features robust product
+      galleries, detailed specifications, and prominent lead generation forms
+      ("Get A Quote") to facilitate customer engagement. Emphasis was placed on
+      responsive design to ensure optimal viewing across devices and a content
+      management strategy for sections like "Featured Projects" and the company
+      blog.
+    </p>
   </card-component>
 </Layout>
+<style>
+  p {
+    color: var(--color-neutral-200);
+  }
+
+  #chips {
+    display: flex;
+    gap: 1rem;
+  }
+</style>
 <script>
   import "../components/card.ts";
+  import "../components/chip.ts";
 </script>

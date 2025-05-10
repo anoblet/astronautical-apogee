@@ -27,7 +27,7 @@
 body {
   background: var(--color-neutral-900);
   color: var(--text-primary);
-  font-family: "Noto Sans", var(--font-family-sans);
+  font-family: "Noto Sans", "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
