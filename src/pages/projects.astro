@@ -4,5 +4,28 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Projects">
   <h1>Projects</h1>
-  <hr />
+  <card-component
+    image="/src/assets/cxl.com_.png"
+    title="CXL"
+    link="https://cxl.com/"
+  >
+    <p slot="content">Description of project 1.</p>
+  </card-component>
+  <card-component
+    image="/src/assets/graduationsource.com_.png"
+    title="Graduation Source"
+    link="https://graduationsource.com/"
+  >
+    <p slot="content">Description of project 2.</p>
+  </card-component>
+  <card-component
+    image="/src/assets/avantisystemsusa.com_.png"
+    title="Avanti Systems USA"
+    link="https://avantisystemsusa.com/"
+  >
+    <p slot="content">Description of project 3.</p>
+  </card-component>
 </Layout>
+<script>
+  import "../components/card.ts";
+</script>
