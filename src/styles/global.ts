@@ -1,6 +1,10 @@
 import { css } from "lit";
 
 export const globalStyles = css`
+  *:not(:defined) {
+    display: none;
+  }
+
   a {
     svg {
       color: var(--color-teal-200);
@@ -10,7 +14,7 @@ export const globalStyles = css`
       }
     }
   }
-  
+
   h1,
   h2,
   h3,

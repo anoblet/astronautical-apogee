@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+*:not(:defined) {
+  display: none;
+}
+
 /* Define CSS variables based on the VS Code theme */
 :root {
   --background-primary: #292a2b;

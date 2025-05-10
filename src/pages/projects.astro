@@ -1,14 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import avantisystemsusa from "../assets/avantisystemsusa.com_.png";
+import graduationSource from "../assets/graduationsource.com_.png";
+import cxl from "../assets/cxl.com_.png";
 ---
 
 <Layout title="Projects">
   <h1>Projects</h1>
-  <card-component
-    image="/src/assets/cxl.com_.png"
-    title="CXL"
-    link="https://cxl.com/"
-  >
+  <card-component image={cxl.src} title="CXL" link="https://cxl.com/">
     <div id="chips" slot="chips">
       <chip-component>HTML</chip-component>
       <chip-component>CSS</chip-component>
@@ -36,7 +35,7 @@ import Layout from "../layouts/Layout.astro";
     </ul>
   </card-component>
   <card-component
-    image="/src/assets/graduationsource.com_.png"
+    image={graduationSource.src}
     title="Graduation Source"
     link="https://graduationsource.com/"
   >
@@ -68,7 +67,7 @@ import Layout from "../layouts/Layout.astro";
     </ul>
   </card-component>
   <card-component
-    image="/src/assets/avantisystemsusa.com_.png"
+    image={avantisystemsusa.src}
     title="Avanti Systems USA"
     link="https://avantisystemsusa.com/"
   >
@@ -108,13 +107,19 @@ import Layout from "../layouts/Layout.astro";
   #chips {
     display: flex;
     gap: 1rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+
+    &:hover {
+      overflow-x: auto;
+    }
   }
 
   #content {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin:0;
+    margin: 0;
     padding: 1rem;
   }
 
@@ -131,6 +136,10 @@ import Layout from "../layouts/Layout.astro";
     color: var(--color-teal-400);
     content: "•" " ";
     padding-left: 1rem;
+  }
+
+  card-component::part(title) {
+    color: var(--color-teal-100);
   }
 </style>
 <script>

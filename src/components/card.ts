@@ -29,10 +29,11 @@ class CardComponent extends LitElement {
       #top {
         background-color: var(--color-neutral-800);
         border-radius: 0.5rem 0.5rem 0 0;
-        display:flex;
+        display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0.5rem 1rem;
+        gap: 1rem;
       }
 
       img {
@@ -44,7 +45,7 @@ class CardComponent extends LitElement {
   render() {
     return html`
       <div id="top">
-        <h2 id="title">${this.title}</h2>
+        <h2 id="title" part="title">${this.title}</h2>
         <slot name="chips"></slot>
       </div>
       <div id="center"></div>
