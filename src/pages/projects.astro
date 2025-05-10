@@ -18,15 +18,22 @@ import Layout from "../layouts/Layout.astro";
       <chip-component>Wordpress</chip-component>
       <chip-component>WooCommerce</chip-component>
     </div>
-    <p slot="content">
-      Contributed to the development of CXL.com, a premier online training
-      platform for B2B marketers. This project showcased skills in building a
-      feature-rich e-learning system, including dynamic content management for a
-      vast library of courses, user authentication and progression tracking, and
-      a subscription-based e-commerce model. Emphasis was placed on creating a
-      responsive, high-performance user experience for on-demand and live course
-      delivery.
-    </p>
+    <ul id="content" slot="content">
+      <li>
+        Contributed to the development of CXL.com, a premier online training
+        platform for B2B marketers.
+      </li>
+      <li>
+        Showcased skills in building a feature-rich e-learning system, including
+        dynamic content management for a vast library of courses, user
+        authentication and progression tracking, and a subscription-based
+        e-commerce model.
+      </li>
+      <li>
+        Emphasis was placed on creating a responsive, high-performance user
+        experience for on-demand and live course delivery.
+      </li>
+    </ul>
   </card-component>
   <card-component
     image="/src/assets/graduationsource.com_.png"
@@ -40,38 +47,57 @@ import Layout from "../layouts/Layout.astro";
       <chip-component>PHP</chip-component>
       <chip-component>Magento</chip-component>
     </div>
-    <p slot="content">
-      Developed and maintained a comprehensive e-commerce platform for
-      GraduationSource, a leading supplier of academic regalia, serving over
-      500,000 graduates annually. Key contributions included enhancing the
-      product catalog system with diverse categories and customization options,
-      implementing robust order management and inventory tracking, and
-      developing secure user account functionalities. The project involved
-      creating specialized student ordering portals, integrating multiple
-      payment gateways, and ensuring a scalable, high-performance online
-      shopping experience across various educational levels, from kindergarten
-      to university.
-    </p>
+    <ul id="content" slot="content">
+      <li>
+        Developed and maintained a comprehensive e-commerce platform for
+        GraduationSource, a leading supplier of academic regalia, serving over
+        500,000 graduates annually.
+      </li>
+      <li>
+        Key contributions included enhancing the product catalog system with
+        diverse categories and customization options, implementing robust order
+        management and inventory tracking, and developing secure user account
+        functionalities.
+      </li>
+      <li>
+        The project involved creating specialized student ordering portals,
+        integrating multiple payment gateways, and ensuring a scalable,
+        high-performance online shopping experience across various educational
+        levels, from kindergarten to university.
+      </li>
+    </ul>
   </card-component>
   <card-component
     image="/src/assets/avantisystemsusa.com_.png"
     title="Avanti Systems USA"
     link="https://avantisystemsusa.com/"
   >
-    <p slot="content">
-      Developed a comprehensive web presence for Avanti Systems USA, a leading
-      manufacturer of commercial interior glass wall systems. This project
-      involved creating a visually appealing and informative platform to
-      showcase their diverse product lines, including frameless, freestanding,
-      and high wall systems. Key contributions included implementing a
-      user-friendly navigation and information architecture to cater to
-      architects, designers, and contractors. The site features robust product
-      galleries, detailed specifications, and prominent lead generation forms
-      ("Get A Quote") to facilitate customer engagement. Emphasis was placed on
-      responsive design to ensure optimal viewing across devices and a content
-      management strategy for sections like "Featured Projects" and the company
-      blog.
-    </p>
+    <ul id="content" slot="content">
+      <li>
+        Developed a comprehensive web presence for Avanti Systems USA, a leading
+        manufacturer of commercial interior glass wall systems.
+      </li>
+      <li>
+        This project involved creating a visually appealing and informative
+        platform to showcase their diverse product lines, including frameless,
+        freestanding, and high wall systems.
+      </li>
+      <li>
+        Key contributions included implementing a user-friendly navigation and
+        information architecture to cater to architects, designers, and
+        contractors.
+      </li>
+      <li>
+        The site features robust product galleries, detailed specifications, and
+        prominent lead generation forms ("Get A Quote") to facilitate customer
+        engagement.
+      </li>
+      <li>
+        Emphasis was placed on responsive design to ensure optimal viewing
+        across devices and a content management strategy for sections like
+        "Featured Projects" and the company blog.
+      </li>
+    </ul>
   </card-component>
 </Layout>
 <style>
@@ -82,6 +108,29 @@ import Layout from "../layouts/Layout.astro";
   #chips {
     display: flex;
     gap: 1rem;
+  }
+
+  #content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin:0;
+    padding: 1rem;
+  }
+
+  ul {
+    color: var(--color-neutral-200);
+    list-style-type: "-";
+  }
+
+  li {
+    padding-left: 1rem;
+  }
+
+  li::marker {
+    color: var(--color-teal-400);
+    content: "•" " ";
+    padding-left: 1rem;
   }
 </style>
 <script>

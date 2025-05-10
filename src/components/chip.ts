@@ -14,8 +14,14 @@ class Chipomponent extends LitElement {
       :host {
         border: 1px solid var(--color-neutral-600);
         border-radius: 0.25rem;
+        display: block;
         font-size: 0.875rem;
         padding: 0.125rem 0.5rem;
+      }
+
+      :host(:hover) {
+        background-color: var(--color-neutral-600);
+        cursor: pointer;
       }
     `,
   ];
