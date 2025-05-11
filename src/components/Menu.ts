@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 
 @customElement("menu-component")
 class MenuComponent extends LitElement {
-  @property({ reflect: true, type: Boolean }) accessor opened = true;
+  @property({ reflect: true, type: Boolean }) accessor opened = false;
 
   static styles = css`
     [hidden] {
@@ -68,17 +68,17 @@ class MenuComponent extends LitElement {
 
   firstUpdated() {
     this.addEventListener("click", () => {
-      this.opened = !this.opened;
+      // this.opened = !this.opened;
     });
 
     this.shadowRoot
       ?.querySelector("#icon")
       ?.addEventListener("mouseenter", () => {
-        this.opened = true;
+        // this.opened = true;
       });
 
     this.addEventListener("mouseleave", () => {
-      this.opened = false;
+      // this.opened = false;
     });
   }
 

@@ -32,7 +32,7 @@ class CardComponent extends LitElement {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0.5rem 1rem;
+        padding: 2rem 1rem;
         gap: 1rem;
       }
 

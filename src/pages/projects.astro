@@ -8,7 +8,7 @@ import cxl from "../assets/cxl.com_.png";
 <Layout title="Projects">
   <h1>Projects</h1>
   <card-component image={cxl.src} title="CXL" link="https://cxl.com/">
-    <div id="chips" slot="chips">
+    <div class="chips" slot="chips">
       <chip-component>HTML</chip-component>
       <chip-component>CSS</chip-component>
       <chip-component>JavaScript</chip-component>
@@ -39,7 +39,7 @@ import cxl from "../assets/cxl.com_.png";
     title="Graduation Source"
     link="https://graduationsource.com/"
   >
-    <div id="chips" slot="chips">
+    <div class="chips" slot="chips">
       <chip-component>HTML</chip-component>
       <chip-component>CSS</chip-component>
       <chip-component>JS</chip-component>
@@ -104,17 +104,6 @@ import cxl from "../assets/cxl.com_.png";
     color: var(--color-neutral-200);
   }
 
-  #chips {
-    display: flex;
-    gap: 1rem;
-    overflow: hidden;
-    text-wrap: nowrap;
-
-    &:hover {
-      overflow-x: auto;
-    }
-  }
-
   #content {
     display: flex;
     flex-direction: column;
@@ -141,8 +130,40 @@ import cxl from "../assets/cxl.com_.png";
   card-component::part(title) {
     color: var(--color-teal-100);
   }
+
+  .chips {
+    display: flex;
+    gap: 1rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+
+    &:hover {
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+  }
 </style>
 <script>
   import "../components/card.ts";
   import "../components/chip.ts";
+
+  // import "overlayscrollbars/overlayscrollbars.css";
+  import {
+    OverlayScrollbars,
+    ScrollbarsHidingPlugin,
+    SizeObserverPlugin,
+    ClickScrollPlugin,
+  } from "overlayscrollbars";
+
+  const element = document.querySelector(".chips");
+
+  // const osInstance = OverlayScrollbars(element, {
+  //   overflow: {
+  //     x: "scroll",
+  //   },
+  //   scrollbars: {
+  //     autoHide: "leave",
+  //     autoHideDelay: 100,
+  //   },
+  // });
 </script>
