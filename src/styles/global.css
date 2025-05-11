@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"); */
 
 *,
 *:before,
@@ -6,8 +6,13 @@
   box-sizing: border-box;
 }
 
-*:not(:defined) {
-  display: none;
+* {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+
+  &:not(:defined) {
+    opacity: 0;
+  }
 }
 
 /* Define CSS variables based on the VS Code theme */
@@ -142,5 +147,5 @@ h6 {
 
 hr {
   border-color: var(--color-neutral-800);
-  width: 100%
+  width: 100%;
 }

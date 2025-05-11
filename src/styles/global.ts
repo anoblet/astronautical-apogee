@@ -1,8 +1,23 @@
 import { css } from "lit";
 
 export const globalStyles = css`
-  *:not(:defined) {
-    display: none;
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  * {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+
+    &:has(*:not(:defined)) {
+      opacity: 0;
+    }
+
+    &:not(:defined) {
+      opacity: 0;
+    }
   }
 
   a {

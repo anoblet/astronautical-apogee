@@ -39,10 +39,7 @@ const { title } = Astro.props;
     transition: opacity 0.2s ease-in-out;
     width: 100vw;
 
-    &:has(chips-component:not(:defined)),
-    &:has(menu-component:not(:defined)),
-    &:has(navigation-component:not(:defined)),
-    &:has(social-links:not(:defined)) {
+    &:has(*:not(:defined)) {
       opacity: 0;
     }
   }

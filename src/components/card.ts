@@ -22,17 +22,17 @@ class CardComponent extends LitElement {
 
       #bottom {
         background-color: var(--color-neutral-800);
-        border-radius: 0 0 0.5rem 0.5rem;
+        border-radius: 0 0 0.25rem 0.25rem;
         padding: 0.5rem 1rem;
       }
 
       #top {
         background-color: var(--color-neutral-800);
-        border-radius: 0.5rem 0.5rem 0 0;
+        border-radius: 0.25rem 0.25rem 0 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 2rem 1rem;
+        padding: 1rem 1rem;
         gap: 1rem;
       }
 
