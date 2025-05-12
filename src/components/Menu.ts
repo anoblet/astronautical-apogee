@@ -42,13 +42,16 @@ class MenuComponent extends LitElement {
         li {
           display: flex;
           align-items: center;
-          padding: 0.5rem 2rem;
           font-weight: 500;
 
           &:hover {
             cursor: pointer;
             /* background-color: hsla(0, 0%, 100%, 0.1); */
             color: var(--color-rose-400);
+          }
+
+          a {
+            padding: 0.5rem 2rem;
           }
 
           /* border-right: 1px solid var(--color-neutral-600); */
@@ -92,7 +95,7 @@ class MenuComponent extends LitElement {
             <ul class="overflow-x" ?hidden=${!this.opened}>
               <li><a href="/">Home</a></li>
               <li><a href="/projects">Projects</a></li>
-              <li>Services</li>
+              <li><a href="/services">Services</a></li>
             </ul>
           `
         : nothing}
