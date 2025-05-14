@@ -20,6 +20,10 @@ export const globalStyles = css`
     }
   }
 
+  :host {
+    display: flex;
+  }
+
   a {
     svg {
       color: var(--color-teal-200);
