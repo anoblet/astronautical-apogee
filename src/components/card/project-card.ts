@@ -1,15 +1,16 @@
-import { css, html, LitElement } from "lit";
+import { css, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import { globalStyles } from "../styles/global";
+import { globalStyles } from "../../styles/global";
+import { CardComponent } from "./card";
 
-@customElement("card-component")
-class CardComponent extends LitElement {
+@customElement("project-card")
+export class ProjectCard extends CardComponent {
   @property({ type: String }) accessor image = "";
   @property({ type: String }) accessor title = "";
   @property({ type: String }) accessor content = "";
 
   static styles = [
-    globalStyles,
+    ...super.styles,
     css`
       :host {
         /* border: 1px solid var(--color-neutral-600); */
