@@ -12,15 +12,6 @@ export class ProjectCard extends CardComponent {
   static styles = [
     ...super.styles,
     css`
-      :host {
-        /* border: 1px solid var(--color-neutral-600); */
-        /* border-radius: 1rem; */
-        display: flex;
-        flex-direction: column;
-        /* gap: 1rem; */
-        /* padding: 1rem; */
-      }
-
       #bottom {
         background-color: var(--color-neutral-800);
         border-radius: 0 0 0.25rem 0.25rem;
@@ -33,7 +24,6 @@ export class ProjectCard extends CardComponent {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 1rem;
         gap: 1rem;
       }
 
@@ -46,14 +36,16 @@ export class ProjectCard extends CardComponent {
   render() {
     return html`
       <div id="top">
-        <h2 id="title" part="title">${this.title}</h2>
-        <slot name="chips"></slot>
+        <slot name="top">
+          <h2 id="title" part="title">${this.title}</h2>
+          <slot name="chips"></slot>
+        </slot>
       </div>
-      <div id="center"></div>
-      <img src="${this.image}" alt="${this.title}" />
-      <div id="bottom">
+      <div id="center">
+        <img src="${this.image}" alt="${this.title}" />
         <slot name="content"></slot>
       </div>
+      <div id="bottom"></div>
     `;
   }
 }
