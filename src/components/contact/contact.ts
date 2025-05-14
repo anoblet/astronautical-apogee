@@ -19,7 +19,11 @@ export class ContactComponent extends LitElement {
 
   render() {
     return html`
-      <button-component variant="primary">Schedule</button-component>
+      <button-component
+        href="https://calendar.app.google/t9p2HfknyNWf1RNV6"
+        variant="primary"
+        >Schedule</button-component
+      >
     `;
   }
 }
