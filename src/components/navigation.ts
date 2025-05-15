@@ -9,14 +9,14 @@ class NavigationComponent extends LitElement {
     css`
       :host {
         background-color: var(--color-neutral-900);
-        display: block;
+        flex-direction: column;
         opacity: 1;
         transition: opacity 0.2s ease-in-out;
         width: 100%;
       }
 
       :host([hidden]) {
-        opacity: 0;
+        opacity: 0 !important;
         transition: opacity 0.2s ease-in-out;
       }
     `,

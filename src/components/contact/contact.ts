@@ -14,6 +14,12 @@ export class ContactComponent extends LitElement {
         right: 1rem;
         width: max-content;
       }
+      button-component {
+        transition: transform 0.2s var(--ease, ease);
+      }
+      button-component:hover {
+        transform: scale(1.04);
+      }
     `,
   ];
 
