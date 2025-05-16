@@ -11,8 +11,8 @@ export class Base extends LitElement {
     if (this.href) {
         const el = document.createElement("a");
         el.href = this.href;
-        
-        this.parentElement?.insertBefore(el, this);
+
+        this.getRootNode().host.shadowRoot.insertBefore(el, this);
         el.appendChild(this);
     }
   }

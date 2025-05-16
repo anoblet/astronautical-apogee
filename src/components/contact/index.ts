@@ -1,5 +1,6 @@
 import { css, html, LitElement } from "lit";
 import { customElement } from "lit/decorators.js";
+import { calendarMonth } from "../../icons/calendar-month";
 import { globalStyles } from "../../styles/global";
 import "../button/button";
 
@@ -28,7 +29,9 @@ export class ContactComponent extends LitElement {
       <button-component
         href="https://calendar.app.google/t9p2HfknyNWf1RNV6"
         variant="primary"
-        >Schedule</button-component
+      >
+        <span>Schedule</span>${calendarMonth}
+      </button-component>
       >
     `;
   }

@@ -1,9 +1,10 @@
 import { css, html, LitElement } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { globalStyles } from "../../styles/global";
+import { Base } from "../base";
 
 @customElement("button-component")
-export class ButtonComponent extends LitElement {
+export class ButtonComponent extends Base {
   @property({ type: String }) accessor href = "";
   @property({ type: String }) accessor variant: "primary" | "secondary" =
     "primary";
@@ -12,8 +13,10 @@ export class ButtonComponent extends LitElement {
     globalStyles,
     css`
       :host {
+        align-items: center;
         border-radius: var(--border-radius);
         color: var(--color-neutral-900);
+        gap: 1rem;
         padding: 1rem 2rem;
         border: none;
         cursor: pointer;
@@ -64,14 +67,18 @@ export class ButtonComponent extends LitElement {
         );
         color: var(--color-neutral-900);
       }
+
+      ::slotted(span) {
+        line-height: 0;
+      }
+      
+      ::slotted(svg) {
+        fill: currentColor;
+      }
     `,
   ];
 
   render() {
-    return html`
-      ${this.href
-        ? html`<a href="${this.href}"><slot></slot></a>`
-        : html`<button><slot></slot></button>`}
-    `;
+    return html`<slot></slot>`;
   }
 }
