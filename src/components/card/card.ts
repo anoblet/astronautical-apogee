@@ -25,7 +25,7 @@ export class CardComponent extends LitElement {
 
       :host(:hover) {
         /* outline: 1px solid var(--color-teal-200); */
-        transform: scale(1.02);
+        /* transform: scale(1.02); */
         transition: transform 0.2s ease-in-out;
       }
 

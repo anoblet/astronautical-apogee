@@ -13,7 +13,12 @@ export class ServiceCard extends CardComponent {
         color: var(--color-teal-200);
         display: flex;
         align-items: center;
+        justify-content: flex-end;
+        font-weight: 800;
         gap: 0.5rem;
+      }
+
+      #center {
         padding: 1rem 0;
       }
 
@@ -44,9 +49,12 @@ export class ServiceCard extends CardComponent {
           arrowForward
         )}</a> -->
       </div>
-      <slot name="content"></slot>
+      <div id="center">
+        <slot name="content"></slot>
+      </div>
       <div id="bottom">
-        Learn more <a href="#" id="action" part="action">${unsafeHTML(arrowForward)}</a>
+        Learn more
+        <a href="#" id="action" part="action">${unsafeHTML(arrowForward)}</a>
       </div>
     `;
   }
