@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 import { globalStyles } from "../styles/global";
 
 @customElement("navigation-component")
-class NavigationComponent extends LitElement {
+export class NavigationComponent extends LitElement {
   static styles = [
     globalStyles,
     css`

@@ -18,6 +18,10 @@ export class CardComponent extends LitElement {
         box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.1);
       }
 
+      :host(:hover) {
+        outline: 1px solid var(--color-teal-200);
+      }
+
       #title {
         color: var(--color-teal-200);
       }

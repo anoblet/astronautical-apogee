@@ -6,20 +6,22 @@ import Layout from "../layouts/Layout.astro";
   <h1>Services</h1>
   <ul>
     <li>
-      <service-card title="Design">
-        <p slot="content">
-          I offer UI/UX design services focused on creating intuitive and
-          user-friendly interfaces that enhance the overall user experience. My
-          approach involves understanding user needs and translating them into
-          visually appealing and functional designs. I have experience in
-          developing component-based architectures and reusable UI elements,
-          which promotes consistency and maintainability across projects. Key
-          areas of my design service include wireframing, prototyping, user flow
-          mapping, and ensuring designs are accessible and performant. I aim to
-          deliver designs that not only meet aesthetic goals but also drive user
-          engagement and satisfaction.
-        </p>
-      </service-card>
+      <a href="/services/design">
+        <service-card title="Design">
+          <p slot="content">
+            I offer UI/UX design services focused on creating intuitive and
+            user-friendly interfaces that enhance the overall user experience.
+            My approach involves understanding user needs and translating them
+            into visually appealing and functional designs. I have experience in
+            developing component-based architectures and reusable UI elements,
+            which promotes consistency and maintainability across projects. Key
+            areas of my design service include wireframing, prototyping, user
+            flow mapping, and ensuring designs are accessible and performant. I
+            aim to deliver designs that not only meet aesthetic goals but also
+            drive user engagement and satisfaction.
+          </p>
+        </service-card>
+      </a>
     </li>
     <li>
       <service-card title="Hosting">
@@ -50,6 +52,11 @@ import Layout from "../layouts/Layout.astro";
   <contact-component></contact-component>
 </Layout>
 <style>
+  a {
+    all: unset;
+    cursor: pointer;
+  }
+
   ul {
     display: flex;
     flex-direction: column;
