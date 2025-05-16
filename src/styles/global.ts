@@ -1,4 +1,6 @@
 import { css } from "lit";
+import { unsafeCSS } from "lit";
+import { chevronRight } from "../icons/chevron-right";
 
 export const globalStyles = css`
   *,
@@ -47,4 +49,7 @@ export const globalStyles = css`
   p {
     margin: 0;
   }
+
+  li::marker {
+    content: ${unsafeCSS(chevronRight)};
 `;

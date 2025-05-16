@@ -13,13 +13,11 @@ export class ProjectCard extends CardComponent {
     ...super.styles,
     css`
       #bottom {
-        background-color: var(--color-neutral-800);
         border-radius: 0 0 0.25rem 0.25rem;
         padding: 0.5rem 1rem;
       }
 
       #top {
-        background-color: var(--color-neutral-800);
         border-radius: 0.25rem 0.25rem 0 0;
         display: flex;
         justify-content: space-between;

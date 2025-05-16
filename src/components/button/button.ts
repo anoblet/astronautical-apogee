@@ -36,7 +36,7 @@ export class ButtonComponent extends LitElement {
       :host([variant="primary"]) {
         background: var(--color-teal-200);
         color: var(--color-neutral-800);
-        outline: 1px solid var(--color-black);
+        outline: 1px solid var(--color-neutral-800);
 
         &:hover {
           background-color: var(--color-rose-400);
