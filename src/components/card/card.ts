@@ -1,14 +1,14 @@
-import { css, html, LitElement } from "lit";
+import { css, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import { globalStyles } from "../../styles/global";
+import { Base } from "../base";
 
 @customElement("card-component")
-export class CardComponent extends LitElement {
+export class CardComponent extends Base {
   @property({ type: String }) accessor title = "";
   @property({ type: String }) accessor content = "";
 
   static styles = [
-    globalStyles,
+    ...super.styles,
     css`
       :host {
         background-color: var(--color-neutral-800);

@@ -33,9 +33,21 @@
   --font-family-mono: "Courier New", Courier, monospace;
 }
 
+a {
+  cursor: pointer;
+  text-decoration: none;
+  
+  &:has(project-card),
+  &:has(service-card) {
+    all: unset;
+    
+    cursor: pointer;
+  }
+}
+
 body {
   background: var(--color-neutral-900);
-  color: var(--text-primary);
+  color: var(--color-neutral-200);
   font-family: "Noto Sans", "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -54,39 +66,6 @@ h4,
 h5,
 h6 {
   color: var(--color-neutral-200);
-}
-
-a {
-  color: var(--accent-primary);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--accent-secondary);
-  text-decoration: underline;
-}
-
-code,
-pre {
-  font-family: var(--font-family-mono);
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.2
-  ); /* Slightly darker background for code blocks */
-  padding: 0.2em 0.4em;
-  border-radius: 3px;
-}
-
-pre {
-  padding: 1em;
-  overflow-x: auto;
-}
-
-::selection {
-  background-color: var(--highlight-background);
-  color: var(--text-primary);
 }
 
 .columns {

@@ -13,11 +13,7 @@ export const globalStyles = css`
     opacity: 1;
     transition: opacity 0.2s ease-in-out;
 
-    &:has(*:not(:defined)) {
-      opacity: 0;
-    }
-
-    &:not(:defined) {
+    &:not(:defined), &:has(*:not(:defined)), &:has(image-component:not([loaded])) {
       opacity: 0;
     }
   }

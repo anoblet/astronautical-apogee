@@ -1,7 +1,7 @@
 import { css, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import { globalStyles } from "../../styles/global";
 import { CardComponent } from "./card";
+import "../image";
 
 @customElement("project-card")
 export class ProjectCard extends CardComponent {
@@ -40,7 +40,10 @@ export class ProjectCard extends CardComponent {
         </slot>
       </div>
       <div id="center">
-        <img src="${this.image}" alt="${this.title}" />
+        <image-component
+          src="${this.image}"
+          alt="${this.title}"
+        ></image-component>
         <slot name="content"></slot>
       </div>
       <div id="bottom"></div>
