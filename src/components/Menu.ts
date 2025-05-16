@@ -1,70 +1,73 @@
 import { css, html, LitElement, nothing } from "lit";
 import { customElement, property } from "lit/decorators.js";
+import { globalStyles } from "../styles/global.ts";
 
 @customElement("menu-component")
 class MenuComponent extends LitElement {
   @property({ reflect: true, type: Boolean }) accessor opened = false;
 
-  static styles = css`
-    [hidden] {
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.2s ease-in-out;
-    }
-
-    :not([hidden]) {
-      opacity: 1;
-      transition: opacity 0.2s ease-in-out;
-    }
-
-    :host {
-      display: grid;
-      grid-template-columns: repeat(2, auto);
-      align-items: center;
-      height: 100%;
-      justify-content: space-between;
-
-      #icon {
-        display: flex;
-        align-items: center;
-        padding: 1rem;
+  static styles = [
+    globalStyles,
+    css`
+      [hidden] {
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
       }
 
-      ul {
-        margin: unset;
-        padding-inline-start: unset;
+      :not([hidden]) {
+        opacity: 1;
+        transition: opacity 0.2s ease-in-out;
+      }
 
-        display: flex;
-        list-style: none;
+      :host {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        align-items: center;
         height: 100%;
-        overflow-x: auto;
+        justify-content: space-between;
 
-        li {
+        #icon {
           display: flex;
           align-items: center;
-          font-weight: 500;
+          padding: 1rem;
+        }
 
-          &:hover {
-            cursor: pointer;
-            color: var(--color-rose-400);
-          }
+        ul {
+          margin: unset;
+          padding-inline-start: unset;
 
-          a {
-            padding: 0.5rem 2rem;
+          display: flex;
+          list-style: none;
+          height: 100%;
+          overflow-x: auto;
+
+          li {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            color: var(--color-neutral-200);
+            transition: color 0.2s ease-in-out;
+
+            &:hover {
+              cursor: pointer;
+              color: var(--color-rose-400);
+              transition: color 0.2s ease-in-out;
+            }
+
+            a {
+              color: inherit;
+              padding: 0.5rem 2rem;
+            }
           }
         }
       }
-    }
 
-    :host([opened]) {
-      grid-template-columns: max-content 1fr max-content;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-  `;
+      :host([opened]) {
+        grid-template-columns: max-content 1fr max-content;
+      }
+    `,
+  ];
 
   firstUpdated() {
     this.addEventListener("click", () => {

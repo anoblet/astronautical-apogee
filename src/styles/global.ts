@@ -25,12 +25,13 @@ export const globalStyles = css`
   }
 
   a {
-    svg {
-      color: var(--color-teal-200);
+    color: var(--color-teal-200);
+    transition: color 0.2s ease-in-out;
+    text-decoration: none;
 
-      &:hover {
-        color: var(--color-rose-400);
-      }
+    &:hover {
+      color: var(--color-rose-400);
+      transition: color 0.2s ease-in-out;
     }
   }
 
