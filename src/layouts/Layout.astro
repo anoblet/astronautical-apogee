@@ -27,8 +27,12 @@ const { title } = Astro.props;
       <slot />
     </main>
     <Footer />
+    <social-component></social-component>
   </body>
 </html>
+<script>
+  import "../components/social";
+</script>
 <style>
   body {
     display: flex;

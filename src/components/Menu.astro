@@ -13,11 +13,18 @@ import SocialLinks from "./SocialLinks.astro";
     &[opened] {
       svg {
         /* color: var(--color-rose-400); */
+        /* transition: color 0.2s ease-in-out; */
       }
     }
 
     svg {
       color: var(--color-teal-200);
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: var(--color-rose-400);
+        transition: color 0.2s ease-in-out;
+      }
     }
 
     [slot="social"] {

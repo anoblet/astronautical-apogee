@@ -31,6 +31,11 @@ class MenuComponent extends LitElement {
           display: flex;
           align-items: center;
           padding: 1rem;
+
+          &:hover {
+            cursor: pointer;
+            color: var(--color-rose-400);
+          }
         }
 
         ul {
@@ -71,7 +76,7 @@ class MenuComponent extends LitElement {
 
   firstUpdated() {
     this.addEventListener("click", () => {
-      // this.opened = !this.opened;
+      this.opened = !this.opened;
     });
 
     this.shadowRoot
