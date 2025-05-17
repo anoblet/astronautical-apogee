@@ -99,8 +99,8 @@ class MenuComponent extends LitElement {
         ? html`
             <ul class="overflow-x" ?hidden=${!this.opened}>
               <li><a href="/">Home</a></li>
-              <li><a href="/projects">Projects</a></li>
               <li><a href="/services">Services</a></li>
+              <li><a href="/projects">Projects</a></li>
               <li><a href="/blog">Blog</a></li>
             </ul>
           `
