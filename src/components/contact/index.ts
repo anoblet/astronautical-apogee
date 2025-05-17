@@ -32,7 +32,6 @@ export class ContactComponent extends LitElement {
       >
         <span>Schedule</span>${calendarMonth}
       </button-component>
-      >
     `;
   }
 }
