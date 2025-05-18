@@ -1,7 +1,9 @@
 import { css, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import { CardComponent } from "./card";
+import { unsafeHTML } from "lit/directives/unsafe-html.js";
+import { arrowForward } from "../../icons/arrow-forward";
 import "../image";
+import { CardComponent } from "./card";
 
 @customElement("project-card")
 export class ProjectCard extends CardComponent {
@@ -13,8 +15,12 @@ export class ProjectCard extends CardComponent {
     ...super.styles,
     css`
       #bottom {
-        border-radius: 0 0 0.25rem 0.25rem;
-        padding: 0.5rem 1rem;
+        color: var(--color-teal-200);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-weight: 800;
+        gap: 0.5rem;
       }
 
       #top {
@@ -25,8 +31,19 @@ export class ProjectCard extends CardComponent {
         gap: 1rem;
       }
 
+      a {
+        align-items: center;
+        text-decoration: none;
+        color: var(--color-teal-200);
+        display: flex;
+      }
+
       img {
         width: 100%;
+      }
+
+      svg {
+        fill: var(--color-teal-200);
       }
     `,
   ];
@@ -44,9 +61,14 @@ export class ProjectCard extends CardComponent {
           src="${this.image}"
           alt="${this.title}"
         ></image-component>
-        <slot name="content"></slot>
+        <div id="content">
+          <slot name="content"></slot>
+        </div>
       </div>
-      <div id="bottom"></div>
+      <div id="bottom">
+        Learn more
+        <a href="#" id="action" part="action">${unsafeHTML(arrowForward)}</a>
+      </div>
     `;
   }
 }

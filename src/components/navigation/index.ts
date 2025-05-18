@@ -1,16 +1,20 @@
-import { css, html, LitElement } from "lit";
-import { customElement } from "lit/decorators.js";
+import { html, LitElement } from "lit";
+import { customElement, property } from "lit/decorators.js";
 import { globalStyles } from "../../styles/global";
-import { style } from "./navigation.css";
+import { style } from "./index.css";
+import { close } from "../../icons/close";
 
 @customElement("navigation-component")
 export class NavigationComponent extends LitElement {
-  static styles = [
-    globalStyles,
-    style
-  ];
+  @property({ type: Boolean, reflect: true }) accessor opened = false;
+
+  static styles = [globalStyles, style];
 
   scrollY = 0;
+
+  close() {
+    this.opened = false;
+  }
 
   firstUpdated() {
     window.addEventListener("scroll", () => {
@@ -23,7 +27,7 @@ export class NavigationComponent extends LitElement {
       if (this.scrollY > window.scrollY) {
         this.hidden = false;
       }
-      
+
       if (this.scrollY < window.scrollY) {
         this.hidden = true;
       }
@@ -33,6 +37,9 @@ export class NavigationComponent extends LitElement {
   }
 
   render() {
-    return html`<slot></slot>`;
+    return html`
+      <slot></slot>
+      <aside><span @click=${this.close} class="icon" id="close">${close}</span><slot name="aside"></slot></aside>
+    `;
   }
 }

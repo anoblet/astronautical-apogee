@@ -50,7 +50,9 @@ export class ServiceCard extends CardComponent {
         )}</a> -->
       </div>
       <div id="center">
-        <slot name="content"></slot>
+        <div id="content">
+          <slot name="content"></slot>
+        </div>
       </div>
       <div id="bottom">
         Learn more

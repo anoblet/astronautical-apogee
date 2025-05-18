@@ -35,6 +35,10 @@ export class CardComponent extends Base {
         /* transition: transform 0.2s ease-in-out; */
       }
 
+      #content {
+        cursor: default;
+      }
+
       #title {
         color: var(--color-teal-200);
       }
@@ -44,7 +48,9 @@ export class CardComponent extends Base {
   render() {
     return html`
       <h2 id="title" part="title">${this.title}</h2>
-      <slot name="content"></slot>
+      <div id="content">
+        <slot name="content"></slot>
+      </div>
     `;
   }
 }
