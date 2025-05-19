@@ -6,12 +6,45 @@ import Layout from "../../layouts/Layout.astro";
   <h1>Design</h1>
   <p>
     We create beautiful and functional designs that resonate with your audience.
+    Our approach blends creativity, usability, and your brand’s unique voice.
   </p>
-  <p>Our design services include:</p>
-  <ul>
-    <li>UI/UX Design</li>
-    <li>Brand Identity</li>
-    <li>Print Design</li>
-    <li>Web Design</li>
-  </ul>
+  <p>Explore our core design services:</p>
+  <div class="grid" style="gap: 2rem;">
+    <service-card title="UI/UX Design">
+      <div slot="content">
+        <p>
+          Intuitive, accessible, and visually engaging interfaces for web and
+          mobile. We focus on user flows, wireframes, and delightful
+          interactions.
+        </p>
+      </div>
+    </service-card>
+    <service-card title="Brand Identity">
+      <div slot="content">
+        <p>
+          Distinctive logos, color palettes, and brand systems that communicate
+          your unique story and values across all touchpoints.
+        </p>
+      </div>
+    </service-card>
+    <service-card title="Print Design">
+      <div slot="content">
+        <p>
+          High-impact print collateral—brochures, business cards, posters, and
+          more—crafted to leave a lasting impression.
+        </p>
+      </div>
+    </service-card>
+    <service-card title="Web Design">
+      <div slot="content">
+        <p>
+          Modern, responsive websites that blend aesthetics with performance,
+          accessibility, and seamless user experience.
+        </p>
+      </div>
+    </service-card>
+  </div>
 </Layout>
+<script>
+  import "../../components/card/service-card";
+</script>
