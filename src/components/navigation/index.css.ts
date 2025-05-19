@@ -22,6 +22,11 @@ export const style = css`
     }
   }
 
+  a {
+    display: flex;
+    align-items: center;
+  }
+
   aside {
     background-color: var(--color-neutral-900);
     height: 100vh;
@@ -30,7 +35,17 @@ export const style = css`
     width: 100vw;
   }
 
+  svg {
+    fill: currentColor;
+    height: 2rem;
+    width: 2rem;
+  }
+
   #icon {
+    padding: 1rem;
+  }
+
+  #menu {
     padding: 1rem;
   }
 `;

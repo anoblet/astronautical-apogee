@@ -1,11 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import genaiscript from "../assets/microsoft.github.io_genaiscript_.png";
+import litdev from "../assets/lit.dev_.png";
 ---
 
 <Layout title="Projects">
   <h1>Projects</h1>
-  <project-card image={genaiscript.src} title="GenAIScript" href="https://microsoft.github.io/genaiscript/">
+  <project-card
+    image={genaiscript.src}
+    title="GenAIScript"
+    href="https://microsoft.github.io/genaiscript/"
+  >
     <div class="chips" slot="chips">
       <chip-component>TypeScript</chip-component>
       <chip-component>Node.js</chip-component>
@@ -16,17 +21,45 @@ import genaiscript from "../assets/microsoft.github.io_genaiscript_.png";
     </div>
     <ul id="content" slot="content">
       <li>
-        I am actively learning GenAIScript, an open-source scripting language for generative AI workflows by Microsoft.
+        I am actively learning GenAIScript, an open-source scripting language
+        for generative AI workflows by Microsoft.
       </li>
       <li>
-        I contribute to the community by sharing feedback, reporting issues, and engaging with other users to improve the project.
+        I contribute to the community by sharing feedback, reporting issues, and
+        engaging with other users to improve the project.
       </li>
       <li>
-        I am implementing GenAIScript in my daily workflow to automate content generation, experiment with prompt engineering, and streamline repetitive tasks using AI.
+        I am implementing GenAIScript in my daily workflow to automate content
+        generation, experiment with prompt engineering, and streamline
+        repetitive tasks using AI.
       </li>
     </ul>
   </project-card>
-  <contact-component></contact-component>
+  <project-card image={litdev.src} title="Lit" href="https://lit.dev/">
+    <div class="chips" slot="chips">
+      <chip-component>JavaScript</chip-component>
+      <chip-component>TypeScript</chip-component>
+      <chip-component>Web Components</chip-component>
+      <chip-component>LitElement</chip-component>
+      <chip-component>Open Source</chip-component>
+    </div>
+    <ul id="content" slot="content">
+      <li>
+        Lit is a fast, simple library for building web components and reactive
+        UIs.
+      </li>
+      <li>
+        I have been learning Lit and contributing to its ecosystem for over 5
+        years, sharing feedback and improvements with the community.
+      </li>
+      <li>
+        My work with Lit includes building reusable UI components, exploring
+        advanced patterns, and advocating for web standards.
+      </li>
+    </ul>
+  </project-card>
+  <contact-component href="https://calendar.app.google/t9p2HfknyNWf1RNV6"
+  ></contact-component>
 </Layout>
 <style>
   p {
@@ -57,6 +90,7 @@ import genaiscript from "../assets/microsoft.github.io_genaiscript_.png";
   }
 
   .chips {
+    color: var(--secondary-color);
     display: flex;
     gap: 1rem;
     overflow: hidden;

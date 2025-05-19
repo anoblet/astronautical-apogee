@@ -31,12 +31,16 @@ export const globalStyles = css`
 
   a:not(:has(project-card)):not(:has(service-card)) {
     color: var(--color-teal-200);
-    transition: color 0.2s ease-in-out;
+    transition: color 0.1s ease-in-out;
     text-decoration: none;
 
     &:hover {
       color: var(--color-rose-400);
-      transition: color 0.2s ease-in-out;
+      transition: color 0.1s ease-in-out;
+    }
+
+    svg {
+      fill: currentColor;
     }
   }
 

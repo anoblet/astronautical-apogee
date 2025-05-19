@@ -5,7 +5,7 @@ import SocialLinks from "./SocialLinks.astro";
 
 <nav>
   <menu-component opened>
-    <Icon name="mdi:menu" size={32} slot="icon" />
+    <!-- <Icon name="mdi:menu" size={32} slot="icon" /> -->
   </menu-component>
 </nav>
 <style>
@@ -31,6 +31,10 @@ import SocialLinks from "./SocialLinks.astro";
       display: flex;
       align-items: center;
     }
+  }
+
+  nav {
+    flex: 1;
   }
 </style>
 <script>

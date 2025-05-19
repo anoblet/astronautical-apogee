@@ -1,20 +1,5 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"); */
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-* {
-  opacity: 1;
-  /* transition: opacity 0.2s ease-in-out; */
-
-  &:not(:defined) {
-    opacity: 0;
-  }
-}
-
 /* Define CSS variables based on the VS Code theme */
 :root {
   --background-primary: #292a2b;

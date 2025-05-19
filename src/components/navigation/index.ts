@@ -3,6 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 import { globalStyles } from "../../styles/global";
 import { style } from "./index.css";
 import { close } from "../../icons/close";
+import { menu } from "../../icons/menu";
 
 @customElement("navigation-component")
 export class NavigationComponent extends LitElement {
@@ -39,7 +40,10 @@ export class NavigationComponent extends LitElement {
   render() {
     return html`
       <slot></slot>
-      <aside><span @click=${this.close} class="icon" id="close">${close}</span><slot name="aside"></slot></aside>
+      <aside>
+        <span @click=${this.close} class="icon" id="close">${close}</span
+        ><slot name="aside"></slot>
+      </aside>
     `;
   }
 }

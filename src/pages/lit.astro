@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+import litdev from "../assets/lit.dev_.png";
+---
+
+<Layout title="Lit">
+  <h1>Lit</h1>
+  <project-card image={litdev.src} title="Lit" href="https://lit.dev/">
+    <div class="chips" slot="chips">
+      <chip-component>JavaScript</chip-component>
+      <chip-component>TypeScript</chip-component>
+      <chip-component>Web Components</chip-component>
+      <chip-component>LitElement</chip-component>
+      <chip-component>Open Source</chip-component>
+    </div>
+    <ul id="content" slot="content">
+      <li>
+        Lit is a fast, simple library for building web components and reactive UIs.
+      </li>
+      <li>
+        I have been learning Lit and contributing to its ecosystem for over 5 years, sharing feedback and improvements with the community.
+      </li>
+      <li>
+        My work with Lit includes building reusable UI components, exploring advanced patterns, and advocating for web standards.
+      </li>
+    </ul>
+  </project-card>
+</Layout>
+
+<style>
+  p {
+    color: var(--color-neutral-200);
+  }
+
+  #content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  ul {
+    color: var(--color-neutral-200);
+    list-style-type: "-";
+  }
+
+  li {
+    padding-left: 1rem;
+  }
+
+  li::marker {
+    color: var(--color-teal-400);
+    content: "•" " ";
+    padding-left: 1rem;
+  }
+
+  .chips {
+    display: flex;
+    gap: 1rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+
+    &:hover {
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+  }
+</style>
+<script>
+  import "../components/card/project-card";
+  import "../components/chip.ts";
+</script>

@@ -1,6 +1,7 @@
 import { css, html, LitElement, nothing } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { globalStyles } from "../styles/global.ts";
+import { menu } from "../icons/menu.ts";
 
 @customElement("menu-component")
 class MenuComponent extends LitElement {
@@ -71,12 +72,23 @@ class MenuComponent extends LitElement {
       :host([opened]) {
         grid-template-columns: max-content 1fr max-content;
       }
+
+      #icon {
+        a {
+          display: flex;
+          align-items: center;
+        }
+        svg {
+          height: 2rem;
+          width: 2rem;
+        }
+      }
     `,
   ];
 
   firstUpdated() {
     this.addEventListener("click", () => {
-      this.opened = !this.opened;
+      // this.opened = !this.opened;
     });
 
     this.shadowRoot
@@ -93,7 +105,7 @@ class MenuComponent extends LitElement {
   render() {
     return html`
       <div id="icon">
-        <slot name="icon"></slot>
+        <a href="/" id="menu">${menu}</a>
       </div>
       ${this.opened
         ? html`
