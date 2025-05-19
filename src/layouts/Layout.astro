@@ -9,6 +9,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import { ClientRouter } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -35,8 +37,9 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ClientRouter />
   </head>
-  <body>
+  <body style="background-color: oklch(0.205 0 0);">
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
@@ -58,6 +61,9 @@ const { title } = Astro.props;
   import "../components/social";
 </script>
 <style>
+  @view-transition {
+    navigation: auto;
+  }
   body {
     display: flex;
     flex-direction: column;
@@ -91,4 +97,16 @@ const { title } = Astro.props;
   media.subscribe((media: string) => {
     document.body.setAttribute("data-media", media);
   });
+</script>
+<script>
+  import { globalStyles } from "../styles/global";
+
+  if (globalStyles.styleSheet) {
+    document.adoptedStyleSheets = [
+      ...document.adoptedStyleSheets,
+      globalStyles.styleSheet,
+    ];
+  } else {
+    console.error("Global styles not loaded");
+  }
 </script>

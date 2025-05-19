@@ -1,9 +1,13 @@
 import { css } from "lit";
 import { unsafeCSS } from "lit";
 import { chevronRight } from "../icons/chevron-right";
-// import styles from "./global.css" assert { type: "css" };
 
 export const globalStyles = css`
+  :root {
+    --primary-color: var(--color-teal-200);
+    --secondary-color: var(--color-rose-400);
+  }
+
   *,
   *:before,
   *:after {
@@ -12,9 +16,11 @@ export const globalStyles = css`
 
   * {
     opacity: 1;
-    transition: opacity 0.2s ease-in-out;
+    /* transition: opacity 0.2s ease-in-out; */
 
-    &:not(:defined), &:has(*:not(:defined)), &:has(image-component:not([loaded])) {
+    &:not(:defined),
+    &:has(*:not(:defined)),
+    &:has(image-component:not([loaded])) {
       opacity: 0;
     }
   }
@@ -23,7 +29,7 @@ export const globalStyles = css`
     display: flex;
   }
 
-  a {
+  a:not(:has(project-card)):not(:has(service-card)) {
     color: var(--color-teal-200);
     transition: color 0.2s ease-in-out;
     text-decoration: none;
@@ -49,4 +55,5 @@ export const globalStyles = css`
 
   li::marker {
     content: ${unsafeCSS(chevronRight)};
+  }
 `;

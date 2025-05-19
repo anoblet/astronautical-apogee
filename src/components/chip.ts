@@ -22,6 +22,7 @@ class ChipoCmponent extends LitElement {
       :host(:hover) {
         background-color: var(--color-neutral-600);
         cursor: pointer;
+        transition: background-color 0.1s ease-in-out;
       }
     `,
   ];
