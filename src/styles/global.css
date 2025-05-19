@@ -134,6 +134,14 @@ p {
 }
 
 ul {
+  list-style-position: inside;
   margin: 0;
   padding: 0;
+
+  &.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    list-style: none;
+  }
 }

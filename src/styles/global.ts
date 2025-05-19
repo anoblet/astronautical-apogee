@@ -1,6 +1,7 @@
 import { css } from "lit";
 import { unsafeCSS } from "lit";
 import { chevronRight } from "../icons/chevron-right";
+// import styles from "./global.css" assert { type: "css" };
 
 export const globalStyles = css`
   *,

@@ -61,9 +61,7 @@ export class ProjectCard extends CardComponent {
           src="${this.image}"
           alt="${this.title}"
         ></image-component>
-        <div id="content">
-          <slot name="content"></slot>
-        </div>
+        <slot name="content"></slot>
       </div>
       <div id="bottom">
         Learn more
