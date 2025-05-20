@@ -1,11 +1,12 @@
-import { css, html, LitElement } from "lit";
+import { css, html } from "lit";
 import { customElement } from "lit/decorators.js";
 import { calendarMonth } from "../../icons/calendar-month";
 import { globalStyles } from "../../styles/global";
+import { Base } from "../base";
 import "../button";
 
 @customElement("contact-component")
-export class ContactComponent extends LitElement {
+export class ContactComponent extends Base {
   static styles = [
     globalStyles,
     css`
@@ -15,9 +16,11 @@ export class ContactComponent extends LitElement {
         right: 1rem;
         width: max-content;
       }
+
       button-component {
         transition: transform 0.2s var(--ease, ease);
       }
+      
       button-component:hover {
         transform: scale(1.04);
       }

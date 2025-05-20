@@ -61,6 +61,10 @@ export const globalStyles = css`
     content: ${unsafeCSS(chevronRight)};
   }
 
+  button-component {
+    outline: 1px solid var(--color-black);
+  }
+
   .grid {
     display: grid;
     gap: 1rem;

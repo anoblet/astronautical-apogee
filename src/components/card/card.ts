@@ -7,6 +7,8 @@ export class CardComponent extends Base {
   @property({ type: String }) accessor title = "";
   @property({ type: String }) accessor content = "";
 
+  accessor classes = [...super.classes, "card"];
+
   static styles = [
     ...super.styles,
     css`
@@ -28,8 +30,8 @@ export class CardComponent extends Base {
       }
 
       :host(:hover) {
-        background-color: var(--color-neutral-700);
-        outline-color: var(--color-neutral-400);
+        /* background-color: var(--color-neutral-700); */
+        outline-color: var(--color-neutral-500);
         /* transform: scale(1.02); */
         transition: outline-color 0.2s ease-in-out;
         /* transition: transform 0.2s ease-in-out; */
