@@ -2,94 +2,97 @@
 import Button from "./Button.astro";
 ---
 
-<section>
-  <h1 class="grid text-align-center hidden-desktop">
-    <span class="text-align-center">Andrew Noblet</span>
-    <span class="bold">Software Developer</span>
-  </h1>
-  <h1 class="text-align-center hidden-mobile">
-    Andrew Noblet | <span class="bold">Software Developer</span>
-  </h1>
-  <div class="grid min-width-50 padding" id="buttons">
-      <a href="https://calendar.app.google/t9p2HfknyNWf1RNV6"><Button>Schedule</Button></a>
-      <a href="/projects"><Button variant="secondary">Projects</Button></a>
-    </div>
-  </div>
-</section>
-<style>
-  section {
-    background: var(--grey-900);
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
+<hero-component></hero-component>
 
-    h1 {
-      color: #fff;
-      font-weight: 500;
-      margin: 0;
-      padding: 2rem;
-    }
-
-    .bold {
-      font-weight: 800;
-    }
-
-    #buttons {
-      min-width: 50%;
-
-      > * {
-        display: flex;
-
-        button {
-          flex: 1;
-        }
-      }
-
-      a {
-        &:hover {
-          text-decoration: none;
-        }
-      }
-    }
-  }
-</style>
+<style></style>
 <script>
-  import { css, html, LitElement } from "lit";
-  import { customElement } from "lit/decorators.js";
+  import { css, html, LitElement, nothing } from "lit";
+  import { customElement, property } from "lit/decorators.js";
   import { globalStyles } from "../styles/global.ts";
+  import "@components/button";
+  import { media } from "../media";
 
   @customElement("hero-component")
   class HeroComponent extends LitElement {
+    @property({ reflect: true, type: String }) accessor media = "desktop";
+
     static styles = [
       globalStyles,
       css`
         :host {
-          display: block;
+          flex: 1;
+        }
+          
+        section {
+          background: var(--grey-900);
+          display: flex;
+          flex: 1;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 2rem;
+
+          h1 {
+            color: #fff;
+            font-weight: 500;
+            margin: 0;
+            padding: 2rem;
+          }
+
+          .bold {
+            font-weight: 800;
+          }
+
+          #buttons {
+            min-width: 50%;
+
+            > * {
+              display: flex;
+
+              button-component {
+                flex: 1;
+              }
+            }
+
+            a {
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
         }
       `,
     ];
 
+    firstUpdated() {
+      media.subscribe((media: string) => {
+        this.media = media;
+      });
+    }
+
     render() {
       return html`
         <section>
-          <h1 class="grid text-align-center hidden-desktop">
-            <span class="text-align-center">Andrew Noblet</span>
-            <hr />
-            <span class="bold">Software Developer</span>
-          </h1>
-          <h1 class="text-align-center hidden-mobile">
-            Andrew Noblet | <span class="bold">Software Developer</span>
-          </h1>
-          <div class="grid min-width-50 padding">
-            <div>
-              <a<button>Projects</button>
-            </div>
-            <div>
-              <a href="/schedule"><button variant="secondary">Contact</button></a>
-            </div>
+          ${this.media === "desktop"
+            ? html` <h1 class="text-align-center hidden-mobile">
+                Andrew Noblet | <span class="bold">Software Developer</span>
+              </h1>`
+            : nothing}
+          ${this.media === "mobile"
+            ? html` <h1 class="grid text-align-center hidden-desktop">
+                <span class="text-align-center">Andrew Noblet</span>
+                <span class="bold">Software Developer</span>
+              </h1>`
+            : nothing}
+          <div class="grid min-width-50 padding" id="buttons">
+            <button-component
+              href="https://calendar.app.google/t9p2HfknyNWf1RNV6"
+              variant="primary"
+              >Schedule</button-component
+            >
+            <button-component href="/projects" variant="secondary"
+              >Projects</button-component
+            >
           </div>
         </section>
       `;

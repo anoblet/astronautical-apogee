@@ -17,6 +17,7 @@ export class ButtonComponent extends Base {
         border-radius: var(--border-radius);
         color: var(--color-neutral-900);
         gap: 1rem;
+        justify-content: center;
         padding: 1rem 2rem;
         border: none;
         cursor: pointer;
@@ -55,23 +56,25 @@ export class ButtonComponent extends Base {
           color: inherit;
         }
       }
+
       :host([variant="secondary"]) {
-        background: var(--color-neutral-900);
-        color: var(--color-neutral-100);
+        background: unset;
+        border: 1px solid var(--color-teal-200);
+        color: var(--color-teal-200);
       }
+
       :host([variant="secondary"]:hover) {
         background-color: color-mix(
           in oklab,
           var(--color-teal-200) 20%,
           var(--color-neutral-900) 100%
         );
-        color: var(--color-neutral-900);
       }
 
       ::slotted(span) {
         line-height: 0;
       }
-      
+
       ::slotted(svg) {
         fill: currentColor;
       }

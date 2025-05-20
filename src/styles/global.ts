@@ -60,4 +60,10 @@ export const globalStyles = css`
   li::marker {
     content: ${unsafeCSS(chevronRight)};
   }
+
+  .grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+  }
 `;
