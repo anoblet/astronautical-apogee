@@ -4,8 +4,6 @@ import { calendarMonth } from "../../icons/calendar-month";
 import { globalStyles } from "../../styles/global";
 import "../button";
 
-console.log("HI!");
-
 @customElement("contact-component")
 export class ContactComponent extends LitElement {
   static styles = [

@@ -66,4 +66,8 @@ export const globalStyles = css`
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
   }
+
+  .text-align-center {
+    text-align: center;
+  }
 `;

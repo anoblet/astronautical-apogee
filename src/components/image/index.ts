@@ -25,7 +25,6 @@ export class ImageComponent extends LitElement {
   }
 
   onLoad() {
-    console.log(this);
     this.loaded = true;
   }
 
