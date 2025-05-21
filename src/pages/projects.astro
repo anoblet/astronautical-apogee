@@ -1,12 +1,56 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import genaiscript from "../assets/microsoft.github.io_genaiscript_.png";
-import litdev from "../assets/lit.dev_.png";
+import Layout from "@layouts/Layout.astro";
+import genaiscript from "@assets/microsoft.github.io_genaiscript_.png";
+import lit from "@assets/lit.dev_.png";
+import astro from "@assets/astro.build_.png";
 ---
 
 <Layout title="Projects">
   <h1>Projects</h1>
   <div class="grid">
+    <project-card image={astro.src} title="Astro" href="https://astro.build/">
+      <div class="chips" slot="chips">
+        <chip-component>JavaScript</chip-component>
+        <chip-component>TypeScript</chip-component>
+        <chip-component>Static Site Generator</chip-component>
+        <chip-component>Astro</chip-component>
+        <chip-component>Open Source</chip-component>
+      </div>
+      <ul id="content" slot="content">
+        <li>
+          Astro is a modern static site builder focused on performance and component-driven architecture.
+        </li>
+        <li>
+          I use Astro to build fast, maintainable, and highly composable web projects with a focus on reusability and best practices.
+        </li>
+        <li>
+          My experience includes creating layouts, reusable components, and integrating with various frameworks using Astro.
+        </li>
+      </ul>
+    </project-card>
+    <project-card image={lit.src} title="Lit" href="https://lit.dev/">
+      <div class="chips" slot="chips">
+        <chip-component>JavaScript</chip-component>
+        <chip-component>TypeScript</chip-component>
+        <chip-component>Web Components</chip-component>
+        <chip-component>LitElement</chip-component>
+        <chip-component>Open Source</chip-component>
+      </div>
+      <ul id="content" slot="content">
+        <li>
+          Lit is a fast, simple library for building web components and reactive
+          UIs.
+        </li>
+        <li>
+          I have been learning Lit and contributing to its ecosystem for over 5
+          years, sharing feedback and improvements with the community.
+        </li>
+        <li>
+          My work with Lit includes building reusable UI components, exploring
+          advanced patterns, and advocating for web standards.
+        </li>
+      </ul>
+    </project-card>
     <project-card
       image={genaiscript.src}
       title="GenAIScript"
@@ -33,29 +77,6 @@ import litdev from "../assets/lit.dev_.png";
           I am implementing GenAIScript in my daily workflow to automate content
           generation, experiment with prompt engineering, and streamline
           repetitive tasks using AI.
-        </li>
-      </ul>
-    </project-card>
-    <project-card image={litdev.src} title="Lit" href="https://lit.dev/">
-      <div class="chips" slot="chips">
-        <chip-component>JavaScript</chip-component>
-        <chip-component>TypeScript</chip-component>
-        <chip-component>Web Components</chip-component>
-        <chip-component>LitElement</chip-component>
-        <chip-component>Open Source</chip-component>
-      </div>
-      <ul id="content" slot="content">
-        <li>
-          Lit is a fast, simple library for building web components and reactive
-          UIs.
-        </li>
-        <li>
-          I have been learning Lit and contributing to its ecosystem for over 5
-          years, sharing feedback and improvements with the community.
-        </li>
-        <li>
-          My work with Lit includes building reusable UI components, exploring
-          advanced patterns, and advocating for web standards.
         </li>
       </ul>
     </project-card>
@@ -105,6 +126,8 @@ import litdev from "../assets/lit.dev_.png";
   }
 
   .grid {
+    grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));
+
     > * {
       display: flex;
       flex-direction: column;
