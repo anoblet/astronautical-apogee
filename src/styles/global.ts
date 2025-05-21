@@ -65,6 +65,18 @@ export const globalStyles = css`
     outline: 1px solid var(--color-black);
   }
 
+  icon-component {
+    padding: 1rem;
+
+    svg {
+      color: var(--color-teal-200);
+    }
+  }
+
+  svg {
+    fill: currentColor;
+  }
+
   .grid {
     display: grid;
     gap: 1rem;

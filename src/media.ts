@@ -12,7 +12,7 @@ observer.addEventListener("change", mediaChanged);
 
 mediaChanged(observer);
 
-const subscribe = (callback: any) => {
+export const subscribe = (callback: any) => {
   subscribers.push(callback);
   callback(mediaSize);
 };

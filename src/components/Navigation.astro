@@ -2,11 +2,46 @@
 import Menu from "./Menu.astro";
 ---
 
-<navigation-component>
-  <Menu />
-  <social-component></social-component>
-</navigation-component>
+<media-component desktop>
+  <navigation-component>
+    <Menu />
+    <social-component></social-component>
+  </navigation-component>
+</media-component>
+<media-component mobile>
+  <navigation-mobile>
+    <aside slot="aside">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </aside>
+  </navigation-mobile>
+</media-component>
+<style>
+  navigation-mobile {
+    ul {
+      display: grid;
+      list-style: none;
+      padding: 1rem;
+
+      li {
+        border-top: 1px solid var(--color-teal-200);
+        padding: 1rem;
+
+        &:last-child {
+          border-bottom: 1px solid var(--color-teal-200);
+        }
+      }
+    }
+  }
+</style>
 <script>
+  import "./media";
   import "./navigation";
-  import "./social"
+  import "./navigation/mobile";
+  import "./social";
 </script>
