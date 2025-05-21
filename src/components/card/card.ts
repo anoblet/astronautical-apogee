@@ -37,6 +37,10 @@ export class CardComponent extends Base {
         /* transition: transform 0.2s ease-in-out; */
       }
 
+      #center {
+        flex: 1;
+      }
+
       #title {
         color: var(--color-teal-200);
       }

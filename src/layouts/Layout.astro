@@ -76,6 +76,10 @@ import { ClientRouter } from "astro:transitions";
     &:has(*:not(:defined)) {
       opacity: 0;
     }
+
+    > * {
+      width: 100%;
+    }
   }
 
   main {

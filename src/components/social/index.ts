@@ -10,12 +10,8 @@ export class Social extends LitElement {
       :host {
         display: flex;
         gap: 1rem;
+        justify-content: center;
         padding: 1rem;
-      }
-
-      a {
-        display: flex;
-        align-items: center;
       }
     `,
   ];

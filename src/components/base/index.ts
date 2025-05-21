@@ -1,7 +1,6 @@
 import { LitElement } from "lit";
 import { property } from "lit/decorators.js";
 import { globalStyles } from "../../styles/global";
-import { subscribe } from "src/media";
 
 export class Base extends LitElement {
   @property({ type: String }) accessor href = "";
@@ -20,5 +19,9 @@ export class Base extends LitElement {
 
       el.appendChild(this);
     }
+
+    this.classes.forEach((className) => {
+      this.classList.add(className);
+    });
   }
 }
