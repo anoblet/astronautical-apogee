@@ -1,8 +1,109 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro'; // Import the Hero component
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Andrew Noblet">
-	<Hero />
+  <index-component></index-component>
 </Layout>
+<script>
+  import { Base } from "@components/base";
+  import "@components/button";
+  import { css, html } from "lit";
+  import { customElement, property } from "lit/decorators.js";
+  import { globalStyles } from "@styles/global.ts";
+
+  @customElement("index-component")
+  class IndexComponent extends Base {
+    @property({ reflect: true, type: String }) accessor media = "desktop";
+
+    static styles = [
+      globalStyles,
+      css`
+        :host {
+          flex: 1;
+        }
+
+        section {
+          background: var(--grey-900);
+          display: flex;
+          flex: 1;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 2rem;
+
+          h1 {
+            color: #fff;
+            font-weight: 500;
+            margin: 0;
+            padding: 2rem;
+          }
+
+          .bold {
+            font-weight: 800;
+          }
+
+          #buttons {
+            min-width: 50%;
+
+            > * {
+              display: flex;
+
+              button-component {
+                flex: 1;
+              }
+            }
+
+            a {
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      `,
+    ];
+
+    render() {
+      return html`
+        <section>
+          <media-component desktop>
+            <h1 class="text-align-center hidden-mobile">
+              Andrew Noblet | <span class="bold">Software Developer</span>
+            </h1>
+          </media-component>
+          <media-component mobile>
+            <h1 class="grid text-align-center hidden-desktop">
+              <span class="text-align-center">Andrew Noblet</span>
+              <span class="bold">Software Developer</span>
+            </h1>
+          </media-component>
+          <media-component desktop>
+            <div class="grid min-width-50 padding" id="buttons">
+              <button-component
+                href="https://calendar.app.google/t9p2HfknyNWf1RNV6"
+                variant="primary"
+                >Schedule an appointment</button-component
+              >
+              <button-component href="/services" variant="secondary"
+                >Services</button-component
+              >
+            </div>
+          </media-component>
+          <media-component mobile>
+            <div class="grid min-width-50 padding" id="buttons">
+              <button-component href="/services" variant="secondary"
+                >Services</button-component
+              >
+              <button-component
+                href="https://calendar.app.google/t9p2HfknyNWf1RNV6"
+                variant="primary"
+                >Schedule an appointment</button-component
+              >
+            </div>
+          </media-component>
+        </section>
+      `;
+    }
+  }
+</script>
