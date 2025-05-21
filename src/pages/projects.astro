@@ -18,13 +18,16 @@ import astro from "@assets/astro.build_.png";
       </div>
       <ul id="content" slot="content">
         <li>
-          Astro is a modern static site builder focused on performance and component-driven architecture.
+          Astro is a modern static site builder focused on performance and
+          component-driven architecture.
         </li>
         <li>
-          I use Astro to build fast, maintainable, and highly composable web projects with a focus on reusability and best practices.
+          I use Astro to build fast, maintainable, and highly composable web
+          projects with a focus on reusability and best practices.
         </li>
         <li>
-          My experience includes creating layouts, reusable components, and integrating with various frameworks using Astro.
+          My experience includes creating layouts, reusable components, and
+          integrating with various frameworks using Astro.
         </li>
       </ul>
     </project-card>
@@ -126,7 +129,7 @@ import astro from "@assets/astro.build_.png";
   }
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(352px, 1fr));
 
     > * {
       display: flex;
@@ -139,7 +142,7 @@ import astro from "@assets/astro.build_.png";
   }
 </style>
 <script>
-  import "../components/card/project-card";
-  import "../components/chip.ts";
-  import "../components/contact";
+  import "@components/card/project-card";
+  import "@components/chip";
+  import "@components/contact";
 </script>
