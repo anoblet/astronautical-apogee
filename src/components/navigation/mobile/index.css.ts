@@ -31,6 +31,7 @@ export const style = css`
   }
 
   icon-component {
+    color: var(--color-teal-200);
     cursor: pointer;
     z-index: 1;
   }
@@ -45,6 +46,8 @@ export const style = css`
     color: var(--color-teal-200);
     display: flex;
     flex: 1;
+    font-size: 1.25rem;
+    font-weight: 600;
     height: 100%;
     justify-content: center;
     padding: 1rem;
