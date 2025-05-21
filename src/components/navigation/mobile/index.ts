@@ -49,6 +49,7 @@ export class NavigationMobile extends Base {
   render() {
     return html`
       <icon-component @click=${this.toggle}>${menu}</icon-component>
+      <span class="title">Andrew Noblet</span>
       <aside>
         <icon-component @click=${this.toggle}>${close}</icon-component>
         <slot name="aside"></slot>

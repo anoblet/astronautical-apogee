@@ -29,11 +29,12 @@ import Menu from "./Menu.astro";
       padding: 1rem;
 
       li {
-        border-top: 1px solid var(--color-teal-200);
+        border-bottom: 1px solid var(--color-teal-200);
+        /* border-top: 1px solid var(--color-teal-200); */
         padding: 1rem;
 
         &:last-child {
-          border-bottom: 1px solid var(--color-teal-200);
+          border-bottom: unset;
         }
       }
     }
