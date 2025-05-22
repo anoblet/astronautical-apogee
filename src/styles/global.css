@@ -21,13 +21,6 @@
 a {
   cursor: pointer;
   text-decoration: none;
-  
-  &:has(project-card),
-  &:has(service-card) {
-    all: unset;
-    
-    cursor: pointer;
-  }
 }
 
 body {

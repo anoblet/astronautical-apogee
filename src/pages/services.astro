@@ -34,7 +34,7 @@ import Layout from "../layouts/Layout.astro";
       </service-card>
     </li>
     <li>
-      <service-card title="Consultation">
+      <service-card href="/services/consultation" title="Consultation">
         <p slot="content">
           I offer expert consultation services to help you navigate the
           complexities of software development. Whether you need guidance on
@@ -54,6 +54,10 @@ import Layout from "../layouts/Layout.astro";
   a {
     all: unset;
     cursor: pointer;
+  }
+
+  p {
+    color: var(--color-neutral-200);
   }
 
   ul {

@@ -4,6 +4,8 @@ import { chevronRight } from "../icons/chevron-right";
 
 export const globalStyles = css`
   :root {
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
     --primary-color: var(--color-teal-200);
     --secondary-color: var(--color-rose-400);
   }
