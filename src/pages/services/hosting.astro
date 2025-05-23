@@ -1,0 +1,66 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Hosting">
+  <h1>Hosting</h1>
+  <p>
+    I provide reliable and scalable hosting solutions tailored to your specific needs. 
+    From personal blogs to complex web applications, I help you deploy and manage your 
+    projects with confidence and peace of mind.
+  </p>
+  <p>My hosting services include:</p>
+  <div class="grid" style="gap: 2rem;">
+    <service-card title="Cloud Hosting">
+      <div slot="content">
+        <p>
+          Modern cloud infrastructure with auto-scaling, global CDN, and 99.9% uptime. 
+          Perfect for high-traffic websites and applications that need reliable performance.
+        </p>
+      </div>
+    </service-card>
+    <service-card title="Static Site Hosting">
+      <div slot="content">
+        <p>
+          Lightning-fast hosting for static sites and JAMstack applications. Optimized 
+          for speed with edge deployment and instant global distribution.
+        </p>
+      </div>
+    </service-card>
+    <service-card title="Database Management">
+      <div slot="content">
+        <p>
+          Secure database setup and management with automated backups, monitoring, 
+          and optimization. Supporting PostgreSQL, MySQL, and NoSQL solutions.
+        </p>
+      </div>
+    </service-card>
+    <service-card title="Performance Optimization">
+      <div slot="content">
+        <p>
+          Comprehensive performance tuning including caching strategies, image 
+          optimization, and code splitting to ensure your site loads fast worldwide.
+        </p>
+      </div>
+    </service-card>
+    <service-card title="Security & Monitoring">
+      <div slot="content">
+        <p>
+          Robust security measures with SSL certificates, firewall protection, 
+          and 24/7 monitoring to keep your site secure and running smoothly.
+        </p>
+      </div>
+    </service-card>
+    <service-card title="Migration Support">
+      <div slot="content">
+        <p>
+          Seamless migration from your current hosting provider with zero downtime. 
+          I handle the technical details so you can focus on your business.
+        </p>
+      </div>
+    </service-card>
+  </div>
+</Layout>
+<script>
+  import "@components/card/service-card";
+</script>

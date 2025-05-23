@@ -1,0 +1,68 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Consultation">
+  <h1>Consultation</h1>
+  <p>
+    I offer expert consultation services to help you navigate the complexities of 
+    software development and make informed technical decisions. Whether you're starting 
+    a new project or optimizing an existing one, I provide strategic guidance tailored 
+    to your specific challenges and goals.
+  </p>
+  <p>My consultation areas include:</p>
+  <div class="grid" style="gap: 2rem;">
+    <service-card title="Technology Strategy">
+      <div slot="content">
+        <p>
+          Strategic guidance on technology choices, architecture decisions, and 
+          long-term technical roadmaps. I help you select the right tools and 
+          frameworks for sustainable growth.
+        </p>
+      </div>
+    </service-card>
+    <service-card title="Code Review & Audits">
+      <div slot="content">
+        <p>
+          Comprehensive code reviews and technical audits to identify improvements, 
+          security vulnerabilities, and performance bottlenecks in your existing codebase.
+        </p>
+      </div>
+    </service-card>
+    <service-card title="Project Planning">
+      <div slot="content">
+        <p>
+          Expert project planning and timeline estimation. I help break down complex 
+          requirements into manageable phases with realistic deliverables and milestones.
+        </p>
+      </div>
+    </service-card>
+    <service-card title="Performance Optimization">
+      <div slot="content">
+        <p>
+          Deep-dive analysis of application performance with actionable recommendations 
+          for optimization. From database queries to frontend rendering efficiency.
+        </p>
+      </div>
+    </service-card>
+    <service-card title="Team Mentoring">
+      <div slot="content">
+        <p>
+          Technical mentoring for development teams, including best practices, 
+          code standards, and knowledge transfer sessions to elevate team capabilities.
+        </p>
+      </div>
+    </service-card>
+    <service-card title="Problem Solving">
+      <div slot="content">
+        <p>
+          Targeted problem-solving sessions for specific technical challenges. 
+          I provide practical solutions and implementation strategies for complex issues.
+        </p>
+      </div>
+    </service-card>
+  </div>
+</Layout>
+<script>
+  import "@components/card/service-card";
+</script>
