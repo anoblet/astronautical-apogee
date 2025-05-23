@@ -8,3 +8,9 @@
 - Always adhere to the global color scheme
 - Remove unnecesary comments
 - Do not add comments
+- Always include an empty line at the end of the file
+- Decorators need the accessor keyword(https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html#auto-accessors-in-classes)
+
+#file:./generated-instructions.md
+#file:./instructions/lit.instructions.md
+
