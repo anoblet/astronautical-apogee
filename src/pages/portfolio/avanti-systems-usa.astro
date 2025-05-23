@@ -1,0 +1,49 @@
+---
+import Layout from "@layouts/Layout.astro";
+import avantisystemsusa from "@assets/avantisystemsusa.com_.png";
+---
+
+<Layout>
+  <project-card
+    image={avantisystemsusa.src}
+    title="Avanti Systems USA"
+    href="/portfolio/avanti-systems-usa"
+  >
+    <div class="chips" slot="chips">
+      <chip-component>HTML</chip-component>
+      <chip-component>CSS</chip-component>
+      <chip-component>JavaScript</chip-component>
+      <chip-component>Wordpress</chip-component>
+    </div>
+    <ul id="content" slot="content">
+      <li>
+        Developed a comprehensive web presence for Avanti Systems USA, a leading
+        manufacturer of commercial interior glass wall systems.
+      </li>
+      <li>
+        This project involved creating a visually appealing and informative
+        platform to showcase their diverse product lines, including frameless,
+        freestanding, and high wall systems.
+      </li>
+      <li>
+        Key contributions included implementing a user-friendly navigation and
+        information architecture to cater to architects, designers, and
+        contractors.
+      </li>
+      <li>
+        The site features robust product galleries, detailed specifications, and
+        prominent lead generation forms ("Get A Quote") to facilitate customer
+        engagement.
+      </li>
+      <li>
+        Emphasis was placed on responsive design to ensure optimal viewing
+        across devices and a content management strategy for sections like
+        "Featured Projects" and the company blog.
+      </li>
+    </ul>
+  </project-card>
+</Layout>
+<script>
+  import "@components/card/project-card";
+  import "@components/chip";
+</script>

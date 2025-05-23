@@ -75,8 +75,31 @@ export const globalStyles = css`
     }
   }
 
+  project-card {
+    ul {
+      color: var(--color-neutral-200);
+    }
+  }
+
   svg {
     fill: currentColor;
+  }
+
+  ul {
+    padding: 1rem;
+  }
+
+  .chips {
+    color: var(--secondary-color);
+    display: flex;
+    gap: 1rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+
+    &:hover {
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
   }
 
   .grid {

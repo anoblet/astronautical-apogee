@@ -1,0 +1,38 @@
+---
+import Layout from "@layouts/Layout.astro";
+import cxl from "@assets/cxl.com_.png";
+---
+
+<Layout title="CXL">
+  <project-card image={cxl.src} title="CXL" href="/portfolio/cxl">
+    <div class="chips" slot="chips">
+      <chip-component>HTML</chip-component>
+      <chip-component>CSS</chip-component>
+      <chip-component>JavaScript</chip-component>
+      <chip-component>Web Components</chip-component>
+      <chip-component>Lit</chip-component>
+      <chip-component>Wordpress</chip-component>
+      <chip-component>WooCommerce</chip-component>
+    </div>
+    <ul slot="content">
+      <li>
+        Contributed to the development of CXL.com, a premier online training
+        platform for B2B marketers.
+      </li>
+      <li>
+        Showcased skills in building a feature-rich e-learning system, including
+        dynamic content management for a vast library of courses, user
+        authentication and progression tracking, and a subscription-based
+        e-commerce model.
+      </li>
+      <li>
+        Emphasis was placed on creating a responsive, high-performance user
+        experience for on-demand and live course delivery.
+      </li>
+    </ul>
+  </project-card>
+</Layout>
+<script>
+  import "@components/card/project-card";
+  import "@components/chip";
+</script>
