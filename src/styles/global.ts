@@ -19,7 +19,6 @@ export const globalStyles = css`
 
   * {
     opacity: 1;
-    /* transition: opacity 0.2s ease-in-out; */
 
     &:not(:defined),
     &:has(*:not(:defined)),
@@ -28,11 +27,40 @@ export const globalStyles = css`
     }
   }
 
+  body {
+    background: var(--color-neutral-900);
+    color: var(--color-neutral-200);
+    font-family: "Noto Sans", "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    &[data-media="desktop"] {
+      .hidden-desktop {
+        display: none;
+      }
+    }
+
+    &[data-media="mobile"] {
+      .hidden-mobile {
+        display: none;
+      }
+    }
+  }
+
   :host {
     display: flex;
   }
 
   a {
+    cursor: pointer;
+    text-decoration: none;
+
     &:has(svg) {
       display: flex;
       align-items: center;
@@ -42,7 +70,6 @@ export const globalStyles = css`
   a:not(:has(project-card)):not(:has(service-card)) {
     color: var(--color-teal-200);
     transition: color 0.1s ease-in-out;
-    text-decoration: none;
 
     &:hover {
       color: var(--color-rose-400);
@@ -65,6 +92,12 @@ export const globalStyles = css`
   h5,
   h6 {
     margin: 0;
+    color: var(--color-neutral-200);
+  }
+
+  hr {
+    border-color: var(--color-neutral-800);
+    width: 100%;
   }
 
   icon-component {
@@ -103,6 +136,14 @@ export const globalStyles = css`
 
   ul {
     padding: 1rem;
+    margin: 0;
+
+    &.card-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      list-style: none;
+    }
   }
 
   .chips {
@@ -116,6 +157,21 @@ export const globalStyles = css`
       overflow-x: auto;
       scrollbar-width: none;
     }
+  }
+
+  .columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .overflow-x-auto {
+    overflow-x: auto;
   }
 
   .flex {
