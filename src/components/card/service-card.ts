@@ -1,7 +1,7 @@
 import { css, html } from "lit";
 import { customElement } from "lit/decorators.js";
 import { arrowForward } from "../../icons/arrow-forward";
-import { CardComponent } from "./card";
+import { CardComponent } from ".";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
 
 @customElement("service-card")

@@ -7,89 +7,46 @@ import Layout from "@layouts/Layout.astro";
 
 <Layout title="Portfolio">
   <scroll-component>
-    <project-card image={cxl.src} title="CXL" href="/portfolio/cxl">
-      <div class="chips" slot="chips">
-        <chip-component>HTML</chip-component>
-        <chip-component>CSS</chip-component>
-        <chip-component>JavaScript</chip-component>
-        <chip-component>Web Components</chip-component>
-        <chip-component>Lit</chip-component>
-        <chip-component>Wordpress</chip-component>
-        <chip-component>WooCommerce</chip-component>
-      </div>
-    </project-card>
-    <project-card
+    <card-component image={cxl.src} title="CXL" href="/portfolio/cxl">
+      <image-component src={cxl.src} alt="CXL"></image-component>
+      <span class="font-size-2 font-weight-6 text-align-center">
+        CXL
+      </span>
+    </card-component>
+    <card-component
       image={graduationSource.src}
       title="Graduation Source"
       href="/portfolio/graduation-source"
     >
-      <div class="chips" slot="chips">
-        <chip-component>HTML</chip-component>
-        <chip-component>CSS</chip-component>
-        <chip-component>JS</chip-component>
-        <chip-component>PHP</chip-component>
-        <chip-component>Magento</chip-component>
-      </div>
-    </project-card>
-    <project-card
+      <image-component src={graduationSource.src} alt="Graduation Source"
+      ></image-component>
+      <span class="font-size-2 font-weight-6 text-align-center">
+        Graduation Source
+      </span>
+    </card-component>
+    <card-component
       image={avantisystemsusa.src}
       title="Avanti Systems USA"
       href="/portfolio/avanti-systems-usa"
     >
-      <div class="chips" slot="chips">
-        <chip-component>HTML</chip-component>
-        <chip-component>CSS</chip-component>
-        <chip-component>JavaScript</chip-component>
-        <chip-component>Wordpress</chip-component>
-      </div>
-    </project-card>
+      <image-component src={avantisystemsusa.src} alt="Avanti Systems USA"
+      ></image-component>
+      <span class="font-size-2 font-weight-6 text-align-center">
+        Avanti Systems USA
+      </span>
+    </card-component>
   </scroll-component>
   <contact-component></contact-component>
 </Layout>
 <style>
-  p {
+  span {
     color: var(--color-neutral-200);
-  }
-
-  #content {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin: 0;
-    padding: 1rem;
-  }
-
-  ul {
-    color: var(--color-neutral-200);
-    list-style-type: "-";
-  }
-
-  li {
-    padding-left: 1rem;
-  }
-
-  li::marker {
-    color: var(--color-teal-400);
-    content: "•" " ";
-    padding-left: 1rem;
-  }
-
-  .chips {
-    color: var(--secondary-color);
-    display: flex;
-    gap: 1rem;
-    overflow: hidden;
-    text-wrap: nowrap;
-
-    &:hover {
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
   }
 </style>
 <script>
-  import "@components/card/project-card";
+  import "@components/card";
   import "@components/chip";
   import "@components/contact";
+  import "@components/image";
   import "@components/scroll";
 </script>

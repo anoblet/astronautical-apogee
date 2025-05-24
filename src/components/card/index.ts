@@ -48,9 +48,6 @@ export class CardComponent extends Base {
   ];
 
   render() {
-    return html`
-      <slot name="title"></slot>
-      <slot name="content"></slot>
-    `;
+    return html`<slot></slot>`;
   }
 }

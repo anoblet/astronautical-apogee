@@ -185,6 +185,26 @@ export const globalStyles = css`
     }
   }
 
+  .flex-end {
+    justify-self: flex-end;
+  }
+
+  .font-size-2 {
+    font-size: 2rem;
+  }
+
+  .font-weight-5 {
+    font-weight: 500;
+  }
+
+  .font-weight-6 {
+    font-weight: 600;
+  }
+
+  .font-weight-8 {
+    font-weight: 800;
+  }
+
   .gap {
     gap: 1rem;
   }

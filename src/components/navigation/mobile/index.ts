@@ -44,7 +44,7 @@ export class NavigationMobile extends Base {
       <icon-component @click=${this.toggle}>${menu}</icon-component>
       <span class="title"><icon-component href="/">${astro}</icon-component></span>
       <aside>
-        <icon-component @click=${this.toggle}>${close}</icon-component>
+        <icon-component @click=${this.toggle} class="flex-end">${close}</icon-component>
         <slot name="aside"></slot>
       </aside>
     `;
