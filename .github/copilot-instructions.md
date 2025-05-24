@@ -10,7 +10,10 @@
 - Do not add comments
 - Always include an empty line at the end of the file
 - Decorators need the accessor keyword(https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html#auto-accessors-in-classes)
+- Always make the CSS rules as efficient as possible
+- Styles are always scoped to the component
+- It's possible to target elements directly, without needing to specify a parent class for example: `h1`
+- Styles should be as atomic as possible in order to provide brand continuity
 
 #file:./generated-instructions.md
 #file:./instructions/lit.instructions.md
-

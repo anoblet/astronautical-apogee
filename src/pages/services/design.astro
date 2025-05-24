@@ -6,9 +6,9 @@ import Layout from "../../layouts/Layout.astro";
   <section class="hero">
     <h1>UI/UX Design</h1>
     <p class="hero-description">
-      Creating intuitive and user-friendly interfaces that enhance user experience
-      and drive engagement. From research to final implementation, I deliver designs
-      that balance aesthetics with functionality.
+      Creating intuitive and user-friendly interfaces that enhance user
+      experience and drive engagement. From research to final implementation, I
+      deliver designs that balance aesthetics with functionality.
     </p>
   </section>
 
@@ -17,19 +17,31 @@ import Layout from "../../layouts/Layout.astro";
     <div class="process-grid">
       <div class="process-step">
         <h3>1. Research & Discovery</h3>
-        <p>Understanding your users, business goals, and competitive landscape to inform design decisions.</p>
+        <p>
+          Understanding your users, business goals, and competitive landscape to
+          inform design decisions.
+        </p>
       </div>
       <div class="process-step">
         <h3>2. Wireframing</h3>
-        <p>Creating low-fidelity wireframes to establish information architecture and user flows.</p>
+        <p>
+          Creating low-fidelity wireframes to establish information architecture
+          and user flows.
+        </p>
       </div>
       <div class="process-step">
         <h3>3. Visual Design</h3>
-        <p>Developing high-fidelity mockups with attention to typography, color, and visual hierarchy.</p>
+        <p>
+          Developing high-fidelity mockups with attention to typography, color,
+          and visual hierarchy.
+        </p>
       </div>
       <div class="process-step">
         <h3>4. Prototyping</h3>
-        <p>Building interactive prototypes to test and validate design concepts before development.</p>
+        <p>
+          Building interactive prototypes to test and validate design concepts
+          before development.
+        </p>
       </div>
     </div>
   </section>
@@ -40,8 +52,8 @@ import Layout from "../../layouts/Layout.astro";
       <service-card title="User Experience Design">
         <div slot="content">
           <p>
-            Comprehensive UX research, user journey mapping, and information architecture
-            to create seamless user experiences.
+            Comprehensive UX research, user journey mapping, and information
+            architecture to create seamless user experiences.
           </p>
           <ul>
             <li>User research and personas</li>
@@ -84,10 +96,19 @@ import Layout from "../../layouts/Layout.astro";
     </div>
   </section>
 
-  <contact-component href="https://calendar.app.google/t9p2HfknyNWf1RNV6"></contact-component>
+  <contact-component href="https://calendar.app.google/t9p2HfknyNWf1RNV6"
+  ></contact-component>
 </Layout>
 
 <style>
+  service-card {
+    &::part(title) {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--color-amber-300);
+    }
+  }
+
   .hero {
     text-align: center;
     margin-bottom: 3rem;
@@ -97,7 +118,7 @@ import Layout from "../../layouts/Layout.astro";
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--color-neutral-100);
+    color: var(--color-amber-300);
   }
 
   .hero-description {
@@ -112,19 +133,29 @@ import Layout from "../../layouts/Layout.astro";
     margin-bottom: 4rem;
   }
 
-  .process-section h2 {
+  .process-section h2,
+  .services-section h2 {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 2rem;
-    color: var(--color-teal-200);
+    color: var(--color-blue-400);
     text-align: center;
   }
 
-  .process-grid {
+  .process-grid,
+  .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 2rem;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     margin-bottom: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    margin-bottom: 4rem;
   }
 
   .process-step {
@@ -139,27 +170,17 @@ import Layout from "../../layouts/Layout.astro";
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: var(--color-teal-200);
+    color: var(--color-amber-300);
   }
 
-  .process-step p {
+  .process-step p,
+  service-card [slot="content"] li {
     color: var(--color-neutral-300);
     line-height: 1.6;
   }
 
-  .services-section h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-    color: var(--color-teal-200);
-    text-align: center;
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
+  .process-step p {
+    margin: 0;
   }
 
   service-card [slot="content"] ul {
@@ -172,7 +193,6 @@ import Layout from "../../layouts/Layout.astro";
     position: relative;
     padding-left: 1.5rem;
     margin-bottom: 0.5rem;
-    color: var(--color-neutral-300);
   }
 
   service-card [slot="content"] li::before {
@@ -198,11 +218,7 @@ import Layout from "../../layouts/Layout.astro";
       font-size: 1rem;
     }
 
-    .process-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-
+    .process-grid,
     .services-grid {
       grid-template-columns: 1fr;
       gap: 1.5rem;
