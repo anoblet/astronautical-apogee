@@ -25,6 +25,7 @@ export class ButtonComponent extends Base {
         font-size: 1.25rem;
         font-weight: 600;
         letter-spacing: 0.1rem;
+        text-align: center;
       }
 
       a {

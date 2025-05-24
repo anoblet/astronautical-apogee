@@ -9,6 +9,8 @@ export const globalStyles = css`
     --primary-color: var(--color-teal-200);
     --secondary-color: var(--color-rose-400);
     --tertiary-color: var(--color-blue-400);
+
+    --border-radius: 0.25rem;
   }
 
   *,

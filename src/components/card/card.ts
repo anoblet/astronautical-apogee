@@ -49,7 +49,7 @@ export class CardComponent extends Base {
 
   render() {
     return html`
-      <h2 id="title" part="title">${this.title}</h2>
+      <slot name="title"></slot>
       <slot name="content"></slot>
     `;
   }

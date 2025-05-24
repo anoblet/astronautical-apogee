@@ -9,14 +9,17 @@ class MediaComponent extends LitElement {
   static styles = css`
     :host {
       display: none;
+      width: 100%;
     }
 
     :host([desktop][media="desktop"]) {
-      display: initial;
+      display: flex;
+      flex-direction: column;
     }
 
     :host([mobile][media="mobile"]) {
-      display: initial;
+      display: flex;
+      flex-direction: column;
     }
   `;
 

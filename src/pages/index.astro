@@ -77,26 +77,26 @@ import Layout from "../layouts/Layout.astro";
             </h1>
           </media-component>
           <media-component desktop>
-            <div class="grid gap min-width-50 padding" id="buttons">
+            <div class="gap grid min-width-50 padding" id="buttons">
+              <button-component href="/services" variant="secondary"
+                >Services</button-component
+              >
               <button-component
                 href="https://calendar.app.google/t9p2HfknyNWf1RNV6"
                 variant="primary"
-                >Schedule an appointment</button-component
-              >
-              <button-component href="/services" variant="secondary"
-                >Services</button-component
+                >Schedule</button-component
               >
             </div>
           </media-component>
           <media-component mobile>
-            <div class="grid min-width-50 padding" id="buttons">
+            <div class="gap grid min-width-50 padding" id="buttons">
               <button-component href="/services" variant="secondary"
                 >Services</button-component
               >
               <button-component
                 href="https://calendar.app.google/t9p2HfknyNWf1RNV6"
                 variant="primary"
-                >Schedule an appointment</button-component
+                >Schedule</button-component
               >
             </div>
           </media-component>
