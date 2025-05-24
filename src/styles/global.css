@@ -61,12 +61,6 @@ h6 {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
-}
-
 .overflow-x-auto {
   overflow-x: auto;
 }

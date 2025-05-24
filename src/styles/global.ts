@@ -123,9 +123,6 @@ export const globalStyles = css`
     &.column {
       flex-direction: column;
     }
-    &.gap {
-      gap: 1rem;
-    }
   }
 
   .gap {
@@ -134,8 +131,10 @@ export const globalStyles = css`
 
   .grid {
     display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+
+    &.column {
+      grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    }
   }
 
   .padding {
