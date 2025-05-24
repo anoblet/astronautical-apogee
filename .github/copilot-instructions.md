@@ -15,5 +15,6 @@
 - It's possible to target elements directly, without needing to specify a parent class for example: `h1`
 - Styles should be as atomic as possible in order to provide brand continuity
 
-#file:./generated-instructions.md
 #file:./instructions/lit.instructions.md
+
+*** Keep it simple! ***
