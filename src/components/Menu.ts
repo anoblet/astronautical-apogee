@@ -110,7 +110,6 @@ class MenuComponent extends LitElement {
       ${this.opened
         ? html`
             <ul class="overflow-x" ?hidden=${!this.opened}>
-              <li><a href="/">Home</a></li>
               <li><a href="/portfolio">Portfolio</a></li>
               <li><a href="/projects">Projects</a></li>
               <li><a href="/services">Services</a></li>
