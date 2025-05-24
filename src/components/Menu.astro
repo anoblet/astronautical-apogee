@@ -1,22 +1,8 @@
----
-import { Icon } from "astro-icon/components";
-import SocialLinks from "./SocialLinks.astro";
----
-
 <nav>
-  <menu-component opened>
-    <!-- <Icon name="mdi:menu" size={32} slot="icon" /> -->
-  </menu-component>
+  <menu-component opened> </menu-component>
 </nav>
 <style>
   menu-component {
-    &[opened] {
-      svg {
-        /* color: var(--color-rose-400); */
-        /* transition: color 0.2s ease-in-out; */
-      }
-    }
-
     svg {
       color: var(--color-teal-200);
       transition: color 0.2s ease-in-out;
