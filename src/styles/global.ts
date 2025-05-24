@@ -8,6 +8,7 @@ export const globalStyles = css`
 
     --primary-color: var(--color-teal-200);
     --secondary-color: var(--color-rose-400);
+    --tertiary-color: var(--color-sky-200);
   }
 
   *,
@@ -81,6 +82,14 @@ export const globalStyles = css`
     }
   }
 
+  service-card {
+    [slot="content"] {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+
   svg {
     fill: currentColor;
   }
@@ -99,6 +108,16 @@ export const globalStyles = css`
     &:hover {
       overflow-x: auto;
       scrollbar-width: none;
+    }
+  }
+
+  .flex {
+    display: flex;
+    &.column {
+      flex-direction: column;
+    }
+    &.gap {
+      gap: 1rem;
     }
   }
 

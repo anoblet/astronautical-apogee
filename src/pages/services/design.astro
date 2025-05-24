@@ -2,49 +2,220 @@
 import Layout from "../../layouts/Layout.astro";
 ---
 
-<Layout title="Design">
-  <h1>Design</h1>
-  <p>
-    We create beautiful and functional designs that resonate with your audience.
-    Our approach blends creativity, usability, and your brand’s unique voice.
-  </p>
-  <p>Explore our core design services:</p>
-  <div class="grid" style="gap: 2rem;">
-    <service-card title="UI/UX Design">
-      <div slot="content">
-        <p>
-          Intuitive, accessible, and visually engaging interfaces for web and
-          mobile. We focus on user flows, wireframes, and delightful
-          interactions.
-        </p>
+<Layout title="UI/UX Design Services">
+  <section class="hero">
+    <h1>UI/UX Design</h1>
+    <p class="hero-description">
+      Creating intuitive and user-friendly interfaces that enhance user experience
+      and drive engagement. From research to final implementation, I deliver designs
+      that balance aesthetics with functionality.
+    </p>
+  </section>
+
+  <section class="process-section">
+    <h2>My Design Process</h2>
+    <div class="process-grid">
+      <div class="process-step">
+        <h3>1. Research & Discovery</h3>
+        <p>Understanding your users, business goals, and competitive landscape to inform design decisions.</p>
       </div>
-    </service-card>
-    <service-card title="Brand Identity">
-      <div slot="content">
-        <p>
-          Distinctive logos, color palettes, and brand systems that communicate
-          your unique story and values across all touchpoints.
-        </p>
+      <div class="process-step">
+        <h3>2. Wireframing</h3>
+        <p>Creating low-fidelity wireframes to establish information architecture and user flows.</p>
       </div>
-    </service-card>
-    <service-card title="Print Design">
-      <div slot="content">
-        <p>
-          High-impact print collateral—brochures, business cards, posters, and
-          more—crafted to leave a lasting impression.
-        </p>
+      <div class="process-step">
+        <h3>3. Visual Design</h3>
+        <p>Developing high-fidelity mockups with attention to typography, color, and visual hierarchy.</p>
       </div>
-    </service-card>
-    <service-card title="Web Design">
-      <div slot="content">
-        <p>
-          Modern, responsive websites that blend aesthetics with performance,
-          accessibility, and seamless user experience.
-        </p>
+      <div class="process-step">
+        <h3>4. Prototyping</h3>
+        <p>Building interactive prototypes to test and validate design concepts before development.</p>
       </div>
-    </service-card>
-  </div>
+    </div>
+  </section>
+
+  <section class="services-section">
+    <h2>Design Services</h2>
+    <div class="services-grid">
+      <service-card title="User Experience Design">
+        <div slot="content">
+          <p>
+            Comprehensive UX research, user journey mapping, and information architecture
+            to create seamless user experiences.
+          </p>
+          <ul>
+            <li>User research and personas</li>
+            <li>Information architecture</li>
+            <li>User journey mapping</li>
+            <li>Usability testing</li>
+          </ul>
+        </div>
+      </service-card>
+
+      <service-card title="User Interface Design">
+        <div slot="content">
+          <p>
+            Beautiful and functional user interfaces that align with your brand
+            and provide excellent user experience across all devices.
+          </p>
+          <ul>
+            <li>High-fidelity mockups</li>
+            <li>Design systems</li>
+            <li>Responsive design</li>
+            <li>Accessibility compliance</li>
+          </ul>
+        </div>
+      </service-card>
+
+      <service-card title="Design Systems">
+        <div slot="content">
+          <p>
+            Scalable design systems with reusable components that ensure
+            consistency across your entire product ecosystem.
+          </p>
+          <ul>
+            <li>Component libraries</li>
+            <li>Style guides</li>
+            <li>Design tokens</li>
+            <li>Documentation</li>
+          </ul>
+        </div>
+      </service-card>
+    </div>
+  </section>
+
+  <contact-component href="https://calendar.app.google/t9p2HfknyNWf1RNV6"></contact-component>
 </Layout>
+
+<style>
+  .hero {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-neutral-100);
+  }
+
+  .hero-description {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--color-neutral-300);
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+
+  .process-section {
+    margin-bottom: 4rem;
+  }
+
+  .process-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--color-teal-200);
+    text-align: center;
+  }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .process-step {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--color-neutral-800);
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-neutral-600);
+  }
+
+  .process-step h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--color-teal-200);
+  }
+
+  .process-step p {
+    color: var(--color-neutral-300);
+    line-height: 1.6;
+  }
+
+  .services-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--color-teal-200);
+    text-align: center;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  service-card [slot="content"] ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  service-card [slot="content"] li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-neutral-300);
+  }
+
+  service-card [slot="content"] li::before {
+    content: "•";
+    color: var(--color-teal-400);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+  }
+
+  service-card [slot="content"] p {
+    color: var(--color-neutral-200);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+    }
+
+    .process-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .process-section h2,
+    .services-section h2 {
+      font-size: 1.5rem;
+    }
+  }
+</style>
+
 <script>
-  import "@components/card/service-card";
+  import "../../components/card/service-card";
+  import "../../components/contact";
 </script>
