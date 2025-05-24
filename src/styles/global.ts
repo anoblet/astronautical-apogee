@@ -6,9 +6,11 @@ export const globalStyles = css`
   :root {
     --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
+    /* Color scheme */
     --primary-color: var(--color-teal-200);
     --secondary-color: var(--color-rose-400);
     --tertiary-color: var(--color-blue-400);
+    --quaternary-color: var(--color-amber-200);
 
     --border-radius: 0.25rem;
   }
