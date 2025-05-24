@@ -28,17 +28,6 @@ class MenuComponent extends LitElement {
         height: 100%;
         justify-content: space-between;
 
-        #icon {
-          display: flex;
-          align-items: center;
-          padding: 1rem;
-
-          &:hover {
-            cursor: pointer;
-            color: var(--color-rose-400);
-          }
-        }
-
         ul {
           margin: unset;
           padding-inline-start: unset;
@@ -74,13 +63,21 @@ class MenuComponent extends LitElement {
       }
 
       #icon {
-        a {
-          display: flex;
-          align-items: center;
-        }
-        svg {
-          height: 2rem;
-          width: 2rem;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        aspect-ratio: 1;
+        background-color: var(--color-teal-200);
+        color: var(--color-neutral-900);
+        border-radius: 50%;
+        padding: 0.25rem 1rem;
+        width: 2rem;
+        height: 2rem;
+
+        &:hover {
+          background-color: var(--color-rose-400);
+          color: var(--color-neutral-900);
+          cursor: pointer;
         }
       }
     `,
@@ -104,8 +101,8 @@ class MenuComponent extends LitElement {
 
   render() {
     return html`
-      <div id="icon">
-        <a href="/" id="menu">${menu}</a>
+      <div class="padding">
+        <a href="/" id="icon">A</a>
       </div>
       ${this.opened
         ? html`

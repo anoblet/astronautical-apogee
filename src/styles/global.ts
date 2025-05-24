@@ -32,6 +32,13 @@ export const globalStyles = css`
     display: flex;
   }
 
+  a {
+    &:has(svg) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
   a:not(:has(project-card)):not(:has(service-card)) {
     color: var(--color-teal-200);
     transition: color 0.1s ease-in-out;
@@ -47,6 +54,10 @@ export const globalStyles = css`
     }
   }
 
+  button-component {
+    outline: 1px solid var(--color-black);
+  }
+
   h1,
   h2,
   h3,
@@ -56,24 +67,20 @@ export const globalStyles = css`
     margin: 0;
   }
 
-  p {
-    margin: 0;
-  }
-
-  li::marker {
-    content: ${unsafeCSS(chevronRight)};
-  }
-
-  button-component {
-    outline: 1px solid var(--color-black);
-  }
-
   icon-component {
     padding: 1rem;
 
     svg {
       color: var(--color-teal-200);
     }
+  }
+
+  li::marker {
+    content: ${unsafeCSS(chevronRight)};
+  }
+
+  p {
+    margin: 0;
   }
 
   project-card {
@@ -121,10 +128,18 @@ export const globalStyles = css`
     }
   }
 
+  .gap {
+    gap: 1rem;
+  }
+
   .grid {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+  }
+
+  .padding {
+    padding: 1rem;
   }
 
   .text-align-center {
