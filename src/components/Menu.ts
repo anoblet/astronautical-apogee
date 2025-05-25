@@ -1,7 +1,7 @@
 import { css, html, LitElement, nothing } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { globalStyles } from "../styles/global.ts";
-import { menu } from "../icons/menu.ts";
+import { home } from "../icons/home.ts";
 
 @customElement("menu-component")
 class MenuComponent extends LitElement {
@@ -101,12 +101,12 @@ class MenuComponent extends LitElement {
 
   render() {
     return html`
-      <div class="padding">
-        <a href="/" id="icon">A</a>
+      <div>
+        <icon-component href="/">${home}</icon-component>
       </div>
       ${this.opened
         ? html`
-            <ul class="overflow-x" ?hidden=${!this.opened}>
+            <ul class="overflow-x padding-0" ?hidden=${!this.opened}>
               <li><a href="/portfolio">Portfolio</a></li>
               <li><a href="/projects">Projects</a></li>
               <li><a href="/services">Services</a></li>

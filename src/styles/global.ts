@@ -229,6 +229,10 @@ export const globalStyles = css`
     padding: 1rem;
   }
 
+  .padding-0 {
+    padding: 0;
+  }
+
   .text-align-center {
     text-align: center;
   }
