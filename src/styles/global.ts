@@ -169,6 +169,10 @@ export const globalStyles = css`
     gap: 1rem;
   }
 
+  .align-items-center {
+    align-items: center;
+  }
+
   .antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -187,6 +191,10 @@ export const globalStyles = css`
 
   .flex-end {
     justify-self: flex-end;
+  }
+
+  .font-size-1-5 {
+    font-size: 1.5rem;
   }
 
   .font-size-2 {
