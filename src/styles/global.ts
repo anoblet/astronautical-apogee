@@ -69,6 +69,12 @@ export const globalStyles = css`
       display: flex;
       align-items: center;
     }
+
+    :hover {
+      svg {
+        fill: var(--color-rose-400);
+      }
+    }
   }
 
   a:not(:has(project-card)):not(:has(service-card)) {
