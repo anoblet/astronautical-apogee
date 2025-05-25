@@ -15,6 +15,7 @@
 - It's possible to target elements directly, without needing to specify a parent class for example: `h1`
 - Styles should be as atomic as possible in order to provide brand continuity
 - Use the color scheme from `styles/global.ts`
+- Do your best to not modify existing logic and or definitions, though update it when neccessary
 
 #file:./instructions/lit.instructions.md
 
