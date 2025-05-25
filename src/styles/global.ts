@@ -13,6 +13,7 @@ export const globalStyles = css`
     --quaternary-color: var(--color-amber-200);
 
     --border-radius: 0.25rem;
+    --gap: 1rem;
   }
 
   *,

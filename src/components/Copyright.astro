@@ -1,16 +1,26 @@
----
-const currentYear = new Date().getFullYear();
----
+<copyright-component></copyright-component>
+<script>
+  import { Base } from "@components/base";
+  import { heart } from "@icons/heart";
+  import { customElement } from "lit/decorators.js";
+  import { css, html } from "lit";
 
-<div class="copyright">
-  &copy; {currentYear} Andrew Noblet. All rights reserved.
-</div>
-
-<style>
-  .copyright {
-    text-align: center;
-    font-size: var(--font-size-sm);
-    color: var(--text-secondary);
-    padding: var(--spacing-md) 0;
+  @customElement("copyright-component")
+  class CopyrightComponent extends Base {
+    static styles = [
+      ...super.styles,
+      css`
+        :host {
+          gap: var(--gap);
+          justify-content: center;
+        }
+      `,
+    ];
+    render() {
+      return html`
+        <span>${heart}</span>
+        &copy; ${new Date().getFullYear()} Andrew Noblet. All rights reserved.
+      `;
+    }
   }
-</style>
+</script>
