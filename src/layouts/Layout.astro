@@ -54,10 +54,12 @@ import { ClientRouter } from "astro:transitions";
     </main>
     <social-component></social-component>
     <Footer />
+    <!-- <contrast-component></contrast-component> -->
   </body>
 </html>
 <script>
-  import "../components/social";
+  // import "@components/contrast";
+  import "@components/social";
 </script>
 <style>
   @view-transition {
@@ -86,7 +88,6 @@ import { ClientRouter } from "astro:transitions";
     flex: 1;
     flex-direction: column;
     gap: 1.5rem;
-    max-width: 1024px;
     padding: 1rem;
     width: 100%;
   }

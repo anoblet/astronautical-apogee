@@ -12,8 +12,11 @@ export const globalStyles = css`
     --tertiary-color: var(--color-blue-400);
     --quaternary-color: var(--color-amber-200);
 
+    --background-color: var(--color-neutral-900);
     --border-radius: 0.25rem;
     --gap: 1rem;
+    --outline: 1px solid #000;
+    --padding: 1rem;
   }
 
   *,
@@ -33,7 +36,7 @@ export const globalStyles = css`
   }
 
   body {
-    background: var(--color-neutral-900);
+    background-color: var(--background-color);
     color: var(--color-neutral-200);
     font-family: "Noto Sans", "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -112,7 +115,7 @@ export const globalStyles = css`
   }
 
   icon-component {
-    padding: 1rem;
+    padding: var(--padding);
 
     svg {
       color: var(--color-teal-200);
@@ -146,7 +149,7 @@ export const globalStyles = css`
   }
 
   ul {
-    padding: 1rem;
+    padding: var(--padding);
     margin: 0;
 
     &.card-list {
@@ -178,6 +181,10 @@ export const globalStyles = css`
 
   .align-items-center {
     align-items: center;
+  }
+
+  .align-self-center {
+    align-self: center;
   }
 
   .antialiased {
@@ -233,11 +240,19 @@ export const globalStyles = css`
   }
 
   .padding {
-    padding: 1rem;
+    padding: var(--padding);
+  }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  .padding-0 {
+    padding: 0;                                                                                                                                                                                                                                                                                                                                                                           
   }
 
-  .padding-0 {
-    padding: 0;
+  .page {
+    max-width: 1024px;
+
+    &.wide {
+      max-width: unset;
+    }
   }
 
   .text-align-center {

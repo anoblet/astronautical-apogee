@@ -13,7 +13,7 @@ export class CardComponent extends Base {
     ...super.styles,
     css`
       :host {
-        background-color: var(--color-neutral-800);
+        background-color: var(--card-background-color);
         border-radius: 0.5rem;
         display: flex;
         flex-direction: column;
