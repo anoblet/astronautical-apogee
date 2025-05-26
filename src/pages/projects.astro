@@ -6,8 +6,9 @@ import astro from "@assets/astro.build_.webp";
 ---
 
 <Layout title="Projects">
-  <div class="align-self-center grid gap page">
-    <h1>Projects</h1>
+  <h1>Projects</h1>
+
+  <div class="column flex gap page">
     <project-card image={astro.src} title="Astro" href="https://astro.build/">
       <div class="chips" slot="chips">
         <chip-component>JavaScript</chip-component>
@@ -88,59 +89,8 @@ import astro from "@assets/astro.build_.webp";
   ></contact-component>
 </Layout>
 <style>
-  p {
-    color: var(--color-neutral-200);
-  }
-
-  #content {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin: 0;
-    padding: 1rem;
-  }
-
-  ul {
-    color: var(--color-neutral-200);
-    list-style-type: "-";
-  }
-
-  li {
-    padding-left: 1rem;
-  }
-
-  li::marker {
-    color: var(--color-teal-400);
-    content: "•" " ";
-    padding-left: 1rem;
-  }
-
   .chips {
-    color: var(--secondary-color);
-    display: flex;
-    gap: 1rem;
-    overflow: hidden;
-    text-wrap: nowrap;
-
-    &:hover {
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-  }
-
-  .gap {
-    gap: 2rem;
-  }
-
-  .grid {
-    > * {
-      display: flex;
-      flex-direction: column;
-
-      .card {
-        flex: 1;
-      }
-    }
+    overflow-x: auto;
   }
 </style>
 <script>

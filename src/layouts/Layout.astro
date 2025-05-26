@@ -52,7 +52,6 @@ import { ClientRouter } from "astro:transitions";
     <main>
       <slot />
     </main>
-    <social-component></social-component>
     <Footer />
     <!-- <contrast-component></contrast-component> -->
   </body>
@@ -84,6 +83,7 @@ import { ClientRouter } from "astro:transitions";
   }
 
   main {
+    align-items: center;
     display: flex;
     flex: 1;
     flex-direction: column;

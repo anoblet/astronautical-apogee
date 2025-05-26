@@ -96,6 +96,7 @@ export const globalStyles = css`
   }
 
   button-component {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     outline: 1px solid var(--color-black);
   }
 
@@ -249,6 +250,7 @@ export const globalStyles = css`
 
   .page {
     max-width: 1024px;
+    width: 100%;
 
     &.wide {
       max-width: unset;

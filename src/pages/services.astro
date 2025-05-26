@@ -3,70 +3,81 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Services">
-  <section class="hero">
-    <h1>Services</h1>
-    <p class="hero-description">
-      Comprehensive solutions to bring your digital vision to life. From design to deployment, 
-      I provide end-to-end services that prioritize quality, performance, and user experience.
-    </p>
-  </section>
-  
-  <section class="services-grid">
-    <service-card href="/services/design" title="UI/UX Design">
-      <div slot="content">
-        <p>
-          Create intuitive and user-friendly interfaces that enhance the overall user experience.
-          My design approach focuses on understanding user needs and translating them into
-          visually appealing and functional designs.
-        </p>
-        <ul>
-          <li>User experience research and analysis</li>
-          <li>Wireframing and prototyping</li>
-          <li>Component-based design systems</li>
-          <li>Accessibility-focused design</li>
-        </ul>
-      </div>
-    </service-card>
+  <div class="column flex gap page">
+    <section class="hero">
+      <h1>Services</h1>
+      <p class="hero-description">
+        Comprehensive solutions to bring your digital vision to life. From
+        design to deployment, I provide end-to-end services that prioritize
+        quality, performance, and user experience.
+      </p>
+    </section>
 
-    <service-card href="/services/hosting" title="Web Hosting & Deployment">
-      <div slot="content">
-        <p>
-          Reliable and scalable hosting solutions tailored to your needs. Whether it's a 
-          personal blog or a complex web application, I can help you deploy and manage 
-          your project on various platforms.
-        </p>
-        <ul>
-          <li>Server setup and configuration</li>
-          <li>Performance optimization</li>
-          <li>Security and maintenance</li>
-          <li>CI/CD pipeline setup</li>
-        </ul>
-      </div>
-    </service-card>
+    <section class="services-grid">
+      <service-card href="/services/design" title="UI/UX Design">
+        <div slot="content">
+          <p>
+            Create intuitive and user-friendly interfaces that enhance the
+            overall user experience. My design approach focuses on understanding
+            user needs and translating them into visually appealing and
+            functional designs.
+          </p>
+          <ul>
+            <li>User experience research and analysis</li>
+            <li>Wireframing and prototyping</li>
+            <li>Component-based design systems</li>
+            <li>Accessibility-focused design</li>
+          </ul>
+        </div>
+      </service-card>
 
-    <service-card href="/services/consultation" title="Technical Consultation">
-      <div slot="content">
-        <p>
-          Expert consultation to help you navigate the complexities of software development.
-          Get strategic advice and practical solutions for technology choices, project planning,
-          and overcoming technical challenges.
-        </p>
-        <ul>
-          <li>Technology stack recommendations</li>
-          <li>Architecture planning</li>
-          <li>Code review and optimization</li>
-          <li>Project planning and strategy</li>
-        </ul>
-      </div>
-    </service-card>
-  </section>
+      <service-card href="/services/hosting" title="Web Hosting & Deployment">
+        <div slot="content">
+          <p>
+            Reliable and scalable hosting solutions tailored to your needs.
+            Whether it's a personal blog or a complex web application, I can
+            help you deploy and manage your project on various platforms.
+          </p>
+          <ul>
+            <li>Server setup and configuration</li>
+            <li>Performance optimization</li>
+            <li>Security and maintenance</li>
+            <li>CI/CD pipeline setup</li>
+          </ul>
+        </div>
+      </service-card>
 
-  <section class="cta-section">
-    <h2>Ready to Get Started?</h2>
-    <p>Let's discuss your project and find the perfect solution for your needs.</p>
-  </section>
+      <service-card
+        href="/services/consultation"
+        title="Technical Consultation"
+      >
+        <div slot="content">
+          <p>
+            Expert consultation to help you navigate the complexities of
+            software development. Get strategic advice and practical solutions
+            for technology choices, project planning, and overcoming technical
+            challenges.
+          </p>
+          <ul>
+            <li>Technology stack recommendations</li>
+            <li>Architecture planning</li>
+            <li>Code review and optimization</li>
+            <li>Project planning and strategy</li>
+          </ul>
+        </div>
+      </service-card>
+    </section>
 
-  <contact-component href="https://calendar.app.google/t9p2HfknyNWf1RNV6"></contact-component>
+    <section class="cta-section">
+      <h2>Ready to Get Started?</h2>
+      <p>
+        Let's discuss your project and find the perfect solution for your needs.
+      </p>
+    </section>
+
+    <contact-component href="https://calendar.app.google/t9p2HfknyNWf1RNV6"
+    ></contact-component>
+  </div>
 </Layout>
 <style>
   .hero {
