@@ -28,10 +28,12 @@ export const globalStyles = css`
   * {
     opacity: 1;
 
-    &:not(:defined),
-    &:has(*:not(:defined)),
-    &:has(image-component:not([loaded])) {
-      opacity: 0;
+    &:not(html, body) {
+      &:not(:defined),
+      &:has(*:not(:defined)),
+      &:has(image-component:not([loaded])) {
+        opacity: 0;
+      }
     }
   }
 
