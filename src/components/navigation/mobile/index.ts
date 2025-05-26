@@ -5,7 +5,7 @@ import { menu } from "@icons/menu";
 import { html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { style } from "./index.css";
-import { astro } from "@icons/astro";
+import { planet } from "@icons/planet";
 
 @customElement("navigation-mobile")
 export class NavigationMobile extends Base {
@@ -42,9 +42,9 @@ export class NavigationMobile extends Base {
   render() {
     return html`
       <icon-component @click=${this.toggle}>${menu}</icon-component>
-      <span class="title"><icon-component href="/">${astro}</icon-component></span>
+      <span class="title"><icon-component href="/">${planet}</icon-component></span>
       <aside>
-        <icon-component @click=${this.toggle} class="flex-end">${close}</icon-component>
+        <icon-component @click=${this.toggle}>${close}</icon-component>
         <slot name="aside"></slot>
       </aside>
     `;
