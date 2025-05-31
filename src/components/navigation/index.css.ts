@@ -17,11 +17,8 @@ export const style = css`
     transition: opacity 0.2s ease-in-out;
   }
 
-  ul {
-    align-items: center;
-    display: flex;
-    flex: 1;
-    list-style: none;
+  a {
+    color: inherit;
   }
 
   li {
@@ -30,13 +27,7 @@ export const style = css`
     height: 100%;
 
     &:hover {
-      background-color: rgba(255, 255, 255, 0.05);
       cursor: pointer;
-      transition: background-color 0.2s ease-in-out;
-
-      a {
-        color: var(--color-rose-400);
-      }
     }
 
     a {
@@ -46,5 +37,12 @@ export const style = css`
 
   social-component {
     color: var(--color-teal-200);
+  }
+
+  ul {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    list-style: none;
   }
 `;

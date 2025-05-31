@@ -3,19 +3,19 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Services">
-  <div class="column flex gap page">
-    <section class="hero">
-      <h1>Services</h1>
-      <p class="hero-description">
+  <div class="column flex gap-3 page">
+    <div class="gap grid">
+      <h1 class="text-align-center">Services</h1>
+      <p class="hero-description text-align-center">
         Comprehensive solutions to bring your digital vision to life. From
         design to deployment, I provide end-to-end services that prioritize
         quality, performance, and user experience.
       </p>
-    </section>
-
-    <section class="services-grid">
-      <service-card href="/services/design" title="UI/UX Design">
-        <div slot="content">
+    </div>
+    <div class="column gap-2 grid">
+      <a href="/services/design">
+        <card-component>
+          <h3>UI/UX Design</h3>
           <p>
             Create intuitive and user-friendly interfaces that enhance the
             overall user experience. My design approach focuses on understanding
@@ -28,11 +28,11 @@ import Layout from "../layouts/Layout.astro";
             <li>Component-based design systems</li>
             <li>Accessibility-focused design</li>
           </ul>
-        </div>
-      </service-card>
-
-      <service-card href="/services/hosting" title="Web Hosting & Deployment">
-        <div slot="content">
+        </card-component>
+      </a>
+      <a href="/services/hosting">
+        <card-component>
+          <h3>Web Hosting & Deployment</h3>
           <p>
             Reliable and scalable hosting solutions tailored to your needs.
             Whether it's a personal blog or a complex web application, I can
@@ -44,14 +44,11 @@ import Layout from "../layouts/Layout.astro";
             <li>Security and maintenance</li>
             <li>CI/CD pipeline setup</li>
           </ul>
-        </div>
-      </service-card>
-
-      <service-card
-        href="/services/consultation"
-        title="Technical Consultation"
-      >
-        <div slot="content">
+        </card-component>
+      </a>
+      <a href="/services/consultation">
+        <card-component>
+          <h3>Technical Consultation</h3>
           <p>
             Expert consultation to help you navigate the complexities of
             software development. Get strategic advice and practical solutions
@@ -64,32 +61,20 @@ import Layout from "../layouts/Layout.astro";
             <li>Code review and optimization</li>
             <li>Project planning and strategy</li>
           </ul>
-        </div>
-      </service-card>
-    </section>
-
+        </card-component>
+      </a>
+    </div>
     <section class="cta-section">
       <h2>Ready to Get Started?</h2>
       <p>
         Let's discuss your project and find the perfect solution for your needs.
       </p>
     </section>
-
-    <contact-component href="https://calendar.app.google/t9p2HfknyNWf1RNV6"
-    ></contact-component>
   </div>
 </Layout>
 <style>
   .hero {
     text-align: center;
-    margin-bottom: 3rem;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--color-neutral-100);
   }
 
   .hero-description {
@@ -104,7 +89,6 @@ import Layout from "../layouts/Layout.astro";
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 2rem;
-    margin-bottom: 4rem;
   }
 
   .cta-section {
@@ -113,52 +97,7 @@ import Layout from "../layouts/Layout.astro";
     margin-bottom: 2rem;
   }
 
-  .cta-section h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--color-teal-200);
-  }
-
-  .cta-section p {
-    font-size: 1.125rem;
-    color: var(--color-neutral-300);
-    max-width: 32rem;
-    margin: 0 auto;
-  }
-
-  service-card [slot="content"] ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 1rem;
-  }
-
-  service-card [slot="content"] li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--color-neutral-300);
-  }
-
-  service-card [slot="content"] li::before {
-    content: "•";
-    color: var(--color-teal-400);
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-  }
-
-  service-card [slot="content"] p {
-    color: var(--color-neutral-200);
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-
   @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 2rem;
-    }
-
     .hero-description {
       font-size: 1rem;
     }
@@ -167,13 +106,9 @@ import Layout from "../layouts/Layout.astro";
       grid-template-columns: 1fr;
       gap: 1.5rem;
     }
-
-    .cta-section h2 {
-      font-size: 1.5rem;
-    }
   }
 </style>
 <script>
-  import "../components/card/service-card";
+  import "../components/card";
   import "../components/contact";
 </script>

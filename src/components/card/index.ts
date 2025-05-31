@@ -16,6 +16,7 @@ export class CardComponent extends Base {
         background-color: var(--card-background-color);
         border-radius: 0.5rem;
         display: flex;
+        flex: 1;
         flex-direction: column;
         gap: 1rem;
         padding: 1rem;
@@ -25,15 +26,15 @@ export class CardComponent extends Base {
         outline-width: 1px;
         outline-style: solid;
         outline-color: var(--color-neutral-600);
-        transition: outline-color 0.2s ease-in-out;
+        transition: outline-color 0.1s ease-in-out;
         /* transition: transform 0.2s ease-in-out; */
       }
 
       :host(:hover) {
         /* background-color: var(--color-neutral-700); */
-        outline-color: var(--color-neutral-500);
+        outline-color: var(--color-neutral-400);
         /* transform: scale(1.02); */
-        transition: outline-color 0.2s ease-in-out;
+        transition: outline-color 0.1s ease-in-out;
         /* transition: transform 0.2s ease-in-out; */
       }
 

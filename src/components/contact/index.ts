@@ -20,10 +20,20 @@ export class ContactComponent extends Base {
         position: fixed;
         right: 1rem;
         width: max-content;
+
+        a {
+          color: inherit;
+        }
       }
 
-      a:hover button-component {
-        transform: scale(1.04);
+      :host(:hover) {
+        /* background-color: var(--color-blue-400); */
+        transform: scale(1.05);
+        transition: transform 0.1s ease-in-out;
+
+        a {
+          color: inherit;
+        }
       }
     `,
   ];

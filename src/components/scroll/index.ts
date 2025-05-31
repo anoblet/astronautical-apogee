@@ -10,6 +10,7 @@ export class ScrollComponent extends Base {
     ...super.styles,
     css`
       :host {
+        max-width: 100%;
         position: relative;
       }
 

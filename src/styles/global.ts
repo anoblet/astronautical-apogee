@@ -77,32 +77,36 @@ export const globalStyles = css`
   }
 
   a {
+    color: var(--color-teal-200);
     cursor: pointer;
+    display: inline-flex;
     text-decoration: none;
+    transition: color 0.1s ease-in-out;
+
+    &:has(card-component) {
+      color: inherit;
+
+      &:hover {
+        color: var(--color-neutral-200);
+      }
+    }
 
     &:has(svg) {
       display: flex;
       align-items: center;
     }
 
+    &:not(:has(card-component)) {
+      &:hover {
+        color: var(--color-sky-200);
+        transition: color 0.1s ease-in-out;
+      }
+    }
+
     :hover {
       svg {
         fill: var(--color-rose-400);
       }
-    }
-  }
-
-  a:not(:has(project-card)):not(:has(service-card)) {
-    color: inherit;
-    transition: color 0.1s ease-in-out;
-
-    &:hover {
-      color: var(--color-rose-400);
-      transition: color 0.1s ease-in-out;
-    }
-
-    svg {
-      fill: currentColor;
     }
   }
 
@@ -129,6 +133,7 @@ export const globalStyles = css`
 
   h2 {
     color: var(--color-teal-200);
+    font-size: 2rem;
   }
 
   h3 {
@@ -222,8 +227,8 @@ export const globalStyles = css`
     -moz-osx-font-smoothing: grayscale;
   }
 
-  .overflow-x-auto {
-    overflow-x: auto;
+  .divider {
+    height: 1rem;
   }
 
   .flex {
@@ -261,12 +266,28 @@ export const globalStyles = css`
     gap: 1rem;
   }
 
+  .gap-2 {
+    gap: 2rem;
+  }
+
+  .gap-3 {
+    gap: 3rem;
+  }
+
+  .gap-4 {
+    gap: 4rem;
+  }
+
   .grid {
     display: grid;
 
     &.column {
       grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
     }
+  }
+
+  .overflow-x-auto {
+    overflow-x: auto;
   }
 
   .padding {
