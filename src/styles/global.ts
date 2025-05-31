@@ -93,7 +93,7 @@ export const globalStyles = css`
   }
 
   a:not(:has(project-card)):not(:has(service-card)) {
-    color: var(--color-teal-200);
+    color: inherit;
     transition: color 0.1s ease-in-out;
 
     &:hover {

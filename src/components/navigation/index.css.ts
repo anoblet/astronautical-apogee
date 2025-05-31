@@ -4,6 +4,8 @@ export const style = css`
   :host {
     background-color: var(--color-neutral-900);
     display: flex;
+    flex: 1;
+    gap: 2rem;
     justify-content: space-between;
     opacity: 1;
     transition: opacity 0.2s ease-in-out;
@@ -15,37 +17,30 @@ export const style = css`
     transition: opacity 0.2s ease-in-out;
   }
 
-  :host([opened]) {
-    aside {
-      left: 0;
-      transition: left 0.2s ease-in-out;
-    }
-  }
-
-  a {
-    display: flex;
+  ul {
     align-items: center;
+    display: flex;
+    flex: 1;
+    list-style: none;
   }
 
-  aside {
-    background-color: var(--color-neutral-900);
-    height: 100vh;
-    left: -100vw;
-    position: fixed;
-    width: 100vw;
-  }
+  li {
+    align-items: center;
+    display: flex;
+    height: 100%;
 
-  svg {
-    fill: currentColor;
-    height: 2rem;
-    width: 2rem;
-  }
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
 
-  #icon {
-    padding: 1rem;
-  }
+      a {
+        color: var(--color-rose-400);
+      }
+    }
 
-  #menu {
-    padding: 1rem;
+    a {
+      padding: 0 2.5rem;
+    }
   }
 `;

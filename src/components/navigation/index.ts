@@ -1,9 +1,8 @@
+import { home } from "@icons/home";
 import { html, LitElement } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { globalStyles } from "../../styles/global";
 import { style } from "./index.css";
-import { close } from "../../icons/close";
-import { menu } from "../../icons/menu";
 
 @customElement("navigation-component")
 export class NavigationComponent extends LitElement {
@@ -39,11 +38,19 @@ export class NavigationComponent extends LitElement {
 
   render() {
     return html`
-      <slot></slot>
-      <aside>
-        <span @click=${this.close} class="icon" id="close">${close}</span
-        ><slot name="aside"></slot>
-      </aside>
+      <a href="/">
+        <icon-component>${home}</icon-component>
+      </a>
+      <ul class="overflow-x padding-0">
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/services">Services</a></li>
+        <!-- <li><a href="/blog">Blog</a></li> -->
+      </ul>
+
+      <div id="social">
+        <slot name="social"></slot>
+      </div>
     `;
   }
 }
