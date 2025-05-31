@@ -6,6 +6,7 @@ export const style = css`
     position: relative;
     transition: opacity 0.2s ease-in-out;
     width: 100%;
+    z-index: 1;
   }
 
   :host([hidden]) {

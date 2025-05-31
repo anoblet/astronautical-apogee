@@ -117,11 +117,22 @@ export const globalStyles = css`
   h4,
   h5,
   h6 {
+    font-family: "Poppins", sans-serif;
+
     margin: 0;
   }
 
   h1 {
-    color: var(--h1-color);
+    color: var(--color-amber-200);
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    color: var(--color-teal-200);
+  }
+
+  h3 {
+    color: var(--color-blue-200);
   }
 
   hr {
@@ -139,6 +150,10 @@ export const globalStyles = css`
 
   li::marker {
     content: ${unsafeCSS(chevronRight)};
+  }
+
+  main {
+    position: relative;
   }
 
   p {

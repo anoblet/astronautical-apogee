@@ -6,22 +6,28 @@ import Layout from "../../layouts/Layout.astro";
   <section class="hero">
     <h1>Technical Consultation</h1>
     <p class="hero-description">
-      Expert guidance to help you navigate complex technical decisions and optimize your 
-      development process. From architecture planning to performance optimization, 
-      I provide strategic advice that drives results and accelerates your success.
+      Expert guidance to help you navigate complex technical decisions and
+      optimize your development process. From architecture planning to
+      performance optimization, I provide strategic advice that drives results
+      and accelerates your success.
     </p>
   </section>
-
   <section class="approach-section">
     <h2>My Approach</h2>
     <div class="approach-grid">
       <div class="approach-step">
         <h3>Assessment</h3>
-        <p>Thorough analysis of your current situation, challenges, and objectives.</p>
+        <p>
+          Thorough analysis of your current situation, challenges, and
+          objectives.
+        </p>
       </div>
       <div class="approach-step">
         <h3>Strategy</h3>
-        <p>Develop tailored recommendations based on best practices and your specific needs.</p>
+        <p>
+          Develop tailored recommendations based on best practices and your
+          specific needs.
+        </p>
       </div>
       <div class="approach-step">
         <h3>Implementation</h3>
@@ -29,125 +35,116 @@ import Layout from "../../layouts/Layout.astro";
       </div>
       <div class="approach-step">
         <h3>Follow-up</h3>
-        <p>Ongoing support to ensure successful outcomes and continuous improvement.</p>
+        <p>
+          Ongoing support to ensure successful outcomes and continuous
+          improvement.
+        </p>
       </div>
     </div>
   </section>
-
   <section class="services-section">
     <h2>Consultation Services</h2>
     <div class="services-grid">
-      <service-card title="Technology Strategy">
-        <div slot="content">
-          <p>
-            Strategic guidance on technology choices, architecture decisions, and 
-            long-term technical roadmaps to ensure sustainable growth.
-          </p>
-          <ul>
-            <li>Technology stack evaluation</li>
-            <li>Architecture planning</li>
-            <li>Scalability assessment</li>
-            <li>Future-proofing strategies</li>
-          </ul>
-        </div>
-      </service-card>
-
-      <service-card title="Code Review & Audits">
-        <div slot="content">
-          <p>
-            Comprehensive code reviews and technical audits to identify improvements, 
-            security vulnerabilities, and performance bottlenecks.
-          </p>
-          <ul>
-            <li>Code quality assessment</li>
-            <li>Security vulnerability analysis</li>
-            <li>Performance bottleneck identification</li>
-            <li>Best practices recommendations</li>
-          </ul>
-        </div>
-      </service-card>
-
-      <service-card title="Project Planning">
-        <div slot="content">
-          <p>
-            Expert project planning and timeline estimation to break down complex 
-            requirements into manageable phases with realistic deliverables.
-          </p>
-          <ul>
-            <li>Requirements analysis</li>
-            <li>Timeline estimation</li>
-            <li>Risk assessment</li>
-            <li>Milestone planning</li>
-          </ul>
-        </div>
-      </service-card>
-
-      <service-card title="Performance Optimization">
-        <div slot="content">
-          <p>
-            Deep-dive analysis of application performance with actionable recommendations 
-            for optimization across all layers of your application.
-          </p>
-          <ul>
-            <li>Performance profiling</li>
-            <li>Database optimization</li>
-            <li>Frontend optimization</li>
-            <li>Infrastructure tuning</li>
-          </ul>
-        </div>
-      </service-card>
-
-      <service-card title="Team Mentoring">
-        <div slot="content">
-          <p>
-            Technical mentoring for development teams, including best practices, 
-            code standards, and professional development guidance.
-          </p>
-          <ul>
-            <li>Development best practices</li>
-            <li>Code review processes</li>
-            <li>Team skill development</li>
-            <li>Technical leadership</li>
-          </ul>
-        </div>
-      </service-card>
-
-      <service-card title="Problem Solving">
-        <div slot="content">
-          <p>
-            Expert troubleshooting for complex technical challenges, system issues, 
-            and architectural problems that require deep technical expertise.
-          </p>
-          <ul>
-            <li>Technical troubleshooting</li>
-            <li>System debugging</li>
-            <li>Architecture problem solving</li>
-            <li>Emergency support</li>
-          </ul>
-        </div>
-      </service-card>
+      <card-component>
+        <h3>Technology Strategy</h3>
+        <p>
+          Strategic guidance on technology choices, architecture decisions, and
+          long-term technical roadmaps to ensure sustainable growth.
+        </p>
+        <ul>
+          <li>Technology stack evaluation</li>
+          <li>Architecture planning</li>
+          <li>Scalability assessment</li>
+          <li>Future-proofing strategies</li>
+        </ul>
+      </card-component>
+      <card-component>
+        <h3>Code Review & Audits</h3>
+        <p>
+          Comprehensive code reviews and technical audits to identify
+          improvements, security vulnerabilities, and performance bottlenecks.
+        </p>
+        <ul>
+          <li>Code quality assessment</li>
+          <li>Security vulnerability analysis</li>
+          <li>Performance bottleneck identification</li>
+          <li>Best practices recommendations</li>
+        </ul>
+      </card-component>
+      <card-component>
+        <h3>Project Planning & Estimation</h3>
+        <p>
+          Expert project planning and timeline estimation to break down complex
+          requirements into manageable phases with realistic deliverables.
+        </p>
+        <ul>
+          <li>Requirements analysis</li>
+          <li>Timeline estimation</li>
+          <li>Risk assessment</li>
+          <li>Milestone planning</li>
+        </ul>
+      </card-component>
+      <card-component>
+        <h2>Performance Optimization</h2>
+        <p>
+          Deep-dive analysis of application performance with actionable
+          recommendations for optimization across all layers of your
+          application.
+        </p>
+        <ul>
+          <li>Performance profiling</li>
+          <li>Database optimization</li>
+          <li>Frontend optimization</li>
+          <li>Infrastructure tuning</li>
+        </ul>
+      </card-component>
+      <card-component>
+        <h2>Team Mentoring</h2>
+        <p>
+          Technical mentoring for development teams, including best practices,
+          code standards, and professional development guidance.
+        </p>
+        <ul>
+          <li>Development best practices</li>
+          <li>Code review processes</li>
+          <li>Team skill development</li>
+          <li>Technical leadership</li>
+        </ul>
+      </card-component>
+      <card-component>
+        <h2>Problem Solving</h2>
+        <p>
+          Expert troubleshooting for complex technical challenges, system
+          issues, and architectural problems that require deep technical
+          expertise.
+        </p>
+        <ul>
+          <li>Technical troubleshooting</li>
+          <li>System debugging</li>
+          <li>Architecture problem solving</li>
+          <li>Emergency support</li>
+        </ul>
+      </card-component>
     </div>
   </section>
-
   <section class="cta-section">
     <h2>Ready to Solve Your Technical Challenges?</h2>
-    <p>Let's discuss your specific needs and find the right solution together.</p>
+    <p>
+      Let's discuss your specific needs and find the right solution together.
+    </p>
   </section>
-
-  <contact-component href="https://calendar.app.google/t9p2HfknyNWf1RNV6"></contact-component>
+  <contact-component href="https://calendar.app.google/t9p2HfknyNWf1RNV6"
+  ></contact-component>
 </Layout>
-
 <style>
+  section {
+    display: grid;
+    gap: 2rem;
+  }
+
   .hero {
     text-align: center;
     margin-bottom: 3rem;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--color-neutral-100);
   }
 
   .hero-description {
@@ -162,14 +159,6 @@ import Layout from "../../layouts/Layout.astro";
     margin-bottom: 4rem;
   }
 
-  .approach-section h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-    color: var(--color-teal-200);
-    text-align: center;
-  }
-
   .approach-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -178,31 +167,13 @@ import Layout from "../../layouts/Layout.astro";
   }
 
   .approach-step {
+    display: grid;
+    gap: 1rem;
     text-align: center;
     padding: 1.5rem;
     background-color: var(--color-neutral-800);
     border-radius: 0.5rem;
     border: 1px solid var(--color-neutral-600);
-  }
-
-  .approach-step h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--color-teal-200);
-  }
-
-  .approach-step p {
-    color: var(--color-neutral-300);
-    line-height: 1.6;
-  }
-
-  .services-section h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-    color: var(--color-teal-200);
-    text-align: center;
   }
 
   .services-grid {
@@ -218,52 +189,7 @@ import Layout from "../../layouts/Layout.astro";
     margin-bottom: 2rem;
   }
 
-  .cta-section h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--color-teal-200);
-  }
-
-  .cta-section p {
-    font-size: 1.125rem;
-    color: var(--color-neutral-300);
-    max-width: 32rem;
-    margin: 0 auto;
-  }
-
-  service-card [slot="content"] ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 1rem;
-  }
-
-  service-card [slot="content"] li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--color-neutral-300);
-  }
-
-  service-card [slot="content"] li::before {
-    content: "•";
-    color: var(--color-teal-400);
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-  }
-
-  service-card [slot="content"] p {
-    color: var(--color-neutral-200);
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-
   @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 2rem;
-    }
-
     .hero-description {
       font-size: 1rem;
     }
@@ -277,16 +203,9 @@ import Layout from "../../layouts/Layout.astro";
       grid-template-columns: 1fr;
       gap: 1.5rem;
     }
-
-    .approach-section h2,
-    .services-section h2,
-    .cta-section h2 {
-      font-size: 1.5rem;
-    }
   }
 </style>
-
 <script>
-  import "../../components/card/service-card";
-  import "../../components/contact";
+  import "@components/card";
+  import "@components/contact";
 </script>
