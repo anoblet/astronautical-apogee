@@ -15,8 +15,17 @@ export const globalStyles = css`
     --background-color: var(--color-neutral-900);
     --border-radius: 0.25rem;
     --gap: 1rem;
+    --h1-color: var(--color-neutral-200);
     --outline: 1px solid #000;
     --padding: 1rem;
+    --text-color: var(--color-neutral-200);
+
+    &:not(.dark) {
+      --background-color: #fff;
+      --button-secondary-color: var(--color-neutral-200);
+      --h1-color: var(--color-neutral-900);
+      --text-color: var(--color-neutral-900);
+    }
   }
 
   *,
@@ -39,7 +48,7 @@ export const globalStyles = css`
 
   body {
     background-color: var(--background-color);
-    color: var(--color-neutral-200);
+    color: var(--text-color);
     font-family: "Noto Sans", "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -109,7 +118,10 @@ export const globalStyles = css`
   h5,
   h6 {
     margin: 0;
-    color: var(--color-neutral-200);
+  }
+
+  h1 {
+    color: var(--h1-color);
   }
 
   hr {
@@ -245,9 +257,9 @@ export const globalStyles = css`
   .padding {
     padding: var(--padding);
   }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+
   .padding-0 {
-    padding: 0;                                                                                                                                                                                                                                                                                                                                                                           
+    padding: 0;
   }
 
   .page {
@@ -257,6 +269,13 @@ export const globalStyles = css`
     &.wide {
       max-width: unset;
     }
+  }
+
+  .space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
 
   .text-align-center {
