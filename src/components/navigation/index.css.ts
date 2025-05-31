@@ -5,7 +5,6 @@ export const style = css`
     background-color: var(--color-neutral-900);
     display: flex;
     flex: 1;
-    gap: 2rem;
     justify-content: space-between;
     opacity: 1;
     transition: opacity 0.2s ease-in-out;
@@ -40,7 +39,11 @@ export const style = css`
     }
 
     a {
-      padding: 0 2.5rem;
+      padding: 0 2rem;
     }
+  }
+
+  social-component {
+    color: var(--color-teal-200);
   }
 `;

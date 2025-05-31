@@ -43,13 +43,13 @@ export class NavigationComponent extends LitElement {
       </a>
       <ul class="overflow-x padding-0">
         <li><a href="/portfolio">Portfolio</a></li>
-        <li><a href="/projects">Projects</a></li>
+        <li><a href="/software">Software</a></li>
         <li><a href="/services">Services</a></li>
         <!-- <li><a href="/blog">Blog</a></li> -->
       </ul>
 
       <div id="social">
-        <slot name="social"></slot>
+        <social-component></social-component>
       </div>
     `;
   }
