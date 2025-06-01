@@ -157,6 +157,10 @@ export const globalStyles = css`
     }
   }
 
+  .justify-content-center {
+    justify-content: center;
+  }
+
   li::marker {
     content: ${unsafeCSS(chevronRight)};
   }
@@ -288,6 +292,10 @@ export const globalStyles = css`
     &.column {
       grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
     }
+  }
+
+  .max-width-48 {
+    max-width: 48rem;
   }
 
   .overflow-x-auto {

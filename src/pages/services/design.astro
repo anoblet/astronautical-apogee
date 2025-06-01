@@ -3,59 +3,60 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="UI/UX Design Services">
-  <section class="hero">
-    <h1>UI/UX Design</h1>
-    <p class="hero-description">
-      Creating intuitive and user-friendly interfaces that enhance user
-      experience and drive engagement. From research to final implementation, I
-      deliver designs that balance aesthetics with functionality.
-    </p>
-  </section>
-  <section class="process-section">
-    <h2>My Design Process</h2>
-    <div class="process-grid">
-      <div class="process-step">
-        <h3>Research & Discovery</h3>
-        <p>
-          Understanding your users, business goals, and competitive landscape to
-          inform design decisions.
-        </p>
+  <div class="grid gap-3 page">
+    <section class="hero">
+      <h1>UI/UX Design</h1>
+      <p class="hero-description">
+        Creating intuitive and user-friendly interfaces that enhance user
+        experience and drive engagement. From research to final implementation,
+        I deliver designs that balance aesthetics with functionality.
+      </p>
+    </section>
+    <section class="gap-2 grid">
+      <h2>My Design Process</h2>
+      <div class="column gap grid">
+        <div class="process-step">
+          <h3>Research & Discovery</h3>
+          <p>
+            Understanding your users, business goals, and competitive landscape
+            to inform design decisions.
+          </p>
+        </div>
+        <div class="process-step">
+          <h3>Wireframing</h3>
+          <p>
+            Creating low-fidelity wireframes to establish information
+            architecture and user flows.
+          </p>
+        </div>
+        <div class="process-step">
+          <h3>Visual Design</h3>
+          <p>
+            Developing high-fidelity mockups with attention to typography,
+            color, and visual hierarchy.
+          </p>
+        </div>
+        <div class="process-step">
+          <h3>Prototyping</h3>
+          <p>
+            Building interactive prototypes to test and validate design concepts
+            before development.
+          </p>
+        </div>
       </div>
-      <div class="process-step">
-        <h3>Wireframing</h3>
-        <p>
-          Creating low-fidelity wireframes to establish information architecture
-          and user flows.
-        </p>
-      </div>
-      <div class="process-step">
-        <h3>Visual Design</h3>
-        <p>
-          Developing high-fidelity mockups with attention to typography, color,
-          and visual hierarchy.
-        </p>
-      </div>
-      <div class="process-step">
-        <h3>Prototyping</h3>
-        <p>
-          Building interactive prototypes to test and validate design concepts
-          before development.
-        </p>
-      </div>
-    </div>
-  </section>
-  <section class="services-section">
-    <h2>Design Services</h2>
-    <div class="services-grid">
-      <card-component>
-        <h3>User Experience Design</h3>
-        <p>
-          Comprehensive UX research, user journey mapping, and information
-          architecture to create seamless user experiences.
-        </p>
-        <ul>
-          <li>User research and personas</li>
-          <li>Information architecture</li>
+    </section>
+    <section class="gap-2 grid">
+      <h2>Design Services</h2>
+      <div class="column gap grid">
+        <card-component>
+          <h3>User Experience Design</h3>
+          <p>
+            Comprehensive UX research, user journey mapping, and information
+            architecture to create seamless user experiences.
+          </p>
+          <ul>
+            <li>User research and personas</li>
+            <li>Information architecture</li>
           <li>User journey mapping</li>
           <li>Usability testing</li>
         </ul>
@@ -87,15 +88,10 @@ import Layout from "../../layouts/Layout.astro";
         </ul>
       </card-component>
     </div>
-  </section>
+  </div>
 </Layout>
 
 <style>
-  section {
-    display: grid;
-    gap: 2rem;
-  }
-
   .hero {
     text-align: center;
   }

@@ -31,7 +31,29 @@ export const style = css`
     }
 
     a {
-      padding: 0 2rem;
+      padding: 0 1rem;
+    }
+  }
+
+  fluent-menu {
+    height: 100%;
+
+    [slot="trigger"] {
+      align-items: center;
+      display: flex;
+      height: 100%;
+    }
+  }
+
+  fluent-menu-list {
+    background-color: var(--color-neutral-900);
+  }
+
+  fluent-menu-item {
+    color: var(--color-neutral-200);
+
+    a {
+      padding: 0;
     }
   }
 
@@ -43,6 +65,8 @@ export const style = css`
     align-items: center;
     display: flex;
     flex: 1;
+    gap: 1rem;
     list-style: none;
+    padding: 0 1rem;
   }
 `;

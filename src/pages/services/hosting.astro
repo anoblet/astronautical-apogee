@@ -3,45 +3,52 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="Web Hosting & Deployment Services">
-  <section class="hero">
-    <h1>Web Hosting & Deployment</h1>
-    <p class="hero-description">
-      Reliable and scalable hosting solutions tailored to your needs. From simple static sites 
-      to complex web applications, I provide end-to-end deployment and management services 
-      with a focus on performance, security, and reliability.
-    </p>
-  </section>
-
-  <section class="features-section">
-    <h2>Why Choose My Hosting Services</h2>
-    <div class="features-grid">
-      <div class="feature">
-        <h3>99.9% Uptime</h3>
-        <p>Reliable infrastructure with guaranteed uptime and fast global delivery.</p>
-      </div>
-      <div class="feature">
-        <h3>Lightning Fast</h3>
-        <p>Optimized for speed with CDN, caching, and performance monitoring.</p>
-      </div>
-      <div class="feature">
-        <h3>Secure by Default</h3>
-        <p>SSL certificates, security headers, and regular security updates.</p>
-      </div>
-      <div class="feature">
-        <h3>24/7 Support</h3>
-        <p>Expert technical support whenever you need it.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="services-section">
-    <h2>Hosting Solutions</h2>
-    <div class="services-grid">
-      <service-card title="Static Site Hosting">
-        <div slot="content">
+  <div class="grid gap-3 page">
+    <section class="justify-content-center gap grid text-align-center">
+      <h1>Web Hosting & Deployment</h1>
+      <p class="hero-description">
+        Reliable and scalable hosting solutions tailored to your needs. From
+        simple static sites to complex web applications, I provide end-to-end
+        deployment and management services with a focus on performance,
+        security, and reliability.
+      </p>
+    </section>
+    <section class="gap grid">
+      <h2>Why Choose My Hosting Services</h2>
+      <div class="column gap grid">
+        <div class="feature">
+          <h3>99.9% Uptime</h3>
           <p>
-            Lightning-fast hosting for static sites, JAMstack applications, and SPAs. 
-            Deployed to global edge locations for optimal performance.
+            Reliable infrastructure with guaranteed uptime and fast global
+            delivery.
+          </p>
+        </div>
+        <div class="feature">
+          <h3>Lightning Fast</h3>
+          <p>
+            Optimized for speed with CDN, caching, and performance monitoring.
+          </p>
+        </div>
+        <div class="feature">
+          <h3>Secure by Default</h3>
+          <p>
+            SSL certificates, security headers, and regular security updates.
+          </p>
+        </div>
+        <div class="feature">
+          <h3>24/7 Support</h3>
+          <p>Expert technical support whenever you need it.</p>
+        </div>
+      </div>
+    </section>
+    <section class="gap grid">
+      <h2>Hosting Solutions</h2>
+      <div class="column gap grid">
+        <card-component>
+          <h3>Static Site Hosting</h3>
+          <p>
+            Lightning-fast hosting for static sites, JAMstack applications, and
+            SPAs. Deployed to global edge locations for optimal performance.
           </p>
           <ul>
             <li>Global CDN deployment</li>
@@ -49,14 +56,13 @@ import Layout from "../../layouts/Layout.astro";
             <li>Git-based deployments</li>
             <li>Custom domains</li>
           </ul>
-        </div>
-      </service-card>
-
-      <service-card title="Cloud Infrastructure">
-        <div slot="content">
+        </card-component>
+        <card-component>
+          <h3>Cloud Infrastructure</h3>
           <p>
-            Scalable cloud hosting with auto-scaling, load balancing, and high availability. 
-            Perfect for dynamic applications and high-traffic websites.
+            Scalable cloud hosting with auto-scaling, load balancing, and high
+            availability. Perfect for dynamic applications and high-traffic
+            websites.
           </p>
           <ul>
             <li>Auto-scaling infrastructure</li>
@@ -64,14 +70,13 @@ import Layout from "../../layouts/Layout.astro";
             <li>Database management</li>
             <li>CI/CD pipelines</li>
           </ul>
-        </div>
-      </service-card>
-
-      <service-card title="Performance Optimization">
-        <div slot="content">
+        </card-component>
+        <card-component>
+          <h3>Performance Optimization</h3>
           <p>
-            Comprehensive performance tuning to ensure your site loads fast worldwide. 
-            Including caching strategies, image optimization, and code optimization.
+            Comprehensive performance tuning to ensure your site loads fast
+            worldwide. Including caching strategies, image optimization, and
+            code optimization.
           </p>
           <ul>
             <li>Caching strategies</li>
@@ -79,13 +84,11 @@ import Layout from "../../layouts/Layout.astro";
             <li>Code splitting</li>
             <li>Performance monitoring</li>
           </ul>
-        </div>
-      </service-card>
-
-      <service-card title="Security & Monitoring">
-        <div slot="content">
+        </card-component>
+        <card-component>
+          <h3>Security & Monitoring</h3>
           <p>
-            Robust security measures with SSL certificates, firewall protection, 
+            Robust security measures with SSL certificates, firewall protection,
             and 24/7 monitoring to keep your site secure and running smoothly.
           </p>
           <ul>
@@ -94,14 +97,13 @@ import Layout from "../../layouts/Layout.astro";
             <li>Security monitoring</li>
             <li>Automated backups</li>
           </ul>
-        </div>
-      </service-card>
-
-      <service-card title="Migration Support">
-        <div slot="content">
+        </card-component>
+        <card-component>
+          <h3>Migration Support</h3>
           <p>
-            Seamless migration from your current hosting provider with zero downtime. 
-            I handle all the technical details so you can focus on your business.
+            Seamless migration from your current hosting provider with zero
+            downtime. I handle all the technical details so you can focus on
+            your business.
           </p>
           <ul>
             <li>Zero-downtime migration</li>
@@ -109,14 +111,13 @@ import Layout from "../../layouts/Layout.astro";
             <li>Data transfer</li>
             <li>Testing & validation</li>
           </ul>
-        </div>
-      </service-card>
-
-      <service-card title="Maintenance & Support">
-        <div slot="content">
+        </card-component>
+        <card-component>
+          <h3>Maintenance & Support</h3>
           <p>
-            Ongoing maintenance and support services to keep your website running smoothly. 
-            Including updates, security patches, and performance optimization.
+            Ongoing maintenance and support services to keep your website
+            running smoothly. Including updates, security patches, and
+            performance optimization.
           </p>
           <ul>
             <li>Regular updates</li>
@@ -124,52 +125,19 @@ import Layout from "../../layouts/Layout.astro";
             <li>Performance monitoring</li>
             <li>Technical support</li>
           </ul>
-        </div>
-      </service-card>
-    </div>
-  </section>
-
-  <contact-component href="https://calendar.app.google/t9p2HfknyNWf1RNV6"></contact-component>
+        </card-component>
+      </div>
+    </section>
+  </div>
 </Layout>
 
 <style>
-  .hero {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--color-neutral-100);
-  }
-
   .hero-description {
     font-size: 1.125rem;
     line-height: 1.7;
     color: var(--color-neutral-300);
     max-width: 48rem;
     margin: 0 auto;
-  }
-
-  .features-section {
-    margin-bottom: 4rem;
-  }
-
-  .features-section h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-    color: var(--color-teal-200);
-    text-align: center;
-  }
-
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
   }
 
   .feature {
@@ -179,88 +147,8 @@ import Layout from "../../layouts/Layout.astro";
     border-radius: 0.5rem;
     border: 1px solid var(--color-neutral-600);
   }
-
-  .feature h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--color-teal-200);
-  }
-
-  .feature p {
-    color: var(--color-neutral-300);
-    line-height: 1.6;
-  }
-
-  .services-section h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-    color: var(--color-teal-200);
-    text-align: center;
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
-  }
-
-  service-card [slot="content"] ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 1rem;
-  }
-
-  service-card [slot="content"] li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--color-neutral-300);
-  }
-
-  service-card [slot="content"] li::before {
-    content: "•";
-    color: var(--color-teal-400);
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-  }
-
-  service-card [slot="content"] p {
-    color: var(--color-neutral-200);
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-
-  @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 2rem;
-    }
-
-    .hero-description {
-      font-size: 1rem;
-    }
-
-    .features-grid {
-      grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-      gap: 1.5rem;
-    }
-
-    .services-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-
-    .features-section h2,
-    .services-section h2 {
-      font-size: 1.5rem;
-    }
-  }
 </style>
-
 <script>
-  import "../../components/card/service-card";
+  import "../../components/card";
   import "../../components/contact";
 </script>
