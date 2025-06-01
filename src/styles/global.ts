@@ -14,6 +14,10 @@ export const globalStyles = css`
 
     --background-color: var(--color-neutral-900);
     --border-radius: 0.25rem;
+    --color-one: var(--color-teal-200);
+    --color-two: var(--color-rose-400);
+    --color-three: var(--color-blue-400);
+    --color-four: var(--color-amber-200);
     --gap: 1rem;
     --h1-color: var(--color-neutral-200);
     --outline: 1px solid #000;
@@ -127,17 +131,17 @@ export const globalStyles = css`
   }
 
   h1 {
-    color: var(--color-amber-200);
+    color: var(--color-blue-200);
     font-size: 2.5rem;
   }
 
   h2 {
-    color: var(--color-teal-200);
+    color: var(--color-blue-200);
     font-size: 2rem;
   }
 
   h3 {
-    color: var(--color-blue-200);
+    color: var(--color-amber-200);
   }
 
   hr {

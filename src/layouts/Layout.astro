@@ -115,3 +115,9 @@ import { ClientRouter } from "astro:transitions";
     console.error("Global styles not loaded");
   }
 </script>
+<script>
+  import { setTheme } from "@fluentui/web-components";
+  import { webDarkTheme } from "@fluentui/tokens";
+
+  setTheme(webDarkTheme);
+</script>
