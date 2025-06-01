@@ -2,8 +2,8 @@ import { css, html, LitElement } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { globalStyles } from "../styles/global";
 
-@customElement("chip-component")
-class ChipCmponent extends LitElement {
+@customElement("tag-component")
+class TagComponent extends LitElement {
   @property({ type: String }) accessor image = "";
   @property({ type: String }) accessor title = "";
   @property({ type: String }) accessor content = "";
