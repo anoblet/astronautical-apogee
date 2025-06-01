@@ -44,7 +44,6 @@ export class NavigationMobile extends Base {
     return html`
       <div class="space-between">
         <icon-component @click=${this.toggle}>${menu}</icon-component>
-        <icon-component href="/">${planet}</icon-component>
         <contrast-component></contrast-component>
       </div>
       <aside>
