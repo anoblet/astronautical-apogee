@@ -3,6 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import genaiscript from "@assets/microsoft.github.io_genaiscript_.webp";
 import lit from "@assets/lit.dev_.webp";
 import astro from "@assets/astro.build_.webp";
+import "../../components/tag.ts";
 ---
 
 <Layout title="Software">
@@ -11,11 +12,13 @@ import astro from "@assets/astro.build_.webp";
   <div class="column flex gap page">
     <project-card image={astro.src} title="Astro" href="https://astro.build/">
       <div class="chips" slot="chips">
-        <chip-component>JavaScript</chip-component>
-        <chip-component>TypeScript</chip-component>
-        <chip-component>Static Site Generator</chip-component>
-        <chip-component>Astro</chip-component>
-        <chip-component>Open Source</chip-component>
+        <div class="flex flex-wrap gap-2">
+          <tag-component>JavaScript</tag-component>
+          <tag-component>TypeScript</tag-component>
+          <tag-component>Static Site Generator</tag-component>
+          <tag-component>Astro</tag-component>
+          <tag-component>Open Source</tag-component>
+        </div>
       </div>
       <ul id="content" slot="content">
         <li>
@@ -34,11 +37,13 @@ import astro from "@assets/astro.build_.webp";
     </project-card>
     <project-card image={lit.src} title="Lit" href="https://lit.dev/">
       <div class="chips" slot="chips">
-        <chip-component>JavaScript</chip-component>
-        <chip-component>TypeScript</chip-component>
-        <chip-component>Web Components</chip-component>
-        <chip-component>LitElement</chip-component>
-        <chip-component>Open Source</chip-component>
+        <div class="flex flex-wrap gap-2">
+          <tag-component>JavaScript</tag-component>
+          <tag-component>TypeScript</tag-component>
+          <tag-component>Web Components</tag-component>
+          <tag-component>LitElement</tag-component>
+          <tag-component>Open Source</tag-component>
+        </div>
       </div>
       <ul id="content" slot="content">
         <li>
@@ -61,12 +66,14 @@ import astro from "@assets/astro.build_.webp";
       href="https://microsoft.github.io/genaiscript/"
     >
       <div class="chips" slot="chips">
-        <chip-component>TypeScript</chip-component>
-        <chip-component>Node.js</chip-component>
-        <chip-component>AI</chip-component>
-        <chip-component>CLI</chip-component>
-        <chip-component>OpenAI</chip-component>
-        <chip-component>Prompt Engineering</chip-component>
+        <div class="flex flex-wrap gap-2">
+          <tag-component>TypeScript</tag-component>
+          <tag-component>Node.js</tag-component>
+          <tag-component>AI</tag-component>
+          <tag-component>CLI</tag-component>
+          <tag-component>OpenAI</tag-component>
+          <tag-component>Prompt Engineering</tag-component>
+        </div>
       </div>
       <ul id="content" slot="content">
         <li>
@@ -97,6 +104,6 @@ import astro from "@assets/astro.build_.webp";
 </style>
 <script>
   import "@components/card/project-card";
-  import "@components/chip";
   import "@components/contact";
+  import "@components/tag";
 </script>
