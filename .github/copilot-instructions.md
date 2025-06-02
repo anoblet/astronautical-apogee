@@ -1,3 +1,6 @@
+#file:./instructions/lit.instructions.md
+#file:./instructions/style.instructions.md
+
 - Create as many new components as neccessary
 - Components should be simple and composible
 - Move as much reusable structure to the layout as apossible.
@@ -16,7 +19,5 @@
 - Styles should be as atomic as possible in order to provide brand continuity
 - Use the color scheme from `styles/global.ts`
 - Do your best to not modify existing logic and or definitions, though update it when neccessary
-
-#file:./instructions/lit.instructions.md
 
 *** Keep it simple! ***
