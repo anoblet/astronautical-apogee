@@ -6,12 +6,12 @@ import litdev from "../assets/lit.dev_.webp";
 <Layout title="Lit">
   <h1>Lit</h1>
   <project-card image={litdev.src} title="Lit" href="https://lit.dev/">
-    <div class="chips" slot="chips">
-      <chip-component>JavaScript</chip-component>
-      <chip-component>TypeScript</chip-component>
-      <chip-component>Web Components</chip-component>
-      <chip-component>LitElement</chip-component>
-      <chip-component>Open Source</chip-component>
+    <div class="tags" slot="tags">
+      <tag-component>JavaScript</tag-component>
+      <tag-component>TypeScript</tag-component>
+      <tag-component>Web Components</tag-component>
+      <tag-component>LitElement</tag-component>
+      <tag-component>Open Source</tag-component>
     </div>
     <ul id="content" slot="content">
       <li>
@@ -55,7 +55,7 @@ import litdev from "../assets/lit.dev_.webp";
     padding-left: 1rem;
   }
 
-  .chips {
+  .tags {
     display: flex;
     gap: 1rem;
     overflow: hidden;
@@ -69,5 +69,5 @@ import litdev from "../assets/lit.dev_.webp";
 </style>
 <script>
   import "../components/card/project-card";
-  import "../components/chip.ts";
+  import "../components/tag.ts";
 </script>

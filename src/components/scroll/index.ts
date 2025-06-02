@@ -1,17 +1,35 @@
 import { Base } from "@components/base";
 import { css, html } from "lit";
-import { customElement } from "lit/decorators.js";
+import {
+  customElement,
+  property,
+  state,
+  query,
+  queryAssignedElements,
+} from "lit/decorators.js";
 import "@components/icon";
 import { chevronLeft, chevronRight } from "@icons/index";
 
 @customElement("scroll-component")
 export class ScrollComponent extends Base {
+  @property({ reflect: true, type: Number }) accessor index = 0;
+
+  @query("#container") accessor container!: HTMLElement;
+  @query("#left") accessor leftIcon!: HTMLElement;
+  @query("#right") accessor rightIcon!: HTMLElement;
+
+  @queryAssignedElements() accessor items!: HTMLElement[];
+
   static styles = [
     ...super.styles,
     css`
       :host {
         max-width: 100%;
-        position: relative;
+        /* position: relative; */
+      }
+
+      :host([index="0"]) #left {
+        display: none;
       }
 
       icon-component {
@@ -47,10 +65,12 @@ export class ScrollComponent extends Base {
 
       #left {
         left: 0;
+        top: 50vh;
       }
 
       #right {
         right: 0;
+        top: 50vh;
       }
 
       ::slotted(*) {
@@ -70,19 +90,62 @@ export class ScrollComponent extends Base {
     `,
   ];
 
+  previous() {
+    if (this.index > 0) {
+      this.index--;
+    }
+
+    this.container.scrollTo({
+      left: this.items[this.index].offsetLeft,
+      behavior: "smooth",
+    });
+  }
+
+  next() {
+    if (this.index < this.items.length - 1) {
+      this.index++;
+    }
+
+    this.container.scrollTo({
+      left: this.items[this.index].offsetLeft,
+      behavior: "smooth",
+    });
+  }
+
   firstUpdated() {
     super.firstUpdated();
 
-    const width = this.getBoundingClientRect().width;
-    console.log(width);
+    this.shadowRoot
+      ?.querySelector("#container")
+      ?.addEventListener("scrollsnapchanging", ({ snapTargetInline }: any) => {
+        this.index = Array.from(snapTargetInline.parentNode.children).indexOf(
+          snapTargetInline
+        );
+
+        if (this.index === 0) {
+          this.leftIcon.hidden = true;
+        } else {
+          this.leftIcon.hidden = false;
+        }
+
+        if (this.index === this.items.length - 1) {
+          this.rightIcon.hidden = true;
+        } else {
+          this.rightIcon.hidden = false;
+        }
+      });
   }
 
   render() {
     return html`
       <div id="container">
-        <icon-component id="left">${chevronLeft}</icon-component>
+        <icon-component @click=${this.previous} id="left">
+          ${chevronLeft}
+        </icon-component>
         <slot></slot>
-        <icon-component id="right">${chevronRight}</icon-component>
+        <icon-component @click=${this.next} id="right">
+          ${chevronRight}
+        </icon-component>
       </div>
     `;
   }

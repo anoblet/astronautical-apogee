@@ -28,6 +28,7 @@ export class CardComponent extends Base {
         outline-color: var(--color-neutral-600);
         transition: outline-color 0.1s ease-in-out;
         /* transition: transform 0.2s ease-in-out; */
+        width: 100%;
       }
 
       :host(:hover) {

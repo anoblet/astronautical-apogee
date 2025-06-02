@@ -27,10 +27,12 @@ export class NavigationComponent extends Base {
     super.firstUpdated();
 
     window.addEventListener("scroll", () => {
+      console.log("Scroll", window.scrollY);
+
       if (window.scrollY > 0) {
-        this.style.position = "fixed";
+        // this.style.position = "fixed";
       } else {
-        this.style.position = "";
+        // this.style.position = "";
       }
 
       if (this.scrollY > window.scrollY) {

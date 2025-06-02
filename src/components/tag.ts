@@ -8,8 +8,9 @@ class TagComponent extends Base {
     ...super.styles,
     css`
       :host {
-        border: 1px solid var(--color-neutral-600);
+        border: 1px solid var(--color-blue-200);
         border-radius: 0.25rem;
+        color: var(--color-blue-200);
         display: block;
         font-size: 0.875rem;
         padding: 0.125rem 0.5rem;

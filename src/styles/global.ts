@@ -80,6 +80,10 @@ export const globalStyles = css`
     display: flex;
   }
 
+  :host([hidden]) {
+    display: none;
+  }
+
   a {
     color: var(--color-teal-200);
     cursor: pointer;
