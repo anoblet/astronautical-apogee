@@ -4,26 +4,6 @@ import { chevronRight } from "../icons/chevron-right";
 
 export const globalStyles = css`
   :root {
-    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-
-    /* Color scheme */
-    --primary-color: var(--color-teal-200);
-    --secondary-color: var(--color-rose-400);
-    --tertiary-color: var(--color-blue-400);
-    --quaternary-color: var(--color-amber-200);
-
-    --background-color: var(--color-neutral-900);
-    --border-radius: 0.25rem;
-    --color-one: var(--color-teal-200);
-    --color-two: var(--color-rose-400);
-    --color-three: var(--color-blue-400);
-    --color-four: var(--color-amber-200);
-    --gap: 1rem;
-    --h1-color: var(--color-neutral-200);
-    --outline: 1px solid #000;
-    --padding: 1rem;
-    --text-color: var(--color-neutral-200);
-
     &:not(.dark) {
       --background-color: #fff;
       --button-secondary-color: var(--color-neutral-200);
@@ -135,8 +115,8 @@ export const globalStyles = css`
   }
 
   h1 {
-    color: var(--color-blue-200);
-    font-size: 2.5rem;
+    color: var(--h1-color);
+    font-size: var(--h1-font-size);
   }
 
   h2 {

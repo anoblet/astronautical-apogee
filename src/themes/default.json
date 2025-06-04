@@ -1,0 +1,19 @@
+{
+  "background-color": "var(--color-neutral-900)",
+  "border-radius": "0.25rem",
+  "color-four": "var(--color-amber-200)",
+  "color-one": "var(--color-teal-200)",
+  "color-three": "var(--color-blue-400)",
+  "color-two": "var(--color-rose-400)",
+  "gap": "1rem",
+  "h1-color": "var(--color-blue-200)",
+  "h1-font-size": "2rem",
+  "navigation-a-color": "var(--color-neutral-200)",
+  "outline": "1px solid #000",
+  "padding": "1rem",
+  "primary-color": "var(--color-teal-200)",
+  "quaternary-color": "var(--color-amber-200)",
+  "secondary-color": "var(--color-rose-400)",
+  "tertiary-color": "var(--color-blue-400)",
+  "text-color": "var(--color-neutral-200)"
+}

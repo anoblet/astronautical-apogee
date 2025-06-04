@@ -95,8 +95,10 @@ import { ClientRouter } from "astro:transitions";
   });
 </script>
 <script>
+  import { applyStoredTheme } from "@components/theme";
   import { globalStyles } from "../styles/global";
 
+  // Apply global styles
   if (globalStyles.styleSheet) {
     document.adoptedStyleSheets = [
       ...document.adoptedStyleSheets,
@@ -105,4 +107,7 @@ import { ClientRouter } from "astro:transitions";
   } else {
     console.error("Global styles not loaded");
   }
+
+  // Apply stored theme
+  applyStoredTheme();
 </script>

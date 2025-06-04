@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@anoblet/mixins':
+        specifier: github:anoblet/mixins
+        version: https://codeload.github.com/anoblet/mixins/tar.gz/09ca5858119f8c2ee984cc5f97e5f730ee722fa7
       '@fluentui/tokens':
         specifier: 1.0.0-alpha.21
         version: 1.0.0-alpha.21
@@ -26,6 +29,10 @@ importers:
         version: 4.16.1
 
 packages:
+
+  '@anoblet/mixins@https://codeload.github.com/anoblet/mixins/tar.gz/09ca5858119f8c2ee984cc5f97e5f730ee722fa7':
+    resolution: {tarball: https://codeload.github.com/anoblet/mixins/tar.gz/09ca5858119f8c2ee984cc5f97e5f730ee722fa7}
+    version: 0.0.3
 
   '@astrojs/compiler@2.12.0':
     resolution: {integrity: sha512-7bCjW6tVDpUurQLeKBUN9tZ5kSv5qYrGmcn0sG0IwacL7isR2ZbyyA3AdZ4uxsuUFOS2SlgReTH7wkxO6zpqWA==}
@@ -1664,6 +1671,10 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
 
 snapshots:
+
+  '@anoblet/mixins@https://codeload.github.com/anoblet/mixins/tar.gz/09ca5858119f8c2ee984cc5f97e5f730ee722fa7':
+    dependencies:
+      lit: 3.3.0
 
   '@astrojs/compiler@2.12.0': {}
 

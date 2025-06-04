@@ -18,7 +18,7 @@ export const style = css`
   }
 
   a {
-    color: inherit;
+    color: var(--navigation-a-color);
   }
 
   li {
