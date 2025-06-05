@@ -7,9 +7,16 @@ import "@components/tag.ts";
 ---
 
 <Layout title="Software">
-  <h1>Software</h1>
-
   <div class="column flex gap page">
+    <div class="gap grid justify-content-center text-align-center">
+      <h1 class="padding-2">Software</h1>
+      <p class="bold-5 max-width-56">
+        Here are some of the software projects I am currently working on or have
+        worked with. These projects reflect my interests in web development,
+        component-based architecture, and AI-driven workflows.
+      </p>
+    </div>
+    <div class="space-0-5"></div>
     <project-card image={astro.src} title="Astro" href="https://astro.build/">
       <div class="chips" slot="chips">
         <div class="flex flex-wrap gap-0-5">

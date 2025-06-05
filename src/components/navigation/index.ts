@@ -96,6 +96,7 @@ export class NavigationComponent extends Base {
           </fluent-menu>
         </li>
         <!-- <li><a href="/blog">Blog</a></li> -->
+         <li><a href="/mentorship">Mentorship</a></li>
       </ul>
 
       <div id="social">

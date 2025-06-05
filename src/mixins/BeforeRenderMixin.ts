@@ -1,19 +1,25 @@
-import { LitElement } from 'lit';
-import { property } from 'lit/decorators.js';
+import { LitElement } from "lit";
+import { property } from "lit/decorators.js";
 
 type Constructor = new (...args: any[]) => LitElement;
 
-export interface BeforeRenderMixin {}
+export interface BeforeRenderInterface {
+  beforeRenderComplete: boolean;
+}
 
-type ReturnConstructor = new (...args: any[]) => LitElement & BeforeRenderMixin;
+type ReturnConstructor = new (...args: any[]) => LitElement &
+  BeforeRenderInterface;
 
-export const BeforeRender = function<B extends Constructor>(Base: B): B & ReturnConstructor {
-  class Mixin extends Base implements BeforeRenderMixin {
+export const BeforeRender = function <B extends Constructor>(
+  Base: B
+): B & ReturnConstructor {
+  class Mixin extends Base implements BeforeRenderInterface {
     @property({ type: Boolean })
     public accessor beforeRenderComplete: boolean = false;
 
     public connectedCallback() {
       super.connectedCallback();
+
       if (!this.beforeRenderComplete)
         this.beforeRender().then(() => (this.beforeRenderComplete = true));
     }
@@ -28,4 +34,4 @@ export const BeforeRender = function<B extends Constructor>(Base: B): B & Return
   }
 
   return Mixin;
-}
+};

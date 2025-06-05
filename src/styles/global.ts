@@ -219,6 +219,14 @@ export const globalStyles = css`
     -moz-osx-font-smoothing: grayscale;
   }
 
+  .bold-5{
+    font-weight: 500;
+  }
+
+  .bold-6 {
+    font-weight: 600;
+  }
+
   .divider {
     height: 1rem;
   }
@@ -228,6 +236,10 @@ export const globalStyles = css`
     &.column {
       flex-direction: column;
     }
+  }
+
+  .flex-1 {
+    flex: 1;
   }
 
   .flex-end {
@@ -258,6 +270,10 @@ export const globalStyles = css`
     gap: 1rem;
   }
 
+  .gap-0-2-5 {
+    gap: 0.25rem;
+  }
+
   .gap-0-5 {
     gap: 0.5rem;
   }
@@ -282,8 +298,20 @@ export const globalStyles = css`
     }
   }
 
+  .justify-content-flex-end {
+    justify-content: flex-end;
+  }
+
   .max-width-48 {
     max-width: 48rem;
+  }
+
+  .max-width-56 {
+    max-width: 56rem;
+  }
+
+  .max-width-64 {
+    max-width: 64rem;
   }
 
   .overflow-x-auto {
@@ -305,6 +333,14 @@ export const globalStyles = css`
     &.wide {
       max-width: unset;
     }
+  }
+
+  .space {
+    height: 1rem;
+  }
+
+  .space-0-5 {
+    height: 0.5rem;
   }
 
   .space-between {

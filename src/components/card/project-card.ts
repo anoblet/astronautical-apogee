@@ -1,9 +1,8 @@
 import { css, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import { unsafeHTML } from "lit/directives/unsafe-html.js";
+import { CardComponent } from ".";
 import { arrowForward } from "../../icons/arrow-forward";
 import "../image";
-import { CardComponent } from ".";
 
 @customElement("project-card")
 export class ProjectCard extends CardComponent {
@@ -65,7 +64,7 @@ export class ProjectCard extends CardComponent {
       </div>
       <div id="bottom">
         Learn more
-        <a href="#" id="action" part="action">${unsafeHTML(arrowForward)}</a>
+        <a href="#" id="action" part="action">${arrowForward}</a>
       </div>
     `;
   }

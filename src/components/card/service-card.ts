@@ -1,8 +1,7 @@
 import { css, html } from "lit";
 import { customElement } from "lit/decorators.js";
-import { arrowForward } from "../../icons/arrow-forward";
 import { CardComponent } from ".";
-import { unsafeHTML } from "lit/directives/unsafe-html.js";
+import { arrowForward } from "../../icons/arrow-forward";
 
 @customElement("service-card")
 export class ServiceCard extends CardComponent {
@@ -83,7 +82,7 @@ export class ServiceCard extends CardComponent {
       </div>
       <div id="bottom">
         Learn more
-        <a href="${this.href}" id="action" part="action">${unsafeHTML(arrowForward)}</a>
+        <a href="${this.href}" id="action" part="action">${arrowForward}</a>
       </div>
     `;
   }
