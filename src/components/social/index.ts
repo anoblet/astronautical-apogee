@@ -13,6 +13,11 @@ export class Social extends LitElement {
         justify-content: center;
         padding: 1rem;
       }
+
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
     `,
   ];
 

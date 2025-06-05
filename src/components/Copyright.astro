@@ -19,13 +19,18 @@
             display: inline-flex;
           }
         }
+
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
       `,
     ];
     render() {
       return html`
-        <span class="rose-400">${heart}</span>
+        <!-- <span class="rose-400">${heart}</span> -->
         <!-- &copy; ${new Date().getFullYear()} Andrew Noblet. All rights reserved. -->
-        <span>Made with love by Andrew Noblet</span>
+        <!-- <span>Made with love</span> -->
         <span class="rose-400">${heart}</span>
       `;
     }

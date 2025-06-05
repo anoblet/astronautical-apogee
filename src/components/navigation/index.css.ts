@@ -17,6 +17,12 @@ export const style = css`
     transition: opacity 0.2s ease-in-out;
   }
 
+  #home {
+    &:hover {
+      color: var(--color-rose-400);
+    }
+  }
+
   a {
     color: var(--navigation-a-color);
   }
@@ -59,6 +65,11 @@ export const style = css`
 
   social-component {
     color: var(--color-teal-200);
+  }
+
+  svg {
+    height: 1.75rem;
+    width: 1.75rem;
   }
 
   ul {

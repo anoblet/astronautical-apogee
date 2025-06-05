@@ -19,5 +19,6 @@
 - Styles should be as atomic as possible in order to provide brand continuity
 - Use the color scheme from `styles/global.ts`
 - Do your best to not modify existing logic and or definitions, though update it when neccessary
+- Emphasize decoupling
 
 *** Keep it simple! ***

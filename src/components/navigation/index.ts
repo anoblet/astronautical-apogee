@@ -62,12 +62,10 @@ export class NavigationComponent extends Base {
 
   render() {
     return html`
-      <a href="/">
+      <a class="teal-200" href="/" id="home">
         <icon-component>${home}</icon-component>
       </a>
       <ul class="overflow-x">
-        <li><a href="/portfolio">Portfolio</a></li>
-        <li><a href="/software">Software</a></li>
         <li>
           <fluent-menu
             @mouseleave=${this.mouseleave}
@@ -75,7 +73,34 @@ export class NavigationComponent extends Base {
             open-on-hover
           >
             <div slot="trigger">
-              <fluent-menu-button appearance="stealth" id="menu-button">
+              <fluent-menu-button appearance="stealth">
+                <a href="/portfolio">Portfolio</a>
+              </fluent-menu-button>
+            </div>
+            <fluent-menu-list>
+              <fluent-menu-item
+                @click=${this.navigate}
+                href="/portfolio/personal"
+              >
+                <a href="/portfolio/personal">Personal</a>
+              </fluent-menu-item>
+              <fluent-menu-item
+                @click=${this.navigate}
+                href="/portfolio/professional"
+              >
+                <a href="/portfolio/professional">Professional</a>
+              </fluent-menu-item>
+            </fluent-menu-list>
+          </fluent-menu>
+        </li>
+        <li>
+          <fluent-menu
+            @mouseleave=${this.mouseleave}
+            close-on-scroll
+            open-on-hover
+          >
+            <div slot="trigger">
+              <fluent-menu-button appearance="stealth">
                 <a href="/services">Services</a>
               </fluent-menu-button>
             </div>
@@ -89,14 +114,17 @@ export class NavigationComponent extends Base {
               >
                 <a href="/services/hosting">Hosting</a>
               </fluent-menu-item>
-              <fluent-menu-item @click=${this.navigate} href="/services/consultation">
+              <fluent-menu-item
+                @click=${this.navigate}
+                href="/services/consultation"
+              >
                 <a href="/services/consultation">Consultation</a>
               </fluent-menu-item>
             </fluent-menu-list>
           </fluent-menu>
         </li>
         <!-- <li><a href="/blog">Blog</a></li> -->
-         <li><a href="/mentorship">Mentorship</a></li>
+        <li><a href="/mentorship">Mentorship</a></li>
       </ul>
 
       <div id="social">

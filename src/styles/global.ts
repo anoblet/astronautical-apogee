@@ -30,6 +30,14 @@ export const globalStyles = css`
     }
   }
 
+  :host {
+    display: flex;
+  }
+
+  :host([hidden]) {
+    display: none;
+  }
+
   body {
     background-color: var(--background-color);
     color: var(--text-color);
@@ -56,14 +64,6 @@ export const globalStyles = css`
     }
   }
 
-  :host {
-    display: flex;
-  }
-
-  :host([hidden]) {
-    display: none;
-  }
-
   a {
     color: var(--color-teal-200);
     cursor: pointer;
@@ -84,16 +84,14 @@ export const globalStyles = css`
       align-items: center;
     }
 
+    &:hover {
+      color: var(--color-blue-200);
+    }
+
     &:not(:has(card-component)) {
       &:hover {
         color: var(--color-sky-200);
         transition: color 0.1s ease-in-out;
-      }
-    }
-
-    :hover {
-      svg {
-        fill: var(--color-rose-400);
       }
     }
   }
@@ -135,10 +133,6 @@ export const globalStyles = css`
 
   icon-component {
     padding: var(--padding);
-
-    svg {
-      color: var(--color-teal-200);
-    }
   }
 
   .justify-content-center {
@@ -173,6 +167,8 @@ export const globalStyles = css`
 
   svg {
     fill: currentColor;
+    height: 1rem;
+    width: 1rem;
   }
 
   ul {
@@ -219,7 +215,7 @@ export const globalStyles = css`
     -moz-osx-font-smoothing: grayscale;
   }
 
-  .bold-5{
+  .bold-5 {
     font-weight: 500;
   }
 
@@ -356,6 +352,10 @@ export const globalStyles = css`
     justify-content: space-between;
     align-items: center;
     width: 100%;
+  }
+
+  .teal-200 {
+    color: var(--color-teal-200);
   }
 
   .text-align-center {
