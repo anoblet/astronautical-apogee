@@ -108,6 +108,7 @@ import { ClientRouter } from "astro:transitions";
     console.error("Global styles not loaded");
   }
 
-  // Apply stored theme
   applyStoredTheme();
+
+  document.addEventListener("astro:after-swap", applyStoredTheme);
 </script>

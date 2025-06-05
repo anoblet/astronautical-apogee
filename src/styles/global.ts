@@ -258,6 +258,10 @@ export const globalStyles = css`
     gap: 1rem;
   }
 
+  .gap-0-5 {
+    gap: 0.5rem;
+  }
+
   .gap-2 {
     gap: 2rem;
   }

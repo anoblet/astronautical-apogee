@@ -27,6 +27,11 @@ export const getTheme = (): Record<string, string> => {
     : defaultTheme;
 };
 
+export const resetTheme = () => {
+  window.localStorage.removeItem("theme");
+  setProperties(defaultTheme);
+};
+
 @customElement("theme-component")
 export class ThemeComponent extends BeforeRender(Base) {
   @queryAll("fluent-text-input") accessor items!: NodeListOf<HTMLElement>;
@@ -111,7 +116,6 @@ export class ThemeComponent extends BeforeRender(Base) {
             H1 Font Size
           </fluent-text-input>
         </li>
-
         <li>
           <fluent-text-input
             @change=${this._onChange}
@@ -122,6 +126,7 @@ export class ThemeComponent extends BeforeRender(Base) {
           </fluent-text-input>
         </li>
       </ul>
+      <button @click=${resetTheme}>Reset to Default Theme</button>
     `;
   }
 }
