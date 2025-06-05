@@ -1,4 +1,4 @@
-<copyright-component></copyright-component>
+<copyright-component class="align-items-center flex"></copyright-component>
 <script>
   import { Base } from "@components/base";
   import { heart } from "@icons/heart";
@@ -11,16 +11,22 @@
       ...super.styles,
       css`
         :host {
-          gap: var(--gap);
+          gap: 0.5rem;
           justify-content: center;
-          padding: var(--padding-0-5);
+          padding: var(--padding-0-2-5);
+
+          > * {
+            display: inline-flex;
+          }
         }
       `,
     ];
     render() {
       return html`
-        <span>${heart}</span>
-        &copy; ${new Date().getFullYear()} Andrew Noblet. All rights reserved.
+        <span class="rose-400">${heart}</span>
+        <!-- &copy; ${new Date().getFullYear()} Andrew Noblet. All rights reserved. -->
+        <span>Made with love by Andrew Noblet</span>
+        <span class="rose-400">${heart}</span>
       `;
     }
   }

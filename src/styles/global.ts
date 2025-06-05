@@ -335,6 +335,14 @@ export const globalStyles = css`
     }
   }
 
+  .rose-200 {
+    color: var(--color-rose-200);
+  }
+
+  .rose-400 {
+    color: var(--color-rose-400);
+  }
+
   .space {
     height: 1rem;
   }
