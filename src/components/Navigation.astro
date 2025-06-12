@@ -6,39 +6,76 @@
     <aside slot="aside">
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/portfolio">Portfolio</a></li>
-        <li><a href="/portfolio/personal">Personal Projects</a></li>
-        <li><a href="/services">Services</a></li>
-        <!-- <li><a href="/blog">Blog</a></li> -->
+        <li>
+          <fluent-accordion>
+            <fluent-accordion-item>
+              <span slot="heading">Portfolio</span>
+              <ul>
+                <li><a href="/portfolio/personal">Personal</a></li>
+                <li><a href="/portfolio/professional">Professional</a></li>
+              </ul>
+            </fluent-accordion-item>
+          </fluent-accordion>
+        </li>
+        <li>
+          <fluent-accordion>
+            <fluent-accordion-item>
+              <span slot="heading">Services</span>
+              <ul>
+                <li><a href="/services/design">Design</a></li>
+                <li><a href="/services/hosting">Hosting</a></li>
+                <li><a href="/services/consultation">Consultation</a></li>
+              </ul>
+            </fluent-accordion-item>
+          </fluent-accordion>
+        </li>
+        <li><a href="/mentorship">Mentorship</a></li>
       </ul>
     </aside>
-  </navigation-mobile>
-</media-component>
-<style>
-  navigation-mobile {
-    a {
-      color: var(--text-color);
-    }
+    <style>
+      navigation-mobile {
+        a {
+          color: var(--text-color);
+        }
 
-    ul {
-      display: grid;
-      list-style: none;
-      padding: 1rem;
+        fluent-accordion-item {
+          display: grid;
+          gap: 0.5rem;
 
-      li {
-        border-bottom: 1px solid var(--color-neutral-600);
-        padding: 1rem;
+          &::part(heading) {
+            gap: 0.5rem;
+          }
+        }
 
-        &:last-child {
-          border-bottom: unset;
+        aside > ul {
+          border-bottom: 1px solid var(--color-neutral-600);
+
+          li {
+            &:last-child {
+              border-bottom: unset;
+            }
+          }
+        }
+
+        ul {
+          display: grid;
+          gap: 1rem;
+          /* list-style: none; */
+          padding: 0 1rem;
+
+          li {
+            padding: 0 1rem;
+          }
         }
       }
-    }
-  }
-</style>
-<script>
-  import "./media";
-  import "./navigation";
-  import "./navigation/mobile";
-  import "./social";
-</script>
+    </style>
+    <script>
+      import "@fluentui/web-components/accordion-item.js";
+      import "@fluentui/web-components/accordion.js";
+      import "./media";
+      import "./navigation";
+      import "./navigation/mobile";
+      import "./social";
+    </script>
+  </navigation-mobile>
+</media-component>

@@ -50,7 +50,7 @@ class ServicesComponent extends Base {
                 <li>Accessibility-focused design</li>
               </ul>
             </div>
-            <a class="gap-0-5 justify-content-flex-end" href="services/design">
+            <a class="gap-0-5 justify-content-flex-end" href="/services/design">
               Learn more${arrowForward}
             </a>
           </card-component>
@@ -69,7 +69,7 @@ class ServicesComponent extends Base {
                 <li>CI/CD pipeline setup</li>
               </ul>
             </div>
-            <a class="gap-0-5 justify-content-flex-end" href="services/hosting">
+            <a class="gap-0-5 justify-content-flex-end" href="/services/hosting">
               Learn more ${arrowForward}
             </a>
           </card-component>
