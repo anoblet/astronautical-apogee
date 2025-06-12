@@ -3,34 +3,139 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Mentorship">
-  <mentorship-component></mentorship-component>
+  <mentorship-component class="gap-2 grid">
+    <section class="hero">
+      <h1>Mentorship Program</h1>
+      <p class="hero-description">
+        Unlock your potential with personalized guidance and support. My
+        mentorship program is designed to help you navigate your career,
+        develop new skills, and achieve your professional goals.
+      </p>
+    </section>
+
+    <section class="gap grid mentor-stats">
+      <card-component>
+        <span class="stat-number">10+</span>
+        <span class="stat-label">Years of Experience</span>
+      </card-component>
+      <card-component>
+        <span class="stat-number">50+</span>
+        <span class="stat-label">Mentees Supported</span>
+      </card-component>
+      <card-component>
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Satisfaction Rate</span>
+      </card-component>
+    </section>
+
+    <section class="gap grid">
+      <h2>Areas of Mentorship</h2>
+      <div class="gap grid">
+        <card-component>
+          <h3>Software Development</h3>
+          <p>
+            Guidance on best practices, new technologies, and career growth in
+            software engineering.
+          </p>
+        </card-component>
+        <card-component>
+          <h3>Web Development</h3>
+          <p>
+            Focus on front-end and back-end technologies, frameworks, and tools.
+          </p>
+        </card-component>
+        <card-component>
+          <h3>Career Advice</h3>
+          <p>
+            Strategies for job searching, interviewing, and advancing your
+            career.
+          </p>
+        </card-component>
+      </div>
+    </section>
+
+    <section class="gap grid">
+      <h2>My Approach</h2>
+      <div class="gap grid">
+        <card-component>
+          <h4>Personalized Plan</h4>
+          <p>
+            We'll create a tailored plan based on your specific goals and needs.
+          </p>
+        </card-component>
+        <card-component>
+          <h4>Regular Check-ins</h4>
+          <p>Consistent support and feedback to keep you on track.</p>
+        </card-component>
+        <card-component>
+          <h4>Resource Sharing</h4>
+          <p>Access to valuable resources, tools, and networks.</p>
+        </card-component>
+      </div>
+    </section>
+
+    <section class="gap grid">
+      <h2>Testimonial</h2>
+      <card-component>
+        <p class="testimonial-quote">
+          "Working with Andrew has been a game-changer for my career. His
+          insights and guidance were invaluable."
+        </p>
+        <p class="testimonial-author">- Jane Doe, Software Engineer</p>
+      </card-component>
+    </section>
+
+    <section class="cta">
+      <h2>Ready to Start?</h2>
+      <p>
+        Contact me today to learn more about the mentorship program and how we
+        can work together.
+      </p>
+      <contact-component></contact-component>
+    </section>
+  </mentorship-component>
 </Layout>
 <script>
-  import "../components/card";
-  import "../components/contact";
   import { Base } from "@components/base";
-  import { customElement } from "lit/decorators.js";
   import { css, html } from "lit";
-  import { arrowForward } from "@icons/arrow-forward";
+  import { customElement } from "lit/decorators.js";
+  import "@components/card";
+  import "@components/contact";
 
   @customElement("mentorship-component")
   class MentorshipComponent extends Base {
     static styles = [
       ...super.styles,
       css`
+        :host {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          width: 100%;
+        }
+
+        section {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .hero {
+          text-align: center;
+        }
+
+        .hero-description {
+          font-size: 1.125rem;
+          line-height: 1.7;
+          color: var(--color-neutral-300);
+          max-width: 48rem;
+          margin: 0 auto;
+        }
+
         .mentor-stats {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
           gap: 1.5rem;
-          margin: 2rem 0;
-        }
-
-        .stat-item {
-          text-align: center;
-          padding: 1.5rem;
-          border-radius: 0.5rem;
-          background: var(--color-neutral-50);
-          border: 1px solid var(--color-neutral-200);
         }
 
         .stat-number {
@@ -46,39 +151,10 @@ import Layout from "../layouts/Layout.astro";
           margin-top: 0.25rem;
         }
 
-        .mentorship-areas {
+        .grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
           gap: 1.5rem;
-          margin: 2rem 0;
-        }
-
-        .approach-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          gap: 1.5rem;
-          margin: 2rem 0;
-        }
-
-        .approach-item {
-          padding: 1.5rem;
-          border-radius: 0.5rem;
-          background: var(--color-neutral-50);
-          border-left: 4px solid var(--color-blue-500);
-        }
-
-        .approach-item h4 {
-          margin: 0 0 0.75rem 0;
-          color: var(--color-blue-600);
-          font-weight: 600;
-        }
-
-        .testimonial {
-          background: var(--color-neutral-50);
-          border-radius: 0.5rem;
-          padding: 2rem;
-          margin: 2rem 0;
-          border-left: 4px solid var(--color-green-500);
         }
 
         .testimonial-quote {
@@ -93,226 +169,46 @@ import Layout from "../layouts/Layout.astro";
           color: var(--color-neutral-700);
         }
 
-        svg {
-          height: 1rem;
-          width: 1rem;
+        .cta {
+          text-align: center;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+          margin: 0;
+        }
+
+        h2 {
+          text-align: center;
+        }
+
+        p {
+          margin: 0;
+          color: var(--color-neutral-400);
+        }
+
+        card-component {
+          gap: 0.5rem;
         }
 
         @media (max-width: 768px) {
-          .mentor-stats {
-            grid-template-columns: repeat(2, 1fr);
+          .hero-description {
+            font-size: 1rem;
+          }
+
+          .mentor-stats,
+          .grid {
+            grid-template-columns: 1fr;
             gap: 1rem;
-          }
-          
-          .stat-item {
-            padding: 1rem;
-          }
-          
-          .stat-number {
-            font-size: 1.5rem;
           }
         }
       `,
     ];
 
     render() {
-      return html`
-        <div class="column flex gap-3 page">
-          <div class="gap grid justify-content-center text-align-center">
-            <h1>Mentorship & Guidance</h1>
-            <p class="hero-description max-width-56">
-              Empowering the next generation of developers through personalized mentorship, 
-              career guidance, and hands-on learning experiences. Whether you're just starting 
-              your coding journey or looking to advance your career, I'm here to help you grow.
-            </p>
-          </div>
-
-          <div class="mentor-stats">
-            <div class="stat-item">
-              <span class="stat-number">50+</span>
-              <div class="stat-label">Developers Mentored</div>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">5+</span>
-              <div class="stat-label">Years Experience</div>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">100%</span>
-              <div class="stat-label">Career Growth Success</div>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">24/7</span>
-              <div class="stat-label">Support Availability</div>
-            </div>
-          </div>
-
-          <section class="gap-2 grid">
-            <h2 class="text-align-center">Mentorship Areas</h2>
-            <div class="mentorship-areas">
-              <card-component>
-                <h3>Frontend Development</h3>
-                <div class="flex-1">
-                  <p>
-                    Master modern frontend technologies and frameworks. Learn best practices 
-                    for building responsive, accessible, and performant web applications.
-                  </p>
-                  <ul>
-                    <li>JavaScript fundamentals and advanced concepts</li>
-                    <li>TypeScript and type-safe development</li>
-                    <li>Web Components and Lit framework</li>
-                    <li>CSS architecture and design systems</li>
-                    <li>Performance optimization techniques</li>
-                  </ul>
-                </div>
-              </card-component>
-
-              <card-component>
-                <h3>Career Development</h3>
-                <div class="flex-1">
-                  <p>
-                    Navigate your software development career with confidence. Get guidance 
-                    on everything from landing your first job to advancing to senior roles.
-                  </p>
-                  <ul>
-                    <li>Resume and portfolio optimization</li>
-                    <li>Technical interview preparation</li>
-                    <li>Salary negotiation strategies</li>
-                    <li>Leadership and communication skills</li>
-                    <li>Remote work best practices</li>
-                  </ul>
-                </div>
-              </card-component>
-
-              <card-component>
-                <h3>Project Guidance</h3>
-                <div class="flex-1">
-                  <p>
-                    Turn your ideas into reality with structured project guidance. Learn 
-                    how to plan, build, and deploy professional-quality applications.
-                  </p>
-                  <ul>
-                    <li>Project planning and architecture</li>
-                    <li>Code review and optimization</li>
-                    <li>Testing strategies and implementation</li>
-                    <li>Deployment and hosting solutions</li>
-                    <li>Maintenance and scaling approaches</li>
-                  </ul>
-                </div>
-              </card-component>
-            </div>
-          </section>
-
-          <section class="gap-2 grid">
-            <h2 class="text-align-center">My Approach</h2>
-            <div class="approach-grid">
-              <div class="approach-item">
-                <h4>Personalized Learning</h4>
-                <p>
-                  Every developer has unique goals and learning styles. I tailor my 
-                  mentorship approach to match your specific needs and career objectives.
-                </p>
-              </div>
-              <div class="approach-item">
-                <h4>Hands-On Practice</h4>
-                <p>
-                  Learning by doing is key. We'll work on real projects and challenges 
-                  that build practical skills you can apply immediately.
-                </p>
-              </div>
-              <div class="approach-item">
-                <h4>Industry Insights</h4>
-                <p>
-                  Benefit from my experience working with diverse clients and technologies. 
-                  Get insider knowledge about industry trends and best practices.
-                </p>
-              </div>
-              <div class="approach-item">
-                <h4>Long-term Support</h4>
-                <p>
-                  Our mentorship relationship doesn't end after a few sessions. I provide 
-                  ongoing support as you grow in your career.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <div class="testimonial">
-            <div class="testimonial-quote">
-              "Andrew's mentorship was transformative for my career. His guidance helped me 
-              transition from a junior developer to a confident full-stack engineer. His 
-              practical advice and patient teaching style made complex concepts accessible."
-            </div>
-            <div class="testimonial-author">
-              — Sarah Chen, Senior Frontend Developer
-            </div>
-          </div>
-
-          <section class="gap-2 grid">
-            <h2 class="text-align-center">Mentorship Options</h2>
-            <div class="mentorship-areas">
-              <card-component>
-                <h3>One-on-One Sessions</h3>
-                <div class="flex-1">
-                  <p>
-                    Personalized mentorship sessions tailored to your specific goals and challenges. 
-                    Perfect for focused learning and career guidance.
-                  </p>
-                  <ul>
-                    <li>1-hour weekly sessions</li>
-                    <li>Customized learning plan</li>
-                    <li>Code review and feedback</li>
-                    <li>Career planning and goal setting</li>
-                  </ul>
-                </div>
-                <p class="bold">$150/hour</p>
-              </card-component>
-
-              <card-component>
-                <h3>Project Mentorship</h3>
-                <div class="flex-1">
-                  <p>
-                    Work alongside me on a real project. Get hands-on experience while 
-                    building something meaningful for your portfolio.
-                  </p>
-                  <ul>
-                    <li>4-6 week project timeline</li>
-                    <li>Weekly check-ins and guidance</li>
-                    <li>Full project documentation</li>
-                    <li>Deployment and presentation prep</li>
-                  </ul>
-                </div>
-                <p class="bold">$2,000/project</p>
-              </card-component>
-
-              <card-component>
-                <h3>Career Coaching Package</h3>
-                <div class="flex-1">
-                  <p>
-                    Comprehensive career development program designed to accelerate your 
-                    professional growth in the tech industry.
-                  </p>
-                  <ul>
-                    <li>8 sessions over 2 months</li>
-                    <li>Resume and portfolio review</li>
-                    <li>Interview preparation</li>
-                    <li>Salary negotiation guidance</li>
-                  </ul>
-                </div>
-                <p class="bold">$1,000/package</p>
-              </card-component>
-            </div>
-          </section>
-
-          <section class="gap grid justify-content-center text-align-center">
-            <h2>Ready to Start Your Journey?</h2>
-            <p class="max-width-48">
-              Let's discuss your goals and create a personalized mentorship plan 
-              that accelerates your growth as a developer.
-            </p>
-            <contact-component></contact-component>
-          </section>
-        </div>
-      `;
+      return html`<slot></slot>`;
     }
   }
 </script>
