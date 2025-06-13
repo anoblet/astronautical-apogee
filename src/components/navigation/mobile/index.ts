@@ -3,7 +3,6 @@ import "@components/contrast";
 import "@components/icon";
 import { close } from "@icons/close";
 import { menu } from "@icons/menu";
-import { planet } from "@icons/planet";
 import { html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { style } from "./index.css";
