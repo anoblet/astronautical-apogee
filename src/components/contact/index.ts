@@ -1,5 +1,4 @@
 import "@components/button";
-import { calendarMonth } from "@icons/calendar-month";
 import { phone } from "@icons/phone";
 import { css, html } from "lit";
 import { customElement } from "lit/decorators.js";
@@ -42,7 +41,7 @@ export class ContactComponent extends Base {
     return html`
       <a
         class="padding"
-        href="${this.href}"
+        href="https://calendar.app.google/JjnLtVR6mnM11FcS9"
         target="_blank"
         rel="noopener noreferrer"
       >
