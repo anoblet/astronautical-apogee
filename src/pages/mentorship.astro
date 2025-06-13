@@ -3,97 +3,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Mentorship">
-  <mentorship-component class="gap-2 grid">
-    <section class="hero">
-      <h1>Mentorship Program</h1>
-      <p class="hero-description">
-        Unlock your potential with personalized guidance and support. My
-        mentorship program is designed to help you navigate your career,
-        develop new skills, and achieve your professional goals.
-      </p>
-    </section>
-
-    <section class="gap grid mentor-stats">
-      <card-component>
-        <span class="stat-number">10+</span>
-        <span class="stat-label">Years of Experience</span>
-      </card-component>
-      <card-component>
-        <span class="stat-number">50+</span>
-        <span class="stat-label">Mentees Supported</span>
-      </card-component>
-      <card-component>
-        <span class="stat-number">100%</span>
-        <span class="stat-label">Satisfaction Rate</span>
-      </card-component>
-    </section>
-
-    <section class="gap grid">
-      <h2>Areas of Mentorship</h2>
-      <div class="gap grid">
-        <card-component>
-          <h3>Software Development</h3>
-          <p>
-            Guidance on best practices, new technologies, and career growth in
-            software engineering.
-          </p>
-        </card-component>
-        <card-component>
-          <h3>Web Development</h3>
-          <p>
-            Focus on front-end and back-end technologies, frameworks, and tools.
-          </p>
-        </card-component>
-        <card-component>
-          <h3>Career Advice</h3>
-          <p>
-            Strategies for job searching, interviewing, and advancing your
-            career.
-          </p>
-        </card-component>
-      </div>
-    </section>
-
-    <section class="gap grid">
-      <h2>My Approach</h2>
-      <div class="gap grid">
-        <card-component>
-          <h4>Personalized Plan</h4>
-          <p>
-            We'll create a tailored plan based on your specific goals and needs.
-          </p>
-        </card-component>
-        <card-component>
-          <h4>Regular Check-ins</h4>
-          <p>Consistent support and feedback to keep you on track.</p>
-        </card-component>
-        <card-component>
-          <h4>Resource Sharing</h4>
-          <p>Access to valuable resources, tools, and networks.</p>
-        </card-component>
-      </div>
-    </section>
-
-    <section class="gap grid">
-      <h2>Testimonial</h2>
-      <card-component>
-        <p class="testimonial-quote">
-          "Working with Andrew has been a game-changer for my career. His
-          insights and guidance were invaluable."
-        </p>
-        <p class="testimonial-author">- Jane Doe, Software Engineer</p>
-      </card-component>
-    </section>
-
-    <section class="cta">
-      <h2>Ready to Start?</h2>
-      <p>
-        Contact me today to learn more about the mentorship program and how we
-        can work together.
-      </p>
-      <contact-component></contact-component>
-    </section>
-  </mentorship-component>
+  <mentorship-component></mentorship-component>
 </Layout>
 <script>
   import { Base } from "@components/base";
@@ -101,27 +11,20 @@ import Layout from "../layouts/Layout.astro";
   import { customElement } from "lit/decorators.js";
   import "@components/card";
   import "@components/contact";
+  import { arrowForward } from "@icons/arrow-forward";
 
   @customElement("mentorship-component")
   class MentorshipComponent extends Base {
     static styles = [
       ...super.styles,
       css`
-        :host {
-          display: flex;
-          flex-direction: column;
-          gap: 2rem;
-          width: 100%;
+        a {
+          font-weight: 800;
         }
 
-        section {
-          display: flex;
-          flex-direction: column;
-          gap: 1rem;
-        }
-
-        .hero {
-          text-align: center;
+        svg {
+          height: 1rem;
+          width: 1rem;
         }
 
         .hero-description {
@@ -132,65 +35,24 @@ import Layout from "../layouts/Layout.astro";
           margin: 0 auto;
         }
 
-        .mentor-stats {
+        .mentor-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-          gap: 1.5rem;
+          grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+          gap: 2rem;
         }
 
-        .stat-number {
-          font-size: 2rem;
-          font-weight: 800;
-          color: var(--color-blue-600);
-          display: block;
-        }
-
-        .stat-label {
-          color: var(--color-neutral-600);
-          font-size: 0.875rem;
-          margin-top: 0.25rem;
-        }
-
-        .grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          gap: 1.5rem;
-        }
-
-        .testimonial-quote {
+        .testimonial {
+          background-color: var(--card-background-color);
+          border-radius: 0.5rem;
+          padding: 1.5rem;
+          border-left: 4px solid var(--color-teal-400);
           font-style: italic;
-          font-size: 1.125rem;
-          line-height: 1.6;
-          margin-bottom: 1rem;
         }
 
         .testimonial-author {
           font-weight: 600;
-          color: var(--color-neutral-700);
-        }
-
-        .cta {
-          text-align: center;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4 {
-          margin: 0;
-        }
-
-        h2 {
-          text-align: center;
-        }
-
-        p {
-          margin: 0;
-          color: var(--color-neutral-400);
-        }
-
-        card-component {
-          gap: 0.5rem;
+          margin-top: 1rem;
+          color: var(--color-teal-300);
         }
 
         @media (max-width: 768px) {
@@ -198,17 +60,147 @@ import Layout from "../layouts/Layout.astro";
             font-size: 1rem;
           }
 
-          .mentor-stats,
-          .grid {
+          .mentor-grid {
             grid-template-columns: 1fr;
-            gap: 1rem;
+            gap: 1.5rem;
           }
         }
       `,
     ];
 
     render() {
-      return html`<slot></slot>`;
+      return html`
+        <div class="column flex gap-3 page">
+          <div class="gap grid">
+            <h1 class="text-align-center">Mentorship</h1>
+            <p class="hero-description text-align-center">
+              Accelerate your development journey with personalized guidance and
+              industry expertise. Whether you're starting your career or looking
+              to level up your skills, I'm here to help you navigate the world
+              of software development and achieve your goals.
+            </p>
+          </div>
+
+          <div class="column gap-2 grid">
+            <card-component>
+              <h3>Career Guidance</h3>
+              <div class="flex-1">
+                <p>
+                  Navigate your software development career with confidence.
+                  From choosing the right technologies to landing your dream
+                  job, I'll help you create a strategic plan for success.
+                </p>
+                <ul>
+                  <li>Career path planning and goal setting</li>
+                  <li>Portfolio and resume review</li>
+                  <li>Interview preparation and practice</li>
+                  <li>Salary negotiation strategies</li>
+                  <li>Professional networking guidance</li>
+                </ul>
+              </div>
+            </card-component>
+
+            <card-component>
+              <h3>Technical Skills Development</h3>
+              <div class="flex-1">
+                <p>
+                  Master modern web technologies and best practices through
+                  hands-on learning. I'll create a customized curriculum based
+                  on your goals and current skill level.
+                </p>
+                <ul>
+                  <li>Web Components and Lit framework</li>
+                  <li>Modern JavaScript and TypeScript</li>
+                  <li>CSS architecture and design systems</li>
+                  <li>Performance optimization techniques</li>
+                  <li>Testing and quality assurance</li>
+                </ul>
+              </div>
+            </card-component>
+
+            <card-component>
+              <h3>Project Mentorship</h3>
+              <div class="flex-1">
+                <p>
+                  Get expert guidance on your personal or professional
+                  projects. From architecture decisions to implementation
+                  challenges, I'll help you build better software.
+                </p>
+                <ul>
+                  <li>Code review and architecture feedback</li>
+                  <li>Problem-solving and debugging support</li>
+                  <li>Best practices and design patterns</li>
+                  <li>Project planning and execution</li>
+                  <li>Technology selection and evaluation</li>
+                </ul>
+              </div>
+            </card-component>
+          </div>
+
+          <section class="gap grid">
+            <h2 class="text-align-center">What You Can Expect</h2>
+            <div class="mentor-grid">
+              <div class="testimonial">
+                "The mentorship provided invaluable insights into modern web
+                development practices. The personalized approach helped me land
+                my first developer role within three months."
+                <div class="testimonial-author">— Former Mentee</div>
+              </div>
+              <div class="testimonial">
+                "Working with Andrew transformed how I approach problem-solving
+                in code. The focus on clean architecture and best practices has
+                made me a much more effective developer."
+                <div class="testimonial-author">— Software Engineer</div>
+              </div>
+            </div>
+          </section>
+
+          <section class="gap grid">
+            <h2 class="text-align-center">Mentorship Process</h2>
+            <div class="mentor-grid">
+              <card-component>
+                <h4>1. Initial Assessment</h4>
+                <p>
+                  We'll start with a comprehensive discussion about your
+                  background, goals, and current challenges to create a
+                  personalized learning plan.
+                </p>
+              </card-component>
+              <card-component>
+                <h4>2. Regular Sessions</h4>
+                <p>
+                  Weekly or bi-weekly sessions focused on your specific needs,
+                  whether it's technical skills, career guidance, or project
+                  support.
+                </p>
+              </card-component>
+              <card-component>
+                <h4>3. Practical Application</h4>
+                <p>
+                  Hands-on projects and real-world challenges to reinforce
+                  learning and build your portfolio with guidance and feedback.
+                </p>
+              </card-component>
+              <card-component>
+                <h4>4. Ongoing Support</h4>
+                <p>
+                  Access to resources, code reviews, and continued guidance as
+                  you progress in your development journey.
+                </p>
+              </card-component>
+            </div>
+          </section>
+
+          <section class="gap grid justify-content-center text-align-center">
+            <h2>Ready to Level Up Your Skills?</h2>
+            <p>
+              Let's discuss your goals and create a mentorship plan that works
+              for you.
+            </p>
+            <contact-component></contact-component>
+          </section>
+        </div>
+      `;
     }
   }
 </script>
