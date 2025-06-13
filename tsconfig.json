@@ -8,7 +8,8 @@
       "@layouts/*": ["src/layouts/*"],
       "@styles/*": ["src/styles/*"],
       "@themes/*": ["src/themes/*"]
-    }
+    },
+    "target": "esnext"
   },
   "extends": "astro/tsconfigs/strict",
   "include": [".astro/types.d.ts", "**/*"],
