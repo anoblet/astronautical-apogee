@@ -2,7 +2,7 @@
 
 - Your first step is to start the development server, keep it running, and use the output to fix any errors that may occur. Start a new terminal if you need to run any additional commands
 
-- This project uses Astro JS, Tailwind CSS, and shadcn ui. Use Tailwind CSS and shadcn ui whenever possible. Check if shadcn ui components are installed before using them. Install them if they are not installed already.
+- This project uses Astro JS, Lit, and Fluent UI. Familiarize yourself with these technologies if you are not already.
 
 - Create a portfolio site for a software deverloper. The Github profile is: https://github.com/anoblet/
 
