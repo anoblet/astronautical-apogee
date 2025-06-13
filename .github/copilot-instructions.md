@@ -20,5 +20,7 @@
 - Use the color scheme from `styles/global.ts`
 - Do your best to not modify existing logic and or definitions, though update it when neccessary
 - Emphasize decoupling
+- Avoid page specific CSS classes
+- Use utility CSS classes available in the global stylesheet when possible
 
 *** Keep it simple! ***
