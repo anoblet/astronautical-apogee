@@ -1,0 +1,76 @@
+# Generated Code Style and Project Instructions
+
+## General Project Guidelines
+- **Simplicity:** Keep solutions simple and straightforward.
+- **Comments:** Remove unnecessary comments. Do not add new comments unless explicitly clarifying complex logic.
+- **File Formatting:** Always include an empty line at the end of each file.
+- **Decoupling:** Emphasize decoupled components and modules.
+- **Reusability:** Design structures and components to be reusable. Move reusable structure to layouts.
+- **Minimal Changes:** Keep changes to existing code as minimal as possible. Only update existing logic or definitions when necessary.
+- **Clarity:** If unsure about any requirement, always ask for clarification.
+- **Development Server:** Start the development server as the first step and keep it running. Use its output to identify and fix errors. Open a new terminal for additional commands if needed.
+- **Technologies:** The project uses Astro JS, Lit, and Fluent UI.
+- **Project Goal:** Create a portfolio site for a software developer (GitHub: https://github.com/anoblet/).
+- **Content Requirements:**
+    - Include a services page.
+    - Include a projects page featuring CXL (https://cxl.com/), Graduation Source (https://graduationsource.com/), and Avanti Systems USA (https://avantisystemsusa.com). Analyze these websites to create appropriate descriptions from a software developer's perspective.
+
+## Component and Layout Design
+- **Component Granularity:** Create as many new components as necessary.
+- **Component Simplicity:** Components should be simple and composable.
+- **Layouts:**
+    - Astro is used for layouts and pages.
+    - Layouts should centralize shared structures (e.g., headers, footers) and use slots for content.
+- **Web Components:** Use LitElement (Web Components) for interactive UI elements.
+- **Astro Components:** Use Astro components for static content and layout structure.
+- **Minimalism:** Components should be minimal, with logic and structure separated for reusability.
+- **Base Classes/Utilities:** Utilize shared base classes and utilities for common functionality and styles.
+- **Organization:** Maintain a clear project structure, separating assets, components, layouts, and pages.
+- **Maintainability:** Design the codebase for maintainability and extensibility, focusing on composability and DRY principles.
+
+## Styling (CSS)
+- **CSS Variables:** Use CSS variables extensively, especially for colors, spacing, and typography to support a global color scheme and potential theming.
+- **Global Color Scheme:** Adhere strictly to the global color scheme defined in `src/styles/global.ts` and `src/styles/colors.css`.
+- **Aesthetic:** Use a dark background (`#333`) with accent colors (`#19f9d8`, `#45a9f9`). The overall aesthetic should be modern and minimal.
+- **Efficiency:** Write CSS rules to be as efficient as possible.
+- **Scoping:** Styles must be scoped to their respective components.
+- **Direct Targeting:** It's permissible to target element`s directly (e.g., `h1`) without requiring a parent class, where appropriate.
+- **Atomic CSS:** Strive for atomic CSS principles to ensure brand continuity and reusability of styles.
+- **Utility Classes:** Use utility CSS classes from the global stylesheet when available; avoid page-specific CSS classes.
+- **Responsive Design:** Implement responsive design using flexbox, grid, and media queries.
+- **Interactive States:** Ensure interactive elements have clear hover and focus states.
+
+## TypeScript/JavaScript
+- **Decorators:** When using decorators, include the `accessor` keyword (as per TypeScript 4.9+ auto-accessors).
+
+## HTML
+- **Semantic HTML:** Prioritize the use of semantic HTML for clarity and accessibility.
+- **Accessibility (A11y):** Consider accessibility by using semantic HTML and ARIA roles where appropriate.
+
+## Specific Component Instructions
+- **Navigation Component:**
+    - Create a new navigation component to be placed inside the header.
+    - Implement a hamburger menu icon for mobile views.
+    - Use tabs for desktop views.
+    - Include GitHub, LinkedIn, and Email icons on the right-hand side.
+
+## Chat and Instruction Management
+- **Chat Logging:** Save every chat interaction in `chats/[timestamp].md`. Update this file after every message exchange.
+- **Chat Log Format:**
+  ```markdown
+  # Chat Interaction - [timestamp]
+
+  ## User Message
+  [User's message here]
+
+  ## Assistant Response
+  [Assistant's response here]
+
+  ## Insights
+  [Any insights or observations about user preferences and behavior]
+  ```
+- **Instruction Updates:** After each user interaction, update this file (`.github/instructions/generated-instructions.md`) with any new insights on user preferences and behavior.
+- **User Preferences:**
+    - The user expects strict adherence to all provided instructions.
+    - The user is direct in pointing out deviations from instructions.
+    - The timestamp mechanism for chat logs (current date and time) is acceptable.
