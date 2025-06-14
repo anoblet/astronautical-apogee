@@ -101,6 +101,14 @@ export const globalStyles = css`
     outline: 1px solid var(--color-black);
   }
 
+  contact-component {
+    align-items: center;
+    display: flex;
+    height: var(--contact-component-height);
+    justify-content: center;
+    width: var(--contact-component-width);
+  }
+
   h1,
   h2,
   h3,
@@ -167,8 +175,8 @@ export const globalStyles = css`
 
   svg {
     fill: currentColor;
-    height: 1rem;
-    width: 1rem;
+    /* height: 1rem; */
+    /* width: 1rem; */
   }
 
   ul {
