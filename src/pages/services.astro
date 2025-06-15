@@ -1,6 +1,9 @@
 ---
+import ArrowForward from "@icons/arrow-forward.svg";
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import { arrowForward } from "@icons/arrow-forward";
+
+const arrowForward = "";
 ---
 
 <Layout title="Services">
@@ -19,9 +22,9 @@ import { arrowForward } from "@icons/arrow-forward";
         <div class="flex-1">
           <p>
             Create intuitive and user-friendly interfaces that enhance the
-            overall user experience. My design approach focuses on
-            understanding user needs and translating them into visually
-            appealing and functional designs.
+            overall user experience. My design approach focuses on understanding
+            user needs and translating them into visually appealing and
+            functional designs.
           </p>
           <ul>
             <li>User experience research and analysis</li>
@@ -31,7 +34,7 @@ import { arrowForward } from "@icons/arrow-forward";
           </ul>
         </div>
         <a class="gap-0-5 justify-content-flex-end" href="/services/design">
-          Learn more{arrowForward}
+          Learn more <ArrowForward />
         </a>
       </card-component>
       <card-component>
@@ -50,7 +53,7 @@ import { arrowForward } from "@icons/arrow-forward";
           </ul>
         </div>
         <a class="gap-0-5 justify-content-flex-end" href="/services/hosting">
-          Learn more {arrowForward}
+          Learn more <ArrowForward />
         </a>
       </card-component>
       <card-component>
@@ -58,9 +61,9 @@ import { arrowForward } from "@icons/arrow-forward";
         <div class="flex-1">
           <p>
             Expert consultation to help you navigate the complexities of
-            software development. Get strategic advice and practical
-            solutions for technology choices, project planning, and
-            overcoming technical challenges.
+            software development. Get strategic advice and practical solutions
+            for technology choices, project planning, and overcoming technical
+            challenges.
           </p>
           <ul class="flex-1">
             <li>Technology stack recommendations</li>
@@ -73,15 +76,14 @@ import { arrowForward } from "@icons/arrow-forward";
           class="gap-0-5 justify-content-flex-end"
           href="services/consultation"
         >
-          Learn more {arrowForward}
+          Learn more <ArrowForward />
         </a>
       </card-component>
     </div>
     <section class="gap grid justify-content-center text-align-center">
       <h2>Ready to Get Started?</h2>
       <p>
-        Let's discuss your project and find the perfect solution for your
-        needs.
+        Let's discuss your project and find the perfect solution for your needs.
       </p>
     </section>
   </div>
@@ -89,5 +91,4 @@ import { arrowForward } from "@icons/arrow-forward";
 
 <script>
   import "@components/card";
-  import "@components/contact";
 </script>
