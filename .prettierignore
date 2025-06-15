@@ -13,6 +13,6 @@ coverage
 reports/
 chats/
 .genaiscript/
-genaisrc/memory.json
+genaisrc/
 pnpm-lock.yaml
 .specstory/

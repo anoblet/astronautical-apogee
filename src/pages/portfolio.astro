@@ -1,8 +1,8 @@
 ---
-import avantisystemsusa from "@assets/avantisystemsusa.com_.webp";
-import cxl from "@assets/cxl.com_.webp";
-import graduationSource from "@assets/graduationsource.com_.webp";
-import Layout from "@layouts/Layout.astro";
+import avantisystemsusa from '@assets/avantisystemsusa.com_.webp';
+import cxl from '@assets/cxl.com_.webp';
+import graduationSource from '@assets/graduationsource.com_.webp';
+import Layout from '@layouts/Layout.astro';
 ---
 
 <Layout title="Portfolio">
@@ -107,20 +107,27 @@ import Layout from "@layouts/Layout.astro";
           "Featured Projects" and the company blog.
         </li>
       </ul>
-      <ul class="flex gap-0-5 padding-0" style="flex-wrap: wrap; list-style-type: none;">
+      <ul
+        class="flex gap-0-5 padding-0"
+        style="flex-wrap: wrap; list-style-type: none;"
+      >
         <li style="text-wrap: nowrap;"><tag-component>HTML</tag-component></li>
         <li style="text-wrap: nowrap;"><tag-component>CSS</tag-component></li>
-        <li style="text-wrap: nowrap;"><tag-component>JavaScript</tag-component></li>
-        <li style="text-wrap: nowrap;"><tag-component>Wordpress</tag-component></li>
+        <li style="text-wrap: nowrap;">
+          <tag-component>JavaScript</tag-component>
+        </li>
+        <li style="text-wrap: nowrap;">
+          <tag-component>Wordpress</tag-component>
+        </li>
       </ul>
     </card-component>
   </scroll-component>
 </Layout>
 
 <script>
-  import "@components/card";
-  import "@components/contact";
-  import "@components/image";
-  import "@components/scroll";
-  import "@components/tag";
+  import '@components/card';
+  import '@components/contact';
+  import '@components/image';
+  import '@components/scroll';
+  import '@components/tag';
 </script>

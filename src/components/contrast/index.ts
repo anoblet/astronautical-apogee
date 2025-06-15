@@ -1,29 +1,29 @@
-import { Base } from "@components/base";
-import "@components/icon";
-import { contrast } from "@icons/contrast";
-import { html } from "lit";
-import { customElement, state } from "lit/decorators.js";
+import { Base } from '@components/base';
+import '@components/icon';
+import { contrast } from '@icons/contrast';
+import { html } from 'lit';
+import { customElement, state } from 'lit/decorators.js';
 
-@customElement("contrast-component")
+@customElement('contrast-component')
 export class ContrastComponent extends Base {
   @state() accessor dark = true;
 
   firstUpdated() {
     super.firstUpdated();
 
-    const item = localStorage.getItem("dark");
+    const item = localStorage.getItem('dark');
     if (item === null) {
       this.dark = true; // Default to dark mode if not set
     } else {
-      this.dark = item === "true";
+      this.dark = item === 'true';
     }
 
-    document.documentElement.classList.toggle("dark", this.dark);
+    document.documentElement.classList.toggle('dark', this.dark);
 
-    this.addEventListener("click", () => {
+    this.addEventListener('click', () => {
       this.dark = !this.dark;
-      document.documentElement.classList.toggle("dark", this.dark);
-      localStorage.setItem("dark", String(this.dark));
+      document.documentElement.classList.toggle('dark', this.dark);
+      localStorage.setItem('dark', String(this.dark));
     });
   }
 

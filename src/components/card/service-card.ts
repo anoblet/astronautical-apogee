@@ -1,15 +1,17 @@
-import { css, html } from "lit";
-import { customElement } from "lit/decorators.js";
-import { CardComponent } from ".";
-import { arrowForward } from "../../icons/arrow-forward";
+import { css, html } from 'lit';
+import { customElement } from 'lit/decorators.js';
+import { CardComponent } from '.';
+import { arrowForward } from '../../icons/arrow-forward';
 
-@customElement("service-card")
+@customElement('service-card')
 export class ServiceCard extends CardComponent {
   static styles = [
     ...super.styles,
     css`
       :host {
-        transition: transform 0.2s ease-in-out, outline-color 0.2s ease-in-out;
+        transition:
+          transform 0.2s ease-in-out,
+          outline-color 0.2s ease-in-out;
       }
 
       :host(:hover) {

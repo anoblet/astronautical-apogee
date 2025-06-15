@@ -10,7 +10,7 @@ Update the mentorship page to use the same style and structure as the other page
 
 _**Assistant**_
 
-I'll help you update the mentorship page to match the style and structure of the other pages. Let me first examine the current mentorship page and then look at other pages to understand the consistent structure. 
+I'll help you update the mentorship page to match the style and structure of the other pages. Let me first examine the current mentorship page and then look at other pages to understand the consistent structure.
 
 ---
 
@@ -22,7 +22,17 @@ _**User**_
 
 _**Assistant**_
 
+---
 
+_**User**_
+
+@agent Try Again
+
+---
+
+_**Assistant**_
+
+I'll examine the mentorship page and compare it with other pages to understand the consistent structure and styling. Let me start by reading the full mentorship page and then look at other pages for comparison. Now let me examine other pages to understand the consistent structure and styling patterns:
 
 ---
 
@@ -34,19 +44,4 @@ _**User**_
 
 _**Assistant**_
 
-I'll examine the mentorship page and compare it with other pages to understand the consistent structure and styling. Let me start by reading the full mentorship page and then look at other pages for comparison. Now let me examine other pages to understand the consistent structure and styling patterns: 
-
 ---
-
-_**User**_
-
-@agent Try Again
-
----
-
-_**Assistant**_
-
-
-
----
-

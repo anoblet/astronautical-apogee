@@ -1,22 +1,22 @@
-import { Base } from "@components/base";
-import { css, html } from "lit";
+import { Base } from '@components/base';
+import { css, html } from 'lit';
 import {
   customElement,
   property,
   state,
   query,
   queryAssignedElements,
-} from "lit/decorators.js";
-import "@components/icon";
-import { chevronLeft, chevronRight } from "@icons/index";
+} from 'lit/decorators.js';
+import '@components/icon';
+import { chevronLeft, chevronRight } from '@icons/index';
 
-@customElement("scroll-component")
+@customElement('scroll-component')
 export class ScrollComponent extends Base {
   @property({ reflect: true, type: Number }) accessor index = 0;
 
-  @query("#container") accessor container!: HTMLElement;
-  @query("#left") accessor leftIcon!: HTMLElement;
-  @query("#right") accessor rightIcon!: HTMLElement;
+  @query('#container') accessor container!: HTMLElement;
+  @query('#left') accessor leftIcon!: HTMLElement;
+  @query('#right') accessor rightIcon!: HTMLElement;
 
   @queryAssignedElements() accessor items!: HTMLElement[];
 
@@ -28,7 +28,7 @@ export class ScrollComponent extends Base {
         /* position: relative; */
       }
 
-      :host([index="0"]) #left {
+      :host([index='0']) #left {
         display: none;
       }
 
@@ -97,7 +97,7 @@ export class ScrollComponent extends Base {
 
     this.container.scrollTo({
       left: this.items[this.index].offsetLeft,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   }
 
@@ -108,7 +108,7 @@ export class ScrollComponent extends Base {
 
     this.container.scrollTo({
       left: this.items[this.index].offsetLeft,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   }
 
@@ -116,8 +116,8 @@ export class ScrollComponent extends Base {
     super.firstUpdated();
 
     this.shadowRoot
-      ?.querySelector("#container")
-      ?.addEventListener("scrollsnapchanging", ({ snapTargetInline }: any) => {
+      ?.querySelector('#container')
+      ?.addEventListener('scrollsnapchanging', ({ snapTargetInline }: any) => {
         this.index = Array.from(snapTargetInline.parentNode.children).indexOf(
           snapTargetInline
         );

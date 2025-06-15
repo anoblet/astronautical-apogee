@@ -1,11 +1,11 @@
-import { Base } from "@components/base";
-import { home } from "@icons/home";
-import { globalStyles } from "@styles/global";
-import { html } from "lit";
-import { customElement, property } from "lit/decorators.js";
-import { style } from "./index.css";
+import { Base } from '@components/base';
+import { home } from '@icons/home';
+import { globalStyles } from '@styles/global';
+import { html } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { style } from './index.css';
 
-@customElement("navigation-component")
+@customElement('navigation-component')
 export class NavigationComponent extends Base {
   @property({ type: Boolean, reflect: true }) accessor opened = false;
 
@@ -20,7 +20,7 @@ export class NavigationComponent extends Base {
   firstUpdated() {
     super.firstUpdated();
 
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
       if (this.scrollY > window.scrollY) {
         this.hidden = false;
       }

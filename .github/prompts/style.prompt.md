@@ -1,18 +1,18 @@
-- Ensure CSS variables are grouped logically (e.g., colors, fonts, spacing) and documented for clarity and maintainability.  
-- Use fallback values for CSS variables to ensure compatibility with older browsers.  
-- Avoid hardcoding color values directly in styles; always use defined CSS variables for consistency.  
-- Ensure all font imports are optimized and only include necessary weights and styles to reduce load time.  
-- Use semantic HTML elements and ensure styles align with their intended purpose for better accessibility.  
-- Avoid using overly generic selectors that might unintentionally affect other elements.  
-- Use a consistent naming convention for CSS classes, such as BEM (Block Element Modifier), to improve readability and maintainability.  
-- Minimize the use of `!important` to avoid specificity issues and maintain clean cascading styles.  
-- Regularly audit and remove unused CSS rules to keep the stylesheet lean and efficient.  
-- Test styles across multiple browsers and devices to ensure consistent rendering.  
-- Use media queries to ensure responsive design and test styles on various screen sizes.  
-- Document the purpose of complex or non-obvious CSS rules to aid future developers.  
-- Ensure all interactive elements (e.g., links, buttons) have clear hover and focus states for better user experience.  
-- Use CSS preprocessors like SCSS or PostCSS for better organization and maintainability of stylesheets.  
-- Optimize animations and transitions for performance, avoiding excessive use of heavy effects.  
-- Ensure all styles adhere to the project's theming system, supporting both light and dark modes.  
-- Use tools like CSS linting or formatting to enforce consistent style rules and detect potential issues.  
+- Ensure CSS variables are grouped logically (e.g., colors, fonts, spacing) and documented for clarity and maintainability.
+- Use fallback values for CSS variables to ensure compatibility with older browsers.
+- Avoid hardcoding color values directly in styles; always use defined CSS variables for consistency.
+- Ensure all font imports are optimized and only include necessary weights and styles to reduce load time.
+- Use semantic HTML elements and ensure styles align with their intended purpose for better accessibility.
+- Avoid using overly generic selectors that might unintentionally affect other elements.
+- Use a consistent naming convention for CSS classes, such as BEM (Block Element Modifier), to improve readability and maintainability.
+- Minimize the use of `!important` to avoid specificity issues and maintain clean cascading styles.
+- Regularly audit and remove unused CSS rules to keep the stylesheet lean and efficient.
+- Test styles across multiple browsers and devices to ensure consistent rendering.
+- Use media queries to ensure responsive design and test styles on various screen sizes.
+- Document the purpose of complex or non-obvious CSS rules to aid future developers.
+- Ensure all interactive elements (e.g., links, buttons) have clear hover and focus states for better user experience.
+- Use CSS preprocessors like SCSS or PostCSS for better organization and maintainability of stylesheets.
+- Optimize animations and transitions for performance, avoiding excessive use of heavy effects.
+- Ensure all styles adhere to the project's theming system, supporting both light and dark modes.
+- Use tools like CSS linting or formatting to enforce consistent style rules and detect potential issues.
 - Regularly review and update the CSS style guide to align with evolving best practices and project requirements.

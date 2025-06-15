@@ -1,13 +1,13 @@
-import { css, html } from "lit";
-import { customElement, property } from "lit/decorators.js";
-import { Base } from "../base";
+import { css, html } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { Base } from '../base';
 
-@customElement("card-component")
+@customElement('card-component')
 export class CardComponent extends Base {
-  @property({ type: String }) accessor title = "";
-  @property({ type: String }) accessor content = "";
+  @property({ type: String }) accessor title = '';
+  @property({ type: String }) accessor content = '';
 
-  accessor classes = [...super.classes, "card"];
+  accessor classes = [...super.classes, 'card'];
 
   static styles = [
     ...super.styles,
@@ -20,7 +20,8 @@ export class CardComponent extends Base {
         flex-direction: column;
         gap: 1rem;
         padding: 1rem;
-        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2),
+        box-shadow:
+          0 10px 15px -3px rgb(0 0 0 / 0.2),
           0 4px 6px -4px rgb(0 0 0 / 0.1);
         /* outline: 1px solid var(--color-neutral-600); */
         outline-width: 1px;

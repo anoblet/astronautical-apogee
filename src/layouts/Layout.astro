@@ -1,7 +1,7 @@
 ---
-import "../styles/colors.css";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import '../styles/colors.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 interface Props {
   title: string;
@@ -9,7 +9,7 @@ interface Props {
 
 const { title } = Astro.props;
 
-import { ClientRouter } from "astro:transitions";
+import { ClientRouter } from 'astro:transitions';
 ---
 
 <!doctype html>
@@ -19,14 +19,14 @@ import { ClientRouter } from "astro:transitions";
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
         var f = d.getElementsByTagName(s)[0],
           j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
+          dl = l != 'dataLayer' ? '&l=' + l : '';
         j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
         f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-N2FTVHQC");
+      })(window, document, 'script', 'dataLayer', 'GTM-N2FTVHQC');
     </script>
     <!-- End Google Tag Manager -->
 
@@ -59,8 +59,8 @@ import { ClientRouter } from "astro:transitions";
   </body>
 </html>
 <script>
-  import "@components/contact";
-  import "@components/social";
+  import '@components/contact';
+  import '@components/social';
 </script>
 <style>
   @view-transition {
@@ -89,16 +89,16 @@ import { ClientRouter } from "astro:transitions";
   rel="stylesheet"
 />
 <script>
-  import media from "../media";
+  import media from '../media';
 
   media.subscribe((media: string) => {
-    document.body.setAttribute("data-media", media);
+    document.body.setAttribute('data-media', media);
   });
 </script>
 <script>
-  import { applyStoredTheme } from "@components/theme";
-  import { globalStyles } from "../styles/global";
-  import "@components/theme/toggle";
+  import { applyStoredTheme } from '@components/theme';
+  import { globalStyles } from '../styles/global';
+  import '@components/theme/toggle';
 
   // Apply global styles
   if (globalStyles.styleSheet) {
@@ -107,11 +107,10 @@ import { ClientRouter } from "astro:transitions";
       globalStyles.styleSheet,
     ];
   } else {
-    console.error("Global styles not loaded");
+    console.error('Global styles not loaded');
   }
 
   applyStoredTheme();
 
-  document.addEventListener("astro:after-swap", applyStoredTheme);
-  
+  document.addEventListener('astro:after-swap', applyStoredTheme);
 </script>

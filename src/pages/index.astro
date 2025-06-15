@@ -1,18 +1,18 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Andrew Noblet">
   <index-component></index-component>
 </Layout>
 <script>
-  import { Base } from "@components/base";
-  import "@components/button";
-  import { globalStyles } from "@styles/global.ts";
-  import { css, html } from "lit";
-  import { customElement } from "lit/decorators.js";
+  import { Base } from '@components/base';
+  import '@components/button';
+  import { globalStyles } from '@styles/global.ts';
+  import { css, html } from 'lit';
+  import { customElement } from 'lit/decorators.js';
 
-  @customElement("index-component")
+  @customElement('index-component')
   class IndexComponent extends Base {
     static styles = [
       globalStyles,

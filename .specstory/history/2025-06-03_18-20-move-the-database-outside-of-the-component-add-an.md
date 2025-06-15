@@ -10,8 +10,7 @@ Move the database outside of the component. Add an exportable function that appl
 
 _**Assistant**_
 
-I'll help you move the database logic outside of the component and create an exportable function to apply themes. Let me first explore the current structure and understand what needs to be done. Now let me create a separate database utility file and update the theme component to use it. Now let me update the theme component to use the new database utility: 
-```
+I'll help you move the database logic outside of the component and create an exportable function to apply themes. Let me first explore the current structure and understand what needs to be done. Now let me create a separate database utility file and update the theme component to use it. Now let me update the theme component to use the new database utility:
 
 ```
 
@@ -26,10 +25,15 @@ I'll help you move the database logic outside of the component and create an exp
 ```
 
 ```
-Now let me check if there's a utils directory and create it if it doesn't exist: Great! The utils directory already exists. Let me check if the database utility file was created correctly: Let me check the updated theme component: Let me check for any compilation errors: Perfect! Now let me test if the setup works by applying the theme function: Now I can see how the application is structured. Let me check the `Layout.astro` file to see where I should apply the theme on initialization: Perfect! I can see that the `Layout.astro` file is already applying theme properties. I need to update this to use our new `applyTheme` function instead of the static import. Let me update it: 
+
+```
+
+Now let me check if there's a utils directory and create it if it doesn't exist: Great! The utils directory already exists. Let me check if the database utility file was created correctly: Let me check the updated theme component: Let me check for any compilation errors: Perfect! Now let me test if the setup works by applying the theme function: Now I can see how the application is structured. Let me check the `Layout.astro` file to see where I should apply the theme on initialization: Perfect! I can see that the `Layout.astro` file is already applying theme properties. I need to update this to use our new `applyTheme` function instead of the static import. Let me update it:
+
 ```
 
 ```
+
 Now let me check if there are any errors with the updated files: The errors in `Layout.astro` are related to Google Tag Manager code that's unrelated to our changes. Our theme-related files have no errors, which is great!
 
 Let me run a quick test to make sure the app builds correctly: Copilot has been working on this problem for a while. It can continue to iterate, or you can send a new message to refine your prompt.
@@ -44,7 +48,4 @@ _**User**_
 
 _**Assistant**_
 
-
-
 ---
-

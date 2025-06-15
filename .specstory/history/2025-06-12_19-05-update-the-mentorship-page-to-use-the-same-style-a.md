@@ -10,7 +10,4 @@ Update the mentorship page to use the same style and structure as the other page
 
 _**Assistant**_
 
-
-
 ---
-

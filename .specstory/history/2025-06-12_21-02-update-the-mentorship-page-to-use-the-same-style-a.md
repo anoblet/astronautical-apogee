@@ -20,12 +20,14 @@ The `mentorship.astro` page has a lot of custom styling and its own component (`
 6.  **Update `mentorship.astro`** to import and use the new `mentorship-component` similar to how `services.astro` uses `services-component`.
 7.  Ensure the color scheme aligns with `styles/global.ts`.
 
-Let's start by creating the new component files. I've created a new `mentorship-component` in `` and updated the `mentorship.astro` page to use it.
+Let's start by creating the new component files. I've created a new `mentorship-component` in ``and updated the`mentorship.astro` page to use it.
 
-The new component's structure and styling are now consistent with the `services.astro` page and the overall site design. I've used CSS variables for colors to ensure they match the global color scheme. 
-````
+The new component's structure and styling are now consistent with the `services.astro` page and the overall site design. I've used CSS variables for colors to ensure they match the global color scheme.
 
-````
+```
+
+```
+
 I've updated the `mentorship.astro` page to use a new `mentorship-component`, aligning its structure and styling with the other pages. This includes:
 
 1.  **Created `index.ts`:** This file contains the new `MentorshipComponent`, which encapsulates the page's content and logic.
@@ -44,8 +46,6 @@ Create a new mentorship page, make sure the style is readable. Use Playwright if
 
 _**Assistant**_
 
-
-
 ---
 
 _**User**_
@@ -62,14 +62,14 @@ First, I need to understand how `card-component` is defined and used. Then I'll 
 
 I will also update the existing `mentorship.astro` to redirect to the new page.
 
- 
-````
+```
 
-````
+```
 
-````
+```
 
-````
+```
+
 I've created a new mentorship page at `index.astro` and updated the `mentorship-component` to use `card-component` instead of `project-card`.
 
 Here's a summary of the changes:
@@ -81,4 +81,3 @@ Here's a summary of the changes:
 The styling remains consistent with the rest of the site, ensuring readability and adherence to the global color scheme.
 
 ---
-

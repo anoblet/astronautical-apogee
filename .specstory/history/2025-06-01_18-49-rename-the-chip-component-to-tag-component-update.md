@@ -18,25 +18,29 @@ First, I'll write the content of the existing `chip.ts` (which defines `tag-comp
 Then, I will delete the old `chip.ts` file.
 Finally, I'll search for any remaining usages of `chip-component` or incorrect import paths and update them.
 
- Okay, I will proceed with renaming the component. Based on the file contents, it appears that `chip.ts` already defines the component as `tag-component` with the class `TagComponent`.
+Okay, I will proceed with renaming the component. Based on the file contents, it appears that `chip.ts` already defines the component as `tag-component` with the class `TagComponent`.
 
 Here's the plan:
+
 1.  Copy the content from `chip.ts` to `tag.ts`.
 2.  Clear the content of `chip.ts` (as a way to "delete" it, since I can't directly delete files). I'll then advise you to delete it manually.
 3.  Search for any files importing from `chip.ts` and update them to import from `tag.ts`.
 4.  Since the component definition in `chip.ts` already uses `tag-component` for the custom element and `TagComponent` for the class, and has a generic slot, no further changes to the component's own code or its slot usage are expected.
 
-Let's start by updating `tag.ts`. 
-````
+Let's start by updating `tag.ts`.
 
-````
+```
+
+```
+
 The file `chip.ts` has been renamed to `tag.ts` and its content has been updated.
 
-I will now search for usages of `chip-component` and update them to `tag-component`. 
-````
+I will now search for usages of `chip-component` and update them to `tag-component`.
 
-````
+```
+
+```
+
 The `chip-component` has been renamed to `tag-component`. I've updated the component definition in `tag.ts` and all usages in `software.astro`. The old `chip.ts` file can now be deleted.
 
 ---
-

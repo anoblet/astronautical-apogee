@@ -1,8 +1,8 @@
-import { css, html, LitElement } from "lit";
-import { customElement } from "lit/decorators.js";
-import { globalStyles } from "../../styles/global.ts";
+import { css, html, LitElement } from 'lit';
+import { customElement } from 'lit/decorators.js';
+import { globalStyles } from '../../styles/global.ts';
 
-@customElement("social-component")
+@customElement('social-component')
 export class Social extends LitElement {
   static styles = [
     globalStyles,

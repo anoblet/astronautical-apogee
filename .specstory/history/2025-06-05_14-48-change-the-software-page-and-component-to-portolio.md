@@ -12,10 +12,12 @@ _**Assistant**_
 
 Okay, I will rename the `software.astro` page to `personal.astro` and update the `project-card` component to be more generic.
 
-First, I'll rename the file `software.astro` to `/home/andrew/Software/astronautical-apogee/src/pages/portfolio/personal.astro` and update its content. 
-````
+First, I'll rename the file `software.astro` to `/home/andrew/Software/astronautical-apogee/src/pages/portfolio/personal.astro` and update its content.
 
-````
+```
+
+```
+
 I have renamed the `software.astro` page to `personal.astro` and updated its title and heading to reflect "Personal Projects". The content remains the same as it was in the `software.astro` page.
 
 I will now rename the file path. OK. I've renamed the `software.astro` page to `personal.astro` and moved it to the `` directory. I also updated the title and heading on the page to "Personal Projects".
@@ -32,14 +34,14 @@ Update the navigation for desktop and mobile to point to the new page.
 
 _**Assistant**_
 
+```
 
-````
+```
 
-````
+```
 
-````
+```
 
-````
 I've updated the navigation links in both the mobile and desktop versions to point to the new `/portfolio/personal` page. The link text is now "Personal Projects".
 
 ---
@@ -52,8 +54,6 @@ Use fluent menu to place the personal projects page in a dropdown underneath por
 
 _**Assistant**_
 
-
-
 ---
 
 _**User**_
@@ -64,10 +64,10 @@ Use fluent menu to place the personal projects page in a dropdown underneath por
 
 _**Assistant**_
 
-
 ```
 
 ```
+
 I've updated the desktop navigation to use a fluent menu dropdown for the Portfolio section. Now "Portfolio" appears as a dropdown menu with "Personal Projects" as a menu item underneath it. This creates a more organized navigation structure where related portfolio items can be grouped together under the main Portfolio menu.
 
 ---
@@ -80,10 +80,10 @@ Add a menu item for professional projects before the personal item.
 
 _**Assistant**_
 
-
 ```
 
 ```
+
 I've added a "Professional" menu item before the "Personal" item in the Portfolio dropdown menu. The Professional item links to `/portfolio/professional` and appears first in the menu, followed by the Personal item.
 
 ---
@@ -96,7 +96,6 @@ Remove menu button id since they are unneccesary
 
 _**Assistant**_
 
-
 ```
 
 ```
@@ -104,7 +103,7 @@ _**Assistant**_
 ```
 
 ```
+
 I've removed the unnecessary `id="menu-button"` attributes from both fluent-menu-button elements in the navigation component.
 
 ---
-

@@ -10,7 +10,7 @@ Do a deep analysis of my site, and suggest any improvements that could be made. 
 
 _**Assistant**_
 
-I'll conduct a comprehensive analysis of your site to identify potential improvements. Let me start by examining the project structure, reading key files, and then use Playwright to analyze the actual rendered site. Now let me start the dev server and use Playwright to analyze the actual site: Perfect! The server is running. Now let me use Playwright to analyze the site: Let me check the portfolio page: Let me navigate to the Services page: Let me test mobile responsiveness: Let me close the browser and analyze more of the codebase: Now let me analyze key code files and check for potential improvements: Now let me examine the error mentioned in the terminal output and check some additional aspects: 
+I'll conduct a comprehensive analysis of your site to identify potential improvements. Let me start by examining the project structure, reading key files, and then use Playwright to analyze the actual rendered site. Now let me start the dev server and use Playwright to analyze the actual site: Perfect! The server is running. Now let me use Playwright to analyze the site: Let me check the portfolio page: Let me navigate to the Services page: Let me test mobile responsiveness: Let me close the browser and analyze more of the codebase: Now let me analyze key code files and check for potential improvements: Now let me examine the error mentioned in the terminal output and check some additional aspects:
 
 ---
 
@@ -41,22 +41,25 @@ I've conducted a comprehensive analysis of your astronautical-apogee website usi
 ## 📊 **Current Performance Scores**
 
 - 🔴 **Performance: 36/100** (Critical)
-- 🟢 **Accessibility: 96/100** (Excellent) 
+- 🟢 **Accessibility: 96/100** (Excellent)
 - 🟢 **Best Practices: 100/100** (Perfect)
 - 🟢 **SEO: 90/100** (Good)
 
 ## 🚨 **Critical Issues**
 
 ### 1. **Severe Performance Problems**
+
 - **Total Blocking Time: 12.34 seconds** (should be <300ms)
 - **Largest Contentful Paint: 12.4 seconds** (should be <2.5s)
 - **Speed Index: 8.4 seconds** (should be <3.9s)
 - **Unused JavaScript: 169KB** of wasted code
 
 ### 2. **Route Collision**
+
 - Both `/services.astro` and `services.ts` exist causing Astro warnings
 
 ### 3. **Code Quality Issues**
+
 - `console.log` statements in production code
 - Potentially unnecessary FluentUI imports
 
@@ -65,14 +68,17 @@ I've conducted a comprehensive analysis of your astronautical-apogee website usi
 ### **🔥 High Priority (Performance)**
 
 1. **Remove/Replace FluentUI Components**
+
    - FluentUI is loading massive bundles for minimal usage
    - Replace with lightweight custom components or native elements
 
 2. **Code Splitting & Lazy Loading**
+
    - Implement dynamic imports for heavy components
    - Lazy load non-critical sections
 
 3. **Bundle Optimization**
+
    - Remove unused JavaScript (169KB potential savings)
    - Optimize Google Tag Manager loading strategy
 
@@ -83,6 +89,7 @@ I've conducted a comprehensive analysis of your astronautical-apogee website usi
 ### **🟡 Medium Priority**
 
 5. **SEO Enhancements**
+
    - Replace generic "Astro description" meta descriptions
    - Add page-specific meta descriptions
    - Implement structured data
@@ -95,6 +102,7 @@ I've conducted a comprehensive analysis of your astronautical-apogee website usi
 ### **🟢 Low Priority (Polish)**
 
 7. **Enhanced UX**
+
    - Improve mobile navigation behavior
    - Add loading states for components
    - Enhance focus management
@@ -139,14 +147,15 @@ I'll tackle the performance issues systematically, starting with the highest-imp
 
 ## 🔥 **Critical Performance Fixes**
 
-### 1. **Fix Route Collision (Quick Win)** The `services.astro` file is just importing the services-component, so I'll remove the duplicate and keep the cleaner astro structure: Now I need to move the services-component to a proper component location and update the astro file: 
+### 1. **Fix Route Collision (Quick Win)** The `services.astro` file is just importing the services-component, so I'll remove the duplicate and keep the cleaner astro structure: Now I need to move the services-component to a proper component location and update the astro file:
+
 ```
 
 ```
+
 ### 2. **Remove FluentUI Dependencies (Major Performance Win)**
 
-The FluentUI components are causing massive bundle bloat. Let me check what's being used and replace them: Let me check what FluentUI components are actually being used in the navigation: Now I need to replace these FluentUI menu components with lightweight native alternatives. Let me create a simple dropdown menu component: 
-```
+The FluentUI components are causing massive bundle bloat. Let me check what's being used and replace them: Let me check what FluentUI components are actually being used in the navigation: Now I need to replace these FluentUI menu components with lightweight native alternatives. Let me create a simple dropdown menu component:
 
 ```
 
@@ -157,22 +166,31 @@ The FluentUI components are causing massive bundle bloat. Let me check what's be
 ```
 
 ```
-Now I need to remove the unused methods and add CSS for the dropdown: 
-```
 
 ```
-Now let me add CSS for the dropdown menu: 
-```
+
+Now I need to remove the unused methods and add CSS for the dropdown:
 
 ```
 
 ```
 
-```
-Let me fix that - I need to remove the old fluent-menu CSS and keep the new dropdown CSS: Let me read the full file and rewrite it properly: Let me create the file from scratch: Now let me remove FluentUI from other components. Let me check the Navigation.astro: 
+Now let me add CSS for the dropdown menu:
+
 ```
 
 ```
+
+```
+
+```
+
+Let me fix that - I need to remove the old fluent-menu CSS and keep the new dropdown CSS: Let me read the full file and rewrite it properly: Let me create the file from scratch: Now let me remove FluentUI from other components. Let me check the Navigation.astro:
+
+```
+
+```
+
 Now let me check the theme and settings components: Let me see if the FluentUI text-input is actually used in this component: This component is using FluentUI text inputs extensively. Let me replace them with native HTML inputs: Copilot has been working on this problem for a while. It can continue to iterate, or you can send a new message to refine your prompt.
 
 ---
@@ -185,7 +203,6 @@ _**User**_
 
 _**Assistant**_
 
-
 ```
 
 ```
@@ -201,31 +218,27 @@ _**Assistant**_
 ```
 
 ```
-Now let me do the same for the settings component: 
-```
 
-```
-I need to read the full file to see the missing method: I need to add the missing _onKeyUp method and fix the structure: 
-```
-
-```
-I need to add the values property: 
-```
-
-```
-### 3. **Remove FluentUI from `package.json`** ### 4. **Add Proper Meta Descriptions (SEO Fix)** 
-```
+Now let me do the same for the settings component:
 
 ```
 
 ```
 
-```
+I need to read the full file to see the missing method: I need to add the missing \_onKeyUp method and fix the structure:
 
 ```
 
 ```
-Now let me add specific descriptions to key pages: 
+
+I need to add the values property:
+
+```
+
+```
+
+### 3. **Remove FluentUI from `package.json`** ### 4. **Add Proper Meta Descriptions (SEO Fix)**
+
 ```
 
 ```
@@ -237,15 +250,31 @@ Now let me add specific descriptions to key pages:
 ```
 
 ```
-### 5. **Test the Performance Improvements** There's an import issue. Let me fix the services component import: Let me check the actual import path: The import looks correct. Let me check if the services component was created properly: The services directory exists. Let me check its contents: The issue might be that the services component is trying to import relative paths. Let me fix the imports: 
-```
 
-```
-Let me try a different approach - import the component using a relative path: 
-```
+Now let me add specific descriptions to key pages:
 
 ```
 
+```
+
+```
+
+```
+
+```
+
+```
+
+### 5. **Test the Performance Improvements** There's an import issue. Let me fix the services component import: Let me check the actual import path: The import looks correct. Let me check if the services component was created properly: The services directory exists. Let me check its contents: The issue might be that the services component is trying to import relative paths. Let me fix the imports:
+
+```
+
+```
+
+Let me try a different approach - import the component using a relative path:
+
+```
+
+```
 
 ---
-

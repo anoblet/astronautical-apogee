@@ -1,11 +1,11 @@
-import { Base } from "@components/base";
-import { customElement, queryAll, state } from "lit/decorators.js";
-import { css, html } from "lit";
-import { BeforeRender } from "../../mixins/BeforeRenderMixin";
+import { Base } from '@components/base';
+import { customElement, queryAll, state } from 'lit/decorators.js';
+import { css, html } from 'lit';
+import { BeforeRender } from '../../mixins/BeforeRenderMixin';
 
-@customElement("settings-component")
+@customElement('settings-component')
 export class SettingsComponent extends BeforeRender(Base) {
-  @queryAll("input") accessor items!: NodeListOf<HTMLInputElement>;
+  @queryAll('input') accessor items!: NodeListOf<HTMLInputElement>;
   @state() accessor values: Record<string, string> = {};
 
   static styles = [
@@ -66,7 +66,7 @@ export class SettingsComponent extends BeforeRender(Base) {
             <input
               @keyup=${this._onKeyUp}
               name="h1-font-size"
-              value=${this.values["h1-font-size"] || ""}
+              value=${this.values['h1-font-size'] || ''}
               type="text"
             />
           </label>

@@ -1,14 +1,14 @@
-import { css, html } from "lit";
-import { customElement, property } from "lit/decorators.js";
-import { CardComponent } from ".";
-import { arrowForward } from "../../icons/arrow-forward";
-import "../image";
+import { css, html } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { CardComponent } from '.';
+import { arrowForward } from '../../icons/arrow-forward';
+import '../image';
 
-@customElement("project-card")
+@customElement('project-card')
 export class ProjectCard extends CardComponent {
-  @property({ type: String }) accessor image = "";
-  @property({ type: String }) accessor title = "";
-  @property({ type: String }) accessor content = "";
+  @property({ type: String }) accessor image = '';
+  @property({ type: String }) accessor title = '';
+  @property({ type: String }) accessor content = '';
 
   static styles = [
     ...super.styles,

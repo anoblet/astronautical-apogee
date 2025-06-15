@@ -1,8 +1,8 @@
-import { Base } from "@components/base";
-import { customElement, queryAll, state } from "lit/decorators.js";
-import { css, html } from "lit";
-import { BeforeRender } from "../../mixins/BeforeRenderMixin";
-import defaultTheme from "@themes/default.json" assert { type: "json" };
+import { Base } from '@components/base';
+import { customElement, queryAll, state } from 'lit/decorators.js';
+import { css, html } from 'lit';
+import { BeforeRender } from '../../mixins/BeforeRenderMixin';
+import defaultTheme from '@themes/default.json' assert { type: 'json' };
 
 const setProperty = (name: string, value: string) => {
   document.documentElement.style.setProperty(`--${name}`, value.trim());
@@ -19,7 +19,7 @@ export const applyStoredTheme = () => {
 };
 
 export const getTheme = (): Record<string, string> => {
-  const storedTheme = window.localStorage.getItem("theme");
+  const storedTheme = window.localStorage.getItem('theme');
 
   return storedTheme
     ? { ...defaultTheme, ...JSON.parse(storedTheme) }
@@ -27,13 +27,13 @@ export const getTheme = (): Record<string, string> => {
 };
 
 export const resetTheme = () => {
-  window.localStorage.removeItem("theme");
+  window.localStorage.removeItem('theme');
   setProperties(defaultTheme);
 };
 
-@customElement("theme-component")
+@customElement('theme-component')
 export class ThemeComponent extends BeforeRender(Base) {
-  @queryAll("input") accessor items!: NodeListOf<HTMLInputElement>;
+  @queryAll('input') accessor items!: NodeListOf<HTMLInputElement>;
 
   @state() accessor properties: Record<string, string> = {};
 
@@ -107,7 +107,7 @@ export class ThemeComponent extends BeforeRender(Base) {
   }
 
   _saveProperties(): void {
-    window.localStorage.setItem("theme", JSON.stringify(this.properties));
+    window.localStorage.setItem('theme', JSON.stringify(this.properties));
   }
 
   render() {
@@ -120,7 +120,7 @@ export class ThemeComponent extends BeforeRender(Base) {
             <input
               @change=${this._onChange}
               name="background-color"
-              value=${this.properties["background-color"] || ""}
+              value=${this.properties['background-color'] || ''}
               type="color"
             />
           </label>
@@ -131,7 +131,7 @@ export class ThemeComponent extends BeforeRender(Base) {
             <input
               @change=${this._onChange}
               name="text-color"
-              value=${this.properties["text-color"] || ""}
+              value=${this.properties['text-color'] || ''}
               type="color"
             />
           </label>
@@ -142,7 +142,7 @@ export class ThemeComponent extends BeforeRender(Base) {
             <input
               @change=${this._onChange}
               name="h1-color"
-              value=${this.properties["h1-color"] || ""}
+              value=${this.properties['h1-color'] || ''}
               type="color"
             />
           </label>
@@ -153,7 +153,7 @@ export class ThemeComponent extends BeforeRender(Base) {
             <input
               @change=${this._onChange}
               name="h1-font-size"
-              value=${this.properties["h1-font-size"] || ""}
+              value=${this.properties['h1-font-size'] || ''}
               type="text"
             />
           </label>
@@ -164,7 +164,7 @@ export class ThemeComponent extends BeforeRender(Base) {
             <input
               @change=${this._onChange}
               name="navigation-a-color"
-              value=${this.properties["navigation-a-color"] || ""}
+              value=${this.properties['navigation-a-color'] || ''}
               type="color"
             />
           </label>

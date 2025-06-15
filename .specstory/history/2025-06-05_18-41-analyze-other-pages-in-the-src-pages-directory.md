@@ -32,21 +32,25 @@ _**User**_
 
 _**Assistant**_
 
-Since the mentorship.astro file is empty, I'll create the complete mentorship page content: 
-````
+Since the mentorship.astro file is empty, I'll create the complete mentorship page content:
 
-````
+```
+
+```
+
 Perfect! I've created a comprehensive mentorship page that adheres to the overall brand aesthetic and follows the established patterns from the other pages. Here's what I've implemented:
 
 ## Key Features of the Mentorship Page:
 
 ### **Structure & Design**
+
 - Follows the same component-based architecture using Lit elements
 - Uses the established Layout with proper title
 - Implements responsive design with CSS Grid and Flexbox
 - Adheres to the global color scheme and typography
 
 ### **Content Sections**
+
 1. **Hero Section** - Clear value proposition and introduction
 2. **Statistics** - Visual proof of experience and success
 3. **Mentorship Areas** - Three key focus areas (Frontend, Career, Projects)
@@ -56,6 +60,7 @@ Perfect! I've created a comprehensive mentorship page that adheres to the overal
 7. **Call-to-Action** - Contact integration for engagement
 
 ### **Brand Consistency**
+
 - Uses the same card components and styling patterns
 - Follows the established color scheme with CSS custom properties
 - Maintains the clean, professional aesthetic
@@ -63,6 +68,7 @@ Perfect! I've created a comprehensive mentorship page that adheres to the overal
 - Responsive design that works on mobile and desktop
 
 ### **Technical Implementation**
+
 - Uses the `Base` class and component architecture
 - Implements proper TypeScript decorators with `accessor` keyword
 - Scoped CSS styles within the component
@@ -72,4 +78,3 @@ Perfect! I've created a comprehensive mentorship page that adheres to the overal
 The page provides a comprehensive overview of mentorship services while maintaining the site's professional, developer-focused brand identity. It includes practical pricing information and clear pathways for potential mentees to get started.
 
 ---
-

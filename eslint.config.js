@@ -72,7 +72,7 @@ export default [
       'chats/**',
       'bin/**',
       '.genaiscript/**',
-      'genaisrc/**/*.d.ts',
+      'genaisrc/**',
       '**/*.astro', // Skip Astro files for now
     ],
   },

@@ -10,7 +10,6 @@ Do a deep analysis of my site, and suggest any improvements that could be made. 
 
 _**Assistant**_
 
-I'll perform a deep analysis of your site to identify potential improvements. Let me start by examining your codebase structure, then use Playwright to analyze the live site. 
+I'll perform a deep analysis of your site to identify potential improvements. Let me start by examining your codebase structure, then use Playwright to analyze the live site.
 
 ---
-

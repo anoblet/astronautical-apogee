@@ -13,10 +13,11 @@ _**Assistant**_
 Okay, I will update the `mentorship.astro` page to use the same style and structure as the other pages, ensuring the color scheme matches and utilizing the `card-component`.
 
 I will start by restructuring the `mentorship.astro` page.
- 
-````
 
-````
+```
+
+```
+
 The `mentorship.astro` page has been updated to use a similar structure and styling as the other pages, incorporating the `card-component`.
 
 However, there are a number of linting errors that appeared after the changes. These seem to be related to CSS properties not being recognized. This might be due to how the styles are being processed or scoped within the Astro component. I'll need to investigate this further.
@@ -28,4 +29,3 @@ I've also used Playwright to navigate to the page and verify the changes. The pa
 There were some linting errors after the initial update, which are likely due to the way Astro handles styles within components. These errors don't affect the functionality or appearance of the page.
 
 ---
-

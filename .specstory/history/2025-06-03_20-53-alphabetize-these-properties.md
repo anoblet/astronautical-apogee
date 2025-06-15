@@ -10,11 +10,12 @@ Alphabetize these properties
 
 _**Assistant**_
 
-I can see you're referring to the properties in the `default.json` theme file. Let me alphabetize them for you. 
+I can see you're referring to the properties in the `default.json` theme file. Let me alphabetize them for you.
+
 ```
 
 ```
+
 The properties in the `default.json` theme file have been alphabetized. All the CSS custom properties are now organized alphabetically from "background-color" to "text-color".
 
 ---
-

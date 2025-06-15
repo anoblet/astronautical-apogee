@@ -1,12 +1,12 @@
-import { css, html, LitElement } from "lit";
-import { customElement, property } from "lit/decorators.js";
-import { globalStyles } from "../../styles/global";
+import { css, html, LitElement } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { globalStyles } from '../../styles/global';
 
-@customElement("image-component")
+@customElement('image-component')
 export class ImageComponent extends LitElement {
-  @property({ type: String }) accessor alt = "";
+  @property({ type: String }) accessor alt = '';
   @property({ reflect: true, type: Boolean }) accessor loaded = false;
-  @property({ type: String }) accessor src = "";
+  @property({ type: String }) accessor src = '';
 
   static styles = [
     globalStyles,
@@ -18,9 +18,9 @@ export class ImageComponent extends LitElement {
   ];
 
   firstUpdated() {
-    const img = this.shadowRoot?.querySelector("img");
+    const img = this.shadowRoot?.querySelector('img');
     if (img) {
-      img.addEventListener("load", this.onLoad.bind(this));
+      img.addEventListener('load', this.onLoad.bind(this));
     }
   }
 

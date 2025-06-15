@@ -1,8 +1,8 @@
-import { Base } from "@components/base";
-import { css, html } from "lit";
-import { customElement } from "lit/decorators.js";
+import { Base } from '@components/base';
+import { css, html } from 'lit';
+import { customElement } from 'lit/decorators.js';
 
-@customElement("tag-component")
+@customElement('tag-component')
 class TagComponent extends Base {
   static styles = [
     ...super.styles,
@@ -28,4 +28,3 @@ class TagComponent extends Base {
     return html`<slot></slot>`;
   }
 }
-

@@ -1,4 +1,4 @@
-import { html } from "lit";
+import { html } from 'lit';
 
 export const contrast = html`<svg
   xmlns="http://www.w3.org/2000/svg"

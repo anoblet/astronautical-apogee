@@ -1,12 +1,12 @@
-import { Base } from "@components/base";
-import "@components/icon";
-import { close } from "@icons/close";
-import { menu } from "@icons/menu";
-import { html } from "lit";
-import { customElement, property } from "lit/decorators.js";
-import { style } from "./index.css";
+import { Base } from '@components/base';
+import '@components/icon';
+import { close } from '@icons/close';
+import { menu } from '@icons/menu';
+import { html } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { style } from './index.css';
 
-@customElement("navigation-mobile")
+@customElement('navigation-mobile')
 export class NavigationMobile extends Base {
   @property({ type: Boolean, reflect: true }) accessor opened = false;
 
@@ -19,11 +19,11 @@ export class NavigationMobile extends Base {
   }
 
   firstUpdated() {
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
       if (window.scrollY > 0) {
-        this.style.position = "fixed";
+        this.style.position = 'fixed';
       } else {
-        this.style.position = "";
+        this.style.position = '';
       }
 
       if (this.scrollY > window.scrollY) {

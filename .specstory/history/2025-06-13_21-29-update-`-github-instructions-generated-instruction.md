@@ -10,7 +10,4 @@ Update `.github/instructions/generated-instructions` with current patterns. Remo
 
 _**Assistant**_
 
-
-
 ---
-

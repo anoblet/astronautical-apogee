@@ -1,11 +1,11 @@
-import "@components/button";
-import { phone } from "@icons/phone";
-import { css, html } from "lit";
-import { customElement } from "lit/decorators.js";
-import { Base } from "../base";
-import { calendarMonth } from "@icons/calendar-month";
+import '@components/button';
+import { phone } from '@icons/phone';
+import { css, html } from 'lit';
+import { customElement } from 'lit/decorators.js';
+import { Base } from '../base';
+import { calendarMonth } from '@icons/calendar-month';
 
-@customElement("contact-component")
+@customElement('contact-component')
 export class ContactComponent extends Base {
   static styles = [
     ...super.styles,

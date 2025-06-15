@@ -1,10 +1,10 @@
-import { css, html, LitElement } from "lit";
-import { customElement, property } from "lit/decorators.js";
-import { subscribe } from "src/media";
+import { css, html, LitElement } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { subscribe } from 'src/media';
 
-@customElement("media-component")
+@customElement('media-component')
 class MediaComponent extends LitElement {
-  @property({ reflect: true, type: String }) accessor media = "desktop";
+  @property({ reflect: true, type: String }) accessor media = 'desktop';
 
   static styles = css`
     :host {
@@ -12,12 +12,12 @@ class MediaComponent extends LitElement {
       width: 100%;
     }
 
-    :host([desktop][media="desktop"]) {
+    :host([desktop][media='desktop']) {
       display: flex;
       flex-direction: column;
     }
 
-    :host([mobile][media="mobile"]) {
+    :host([mobile][media='mobile']) {
       display: flex;
       flex-direction: column;
     }

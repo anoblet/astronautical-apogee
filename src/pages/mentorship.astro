@@ -1,19 +1,19 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Mentorship">
   <mentorship-component></mentorship-component>
 </Layout>
 <script>
-  import { Base } from "@components/base";
-  import { css, html } from "lit";
-  import { customElement } from "lit/decorators.js";
-  import "@components/card";
-  import "@components/contact";
-  import { arrowForward } from "@icons/arrow-forward";
+  import { Base } from '@components/base';
+  import { css, html } from 'lit';
+  import { customElement } from 'lit/decorators.js';
+  import '@components/card';
+  import '@components/contact';
+  import { arrowForward } from '@icons/arrow-forward';
 
-  @customElement("mentorship-component")
+  @customElement('mentorship-component')
   class MentorshipComponent extends Base {
     static styles = [
       ...super.styles,
@@ -122,9 +122,9 @@ import Layout from "../layouts/Layout.astro";
               <h3>Project Mentorship</h3>
               <div class="flex-1">
                 <p>
-                  Get expert guidance on your personal or professional
-                  projects. From architecture decisions to implementation
-                  challenges, I'll help you build better software.
+                  Get expert guidance on your personal or professional projects.
+                  From architecture decisions to implementation challenges, I'll
+                  help you build better software.
                 </p>
                 <ul>
                   <li>Code review and architecture feedback</li>

@@ -1,6 +1,6 @@
-import { css } from "lit";
-import { unsafeCSS } from "lit";
-import { chevronRight } from "../icons/chevron-right";
+import { css } from 'lit';
+import { unsafeCSS } from 'lit';
+import { chevronRight } from '../icons/chevron-right';
 
 export const globalStyles = css`
   :root {
@@ -41,7 +41,7 @@ export const globalStyles = css`
   body {
     background-color: var(--background-color);
     color: var(--text-color);
-    font-family: "Noto Sans", "Roboto", sans-serif;
+    font-family: 'Noto Sans', 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
@@ -51,13 +51,13 @@ export const globalStyles = css`
     display: flex;
     flex-direction: column;
 
-    &[data-media="desktop"] {
+    &[data-media='desktop'] {
       .hidden-desktop {
         display: none;
       }
     }
 
-    &[data-media="mobile"] {
+    &[data-media='mobile'] {
       .hidden-mobile {
         display: none;
       }
@@ -115,7 +115,7 @@ export const globalStyles = css`
   h4,
   h5,
   h6 {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
 
     margin: 0;
   }
@@ -166,7 +166,7 @@ export const globalStyles = css`
   }
 
   service-card {
-    [slot="content"] {
+    [slot='content'] {
       display: flex;
       flex-direction: column;
       gap: 1rem;

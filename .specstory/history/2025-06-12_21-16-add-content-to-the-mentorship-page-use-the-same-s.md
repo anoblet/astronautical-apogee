@@ -11,15 +11,18 @@ Add content to the mentorship page. Use the same style as other pages.
 _**Assistant**_
 
 I'll help you add content to the mentorship page. First, let me examine the current mentorship page and look at other pages to understand the style and structure being used. Now let me check a few other pages to understand the structure and content style: Let me also check the portfolio page to see another example: Now let me check the global styles to understand the design system: Let me also check the card component to understand how it's used: Now I have a good understanding of the structure. Based on the other pages, I can see that the mentorship page should follow this pattern:
+
 1. Use a similar structure to `services.ts` with cards and content sections
 2. Include a hero section with title and description
 3. Use card components for different mentorship offerings
 4. Include appropriate styling and use the existing design system
 
-Let me create comprehensive content for the mentorship page: 
+Let me create comprehensive content for the mentorship page:
+
 ```
 
 ```
+
 Perfect! I've added comprehensive content to the mentorship page following the same style and structure as the other pages in your site. Here's what I included:
 
 ## Key Features Added:
@@ -27,7 +30,7 @@ Perfect! I've added comprehensive content to the mentorship page following the s
 1. **Hero Section**: Clear title and description explaining the mentorship offering
 2. **Service Cards**: Three main mentorship areas:
    - Career Guidance
-   - Technical Skills Development  
+   - Technical Skills Development
    - Project Mentorship
 3. **Testimonials**: Social proof section with example testimonials
 4. **Process Overview**: Four-step explanation of how mentorship works
@@ -46,6 +49,7 @@ Perfect! I've added comprehensive content to the mentorship page following the s
 ## Content Structure:
 
 The content is organized to:
+
 - Clearly communicate the value proposition
 - Address different skill levels and needs
 - Provide specific examples of what's included
@@ -56,4 +60,3 @@ The content is organized to:
 The page now has substantial, meaningful content that aligns with your existing design system and provides visitors with a clear understanding of your mentorship services.
 
 ---
-
