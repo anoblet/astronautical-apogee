@@ -17,6 +17,8 @@
   "index-h1-color": "var(--color-neutral-800)",
   "name": "light",
   "navigation-a-color": "var(--color-neutral-200)",
+  "navigation-mobile-a-color": "var(--color-neutral-200)",
+  "navigation-mobile-color": "var(--color-neutral-200)",
   "outline": "1px solid #000",
   "padding": "1rem",
   "primary-color": "var(--color-teal-200)",

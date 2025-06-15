@@ -29,6 +29,10 @@ export const style = css`
     transition: left 0.2s ease-in-out;
     width: 100vw;
     z-index: 1;
+
+    a {
+      color: var(--navigation-mobile-a-color);
+    }
   }
 
   icon-component {
