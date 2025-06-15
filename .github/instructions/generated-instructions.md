@@ -88,3 +88,8 @@
   - The user expects strict adherence to all provided instructions.
   - The user is direct in pointing out deviations from instructions.
   - The timestamp mechanism for chat logs (current date and time) is acceptable.
+  - Prefers clean, organized configuration files without unnecessary comments.
+  - Values alphabetical organization for better maintainability and readability.
+  - Appreciates minimal, streamlined approaches to file management.
+  - Likes to keep configuration files tidy and well-structured.
+  - Values efficiency in task completion and clear explanations of changes.
