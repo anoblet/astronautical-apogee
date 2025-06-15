@@ -6,14 +6,14 @@ import litdev from "../assets/lit.dev_.webp";
 <Layout title="Lit">
   <h1>Lit</h1>
   <project-card image={litdev.src} title="Lit" href="https://lit.dev/">
-    <div class="tags" slot="tags">
+    <div class="chips" slot="tags">
       <tag-component>JavaScript</tag-component>
       <tag-component>TypeScript</tag-component>
       <tag-component>Web Components</tag-component>
       <tag-component>LitElement</tag-component>
       <tag-component>Open Source</tag-component>
     </div>
-    <ul id="content" slot="content">
+    <ul class="flex column gap padding color-neutral-200" slot="content">
       <li>
         Lit is a fast, simple library for building web components and reactive UIs.
       </li>
@@ -27,46 +27,7 @@ import litdev from "../assets/lit.dev_.webp";
   </project-card>
 </Layout>
 
-<style>
-  p {
-    color: var(--color-neutral-200);
-  }
 
-  #content {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin: 0;
-    padding: 1rem;
-  }
-
-  ul {
-    color: var(--color-neutral-200);
-    list-style-type: "-";
-  }
-
-  li {
-    padding-left: 1rem;
-  }
-
-  li::marker {
-    color: var(--color-teal-400);
-    content: "•" " ";
-    padding-left: 1rem;
-  }
-
-  .tags {
-    display: flex;
-    gap: 1rem;
-    overflow: hidden;
-    text-wrap: nowrap;
-
-    &:hover {
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-  }
-</style>
 <script>
   import "../components/card/project-card";
   import "../components/tag.ts";

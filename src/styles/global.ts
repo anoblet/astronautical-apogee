@@ -231,6 +231,53 @@ export const globalStyles = css`
     font-weight: 600;
   }
 
+  .card-surface {
+    background-color: var(--color-neutral-800);
+    border: 1px solid var(--color-neutral-600);
+    border-radius: 0.5rem;
+
+    &:hover {
+      border-color: var(--color-accent-500);
+    }
+  }
+
+  .card-topic {
+    background: var(--color-neutral-900);
+    border: 1px solid var(--color-neutral-800);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: border-color 0.2s ease;
+
+    &:hover {
+      border-color: var(--color-accent-500);
+    }
+
+    h3 {
+      color: var(--color-neutral-100);
+      margin-bottom: 0.75rem;
+      font-size: 1.125rem;
+      font-weight: 600;
+    }
+
+    p {
+      color: var(--color-neutral-300);
+      line-height: 1.5;
+      margin: 0;
+    }
+  }
+
+  .color-neutral-100 {
+    color: var(--color-neutral-100);
+  }
+
+  .color-neutral-200 {
+    color: var(--color-neutral-200);
+  }
+
+  .color-neutral-300 {
+    color: var(--color-neutral-300);
+  }
+
   .divider {
     height: 1rem;
   }
@@ -248,6 +295,10 @@ export const globalStyles = css`
 
   .flex-end {
     justify-self: flex-end;
+  }
+
+  .font-size-1-125 {
+    font-size: 1.125rem;
   }
 
   .font-size-1-5 {
@@ -300,10 +351,66 @@ export const globalStyles = css`
     &.column {
       grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
     }
+
+    &.auto-fit-15 {
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    }
+
+    &.auto-fit-20 {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+
+    &.auto-fit-300 {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+
+  .hero-description {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--color-neutral-300);
+    max-width: 48rem;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
 
   .justify-content-flex-end {
     justify-content: flex-end;
+  }
+
+  .line-height-1-5 {
+    line-height: 1.5;
+  }
+
+  .line-height-1-6 {
+    line-height: 1.6;
+  }
+
+  .line-height-1-7 {
+    line-height: 1.7;
+  }
+
+  .margin-auto {
+    margin: 0 auto;
+  }
+
+  .margin-bottom-1 {
+    margin-bottom: 1rem;
+  }
+
+  .margin-bottom-2 {
+    margin-bottom: 2rem;
+  }
+
+  .margin-bottom-3 {
+    margin-bottom: 3rem;
+  }
+
+  .margin-bottom-4 {
+    margin-bottom: 4rem;
   }
 
   .max-width-48 {
@@ -328,6 +435,14 @@ export const globalStyles = css`
 
   .padding-0 {
     padding: 0;
+  }
+
+  .padding-1-25 {
+    padding: 1.25rem;
+  }
+
+  .padding-1-5 {
+    padding: 1.5rem;
   }
 
   .page {
@@ -360,6 +475,20 @@ export const globalStyles = css`
     justify-content: space-between;
     align-items: center;
     width: 100%;
+  }
+
+  .step-card {
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--color-neutral-800);
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-neutral-600);
+
+    @media (max-width: 768px) {
+      padding: 1.25rem;
+    }
   }
 
   .teal-200 {

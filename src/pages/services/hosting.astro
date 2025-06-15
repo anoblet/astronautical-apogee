@@ -15,27 +15,27 @@ import Layout from "../../layouts/Layout.astro";
     </section>
     <section class="gap grid">
       <h2>Why Choose My Hosting Services</h2>
-      <div class="column gap grid">
-        <div class="feature">
+      <div class="grid auto-fit-15 gap-2">
+        <div class="step-card">
           <h3>99.9% Uptime</h3>
           <p>
             Reliable infrastructure with guaranteed uptime and fast global
             delivery.
           </p>
         </div>
-        <div class="feature">
+        <div class="step-card">
           <h3>Lightning Fast</h3>
           <p>
             Optimized for speed with CDN, caching, and performance monitoring.
           </p>
         </div>
-        <div class="feature">
+        <div class="step-card">
           <h3>Secure by Default</h3>
           <p>
             SSL certificates, security headers, and regular security updates.
           </p>
         </div>
-        <div class="feature">
+        <div class="step-card">
           <h3>24/7 Support</h3>
           <p>Expert technical support whenever you need it.</p>
         </div>
@@ -131,23 +131,7 @@ import Layout from "../../layouts/Layout.astro";
   </div>
 </Layout>
 
-<style>
-  .hero-description {
-    font-size: 1.125rem;
-    line-height: 1.7;
-    color: var(--color-neutral-300);
-    max-width: 48rem;
-    margin: 0 auto;
-  }
 
-  .feature {
-    text-align: center;
-    padding: 1.5rem;
-    background-color: var(--color-neutral-800);
-    border-radius: 0.5rem;
-    border: 1px solid var(--color-neutral-600);
-  }
-</style>
 <script>
   import "../../components/card";
   import "../../components/contact";

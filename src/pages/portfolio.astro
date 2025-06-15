@@ -107,30 +107,16 @@ import Layout from "@layouts/Layout.astro";
           "Featured Projects" and the company blog.
         </li>
       </ul>
-      <ul class="tags">
-        <li><tag-component>HTML</tag-component></li>
-        <li><tag-component>CSS</tag-component></li>
-        <li><tag-component>JavaScript</tag-component></li>
-        <li><tag-component>Wordpress</tag-component></li>
+      <ul class="flex gap-0-5 padding-0" style="flex-wrap: wrap; list-style-type: none;">
+        <li style="text-wrap: nowrap;"><tag-component>HTML</tag-component></li>
+        <li style="text-wrap: nowrap;"><tag-component>CSS</tag-component></li>
+        <li style="text-wrap: nowrap;"><tag-component>JavaScript</tag-component></li>
+        <li style="text-wrap: nowrap;"><tag-component>Wordpress</tag-component></li>
       </ul>
     </card-component>
   </scroll-component>
 </Layout>
-<style>
-  span {
-  }
 
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    list-style-type: none;
-
-    li {
-      text-wrap: nowrap;
-    }
-  }
-</style>
 <script>
   import "@components/card";
   import "@components/contact";

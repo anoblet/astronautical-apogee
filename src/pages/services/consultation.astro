@@ -6,7 +6,7 @@ import Layout from "../../layouts/Layout.astro";
   <div class="grid gap-3 page">
     <section class="column flex gap-2 align-items-center">
       <h1>Technical Consultation</h1>
-      <p class="max-width-48 text-align-center">
+      <p class="hero-description">
         Expert guidance to help you navigate complex technical decisions and
         optimize your development process. From architecture planning to
         performance optimization, I provide strategic advice that drives results
@@ -15,26 +15,26 @@ import Layout from "../../layouts/Layout.astro";
     </section>
     <section class="gap grid">
       <h2>My Approach</h2>
-      <div class="column gap grid">
-        <div class="approach-step">
+      <div class="grid auto-fit-15 gap-2">
+        <div class="step-card">
           <h3>Assessment</h3>
           <p>
             Thorough analysis of your current situation, challenges, and
             objectives.
           </p>
         </div>
-        <div class="approach-step">
+        <div class="step-card">
           <h3>Strategy</h3>
           <p>
             Develop tailored recommendations based on best practices and your
             specific needs.
           </p>
         </div>
-        <div class="approach-step">
+        <div class="step-card">
           <h3>Implementation</h3>
           <p>Provide guidance and support during the implementation phase.</p>
         </div>
-        <div class="approach-step">
+        <div class="step-card">
           <h3>Follow-up</h3>
           <p>
             Ongoing support to ensure successful outcomes and continuous
@@ -137,31 +137,7 @@ import Layout from "../../layouts/Layout.astro";
     </section>
   </div>
 </Layout>
-<style>
-  .hero-description {
-    font-size: 1.125rem;
-    line-height: 1.7;
-    color: var(--color-neutral-300);
-    max-width: 48rem;
-    margin: 0 auto;
-  }
 
-  .approach-step {
-    display: grid;
-    gap: 1rem;
-    text-align: center;
-    padding: 1.5rem;
-    background-color: var(--color-neutral-800);
-    border-radius: 0.5rem;
-    border: 1px solid var(--color-neutral-600);
-  }
-
-  @media (max-width: 768px) {
-    .hero-description {
-      font-size: 1rem;
-    }
-  }
-</style>
 <script>
   import "@components/card";
   import "@components/contact";

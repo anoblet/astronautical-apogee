@@ -6,7 +6,7 @@ import Layout from "../../layouts/Layout.astro";
   <div class="grid gap-3 page">
     <section class="gap-2 grid text-align-center justify-content-center">
       <h1>UI/UX Design</h1>
-      <p class="padding">
+      <p class="hero-description">
         Creating intuitive and user-friendly interfaces that enhance user
         experience and drive engagement. From research to final implementation,
         I deliver designs that balance aesthetics with functionality.
@@ -14,29 +14,29 @@ import Layout from "../../layouts/Layout.astro";
     </section>
     <section class="gap-2 grid">
       <h2>My Design Process</h2>
-      <div class="column gap grid">
-        <div class="process-step">
+      <div class="grid auto-fit-15 gap-2">
+        <div class="step-card">
           <h3>Research & Discovery</h3>
           <p>
             Understanding your users, business goals, and competitive landscape
             to inform design decisions.
           </p>
         </div>
-        <div class="process-step">
+        <div class="step-card">
           <h3>Wireframing</h3>
           <p>
             Creating low-fidelity wireframes to establish information
             architecture and user flows.
           </p>
         </div>
-        <div class="process-step">
+        <div class="step-card">
           <h3>Visual Design</h3>
           <p>
             Developing high-fidelity mockups with attention to typography,
             color, and visual hierarchy.
           </p>
         </div>
-        <div class="process-step">
+        <div class="step-card">
           <h3>Prototyping</h3>
           <p>
             Building interactive prototypes to test and validate design concepts
@@ -47,7 +47,7 @@ import Layout from "../../layouts/Layout.astro";
     </section>
     <section class="gap-2 grid">
       <h2>Design Services</h2>
-      <div class="column gap grid">
+      <div class="grid auto-fit-20 gap-2">
         <card-component>
           <h3>User Experience Design</h3>
           <p>
@@ -91,56 +91,7 @@ import Layout from "../../layouts/Layout.astro";
   </div>
 </Layout>
 
-<style>
-  .hero {
-    text-align: center;
-  }
 
-  .hero-description {
-    font-size: 1.125rem;
-    line-height: 1.7;
-    color: var(--color-neutral-300);
-    max-width: 48rem;
-    margin: 0 auto;
-  }
-
-  .process-grid,
-  .services-grid {
-    display: grid;
-    gap: 2rem;
-  }
-
-  .process-grid {
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    margin-bottom: 2rem;
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  }
-
-  .process-step {
-    display: grid;
-    gap: 1rem;
-    text-align: center;
-    padding: 1.5rem;
-    background-color: var(--color-neutral-800);
-    border-radius: 0.5rem;
-    border: 1px solid var(--color-neutral-600);
-  }
-
-  @media (max-width: 768px) {
-    .hero-description {
-      font-size: 1rem;
-    }
-
-    .process-grid,
-    .services-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-  }
-</style>
 
 <script>
   import "@components/card";

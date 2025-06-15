@@ -5,58 +5,58 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Blog">
   <div class="page">
     <h1>Blog</h1>
-    <div class="blog-intro">
-      <p>
+    <div class="margin-bottom-3">
+      <p class="color-neutral-200 font-size-1-125 line-height-1-6 margin-bottom-1">
         Welcome to my blog! This is where I share insights, tutorials, and
         thoughts on web development, design, and technology. I write about
         modern frameworks, best practices, and the evolving landscape of
         software development.
       </p>
-      <p>
+      <p class="color-neutral-200 font-size-1-125 line-height-1-6 margin-bottom-1">
         I'm currently setting up the blog infrastructure and preparing my first
         posts. Stay tuned for content covering topics like:
       </p>
     </div>
 
-    <div class="upcoming-topics">
-      <h2>Upcoming Topics</h2>
-      <div class="topics-grid">
-        <div class="topic-card">
+    <div class="margin-bottom-4">
+      <h2 class="margin-bottom-2 color-neutral-100">Upcoming Topics</h2>
+      <div class="grid auto-fit-300 gap-2">
+        <div class="card-topic">
           <h3>Astro & Modern Web Development</h3>
           <p>
             Deep dives into Astro's capabilities, performance optimizations, and
             building fast, content-focused websites.
           </p>
         </div>
-        <div class="topic-card">
+        <div class="card-topic">
           <h3>Web Components with Lit</h3>
           <p>
             Practical guides for building reusable, framework-agnostic
             components using LitElement and modern web standards.
           </p>
         </div>
-        <div class="topic-card">
+        <div class="card-topic">
           <h3>Design Systems & CSS Architecture</h3>
           <p>
             Building scalable design systems, CSS methodologies, and maintaining
             consistency across large projects.
           </p>
         </div>
-        <div class="topic-card">
+        <div class="card-topic">
           <h3>Performance & Accessibility</h3>
           <p>
             Techniques for optimizing web performance and creating inclusive,
             accessible user experiences.
           </p>
         </div>
-        <div class="topic-card">
+        <div class="card-topic">
           <h3>Hosting & Deployment</h3>
           <p>
             Modern deployment strategies, cloud hosting solutions, and
             performance monitoring best practices.
           </p>
         </div>
-        <div class="topic-card">
+        <div class="card-topic">
           <h3>Developer Experience</h3>
           <p>
             Tools, workflows, and techniques that improve productivity and code
@@ -66,9 +66,9 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
 
-    <div class="newsletter-signup">
-      <h2>Stay Updated</h2>
-      <p>
+    <div class="text-align-center padding-1-5 card-surface">
+      <h2 class="margin-bottom-1 color-neutral-100">Stay Updated</h2>
+      <p class="color-neutral-200 margin-bottom-2 max-width-56 margin-auto">
         Want to be notified when I publish new posts? I'm planning to share
         valuable insights and practical tutorials that will help you build
         better web experiences.
@@ -80,93 +80,7 @@ import Layout from "../layouts/Layout.astro";
   </div>
 </Layout>
 
-<style>
-  .blog-intro {
-    margin-bottom: 3rem;
-  }
 
-  .blog-intro p {
-    color: var(--color-neutral-200);
-    font-size: 1.125rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-
-  .upcoming-topics {
-    margin-bottom: 4rem;
-  }
-
-  .upcoming-topics h2 {
-    margin-bottom: 2rem;
-    color: var(--color-neutral-100);
-  }
-
-  .topics-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-
-  .topic-card {
-    background: var(--color-neutral-900);
-    border: 1px solid var(--color-neutral-800);
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    transition: border-color 0.2s ease;
-  }
-
-  .topic-card:hover {
-    border-color: var(--color-accent-500);
-  }
-
-  .topic-card h3 {
-    color: var(--color-neutral-100);
-    margin-bottom: 0.75rem;
-    font-size: 1.125rem;
-    font-weight: 600;
-  }
-
-  .topic-card p {
-    color: var(--color-neutral-300);
-    line-height: 1.5;
-    margin: 0;
-  }
-
-  .newsletter-signup {
-    text-align: center;
-    padding: 2rem;
-    background: var(--color-neutral-900);
-    border-radius: 0.5rem;
-    border: 1px solid var(--color-neutral-800);
-  }
-
-  .newsletter-signup h2 {
-    margin-bottom: 1rem;
-    color: var(--color-neutral-100);
-  }
-
-  .newsletter-signup p {
-    color: var(--color-neutral-200);
-    margin-bottom: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @media (max-width: 768px) {
-    .topics-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .topic-card {
-      padding: 1.25rem;
-    }
-
-    .newsletter-signup {
-      padding: 1.5rem;
-    }
-  }
-</style>
 
 <script>
   import "../components/contact";
