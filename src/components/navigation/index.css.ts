@@ -53,6 +53,12 @@ export const style = css`
 
   fluent-menu-list {
     background-color: var(--color-neutral-900);
+    // Add a box shadow to all sides except for the top
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    /* display: flex; */
+    /* flex-direction: column; */
   }
 
   fluent-menu-item {

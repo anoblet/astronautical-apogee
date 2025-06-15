@@ -1,7 +1,8 @@
 # Generated Code Style and Project Instructions
 
 ## General Project Guidelines
-- **Simplicity:** Keep solutions simple and straightforward.
+- **Simplicity:** Keep solutions simple and straightforward. User highly values code simplification and reducing complexity.
+- **Performance Optimization:** Prioritize bundle size reduction and performance. User is concerned about over-engineering and excessive dependencies.
 - **Comments:** Remove unnecessary comments. Do not add new comments unless explicitly clarifying complex logic.
 - **File Formatting:** Always include an empty line at the end of each file.
 - **Decoupling:** Emphasize decoupled components and modules.
@@ -10,6 +11,7 @@
 - **Clarity:** If unsure about any requirement, always ask for clarification.
 - **Development Server:** Start the development server as the first step and keep it running. Use its output to identify and fix errors. Open a new terminal for additional commands if needed.
 - **Technologies:** The project uses Astro JS, Lit, and Fluent UI.
+- **Bundle Optimization:** User prefers lightweight solutions over heavy frameworks. Consider native alternatives to large dependencies.
 - **Project Goal:** Create a portfolio site for a software developer (GitHub: https://github.com/anoblet/).
 - **Content Requirements:**
     - Include a services page.
