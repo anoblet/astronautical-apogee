@@ -65,7 +65,7 @@ export const globalStyles = css`
   }
 
   a {
-    color: var(--color-teal-200);
+    color: var(--a-color);
     cursor: pointer;
     display: inline-flex;
     text-decoration: none;
@@ -126,12 +126,12 @@ export const globalStyles = css`
   }
 
   h2 {
-    color: var(--color-blue-200);
+    color: var(--h2-color);
     font-size: 2rem;
   }
 
   h3 {
-    color: var(--color-amber-200);
+    color: var(--h3-color);
   }
 
   hr {
@@ -368,7 +368,7 @@ export const globalStyles = css`
   .hero-description {
     font-size: 1.125rem;
     line-height: 1.7;
-    color: var(--color-neutral-300);
+    color: var(--hero-description-color);
     max-width: 48rem;
     margin: 0 auto;
 

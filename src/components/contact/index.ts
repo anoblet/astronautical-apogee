@@ -3,6 +3,7 @@ import { phone } from "@icons/phone";
 import { css, html } from "lit";
 import { customElement } from "lit/decorators.js";
 import { Base } from "../base";
+import { calendarMonth } from "@icons/calendar-month";
 
 @customElement("contact-component")
 export class ContactComponent extends Base {
@@ -45,7 +46,7 @@ export class ContactComponent extends Base {
         target="_blank"
         rel="noopener noreferrer"
       >
-        ${phone}
+        ${calendarMonth}
       </a>
     `;
   }

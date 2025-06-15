@@ -55,6 +55,7 @@ import { ClientRouter } from "astro:transitions";
     <Footer />
     <!-- <contrast-component></contrast-component> -->
     <contact-component></contact-component>
+    <theme-toggle></theme-toggle>
   </body>
 </html>
 <script>
@@ -97,6 +98,7 @@ import { ClientRouter } from "astro:transitions";
 <script>
   import { applyStoredTheme } from "@components/theme";
   import { globalStyles } from "../styles/global";
+  import "@components/theme/toggle";
 
   // Apply global styles
   if (globalStyles.styleSheet) {
@@ -111,4 +113,5 @@ import { ClientRouter } from "astro:transitions";
   applyStoredTheme();
 
   document.addEventListener("astro:after-swap", applyStoredTheme);
+  
 </script>

@@ -1,5 +1,4 @@
 import { Base } from "@components/base";
-import "@components/contrast";
 import "@components/icon";
 import { close } from "@icons/close";
 import { menu } from "@icons/menu";
@@ -43,7 +42,6 @@ export class NavigationMobile extends Base {
     return html`
       <div class="space-between">
         <icon-component @click=${this.toggle}>${menu}</icon-component>
-        <contrast-component></contrast-component>
       </div>
       <aside>
         <icon-component @click=${this.toggle}>${close}</icon-component>
