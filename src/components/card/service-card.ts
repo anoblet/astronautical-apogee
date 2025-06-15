@@ -43,13 +43,6 @@ export class ServiceCard extends CardComponent {
         margin-bottom: 0.5rem;
       }
 
-      #title {
-        font-size: 1.25rem;
-        font-weight: 600;
-        color: var(--color-teal-200);
-        margin: 0;
-      }
-
       a {
         align-items: center;
         text-decoration: none;

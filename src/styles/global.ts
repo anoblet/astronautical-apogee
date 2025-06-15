@@ -159,12 +159,6 @@ export const globalStyles = css`
     margin: 0;
   }
 
-  project-card {
-    ul {
-      color: var(--color-neutral-200);
-    }
-  }
-
   service-card {
     [slot='content'] {
       display: flex;
