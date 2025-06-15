@@ -1,0 +1,10 @@
+{
+  "name": "scripts",
+  "type": "module",
+  "scripts": {
+    "genaiscript": "genaiscript"
+  },
+  "devDependencies": {
+    "genaiscript": "^1.130.1"
+  }
+}

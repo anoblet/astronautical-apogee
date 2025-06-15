@@ -11,12 +11,6 @@ importers:
       '@anoblet/mixins':
         specifier: github:anoblet/mixins
         version: https://codeload.github.com/anoblet/mixins/tar.gz/09ca5858119f8c2ee984cc5f97e5f730ee722fa7
-      '@fluentui/tokens':
-        specifier: 1.0.0-alpha.21
-        version: 1.0.0-alpha.21
-      '@fluentui/web-components':
-        specifier: ^3.0.0-beta.99
-        version: 3.0.0-beta.104(@microsoft/fast-element@2.3.0)
       astro:
         specifier: ^5.7.10
         version: 5.8.0(@types/node@22.15.21)(rollup@4.41.0)(typescript@5.8.3)
@@ -275,14 +269,6 @@ packages:
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
 
-  '@fluentui/tokens@1.0.0-alpha.21':
-    resolution: {integrity: sha512-xQ1T56sNgDFGl+kJdIwhz67mHng8vcwO7Dvx5Uja4t+NRULQBgMcJ4reUo4FGF3TjufHj08pP0/OnKQgnOaSVg==}
-
-  '@fluentui/web-components@3.0.0-beta.104':
-    resolution: {integrity: sha512-eESq5C7tB65k3FFgTLLKM0N0A62u8zaVJQ12ajgnLc5HDJbc4LbvCIU4VGm+8QV1WygGB8pfE5YXb2Ok6084Bw==}
-    peerDependencies:
-      '@microsoft/fast-element': ^2.0.0-beta.26 || ^2.0.0
-
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
@@ -403,12 +389,6 @@ packages:
 
   '@lit/reactive-element@2.1.0':
     resolution: {integrity: sha512-L2qyoZSQClcBmq0qajBVbhYEcG6iK0XfLn66ifLe/RfC0/ihpc+pl0Wdn8bJ8o+hj38cG0fGXRgSS20MuXn7qA==}
-
-  '@microsoft/fast-element@2.3.0':
-    resolution: {integrity: sha512-zEKEvbM7UTCi3kOGQs/fUA1I+g8N+/Gx8hiFgw0oPEsH7Ltxf8YAdqn7puBi1uUQuQo6qkReUptTtZ2Y6+XPLA==}
-
-  '@microsoft/fast-web-utilities@6.0.0':
-    resolution: {integrity: sha512-ckCA4Xn91ja1Qz+jhGGL1Q3ZeuRpA5VvYcRA7GzA1NP545sl14bwz3tbHCq8jIk+PL7mkSaIveGMYuJB2L4Izg==}
 
   '@oslojs/encoding@1.1.0':
     resolution: {integrity: sha512-70wQhgYmndg4GCPxPPxPGevRKqTIJ2Nh4OkiMWmDAVYsTQ+Ta7Sq+rPevXyXGdzr30/qZBnyOalCszoMxlyldQ==}
@@ -825,9 +805,6 @@ packages:
 
   eventemitter3@5.0.1:
     resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
-
-  exenv-es6@1.1.1:
-    resolution: {integrity: sha512-vlVu3N8d6yEMpMsEm+7sUBAI81aqYYuEvfK0jNqmdb/OPXzzH7QWDDnVjMvDSY47JdHEqx/dfC/q8WkfoTmpGQ==}
 
   exit-hook@2.2.1:
     resolution: {integrity: sha512-eNTPlAD67BmP31LDINZ3U7HSF8l57TxOY2PmBJ1shpCvpnxBF93mWCE8YHBnXs8qiUZJc9WDcWIeC3a2HIAMfw==}
@@ -1362,9 +1339,6 @@ packages:
     resolution: {integrity: sha512-iq6eVVI64nQQTRYq2KtEg2d2uU7LElhTJwsH4YzIHZshxlgZms/wIc4VoDQTlG/IvVIrBKG06CrZnp0qv7hkcQ==}
     engines: {node: '>=12'}
 
-  tabbable@6.2.0:
-    resolution: {integrity: sha512-Cat63mxsVJlzYvN51JmVXIgNoUokrIaT2zLclCXjRd8boZ0004U4KCs/sToJ75C6sdlByWxpYnb5Boif1VSFew==}
-
   tiny-inflate@1.0.3:
     resolution: {integrity: sha512-pkY1fj1cKHb2seWDy0B16HeWyczlJA9/WW3u3c4z/NiWDsO3DOU5D7nhTLE9CF0yXv/QZFY7sEJmj24dK+Rrqw==}
 
@@ -1854,18 +1828,6 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
-  '@fluentui/tokens@1.0.0-alpha.21':
-    dependencies:
-      '@swc/helpers': 0.5.17
-
-  '@fluentui/web-components@3.0.0-beta.104(@microsoft/fast-element@2.3.0)':
-    dependencies:
-      '@fluentui/tokens': 1.0.0-alpha.21
-      '@microsoft/fast-element': 2.3.0
-      '@microsoft/fast-web-utilities': 6.0.0
-      tabbable: 6.2.0
-      tslib: 2.8.1
-
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
       '@img/sharp-libvips-darwin-arm64': 1.0.4
@@ -1955,12 +1917,6 @@ snapshots:
   '@lit/reactive-element@2.1.0':
     dependencies:
       '@lit-labs/ssr-dom-shim': 1.3.0
-
-  '@microsoft/fast-element@2.3.0': {}
-
-  '@microsoft/fast-web-utilities@6.0.0':
-    dependencies:
-      exenv-es6: 1.1.1
 
   '@oslojs/encoding@1.1.0': {}
 
@@ -2409,8 +2365,6 @@ snapshots:
       '@types/estree': 1.0.7
 
   eventemitter3@5.0.1: {}
-
-  exenv-es6@1.1.1: {}
 
   exit-hook@2.2.1: {}
 
@@ -3269,8 +3223,6 @@ snapshots:
   strip-ansi@7.1.0:
     dependencies:
       ansi-regex: 6.1.0
-
-  tabbable@6.2.0: {}
 
   tiny-inflate@1.0.3: {}
 

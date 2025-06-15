@@ -7,27 +7,23 @@
       <ul>
         <li><a href="/">Home</a></li>
         <li>
-          <fluent-accordion>
-            <fluent-accordion-item>
-              <span slot="heading">Portfolio</span>
-              <ul>
-                <li><a href="/portfolio/personal">Personal</a></li>
-                <li><a href="/portfolio/professional">Professional</a></li>
-              </ul>
-            </fluent-accordion-item>
-          </fluent-accordion>
+          <details>
+            <summary>Portfolio</summary>
+            <ul>
+              <li><a href="/portfolio/personal">Personal</a></li>
+              <li><a href="/portfolio/professional">Professional</a></li>
+            </ul>
+          </details>
         </li>
         <li>
-          <fluent-accordion>
-            <fluent-accordion-item>
-              <span slot="heading">Services</span>
-              <ul>
-                <li><a href="/services/design">Design</a></li>
-                <li><a href="/services/hosting">Hosting</a></li>
-                <li><a href="/services/consultation">Consultation</a></li>
-              </ul>
-            </fluent-accordion-item>
-          </fluent-accordion>
+          <details>
+            <summary>Services</summary>
+            <ul>
+              <li><a href="/services/design">Design</a></li>
+              <li><a href="/services/hosting">Hosting</a></li>
+              <li><a href="/services/consultation">Consultation</a></li>
+            </ul>
+          </details>
         </li>
         <li><a href="/mentorship">Mentorship</a></li>
       </ul>
@@ -38,12 +34,33 @@
           color: var(--text-color);
         }
 
-        fluent-accordion-item {
-          display: grid;
-          gap: 0.5rem;
+        details {
+          summary {
+            cursor: pointer;
+            padding: 0.5rem 0;
+            list-style: none;
+            color: var(--text-color);
+            font-weight: 500;
 
-          &::part(heading) {
-            gap: 0.5rem;
+            &::-webkit-details-marker {
+              display: none;
+            }
+
+            &::before {
+              content: "▶";
+              display: inline-block;
+              margin-right: 0.5rem;
+              transition: transform 0.2s ease-in-out;
+            }
+          }
+
+          &[open] summary::before {
+            transform: rotate(90deg);
+          }
+
+          ul {
+            padding-left: 1rem;
+            margin-top: 0.5rem;
           }
         }
 
@@ -60,8 +77,6 @@
       }
     </style>
     <script>
-      import "@fluentui/web-components/accordion-item.js";
-      import "@fluentui/web-components/accordion.js";
       import "./media";
       import "./navigation";
       import "./navigation/mobile";
