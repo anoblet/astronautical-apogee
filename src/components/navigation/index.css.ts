@@ -59,8 +59,8 @@ export const style = css`
       top: 100%;
       left: 0;
       background-color: var(--color-neutral-900);
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-      border-radius: 0.5rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+      border-radius: 0 0 0.5rem;
       min-width: 180px;
       opacity: 0;
       visibility: hidden;
@@ -78,12 +78,8 @@ export const style = css`
           background-color: var(--color-neutral-800);
         }
 
-        &:first-child {
-          border-radius: 0.5rem 0.5rem 0 0;
-        }
-
         &:last-child {
-          border-radius: 0 0 0.5rem 0.5rem;
+          border-radius: 0 0 0.25rem 0.25rem;
         }
       }
     }

@@ -3,8 +3,10 @@ import Layout from '@layouts/Layout.astro';
 import genaiscript from '@assets/microsoft.github.io_genaiscript_.webp';
 import lit from '@assets/lit.dev_.webp';
 import astro from '@assets/astro.build_.webp';
+import ArrowForward from '@icons/arrow-forward.svg';
+import { Image } from 'astro:assets';
 import '@components/tag.ts';
-import '@components/card/project-card.ts';
+import '@components/card';
 ---
 
 <Layout title="Personal Projects">
@@ -18,87 +20,113 @@ import '@components/card/project-card.ts';
       </p>
     </div>
     <div class="space-0-5"></div>
-    <project-card image={astro.src} title="Astro" href="https://astro.build/">
-      <div class="chips" slot="chips">
-        <div class="flex flex-wrap gap-0-5">
-          <tag-component>JavaScript</tag-component>
-          <tag-component>TypeScript</tag-component>
-          <tag-component>Static Site Generator</tag-component>
-          <tag-component>Astro</tag-component>
-          <tag-component>Open Source</tag-component>
+    <card-component>
+      <div class="flex gap justify-content-space-between align-items-center">
+        <h2>Astro</h2>
+        <div class="chips">
+          <div class="flex flex-wrap gap-0-5">
+            <tag-component>JavaScript</tag-component>
+            <tag-component>TypeScript</tag-component>
+            <tag-component>Static Site Generator</tag-component>
+            <tag-component>Astro</tag-component>
+            <tag-component>Open Source</tag-component>
+          </div>
         </div>
       </div>
-      <ul id="content" slot="content">
-        <li>
-          Astro is a modern static site builder focused on performance and
-          component-driven architecture.
-        </li>
-        <li>
-          I use Astro to build fast, maintainable, and highly composable web
-          projects with a focus on reusability and best practices.
-        </li>
-        <li>
-          My experience includes creating layouts, reusable components, and
-          integrating with various frameworks using Astro.
-        </li>
-      </ul>
-    </project-card>
-    <project-card image={lit.src} title="Lit" href="https://lit.dev/">
-      <div class="chips" slot="chips">
-        <div class="flex flex-wrap gap-0-5">
-          <tag-component>JavaScript</tag-component>
-          <tag-component>TypeScript</tag-component>
-          <tag-component>Web Components</tag-component>
-          <tag-component>LitElement</tag-component>
-          <tag-component>Open Source</tag-component>
+      <div class="flex-1">
+        <Image src={astro} alt="Astro" class="card-image" />
+        <ul>
+          <li>
+            Astro is a modern static site builder focused on performance and
+            component-driven architecture.
+          </li>
+          <li>
+            I use Astro to build fast, maintainable, and highly composable web
+            projects with a focus on reusability and best practices.
+          </li>
+          <li>
+            My experience includes creating layouts, reusable components, and
+            integrating with various frameworks using Astro.
+          </li>
+        </ul>
+      </div>
+      <a class="gap-0-5 justify-content-flex-end" href="https://astro.build/">
+        Learn more <ArrowForward />
+      </a>
+    </card-component>
+    <card-component>
+      <div class="flex gap justify-content-space-between align-items-center">
+        <h2>Lit</h2>
+        <div class="chips">
+          <div class="flex flex-wrap gap-0-5">
+            <tag-component>JavaScript</tag-component>
+            <tag-component>TypeScript</tag-component>
+            <tag-component>Web Components</tag-component>
+            <tag-component>LitElement</tag-component>
+            <tag-component>Open Source</tag-component>
+          </div>
         </div>
       </div>
-      <ul id="content" slot="content">
-        <li>
-          Lit is a fast, simple library for building web components and reactive
-          UIs.
-        </li>
-        <li>
-          I have been learning Lit and contributing to its ecosystem for over 5
-          years, sharing feedback and improvements with the community.
-        </li>
-        <li>
-          My work with Lit includes building reusable UI components, exploring
-          advanced patterns, and advocating for web standards.
-        </li>
-      </ul>
-    </project-card>
-    <project-card
-      image={genaiscript.src}
-      title="GenAIScript"
-      href="https://microsoft.github.io/genaiscript/"
-    >
-      <div class="chips" slot="chips">
-        <div class="flex flex-wrap gap-0-5">
-          <tag-component>TypeScript</tag-component>
-          <tag-component>Node.js</tag-component>
-          <tag-component>AI</tag-component>
-          <tag-component>CLI</tag-component>
-          <tag-component>OpenAI</tag-component>
-          <tag-component>Prompt Engineering</tag-component>
+      <div class="flex-1">
+        <Image src={lit} alt="Lit" class="card-image" />
+        <ul>
+          <li>
+            Lit is a fast, simple library for building web components and
+            reactive UIs.
+          </li>
+          <li>
+            I have been learning Lit and contributing to its ecosystem for over
+            5 years, sharing feedback and improvements with the community.
+          </li>
+          <li>
+            My work with Lit includes building reusable UI components, exploring
+            advanced patterns, and advocating for web standards.
+          </li>
+        </ul>
+      </div>
+      <a class="gap-0-5 justify-content-flex-end" href="https://lit.dev/">
+        Learn more <ArrowForward />
+      </a>
+    </card-component>
+    <card-component>
+      <div class="flex gap justify-content-space-between align-items-center">
+        <h2>GenAIScript</h2>
+        <div class="chips">
+          <div class="flex flex-wrap gap-0-5">
+            <tag-component>TypeScript</tag-component>
+            <tag-component>Node.js</tag-component>
+            <tag-component>AI</tag-component>
+            <tag-component>CLI</tag-component>
+            <tag-component>OpenAI</tag-component>
+            <tag-component>Prompt Engineering</tag-component>
+          </div>
         </div>
       </div>
-      <ul id="content" slot="content">
-        <li>
-          I am actively learning GenAIScript, an open-source scripting language
-          for generative AI workflows by Microsoft.
-        </li>
-        <li>
-          I contribute to the community by sharing feedback, reporting issues,
-          and engaging with other users to improve the project.
-        </li>
-        <li>
-          I am implementing GenAIScript in my daily workflow to automate content
-          generation, experiment with prompt engineering, and streamline
-          repetitive tasks using AI.
-        </li>
-      </ul>
-    </project-card>
+      <div class="flex-1">
+        <Image src={genaiscript} alt="GenAIScript" class="card-image" />
+        <ul>
+          <li>
+            I am actively learning GenAIScript, an open-source scripting
+            language for generative AI workflows by Microsoft.
+          </li>
+          <li>
+            I contribute to the community by sharing feedback, reporting issues,
+            and engaging with other users to improve the project.
+          </li>
+          <li>
+            I am implementing GenAIScript in my daily workflow to automate
+            content generation, experiment with prompt engineering, and
+            streamline repetitive tasks using AI.
+          </li>
+        </ul>
+      </div>
+      <a
+        class="gap-0-5 justify-content-flex-end"
+        href="https://microsoft.github.io/genaiscript/"
+      >
+        Learn more <ArrowForward />
+      </a>
+    </card-component>
   </div>
 </Layout>
 <style>
@@ -106,12 +134,15 @@ import '@components/card/project-card.ts';
     overflow-x: auto;
   }
 
-  project-card {
+  .card-image {
+    height: 100%;
     width: 100%;
+    border-radius: 0.25rem;
+    margin: 1rem 0;
   }
 </style>
 <script>
-  import '@components/card/project-card';
+  import '@components/card';
   import '@components/contact';
   import '@components/tag';
 </script>

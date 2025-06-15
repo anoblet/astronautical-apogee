@@ -5,7 +5,11 @@ import litdev from '../assets/lit.dev_.webp';
 
 <Layout title="Lit">
   <h1>Lit</h1>
-  <project-card image={litdev.src} title="Lit" href="https://lit.dev/">
+  <card-component>
+    <img src={litdev.src} alt="Lit" slot="image" />
+    <h2 slot="title">
+      <a href="https://lit.dev/">Lit</a>
+    </h2>
     <div class="chips" slot="tags">
       <tag-component>JavaScript</tag-component>
       <tag-component>TypeScript</tag-component>
@@ -27,10 +31,10 @@ import litdev from '../assets/lit.dev_.webp';
         advanced patterns, and advocating for web standards.
       </li>
     </ul>
-  </project-card>
+  </card-component>
 </Layout>
 
 <script>
-  import '../components/card/project-card';
+  import '../components/card';
   import '../components/tag.ts';
 </script>

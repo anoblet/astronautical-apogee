@@ -159,14 +159,6 @@ export const globalStyles = css`
     margin: 0;
   }
 
-  service-card {
-    [slot='content'] {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-  }
-
   svg {
     fill: currentColor;
     /* height: 1rem; */

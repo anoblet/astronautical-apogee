@@ -1,43 +1,70 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import graduationSource from '@assets/graduationsource.com_.webp';
+import ArrowForward from '@icons/arrow-forward.svg';
+import { Image } from 'astro:assets';
+import '@components/tag';
+import '@components/card';
 ---
 
 <Layout title="Graduation Source">
-  <project-card
-    image={graduationSource.src}
-    title="Graduation Source"
-    href="/portfolio/graduation-source"
-  >
-    <div class="chips" slot="chips">
-      <tag-component>HTML</tag-component>
-      <tag-component>CSS</tag-component>
-      <tag-component>JS</tag-component>
-      <tag-component>PHP</tag-component>
-      <tag-component>Magento</tag-component>
+  <card-component>
+    <div class="flex justify-content-space-between align-items-center">
+      <h2>Graduation Source</h2>
+      <div class="chips">
+        <tag-component>HTML</tag-component>
+        <tag-component>CSS</tag-component>
+        <tag-component>JS</tag-component>
+        <tag-component>PHP</tag-component>
+        <tag-component>Magento</tag-component>
+      </div>
     </div>
-    <ul slot="content">
-      <li>
-        Developed and maintained a comprehensive e-commerce platform for
-        GraduationSource, a leading supplier of academic regalia, serving over
-        500,000 graduates annually.
-      </li>
-      <li>
-        Key contributions included enhancing the product catalog system with
-        diverse categories and customization options, implementing robust order
-        management and inventory tracking, and developing secure user account
-        functionalities.
-      </li>
-      <li>
-        The project involved creating specialized student ordering portals,
-        integrating multiple payment gateways, and ensuring a scalable,
-        high-performance online shopping experience across various educational
-        levels, from kindergarten to university.
-      </li>
-    </ul>
-  </project-card>
+    <div class="flex-1">
+      <Image
+        src={graduationSource}
+        alt="Graduation Source"
+        class="card-image"
+      />
+      <ul>
+        <li>
+          Developed and maintained a comprehensive e-commerce platform for
+          GraduationSource, a leading supplier of academic regalia, serving over
+          500,000 graduates annually.
+        </li>
+        <li>
+          Key contributions included enhancing the product catalog system with
+          diverse categories and customization options, implementing robust
+          order management and inventory tracking, and developing secure user
+          account functionalities.
+        </li>
+        <li>
+          The project involved creating specialized student ordering portals,
+          integrating multiple payment gateways, and ensuring a scalable,
+          high-performance online shopping experience across various educational
+          levels, from kindergarten to university.
+        </li>
+      </ul>
+    </div>
+    <a
+      class="gap-0-5 justify-content-flex-end"
+      href="/portfolio/graduation-source"
+    >
+      Learn more <ArrowForward />
+    </a>
+  </card-component>
 </Layout>
+<style>
+  .chips {
+    overflow-x: auto;
+  }
+
+  .card-image {
+    width: 100%;
+    border-radius: 0.25rem;
+    margin: 1rem 0;
+  }
+</style>
 <script>
-  import '@components/card/project-card';
+  import '@components/card';
   import '@components/tag';
 </script>

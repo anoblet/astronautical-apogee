@@ -93,3 +93,7 @@
   - Appreciates minimal, streamlined approaches to file management.
   - Likes to keep configuration files tidy and well-structured.
   - Values efficiency in task completion and clear explanations of changes.
+  - Strongly prefers component consolidation and consistency over multiple specialized components.
+  - Wants to eliminate redundant components in favor of single, reusable components (e.g., replacing `service-card` and `project-card` with unified `card-component`).
+  - Values following established patterns and wants components to be interchangeable and composable.
+  - Prefers cleaner architecture and maintainable codebases through component unification.
