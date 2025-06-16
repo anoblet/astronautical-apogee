@@ -133,8 +133,12 @@ export const globalStyles = css`
   }
 
   icon-component {
-    color: var(--icon-component-color);
-    padding: var(--padding);
+    color: var(--icon-color);
+    padding: var(--icon-padding);
+
+    &:hover {
+      color: var(--icon-hover-color);
+    }
   }
 
   .justify-content-center {

@@ -2,6 +2,11 @@ import { css } from 'lit';
 
 export const style = css`
   :host {
+    --a-color: var(--navigation-desktop-a-color);
+    --a-hover-color: var(--navigation-desktop-a-hover-color);
+    --icon-color: var(--navigation-desktop-icon-color);
+    --icon-hover-color: var(--navigation-desktop-icon-hover-color);
+
     background-color: var(--navigation-desktop-background-color);
     display: flex;
     flex: 1;
@@ -14,11 +19,29 @@ export const style = css`
     &::part(home) {
       background-color: var(--navigation-desktop-home-background-color);
       color: var(--navigation-desktop-home-color);
+    }
   }
 
   :host([hidden]) {
     opacity: 0 !important;
     transition: opacity 0.2s ease-in-out;
+  }
+
+  a {
+    color: var(--navigation-a-color);
+
+    &:hover {
+      color: var(--navigation-a-hover-color);
+    }
+  }
+
+  icon-component {
+    color: var(--navigation-desktop-icon-color);
+    padding: 0.5rem 1rem;
+
+    &:hover {
+      color: var(--navigation-desktop-icon-hover-color);
+    }
   }
 
   #home {

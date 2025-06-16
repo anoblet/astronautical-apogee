@@ -4,7 +4,21 @@ import { Base } from '@components/base';
 
 @customElement('icon-component')
 export class Icon extends Base {
-  static styles = [...super.styles, css``];
+  static styles = [
+    ...super.styles,
+    css`
+      :host {
+        /* color: var(--icon-color); */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      :host(:hover) {
+        /* color: var(--icon-hover-color); */
+      }
+    `,
+  ];
 
   render() {
     return html`<slot></slot>`;
