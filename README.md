@@ -1,5 +1,11 @@
 # Astro Starter Kit: Basics
 
+https://andrewnoblet.com
+
+astro - lit - genaiscript
+
+**_ Disclaimer: This is a work in progress. _**
+
 ```sh
 npm create astro@latest -- --template basics
 ```

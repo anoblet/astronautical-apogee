@@ -97,3 +97,10 @@
   - Wants to eliminate redundant components in favor of single, reusable components (e.g., replacing `service-card` and `project-card` with unified `card-component`).
   - Values following established patterns and wants components to be interchangeable and composable.
   - Prefers cleaner architecture and maintainable codebases through component unification.
+  - Appreciates detailed technical analysis with quantified benefits and actionable recommendations.
+  - Values comprehensive documentation that includes both static code analysis and live browser testing.
+  - Prefers structured reports with clear prioritization, implementation phases, and risk assessments.
+  - Wants functionality preservation as a key requirement when simplifying complex systems.
+  - Values analysis backed by concrete evidence from both code review and runtime behavior.
+  - Appreciates time estimates and phased implementation approaches for technical improvements.
+  - Prefers reducing complexity while maintaining sophisticated engineering practices already in place.
