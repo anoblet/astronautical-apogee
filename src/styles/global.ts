@@ -87,17 +87,10 @@ export const globalStyles = css`
     &:hover {
       color: var(--color-blue-200);
     }
-
-    &:not(:has(card-component)) {
-      &:hover {
-        color: var(--color-sky-200);
-        transition: color 0.1s ease-in-out;
-      }
-    }
   }
 
   button-component {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
     outline: 1px solid var(--color-black);
   }
 
@@ -140,6 +133,7 @@ export const globalStyles = css`
   }
 
   icon-component {
+    color: var(--icon-component-color);
     padding: var(--padding);
   }
 

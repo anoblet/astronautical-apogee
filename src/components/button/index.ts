@@ -61,8 +61,8 @@ export class ButtonComponent extends Base {
 
       :host([variant='secondary']) {
         background: unset;
-        border: 1px solid var(--color-teal-200);
-        color: var(--color-teal-200);
+        border: var(--button-secondary-border);
+        color: var(--button-secondary-color);
       }
 
       :host([variant='secondary']:hover) {
@@ -71,6 +71,7 @@ export class ButtonComponent extends Base {
           var(--color-teal-200) 20%,
           var(--color-neutral-900) 100%
         );
+        color: var(--button-secondary-hover-color);
       }
 
       ::slotted(span) {

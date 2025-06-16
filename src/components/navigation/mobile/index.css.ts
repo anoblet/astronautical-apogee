@@ -36,7 +36,7 @@ export const style = css`
   }
 
   icon-component {
-    color: var(--color-teal-200);
+    color: var(--navigation-mobile-icon-color);
     cursor: pointer;
     z-index: 1;
   }

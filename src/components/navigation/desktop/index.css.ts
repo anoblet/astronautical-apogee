@@ -73,6 +73,7 @@ export const style = css`
       z-index: 10;
 
       a {
+        color: var(--dropdown-menu-a-color);
         display: block;
         padding: 0.75rem 1rem;
         color: var(--color-neutral-200);
