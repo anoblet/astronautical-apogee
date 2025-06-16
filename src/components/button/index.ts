@@ -1,6 +1,5 @@
-import { css, html, LitElement } from 'lit';
+import { css, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { globalStyles } from '../../styles/global';
 import { Base } from '../base';
 
 @customElement('button-component')
@@ -10,7 +9,7 @@ export class ButtonComponent extends Base {
     'primary';
 
   static styles = [
-    globalStyles,
+    ...super.styles,
     css`
       :host {
         align-items: center;

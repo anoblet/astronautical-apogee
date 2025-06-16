@@ -5,8 +5,8 @@ import { html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { style } from './index.css';
 
-@customElement('navigation-component')
-export class NavigationComponent extends Base {
+@customElement('navigation-desktop')
+export class NavigationDesktop extends Base {
   @property({ type: Boolean, reflect: true }) accessor opened = false;
 
   static styles = [globalStyles, style];
@@ -35,7 +35,7 @@ export class NavigationComponent extends Base {
 
   render() {
     return html`
-      <a class="teal-200" href="/" id="home">
+      <a href="/" id="home" part="home">
         <icon-component>${home}</icon-component>
       </a>
       <ul class="overflow-x">

@@ -2,7 +2,7 @@ import { css } from 'lit';
 
 export const style = css`
   :host {
-    background-color: var(--color-neutral-900);
+    background-color: var(--navigation-desktop-background-color);
     display: flex;
     flex: 1;
     justify-content: space-between;
@@ -10,6 +10,10 @@ export const style = css`
     transition: opacity 0.2s ease-in-out;
     width: 100%;
     z-index: 1;
+
+    &::part(home) {
+      background-color: var(--navigation-desktop-home-background-color);
+      color: var(--navigation-desktop-home-color);
   }
 
   :host([hidden]) {
@@ -24,7 +28,7 @@ export const style = css`
   }
 
   a {
-    color: var(--navigation-a-color);
+    color: var(--navigation-desktop-a-color);
   }
 
   li {
@@ -60,7 +64,7 @@ export const style = css`
       left: 0;
       background-color: var(--color-neutral-900);
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-      border-radius: 0 0 0.5rem;
+      border-radius: 0 0 0.5rem 0.5rem;
       min-width: 180px;
       opacity: 0;
       visibility: hidden;

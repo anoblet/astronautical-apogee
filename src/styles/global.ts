@@ -39,7 +39,7 @@ export const globalStyles = css`
   }
 
   body {
-    background-color: var(--background-color);
+    background-color: var(--body-background-color);
     color: var(--text-color);
     font-family: 'Noto Sans', 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -468,7 +468,7 @@ export const globalStyles = css`
     gap: 1rem;
     text-align: center;
     padding: 1.5rem;
-    background-color: var(--color-neutral-800);
+    background-color: var(--step-card-background-color);
     border-radius: 0.5rem;
     border: 1px solid var(--color-neutral-600);
 

@@ -1,7 +1,8 @@
 {
   "a-color": "var(--color-blue-800)",
-  "background-color": "#fff",
+  "body-background-color": "#fff",
   "border-radius": "0.25rem",
+  "box-shadow": "initial",
   "color-four": "var(--color-amber-200)",
   "color-one": "var(--color-teal-200)",
   "color-three": "var(--color-blue-400)",
@@ -16,7 +17,8 @@
   "h3-color": "var(--color-neutral-700)",
   "index-h1-color": "var(--color-neutral-800)",
   "name": "light",
-  "navigation-a-color": "var(--color-neutral-200)",
+  "navigation-a-color": "var(--color-neutral-800)",
+  "navigation-background-color": "#fff",
   "navigation-mobile-a-color": "var(--color-neutral-200)",
   "navigation-mobile-color": "var(--color-neutral-200)",
   "outline": "1px solid #000",
@@ -24,6 +26,7 @@
   "primary-color": "var(--color-teal-200)",
   "quaternary-color": "var(--color-amber-200)",
   "secondary-color": "var(--color-rose-400)",
+  "surface-background-color": "#fff",
   "tertiary-color": "var(--color-blue-400)",
   "text-color": "var(--color-neutral-900)"
 }
