@@ -8,7 +8,7 @@ export class Icon extends Base {
     ...super.styles,
     css`
       :host {
-        /* color: var(--icon-color); */
+        color: var(--icon-color);
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -16,7 +16,7 @@ export class Icon extends Base {
       }
 
       :host(:hover) {
-        /* color: var(--icon-hover-color); */
+        color: var(--icon-hover-color);
       }
     `,
   ];

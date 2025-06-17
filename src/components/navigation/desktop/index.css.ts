@@ -4,6 +4,7 @@ export const style = css`
   :host {
     --a-color: var(--navigation-desktop-a-color);
     --a-hover-color: var(--navigation-desktop-a-hover-color);
+
     --icon-color: var(--navigation-desktop-icon-color);
     --icon-hover-color: var(--navigation-desktop-icon-hover-color);
 
@@ -36,18 +37,7 @@ export const style = css`
   }
 
   icon-component {
-    color: var(--navigation-desktop-icon-color);
     padding: 0.5rem 1rem;
-
-    &:hover {
-      color: var(--navigation-desktop-icon-hover-color);
-    }
-  }
-
-  #home {
-    &:hover {
-      color: var(--color-rose-400);
-    }
   }
 
   a {
@@ -82,10 +72,10 @@ export const style = css`
     }
 
     .dropdown-menu {
+      background-color: var(--navigation-desktop-background-color);
       position: absolute;
       top: 100%;
       left: 0;
-      background-color: var(--color-neutral-900);
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
       border-radius: 0 0 0.5rem 0.5rem;
       min-width: 180px;
@@ -96,10 +86,8 @@ export const style = css`
       z-index: 10;
 
       a {
-        color: var(--dropdown-menu-a-color);
         display: block;
         padding: 0.75rem 1rem;
-        color: var(--color-neutral-200);
         transition: background-color 0.2s ease-in-out;
 
         &:hover {
