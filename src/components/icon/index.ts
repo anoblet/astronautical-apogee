@@ -12,6 +12,7 @@ export class Icon extends Base {
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        padding: var(--icon-padding);
       }
 
       :host(:hover) {

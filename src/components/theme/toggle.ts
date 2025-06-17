@@ -24,9 +24,7 @@ export class ThemeToggle extends Base {
   ];
 
   _toggleTheme() {
-    console.log(this._theme.name);
     this._theme = this._theme.name === 'light' ? dark : light;
-    console.log(this._theme.name);
     applyTheme(this._theme);
     setStoredTheme(this._theme);
   }

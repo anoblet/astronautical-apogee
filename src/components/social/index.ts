@@ -6,8 +6,6 @@ import github from '../../assets/icons/github.svg?raw';
 import linkedin from '../../assets/icons/linkedin.svg?raw';
 import { globalStyles } from '../../styles/global.ts';
 
-console.log(linkedin);
-
 @customElement('social-component')
 export class Social extends LitElement {
   static styles = [
