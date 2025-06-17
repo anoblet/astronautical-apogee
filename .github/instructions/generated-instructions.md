@@ -104,3 +104,7 @@
   - Values analysis backed by concrete evidence from both code review and runtime behavior.
   - Appreciates time estimates and phased implementation approaches for technical improvements.
   - Prefers reducing complexity while maintaining sophisticated engineering practices already in place.
+  - Values consistency across pages and wants to maintain the same design patterns throughout the application.
+  - Expects clear navigation paths and linking to detailed content for user experience enhancement.
+  - Prefers referencing existing pages and patterns when implementing new features to maintain design coherence.
+  - Favors clean, minimal component syntax without unnecessary attributes, preferring content-driven over prop-driven component design.

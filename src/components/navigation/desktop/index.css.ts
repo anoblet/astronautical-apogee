@@ -30,6 +30,7 @@ export const style = css`
 
   a {
     color: var(--navigation-a-color);
+    font-weight: 500;
 
     &:hover {
       color: var(--navigation-a-hover-color);
