@@ -3,87 +3,10 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Blog">
-  <div class="page">
-    <h1>Blog</h1>
-    <div class="margin-bottom-3">
-      <p
-        class="color-neutral-200 font-size-1-125 line-height-1-6 margin-bottom-1"
-      >
-        Welcome to my blog! This is where I share insights, tutorials, and
-        thoughts on web development, design, and technology. I write about
-        modern frameworks, best practices, and the evolving landscape of
-        software development.
-      </p>
-      <p
-        class="color-neutral-200 font-size-1-125 line-height-1-6 margin-bottom-1"
-      >
-        I'm currently setting up the blog infrastructure and preparing my first
-        posts. Stay tuned for content covering topics like:
-      </p>
-    </div>
+  <h1>Blog</h1>
+  <p>Welcome to the blog page!</p>
 
-    <div class="margin-bottom-4">
-      <h2 class="margin-bottom-2 color-neutral-100">Upcoming Topics</h2>
-      <div class="grid auto-fit-300 gap-2">
-        <div class="card-topic">
-          <h3>Astro & Modern Web Development</h3>
-          <p>
-            Deep dives into Astro's capabilities, performance optimizations, and
-            building fast, content-focused websites.
-          </p>
-        </div>
-        <div class="card-topic">
-          <h3>Web Components with Lit</h3>
-          <p>
-            Practical guides for building reusable, framework-agnostic
-            components using LitElement and modern web standards.
-          </p>
-        </div>
-        <div class="card-topic">
-          <h3>Design Systems & CSS Architecture</h3>
-          <p>
-            Building scalable design systems, CSS methodologies, and maintaining
-            consistency across large projects.
-          </p>
-        </div>
-        <div class="card-topic">
-          <h3>Performance & Accessibility</h3>
-          <p>
-            Techniques for optimizing web performance and creating inclusive,
-            accessible user experiences.
-          </p>
-        </div>
-        <div class="card-topic">
-          <h3>Hosting & Deployment</h3>
-          <p>
-            Modern deployment strategies, cloud hosting solutions, and
-            performance monitoring best practices.
-          </p>
-        </div>
-        <div class="card-topic">
-          <h3>Developer Experience</h3>
-          <p>
-            Tools, workflows, and techniques that improve productivity and code
-            quality in modern development environments.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="text-align-center padding-1-5 card-surface">
-      <h2 class="margin-bottom-1 color-neutral-100">Stay Updated</h2>
-      <p class="color-neutral-200 margin-bottom-2 max-width-56 margin-auto">
-        Want to be notified when I publish new posts? I'm planning to share
-        valuable insights and practical tutorials that will help you build
-        better web experiences.
-      </p>
-      <contact-component
-        href="https://calendar.app.google/t9p2HfknyNWf1RNV6"
-        text="Get in Touch for Updates"></contact-component>
-    </div>
-  </div>
+  <ul>
+    <li><a href="/blog/creative">Creative</a></li>
+  </ul>
 </Layout>
-
-<script>
-  import '../components/contact';
-</script>

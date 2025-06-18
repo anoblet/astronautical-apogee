@@ -155,6 +155,7 @@ export const globalStyles = css`
 
   p {
     margin: 0;
+    width: 100%; /* @todo: remove this and fix the issues it causes */
   }
 
   svg {

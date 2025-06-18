@@ -59,6 +59,7 @@ export class NavigationDesktop extends Base {
           </div>
         </li>
         <li><a href="/mentorship">Mentorship</a></li>
+        <li><a href="/blog">Blog</a></li>
       </ul>
       <social-component></social-component>
     `;
