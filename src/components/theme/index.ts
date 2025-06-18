@@ -1,8 +1,9 @@
 import { Base } from '@components/base';
-import { customElement, queryAll, state } from 'lit/decorators.js';
+import dark from '@themes/dark.json' assert { type: 'json' };
+import light from '@themes/light.json' assert { type: 'json' };
 import { css, html } from 'lit';
+import { customElement, queryAll, state } from 'lit/decorators.js';
 import { BeforeRender } from '../../mixins/BeforeRenderMixin';
-import defaultTheme from '@themes/light.json' assert { type: 'json' };
 
 const setProperty = (name: string, value: string) => {
   document.documentElement.style.setProperty(`--${name}`, value.trim());
@@ -19,16 +20,31 @@ export const applyStoredTheme = () => {
 };
 
 export const getTheme = (): Record<string, string> => {
+  let theme;
+
   const storedTheme = window.localStorage.getItem('theme');
 
-  return storedTheme
-    ? { ...defaultTheme, ...JSON.parse(storedTheme) }
-    : defaultTheme;
+  if (storedTheme) {
+    const name = JSON.parse(storedTheme).name;
+
+    // @todo Early return until we have a reset mechanism(timestamp?)
+    switch (name) {
+      case 'dark':
+        theme = dark;
+        break;
+      default:
+        theme = light;
+    }
+  } else {
+    theme = light;
+  }
+
+  return theme;
 };
 
 export const resetTheme = () => {
   window.localStorage.removeItem('theme');
-  setProperties(defaultTheme);
+  setProperties(light);
 };
 
 @customElement('theme-component')

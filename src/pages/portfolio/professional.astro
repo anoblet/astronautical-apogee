@@ -60,7 +60,7 @@ import Layout from '@layouts/Layout.astro';
           </svg>
         </a>
       </card-component>
-      <card-component href="/portfolio/graduation-source">
+      <card-component>
         <image-component src={graduationSource.src} alt="Graduation Source"
         ></image-component>
         <h3>Graduation Source</h3>
@@ -109,15 +109,10 @@ import Layout from '@layouts/Layout.astro';
           </svg>
         </a>
       </card-component>
-      <card-component
-        image={avantisystemsusa.src}
-        title="Avanti Systems USA"
-        href="/portfolio/avanti-systems-usa"
-      >
+      <card-component>
         <image-component src={avantisystemsusa.src} alt="Avanti Systems USA"
         ></image-component>
         <h3>Avanti Systems USA</h3>
-
         <ul>
           <li>
             Developed a comprehensive web presence for Avanti Systems USA, a
@@ -172,9 +167,6 @@ import Layout from '@layouts/Layout.astro';
   </div>
 </Layout>
 <style>
-  span {
-  }
-
   .tags {
     display: flex;
     flex-wrap: wrap;
