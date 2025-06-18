@@ -20,6 +20,10 @@ export class ThemeToggle extends Base {
         left: 0;
         z-index: 1000;
       }
+
+      icon-component {
+        color: var(--theme-toggle-icon-color);
+      }
     `,
   ];
 

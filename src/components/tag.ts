@@ -10,7 +10,7 @@ class TagComponent extends Base {
       :host {
         border: 1px solid var(--color-blue-200);
         border-radius: 0.25rem;
-        color: var(--color-blue-200);
+        color: var(--tag-color);
         display: block;
         font-size: 0.875rem;
         padding: 0.125rem 0.5rem;

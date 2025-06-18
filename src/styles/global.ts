@@ -72,10 +72,10 @@ export const globalStyles = css`
     transition: color 0.1s ease-in-out;
 
     &:has(card-component) {
-      color: inherit;
+      // color: inherit;
 
       &:hover {
-        color: var(--color-neutral-200);
+        // color: var(--color-neutral-200);
       }
     }
 

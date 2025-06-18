@@ -92,7 +92,7 @@ export const style = css`
         transition: background-color 0.2s ease-in-out;
 
         &:hover {
-          background-color: var(--color-neutral-800);
+          // background-color: var(--color-neutral-800);
         }
 
         &:last-child {

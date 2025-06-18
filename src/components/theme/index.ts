@@ -2,7 +2,7 @@ import { Base } from '@components/base';
 import { customElement, queryAll, state } from 'lit/decorators.js';
 import { css, html } from 'lit';
 import { BeforeRender } from '../../mixins/BeforeRenderMixin';
-import defaultTheme from '@themes/default.json' assert { type: 'json' };
+import defaultTheme from '@themes/light.json' assert { type: 'json' };
 
 const setProperty = (name: string, value: string) => {
   document.documentElement.style.setProperty(`--${name}`, value.trim());

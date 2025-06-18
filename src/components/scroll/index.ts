@@ -25,7 +25,7 @@ export class ScrollComponent extends Base {
     css`
       :host {
         max-width: 100%;
-        /* position: relative; */
+        position: relative;
       }
 
       :host([index='0']) #left {
@@ -75,7 +75,6 @@ export class ScrollComponent extends Base {
 
       ::slotted(*) {
         flex-shrink: 0;
-        padding: 0.25rem;
         scroll-snap-align: start;
         width: 100%;
       }

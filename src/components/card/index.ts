@@ -16,17 +16,13 @@ export class CardComponent extends Base {
         background-color: var(--card-background-color);
         border-radius: 0.5rem;
         display: flex;
-        flex: 1;
         flex-direction: column;
         gap: 1rem;
         padding: 1rem;
+        border: 1px solid var(--card-border-color);
         box-shadow:
           0 10px 15px -3px rgb(0 0 0 / 0.2),
           0 4px 6px -4px rgb(0 0 0 / 0.1);
-        /* outline: 1px solid var(--color-neutral-600); */
-        outline-width: 1px;
-        outline-style: solid;
-        outline-color: var(--color-neutral-600);
         transition: outline-color 0.1s ease-in-out;
         /* transition: transform 0.2s ease-in-out; */
         width: 100%;
