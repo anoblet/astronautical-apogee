@@ -19,7 +19,8 @@ export class ContactComponent extends Base {
         outline: 1px solid #000;
         position: fixed;
         right: 1rem;
-        width: max-content;
+        height: 1rem;
+        width: 1rem;
 
         a {
           color: inherit;
@@ -34,6 +35,11 @@ export class ContactComponent extends Base {
         a {
           color: inherit;
         }
+      }
+
+      svg {
+        height: 1rem;
+        width: 1rem;
       }
     `,
   ];
