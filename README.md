@@ -6,6 +6,18 @@ astro - lit - genaiscript
 
 **_ Disclaimer: This is a work in progress. _**
 
+## Tools Used
+
+- [Astro](https://astro.build/)
+- [Lit](https://lit.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Husky](https://typicode.github.io/husky/)
+- [lint-staged](https://github.com/okonet/lint-staged)
+- [Wrangler](https://developers.cloudflare.com/workers/wrangler/)
+- [GenAIScript](https://microsoft.github.io/genaiscript/)
+
 ```sh
 npm create astro@latest -- --template basics
 ```
