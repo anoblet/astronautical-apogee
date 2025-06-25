@@ -362,6 +362,10 @@ export const globalStyles = css`
     }
   }
 
+  .italic {
+    font-style: italic;
+  }
+
   .justify-content-flex-end {
     justify-content: flex-end;
   }
@@ -376,6 +380,10 @@ export const globalStyles = css`
 
   .line-height-1-7 {
     line-height: 1.7;
+  }
+
+  .margin-0-auto {
+    margin: 0 auto;
   }
 
   .margin-auto {
@@ -482,5 +490,13 @@ export const globalStyles = css`
 
   .text-align-center {
     text-align: center;
+  }
+
+  .quote {
+    font-style: italic;
+  }
+
+  .width-100 {
+    width: 100%;
   }
 `;
