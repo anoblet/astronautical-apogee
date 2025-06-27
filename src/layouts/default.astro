@@ -1,0 +1,110 @@
+---
+import '../styles/colors.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+import { ClientRouter } from 'astro:transitions';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-N2FTVHQC');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ClientRouter />
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-N2FTVHQC"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
+    <Header />
+    <main class="column flex gap padding margin-0-auto max-width-56">
+      <slot />
+    </main>
+    <Footer />
+    <!-- <contrast-component></contrast-component> -->
+    <contact-component></contact-component>
+    <theme-toggle></theme-toggle>
+  </body>
+</html>
+<script></script>
+<style>
+  @view-transition {
+    navigation: auto;
+  }
+
+  body {
+    min-height: 100vh;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+
+    &:has(*:not(:defined)) {
+      opacity: 0;
+    }
+  }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet"
+/>
+<script>
+  import media from '../media';
+
+  media.subscribe((media: string) => {
+    document.body.setAttribute('data-media', media);
+  });
+</script>
+<script>
+  import '@components/contact';
+  import '@components/social';
+  import { applyStoredTheme } from '@components/theme';
+  import '@components/theme/toggle';
+  import { globalStyles } from '../styles/global';
+
+  // Apply global styles
+  if (globalStyles.styleSheet) {
+    document.adoptedStyleSheets = [
+      ...document.adoptedStyleSheets,
+      globalStyles.styleSheet,
+    ];
+  } else {
+    console.error('Global styles not loaded');
+  }
+
+  applyStoredTheme();
+
+  document.addEventListener('astro:after-swap', applyStoredTheme);
+</script>
