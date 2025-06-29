@@ -1,9 +1,9 @@
 import '@components/button';
-import { phone } from '@icons/phone';
+import '@components/icon';
+import { calendarMonth } from '@icons/calendar-month';
 import { css, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { Base } from '../base';
-import { calendarMonth } from '@icons/calendar-month';
 
 @customElement('contact-component')
 export class ContactComponent extends Base {
@@ -11,17 +11,6 @@ export class ContactComponent extends Base {
     ...super.styles,
     css`
       :host {
-        background-color: var(--color-teal-200);
-        border-radius: 50%;
-        bottom: 1rem;
-        box-shadow: var(--box-shadow);
-        color: var(--color-neutral-900);
-        outline: 1px solid #000;
-        position: fixed;
-        right: 1rem;
-        height: 1rem;
-        width: 1rem;
-
         a {
           color: inherit;
         }
@@ -36,23 +25,17 @@ export class ContactComponent extends Base {
           color: inherit;
         }
       }
-
-      svg {
-        height: 1rem;
-        width: 1rem;
-      }
     `,
   ];
 
   render() {
     return html`
       <a
-        class="padding"
         href="https://calendar.app.google/JjnLtVR6mnM11FcS9"
         target="_blank"
         rel="noopener noreferrer"
       >
-        ${calendarMonth}
+        <icon-component>${calendarMonth}</icon-component>
       </a>
     `;
   }

@@ -19,6 +19,11 @@ export class Icon extends Base {
       :host(:hover) {
         color: var(--icon-hover-color);
       }
+
+      ::slotted(svg) {
+        height: var(--icon-size, 1rem);
+        width: var(--icon-size, 1rem);
+      }
     `,
   ];
 

@@ -3,15 +3,6 @@ import { unsafeCSS } from 'lit';
 import { chevronRight } from '../icons/chevron-right';
 
 export const globalStyles = css`
-  :root {
-    &:not(.dark) {
-      --background-color: #fff;
-      --button-secondary-color: var(--color-neutral-200);
-      --h1-color: var(--color-neutral-900);
-      --text-color: var(--color-neutral-900);
-    }
-  }
-
   *,
   *:before,
   *:after {
@@ -38,33 +29,17 @@ export const globalStyles = css`
     display: none;
   }
 
-  body {
-    background-color: var(--body-background-color);
-    color: var(--text-color);
-    font-family: 'Noto Sans', 'Roboto', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-
-    &[data-media='desktop'] {
-      .hidden-desktop {
-        display: none;
-      }
-    }
-
-    &[data-media='mobile'] {
-      .hidden-mobile {
-        display: none;
-      }
+  :root {
+    &:not(.dark) {
+      --background-color: #fff;
+      --button-secondary-color: var(--color-neutral-200);
+      --h1-color: var(--color-neutral-900);
+      --text-color: var(--color-neutral-900);
     }
   }
 
   a {
+    align-items: center;
     color: var(--a-color);
     cursor: pointer;
     display: inline-flex;
@@ -80,12 +55,38 @@ export const globalStyles = css`
     }
 
     &:has(svg) {
-      display: flex;
       align-items: center;
+      display: flex;
     }
 
     &:hover {
       color: var(--a-hover-color);
+    }
+  }
+
+  body {
+    background-color: var(--body-background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Noto Sans', 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+    margin: 0;
+    min-height: 100vh;
+    padding: 0;
+
+    &[data-media='desktop'] {
+      .hidden-desktop {
+        display: none;
+      }
+    }
+
+    &[data-media='mobile'] {
+      .hidden-mobile {
+        display: none;
+      }
     }
   }
 
@@ -95,11 +96,33 @@ export const globalStyles = css`
   }
 
   contact-component {
+    right: 1rem;
+  }
+
+  contact-component,
+  theme-toggle {
+    --icon-color: var(--color-sky-600);
+    --icon-hover-color: var(--color-rose-400);
+    --icon-padding: 0.25rem;
+    --icon-size: 1.25rem;
+
     align-items: center;
+    background-color: var(--color-neutral-100);
+    border: 1px solid var(--color-neutral-400);
+    border-radius: 50%;
+    bottom: 1rem;
+    box-shadow: var(--box-shadow);
+    color: var(--color-sky-400);
+    cursor: pointer;
     display: flex;
-    height: var(--contact-component-height);
     justify-content: center;
-    width: var(--contact-component-width);
+    padding: 0.5rem;
+    position: fixed;
+    z-index: 1;
+  }
+
+  navigation-desktop {
+    --icon-size: 1.25rem;
   }
 
   h1,
@@ -109,7 +132,6 @@ export const globalStyles = css`
   h5,
   h6 {
     font-family: 'Poppins', sans-serif;
-
     margin: 0;
   }
 
@@ -141,10 +163,6 @@ export const globalStyles = css`
     }
   }
 
-  .justify-content-center {
-    justify-content: center;
-  }
-
   li::marker {
     content: ${unsafeCSS(chevronRight)};
   }
@@ -164,9 +182,13 @@ export const globalStyles = css`
     /* width: 1rem; */
   }
 
+  theme-toggle {
+    left: 1rem;
+  }
+
   ul {
-    padding: var(--padding);
     margin: 0;
+    padding: var(--padding);
 
     &.card-list {
       display: flex;
@@ -174,25 +196,6 @@ export const globalStyles = css`
       gap: 2rem;
       list-style: none;
     }
-  }
-
-  .chips {
-    color: var(--secondary-color);
-    display: flex;
-    gap: 1rem;
-    overflow: hidden;
-    text-wrap: nowrap;
-
-    &:hover {
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-  }
-
-  .columns {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
   }
 
   .align-items-center {
@@ -239,9 +242,9 @@ export const globalStyles = css`
 
     h3 {
       color: var(--color-neutral-100);
-      margin-bottom: 0.75rem;
       font-size: 1.125rem;
       font-weight: 600;
+      margin-bottom: 0.75rem;
     }
 
     p {
@@ -251,16 +254,23 @@ export const globalStyles = css`
     }
   }
 
-  .color-neutral-100 {
-    color: var(--color-neutral-100);
+  .chips {
+    color: var(--secondary-color);
+    display: flex;
+    gap: 1rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+
+    &:hover {
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
   }
 
-  .color-neutral-200 {
-    color: var(--color-neutral-200);
-  }
-
-  .color-neutral-300 {
-    color: var(--color-neutral-300);
+  .columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
   .divider {
@@ -269,6 +279,7 @@ export const globalStyles = css`
 
   .flex {
     display: flex;
+
     &.column {
       flex-direction: column;
     }
@@ -333,10 +344,6 @@ export const globalStyles = css`
   .grid {
     display: grid;
 
-    &.column {
-      grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
-    }
-
     &.auto-fit-15 {
       grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     }
@@ -348,14 +355,18 @@ export const globalStyles = css`
     &.auto-fit-300 {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
+
+    &.column {
+      grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    }
   }
 
   .hero-description {
+    color: var(--hero-description-color);
     font-size: 1.125rem;
     line-height: 1.7;
-    color: var(--hero-description-color);
-    max-width: 48rem;
     margin: 0 auto;
+    max-width: 48rem;
 
     @media (max-width: 768px) {
       font-size: 1rem;
@@ -364,6 +375,10 @@ export const globalStyles = css`
 
   .italic {
     font-style: italic;
+  }
+
+  .justify-content-center {
+    justify-content: center;
   }
 
   .justify-content-flex-end {
@@ -447,6 +462,10 @@ export const globalStyles = css`
     }
   }
 
+  .quote {
+    font-style: italic;
+  }
+
   .rose-200 {
     color: var(--color-rose-200);
   }
@@ -464,20 +483,20 @@ export const globalStyles = css`
   }
 
   .space-between {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
   }
 
   .step-card {
+    background-color: var(--step-card-background-color);
+    border: 1px solid var(--color-neutral-600);
+    border-radius: 0.5rem;
     display: grid;
     gap: 1rem;
-    text-align: center;
     padding: 1.5rem;
-    background-color: var(--step-card-background-color);
-    border-radius: 0.5rem;
-    border: 1px solid var(--color-neutral-600);
+    text-align: center;
 
     @media (max-width: 768px) {
       padding: 1.25rem;
@@ -490,10 +509,6 @@ export const globalStyles = css`
 
   .text-align-center {
     text-align: center;
-  }
-
-  .quote {
-    font-style: italic;
   }
 
   .width-100 {

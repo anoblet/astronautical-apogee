@@ -33,12 +33,12 @@ export class ThemeToggle extends Base {
     if (storedTheme) {
       this._theme = storedTheme;
     }
+
+    this.addEventListener('click', this._toggleTheme.bind(this));
   }
 
   render() {
-    return html`<icon-component @click=${this._toggleTheme}
-      >${contrast}</icon-component
-    >`;
+    return html`<icon-component>${contrast}</icon-component>`;
   }
 }
 
