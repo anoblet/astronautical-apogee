@@ -27,7 +27,7 @@
   "index-h1-color": "var(--color-neutral-200)",
   "name": "dark",
   "navigation-a-color": "var(--color-neutral-200)",
-  "navigation-a-hover-color": "var(--color-teal-200)",
+  "navigation-a-hover-color": "var(--color-rose-400)",
   "navigation-background-color": "var(--color-neutral-800)",
   "navigation-desktop-a-color": "var(--color-neutral-200)",
   "navigation-desktop-background-color": "var(--color-neutral-800)",

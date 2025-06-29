@@ -85,7 +85,7 @@ export const globalStyles = css`
     }
 
     &:hover {
-      color: var(--color-blue-200);
+      color: var(--a-hover-color);
     }
   }
 
