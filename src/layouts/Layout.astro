@@ -85,6 +85,19 @@ import { ClientRouter } from 'astro:transitions';
       align-items: initial;
     }
   }
+
+  theme-toggle {
+    background-color: var(--color-sky-600);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    overflow: hidden;
+    z-index: 1000;
+
+    --icon-color: var(--color-neutral-100);
+    --icon-hover-color: var(--color-rose-400);
+  }
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

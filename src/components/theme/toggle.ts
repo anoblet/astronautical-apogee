@@ -14,15 +14,9 @@ export class ThemeToggle extends Base {
     ...super.styles,
     css`
       :host {
+        background-color: var(--color-neutral-100);
+        color: var(--color-neutral-900);
         cursor: pointer;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        z-index: 1000;
-      }
-
-      icon-component {
-        color: var(--theme-toggle-icon-color);
       }
     `,
   ];

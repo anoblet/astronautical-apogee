@@ -8,6 +8,7 @@ export class Icon extends Base {
     ...super.styles,
     css`
       :host {
+        background-color: var(--icon-background-color);
         color: var(--icon-color);
         display: inline-flex;
         align-items: center;
