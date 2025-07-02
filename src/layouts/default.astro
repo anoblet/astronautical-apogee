@@ -49,7 +49,7 @@ import { ClientRouter } from 'astro:transitions';
     >
     <!-- End Google Tag Manager (noscript) -->
     <Header />
-    <main class="column flex gap padding margin-0-auto max-width-56">
+    <main class="column flex gap padding">
       <slot />
     </main>
     <Footer />
@@ -58,7 +58,10 @@ import { ClientRouter } from 'astro:transitions';
     <theme-toggle></theme-toggle>
   </body>
 </html>
-<script></script>
+<script>
+  import '@components/contact';
+  import '@components/social';
+</script>
 <style>
   @view-transition {
     navigation: auto;
@@ -71,6 +74,15 @@ import { ClientRouter } from 'astro:transitions';
 
     &:has(*:not(:defined)) {
       opacity: 0;
+    }
+  }
+
+  main {
+    align-items: center;
+    flex: 1;
+
+    p {
+      align-items: initial;
     }
   }
 </style>
@@ -88,11 +100,9 @@ import { ClientRouter } from 'astro:transitions';
   });
 </script>
 <script>
-  import '@components/contact';
-  import '@components/social';
   import { applyStoredTheme } from '@components/theme';
-  import '@components/theme/toggle';
   import { globalStyles } from '../styles/global';
+  import '@components/theme/toggle';
 
   // Apply global styles
   if (globalStyles.styleSheet) {

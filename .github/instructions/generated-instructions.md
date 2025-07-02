@@ -108,3 +108,6 @@
   - Expects clear navigation paths and linking to detailed content for user experience enhancement.
   - Prefers referencing existing pages and patterns when implementing new features to maintain design coherence.
   - Favors clean, minimal component syntax without unnecessary attributes, preferring content-driven over prop-driven component design.
+  - The user prefers automated, agent-driven QA for UI/UX and values clear, actionable reporting.
+  - They are interested in iterative improvement and want to keep a record of each chat interaction for traceability.
+  - The user is detail-oriented and open to further checks (e.g., mobile view, dark mode, accessibility).

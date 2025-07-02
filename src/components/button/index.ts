@@ -29,16 +29,6 @@ export class ButtonComponent extends Base {
         text-align: center;
       }
 
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-
-      button {
-        display: flex;
-        flex: 1;
-      }
-
       :host([variant='primary']) {
         background: var(--color-teal-200);
         color: var(--color-neutral-800);
