@@ -16,16 +16,15 @@ export const style = css`
     transition: opacity 0.2s ease-in-out;
     width: 100%;
     z-index: 1;
-
-    &::part(home) {
-      background-color: var(--navigation-desktop-home-background-color);
-      color: var(--navigation-desktop-home-color);
-    }
   }
 
   :host([hidden]) {
     opacity: 0 !important;
     transition: opacity 0.2s ease-in-out;
+  }
+
+  #home {
+    --icon-size: 1.5rem;
   }
 
   a {
@@ -110,11 +109,6 @@ export const style = css`
 
   social-component {
     color: var(--color-teal-200);
-  }
-
-  svg {
-    height: 1.75rem;
-    width: 1.75rem;
   }
 
   ul {

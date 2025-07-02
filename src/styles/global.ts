@@ -121,10 +121,6 @@ export const globalStyles = css`
     z-index: 1;
   }
 
-  navigation-desktop {
-    --icon-size: 1.25rem;
-  }
-
   h1,
   h2,
   h3,
@@ -174,6 +170,10 @@ export const globalStyles = css`
   p {
     margin: 0;
     width: 100%; /* @todo: remove this and fix the issues it causes */
+  }
+
+  social-component {
+    --icon-size: 1.25rem;
   }
 
   svg {
