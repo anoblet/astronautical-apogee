@@ -11,17 +11,26 @@ export class ContactComponent extends Base {
     ...super.styles,
     css`
       :host {
+        background-color: var(--button-background-color);
+        color: var(--button-color);
+        cursor: pointer;
+
         a {
           color: inherit;
         }
       }
 
       :host(:hover) {
-        /* background-color: var(--color-blue-400); */
+        background-color: var(--button-hover-background-color);
+        color: var(--button-hover-color);
         transform: scale(1.05);
         transition: transform 0.1s ease-in-out;
+      }
 
-        a {
+      icon-component {
+        color: inherit;
+
+        &:hover {
           color: inherit;
         }
       }

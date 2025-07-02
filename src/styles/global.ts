@@ -101,24 +101,26 @@ export const globalStyles = css`
 
   contact-component,
   theme-toggle {
-    --icon-color: var(--color-sky-600);
-    --icon-hover-color: var(--color-rose-400);
+    --icon-color: inherit;
     --icon-padding: 0.25rem;
     --icon-size: 1.25rem;
 
     align-items: center;
-    background-color: var(--color-neutral-100);
     border: 1px solid var(--color-neutral-400);
     border-radius: 50%;
     bottom: 1rem;
     box-shadow: var(--box-shadow);
-    color: var(--color-sky-400);
     cursor: pointer;
     display: flex;
     justify-content: center;
     padding: 0.5rem;
     position: fixed;
     z-index: 1;
+
+    icon-component {
+      --icon-color: blue;
+      color: inherit;
+    }
   }
 
   h1,
@@ -151,7 +153,7 @@ export const globalStyles = css`
   }
 
   icon-component {
-    color: var(--icon-color);
+    /* color: var(--icon-color); */
     padding: var(--icon-padding);
 
     &:hover {

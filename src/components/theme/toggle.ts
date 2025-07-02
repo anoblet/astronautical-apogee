@@ -14,9 +14,24 @@ export class ThemeToggle extends Base {
     ...super.styles,
     css`
       :host {
-        background-color: var(--color-neutral-100);
-        color: var(--color-neutral-900);
+        background-color: var(--button-background-color);
+        color: var(--button-color);
         cursor: pointer;
+      }
+
+      :host(:hover) {
+        background-color: var(--button-hover-background-color);
+        color: var(--button-hover-color);
+        transform: scale(1.05);
+        transition: transform 0.1s ease-in-out;
+      }
+
+      icon-component {
+        color: inherit;
+
+        &:hover {
+          color: inherit;
+        }
       }
     `,
   ];
