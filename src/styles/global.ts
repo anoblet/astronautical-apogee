@@ -1,6 +1,8 @@
 import { css } from 'lit';
 import { unsafeCSS } from 'lit';
-import { chevronRight } from '../icons/chevron-right';
+import chevronRight from '@icons/chevron-right.svg';
+
+console.log(chevronRight);
 
 export const globalStyles = css`
   *,
@@ -161,10 +163,6 @@ export const globalStyles = css`
     }
   }
 
-  li::marker {
-    content: ${unsafeCSS(chevronRight)};
-  }
-
   main {
     position: relative;
   }
@@ -186,6 +184,9 @@ export const globalStyles = css`
 
   theme-toggle {
     left: 1rem;
+  }
+
+  li {
   }
 
   ul {
@@ -515,5 +516,16 @@ export const globalStyles = css`
 
   .width-100 {
     width: 100%;
+  }
+
+  ul.list {
+    list-style-type: none;
+
+    li {
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAtOTYwIDk2MCA5NjAiIHdpZHRoPSIyNHB4IiBmaWxsPSIjZTNlM2UzIj48cGF0aCBkPSJNNTA0LTQ4MCAzMjAtNjY0bDU2LTU2IDI0MCAyNDAtMjQwIDI0MC01Ni01NiAxODQtMTg0WiIvPjwvc3ZnPg==');
+      background-position: 0 0;
+      background-size: 1.6rem 1.6rem;
+      background-repeat: no-repeat;
+    }
   }
 `;
