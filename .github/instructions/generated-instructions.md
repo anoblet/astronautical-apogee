@@ -111,3 +111,11 @@
   - The user prefers automated, agent-driven QA for UI/UX and values clear, actionable reporting.
   - They are interested in iterative improvement and want to keep a record of each chat interaction for traceability.
   - The user is detail-oriented and open to further checks (e.g., mobile view, dark mode, accessibility).
+
+## User Preferences and Behavior Patterns
+
+- **Consistent Page Structure:** User values consistent layouts and structures across different pages (e.g., services and portfolio pages having similar formats)
+- **Content Categorization:** Prefers clear categorization of content with overview pages that lead to detailed sub-pages rather than showing all content on a single page
+- **Hierarchical Navigation:** Favors organized, hierarchical navigation patterns that allow users to drill down into specific areas of interest
+- **Clean Interfaces:** Values scannable, clean interfaces that provide clear pathways for users to find relevant information
+- **Overview + Detail Pattern:** Prefers summary/overview pages with "Learn more" or "View projects" links leading to detailed content pages

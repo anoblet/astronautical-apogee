@@ -1,133 +1,73 @@
 ---
-import avantisystemsusa from '@assets/avantisystemsusa.com_.webp';
-import cxl from '@assets/cxl.com_.webp';
-import graduationSource from '@assets/graduationsource.com_.webp';
+import ArrowForward from '@icons/arrow-forward.svg';
 import Layout from '@layouts/default.astro';
 ---
 
 <Layout title="Portfolio">
-  <scroll-component>
-    <card-component image={cxl.src} title="CXL" href="/portfolio/cxl">
-      <image-component src={cxl.src} alt="CXL"></image-component>
-      <h3>CXL</h3>
-      <ul>
-        <li>
-          Contributed to the development of CXL.com, a premier online training
-          platform for B2B marketers.
-        </li>
-        <li>
-          Showcased skills in building a feature-rich e-learning system,
-          including dynamic content management for a vast library of courses,
-          user authentication and progression tracking, and a subscription-based
-          e-commerce model.
-        </li>
-        <li>
-          Emphasis was placed on creating a responsive, high-performance user
-          experience for on-demand and live course delivery.
-        </li>
-      </ul>
-      <ul class="tags">
-        <li><tag-component>HTML</tag-component></li>
-        <li><tag-component>CSS</tag-component></li>
-        <li><tag-component>JavaScript</tag-component></li>
-        <li><tag-component>Web Components</tag-component></li>
-        <li><tag-component>Lit</tag-component></li>
-        <li><tag-component>Wordpress</tag-component></li>
-        <li><tag-component>WooCommerce</tag-component></li>
-      </ul>
-    </card-component>
-    <card-component
-      image={graduationSource.src}
-      title="Graduation Source"
-      href="/portfolio/graduation-source"
-    >
-      <image-component src={graduationSource.src} alt="Graduation Source"
-      ></image-component>
-      <h3>Graduation Source</h3>
-      <ul>
-        <li>
-          Developed and maintained a comprehensive e-commerce platform for
-          GraduationSource, a leading supplier of academic regalia, serving over
-          500,000 graduates annually.
-        </li>
-        <li>
-          Key contributions included enhancing the product catalog system with
-          diverse categories and customization options, implementing robust
-          order management and inventory tracking, and developing secure user
-          account functionalities.
-        </li>
-        <li>
-          The project involved creating specialized student ordering portals,
-          integrating multiple payment gateways, and ensuring a scalable,
-          high-performance online shopping experience across various educational
-          levels, from kindergarten to university.
-        </li>
-      </ul>
-      <ul class="tags">
-        <li><tag-component>HTML</tag-component></li>
-        <li><tag-component>CSS</tag-component></li>
-        <li><tag-component>JavaScript</tag-component></li>
-        <li><tag-component>PHP</tag-component></li>
-        <li><tag-component>Magento</tag-component></li>
-        <li><tag-component>E-commerce</tag-component></li>
-      </ul>
-    </card-component>
-    <card-component
-      image={avantisystemsusa.src}
-      title="Avanti Systems USA"
-      href="/portfolio/avanti-systems-usa"
-    >
-      <image-component src={avantisystemsusa.src} alt="Avanti Systems USA"
-      ></image-component>
-      <h3>Avanti Systems USA</h3>
-
-      <ul>
-        <li>
-          Developed a comprehensive web presence for Avanti Systems USA, a
-          leading manufacturer of commercial interior glass wall systems.
-        </li>
-        <li>
-          This project involved creating a visually appealing and informative
-          platform to showcase their diverse product lines, including frameless,
-          freestanding, and high wall systems.
-        </li>
-        <li>
-          Key contributions included implementing a user-friendly navigation and
-          information architecture to cater to architects, designers, and
-          contractors.
-        </li>
-        <li>
-          The site features robust product galleries, detailed specifications,
-          and prominent lead generation forms ("Get A Quote") to facilitate
-          customer engagement.
-        </li>
-        <li>
-          Emphasis was placed on responsive design to ensure optimal viewing
-          across devices and a content management strategy for sections like
-          "Featured Projects" and the company blog.
-        </li>
-      </ul>
-      <ul
-        class="flex gap-0-5 padding-0"
-        style="flex-wrap: wrap; list-style-type: none;"
-      >
-        <li style="text-wrap: nowrap;"><tag-component>HTML</tag-component></li>
-        <li style="text-wrap: nowrap;"><tag-component>CSS</tag-component></li>
-        <li style="text-wrap: nowrap;">
-          <tag-component>JavaScript</tag-component>
-        </li>
-        <li style="text-wrap: nowrap;">
-          <tag-component>Wordpress</tag-component>
-        </li>
-      </ul>
-    </card-component>
-  </scroll-component>
+  <div class="column flex gap-3 page">
+    <div class="gap grid">
+      <h1 class="text-align-center">Portfolio</h1>
+      <p class="hero-description text-align-center">
+        A collection of professional and personal projects showcasing expertise
+        in modern web development, component-based architecture, and innovative
+        solutions. From enterprise e-commerce platforms to experimental personal
+        projects.
+      </p>
+    </div>
+    <div class="column gap-2 grid">
+      <card-component>
+        <h3>Professional Projects</h3>
+        <div class="flex-1">
+          <p>
+            Showcase of professional web development projects where I've
+            contributed to building scalable e-commerce platforms, educational
+            systems, and corporate websites. Each project demonstrates expertise
+            in modern web technologies and user-focused solutions.
+          </p>
+          <ul>
+            <li>Enterprise e-commerce platforms</li>
+            <li>Educational and training systems</li>
+            <li>Corporate websites and branding</li>
+            <li>Performance optimization and scalability</li>
+          </ul>
+        </div>
+        <a
+          class="gap-0-5 justify-content-flex-end"
+          href="/portfolio/professional"
+        >
+          View projects <ArrowForward />
+        </a>
+      </card-component>
+      <card-component>
+        <h3>Personal Projects</h3>
+        <div class="flex-1">
+          <p>
+            Personal software projects that reflect my interests in web
+            development, component-based architecture, and AI-driven workflows.
+            These projects serve as testing grounds for new technologies and
+            innovative approaches.
+          </p>
+          <ul>
+            <li>Experimental web technologies</li>
+            <li>Component libraries and design systems</li>
+            <li>AI-driven development tools</li>
+            <li>Open source contributions</li>
+          </ul>
+        </div>
+        <a class="gap-0-5 justify-content-flex-end" href="/portfolio/personal">
+          View projects <ArrowForward />
+        </a>
+      </card-component>
+    </div>
+    <section class="gap grid justify-content-center text-align-center">
+      <h2>Interested in Working Together?</h2>
+      <p>
+        Let's discuss how my experience can help bring your project to life.
+      </p>
+    </section>
+  </div>
 </Layout>
 
 <script>
   import '@components/card';
-  import '@components/contact';
-  import '@components/image';
-  import '@components/scroll';
-  import '@components/tag';
 </script>

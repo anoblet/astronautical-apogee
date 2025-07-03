@@ -16,9 +16,7 @@ const setProperties = (properties: Record<string, string>) => {
 };
 
 export const applyStoredTheme = () => {
-  // setProperties(getTheme());
-
-  setProperties(dark);
+  setProperties(getTheme());
 };
 
 export const getTheme = (): Record<string, string> => {
@@ -34,11 +32,14 @@ export const getTheme = (): Record<string, string> => {
       case 'dark':
         theme = dark;
         break;
-      default:
+      case 'light':
         theme = light;
+        break;
+      default:
+        theme = dark;
     }
   } else {
-    theme = light;
+    theme = dark;
   }
 
   return theme;

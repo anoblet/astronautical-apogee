@@ -1,8 +1,4 @@
 import { css } from 'lit';
-import { unsafeCSS } from 'lit';
-import chevronRight from '@icons/chevron-right.svg';
-
-console.log(chevronRight);
 
 export const globalStyles = css`
   *,

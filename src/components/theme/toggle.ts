@@ -5,6 +5,28 @@ import light from '@themes/light.json' assert { type: 'json' };
 import { css, html } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 
+export const applyStoredTheme = () => {
+  const storedTheme = getStoredTheme();
+  if (storedTheme) {
+    applyTheme(storedTheme);
+  }
+};
+
+export const applyTheme = (theme: Record<string, string>) => {
+  for (const [name, value] of Object.entries(theme)) {
+    document.documentElement.style.setProperty(`--${name}`, value.trim());
+  }
+};
+
+export const getStoredTheme = () => {
+  const storedTheme = localStorage.getItem('theme');
+  return storedTheme ? JSON.parse(storedTheme) : null;
+};
+
+export const setStoredTheme = (theme: Record<string, string>) => {
+  localStorage.setItem('theme', JSON.stringify(theme));
+};
+
 @customElement('theme-toggle')
 export class ThemeToggle extends Base {
   @state()
@@ -42,12 +64,17 @@ export class ThemeToggle extends Base {
     setStoredTheme(this._theme);
   }
 
-  firstUpdated() {
-    super.firstUpdated();
+  connectedCallback() {
+    super.connectedCallback();
+
     const storedTheme = getStoredTheme();
     if (storedTheme) {
       this._theme = storedTheme;
     }
+  }
+
+  firstUpdated() {
+    super.firstUpdated();
 
     this.addEventListener('click', this._toggleTheme.bind(this));
   }
@@ -56,27 +83,3 @@ export class ThemeToggle extends Base {
     return html`<icon-component>${contrast}</icon-component>`;
   }
 }
-
-export const applyStoredTheme = () => {
-  const storedTheme = getStoredTheme();
-  if (storedTheme) {
-    applyTheme(storedTheme);
-  }
-};
-
-export const applyTheme = (theme: Record<string, string>) => {
-  for (const [name, value] of Object.entries(theme)) {
-    document.documentElement.style.setProperty(`--${name}`, value.trim());
-  }
-};
-
-export const getStoredTheme = () => {
-  const storedTheme = localStorage.getItem('theme');
-  return storedTheme ? JSON.parse(storedTheme) : null;
-};
-
-export const setStoredTheme = (theme: Record<string, string>) => {
-  localStorage.setItem('theme', JSON.stringify(theme));
-};
-
-applyStoredTheme();

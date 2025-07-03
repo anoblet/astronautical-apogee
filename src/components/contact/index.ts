@@ -1,6 +1,7 @@
 import '@components/button';
 import '@components/icon';
 import { calendarMonth } from '@icons/calendar-month';
+import { phone } from '@icons/phone';
 import { css, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { Base } from '../base';
@@ -44,7 +45,7 @@ export class ContactComponent extends Base {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <icon-component>${calendarMonth}</icon-component>
+        <icon-component>${phone}</icon-component>
       </a>
     `;
   }
