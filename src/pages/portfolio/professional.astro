@@ -1,14 +1,18 @@
 ---
-import avantisystemsusa from '@assets/avantisystemsusa.com_.webp';
+import Layout from '@layouts/default.astro';
 import cxl from '@assets/cxl.com_.webp';
 import graduationSource from '@assets/graduationsource.com_.webp';
-import Layout from '@layouts/default.astro';
+import avantisystemsusa from '@assets/avantisystemsusa.com_.webp';
+import ArrowForward from '@icons/arrow-forward.svg';
+import { Image } from 'astro:assets';
+import '@components/tag.ts';
+import '@components/card';
 ---
 
-<Layout title="Professional">
+<Layout title="Professional Projects">
   <div class="column flex gap page">
     <div class="gap grid justify-content-center text-align-center">
-      <h1>Professional</h1>
+      <h1>Professional Projects</h1>
       <p class="bold-5 max-width-56">
         A showcase of professional web development projects where I've
         contributed to building scalable e-commerce platforms, educational
@@ -16,10 +20,24 @@ import Layout from '@layouts/default.astro';
         modern web technologies and user-focused solutions.
       </p>
     </div>
-    <scroll-component>
-      <card-component>
-        <image-component src={cxl.src} alt="CXL"></image-component>
-        <h3>CXL</h3>
+    <div class="space-0-5"></div>
+    <card-component>
+      <div class="flex gap justify-content-space-between align-items-center">
+        <h2>CXL</h2>
+        <div class="chips">
+          <div class="flex flex-wrap gap-0-5">
+            <tag-component>HTML</tag-component>
+            <tag-component>CSS</tag-component>
+            <tag-component>JavaScript</tag-component>
+            <tag-component>Web Components</tag-component>
+            <tag-component>Lit</tag-component>
+            <tag-component>Wordpress</tag-component>
+            <tag-component>WooCommerce</tag-component>
+          </div>
+        </div>
+      </div>
+      <div class="flex-1">
+        <Image src={cxl} alt="CXL" class="card-image" />
         <ul>
           <li>
             Contributed to the development of CXL.com, a premier online training
@@ -36,34 +54,31 @@ import Layout from '@layouts/default.astro';
             experience for on-demand and live course delivery.
           </li>
         </ul>
-        <ul class="tags">
-          <li><tag-component>HTML</tag-component></li>
-          <li><tag-component>CSS</tag-component></li>
-          <li><tag-component>JavaScript</tag-component></li>
-          <li><tag-component>Web Components</tag-component></li>
-          <li><tag-component>Lit</tag-component></li>
-          <li><tag-component>Wordpress</tag-component></li>
-          <li><tag-component>WooCommerce</tag-component></li>
-        </ul>
-        <a class="gap-0-5 justify-content-flex-end" href="/portfolio/cxl">
-          Learn more
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24px"
-            viewBox="0 -960 960 960"
-            width="24px"
-            fill="currentColor"
-          >
-            <path
-              d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
-            ></path>
-          </svg>
-        </a>
-      </card-component>
-      <card-component>
-        <image-component src={graduationSource.src} alt="Graduation Source"
-        ></image-component>
-        <h3>Graduation Source</h3>
+      </div>
+      <a class="gap-0-5 align-self-flex-end" href="/portfolio/cxl">
+        Learn more <ArrowForward />
+      </a>
+    </card-component>
+    <card-component>
+      <div class="flex gap justify-content-space-between align-items-center">
+        <h2>Graduation Source</h2>
+        <div class="chips">
+          <div class="flex flex-wrap gap-0-5">
+            <tag-component>HTML</tag-component>
+            <tag-component>CSS</tag-component>
+            <tag-component>JavaScript</tag-component>
+            <tag-component>PHP</tag-component>
+            <tag-component>Magento</tag-component>
+            <tag-component>E-commerce</tag-component>
+          </div>
+        </div>
+      </div>
+      <div class="flex-1">
+        <Image
+          src={graduationSource}
+          alt="Graduation Source"
+          class="card-image"
+        />
         <ul>
           <li>
             Developed and maintained a comprehensive e-commerce platform for
@@ -83,36 +98,32 @@ import Layout from '@layouts/default.astro';
             educational levels, from kindergarten to university.
           </li>
         </ul>
-        <ul class="tags">
-          <li><tag-component>HTML</tag-component></li>
-          <li><tag-component>CSS</tag-component></li>
-          <li><tag-component>JavaScript</tag-component></li>
-          <li><tag-component>PHP</tag-component></li>
-          <li><tag-component>Magento</tag-component></li>
-          <li><tag-component>E-commerce</tag-component></li>
-        </ul>
-        <a
-          class="gap-0-5 justify-content-flex-end"
-          href="/portfolio/graduation-source"
-        >
-          Learn more
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24px"
-            viewBox="0 -960 960 960"
-            width="24px"
-            fill="currentColor"
-          >
-            <path
-              d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
-            ></path>
-          </svg>
-        </a>
-      </card-component>
-      <card-component>
-        <image-component src={avantisystemsusa.src} alt="Avanti Systems USA"
-        ></image-component>
-        <h3>Avanti Systems USA</h3>
+      </div>
+      <a
+        class="gap-0-5 align-self-flex-end"
+        href="/portfolio/graduation-source"
+      >
+        Learn more <ArrowForward />
+      </a>
+    </card-component>
+    <card-component>
+      <div class="flex gap justify-content-space-between align-items-center">
+        <h2>Avanti Systems USA</h2>
+        <div class="chips">
+          <div class="flex flex-wrap gap-0-5">
+            <tag-component>HTML</tag-component>
+            <tag-component>CSS</tag-component>
+            <tag-component>JavaScript</tag-component>
+            <tag-component>Wordpress</tag-component>
+          </div>
+        </div>
+      </div>
+      <div class="flex-1">
+        <Image
+          src={avantisystemsusa}
+          alt="Avanti Systems USA"
+          class="card-image"
+        />
         <ul>
           <li>
             Developed a comprehensive web presence for Avanti Systems USA, a
@@ -139,60 +150,30 @@ import Layout from '@layouts/default.astro';
             "Featured Projects" and the company blog.
           </li>
         </ul>
-        <ul class="tags">
-          <li><tag-component>HTML</tag-component></li>
-          <li><tag-component>CSS</tag-component></li>
-          <li><tag-component>JavaScript</tag-component></li>
-          <li><tag-component>Wordpress</tag-component></li>
-        </ul>
-        <a
-          class="gap-0-5 justify-content-flex-end"
-          href="/portfolio/avanti-systems-usa"
-        >
-          Learn more
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24px"
-            viewBox="0 -960 960 960"
-            width="24px"
-            fill="currentColor"
-          >
-            <path
-              d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
-            ></path>
-          </svg>
-        </a>
-      </card-component>
-    </scroll-component>
+      </div>
+      <a
+        class="gap-0-5 align-self-flex-end"
+        href="/portfolio/avanti-systems-usa"
+      >
+        Learn more <ArrowForward />
+      </a>
+    </card-component>
   </div>
 </Layout>
 <style>
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    list-style-type: none;
-
-    li {
-      text-wrap: nowrap;
-    }
+  .chips {
+    overflow-x: auto;
   }
 
-  a {
-    align-items: center;
-    display: flex;
-    text-decoration: none;
-
-    svg {
-      height: 1rem;
-      width: 1rem;
-    }
+  .card-image {
+    height: 100%;
+    width: 100%;
+    border-radius: 0.25rem;
+    margin: 1rem 0;
   }
 </style>
 <script>
   import '@components/card';
   import '@components/contact';
-  import '@components/image';
-  import '@components/scroll';
   import '@components/tag';
 </script>

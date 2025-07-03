@@ -1,4 +1,5 @@
 import { css } from 'lit';
+import { utility } from './utility';
 
 export const globalStyles = css`
   *,
@@ -195,14 +196,6 @@ export const globalStyles = css`
       gap: 2rem;
       list-style: none;
     }
-  }
-
-  .align-items-center {
-    align-items: center;
-  }
-
-  .align-self-center {
-    align-self: center;
   }
 
   .antialiased {
@@ -525,4 +518,6 @@ export const globalStyles = css`
       padding-left: 2.5rem;
     }
   }
+
+  ${utility}
 `;
