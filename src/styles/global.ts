@@ -526,6 +526,7 @@ export const globalStyles = css`
       background-position: 0 0;
       background-size: 1.6rem 1.6rem;
       background-repeat: no-repeat;
+      padding-left: 2.5rem;
     }
   }
 `;

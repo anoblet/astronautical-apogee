@@ -16,7 +16,9 @@ const setProperties = (properties: Record<string, string>) => {
 };
 
 export const applyStoredTheme = () => {
-  setProperties(getTheme());
+  // setProperties(getTheme());
+
+  setProperties(dark);
 };
 
 export const getTheme = (): Record<string, string> => {
