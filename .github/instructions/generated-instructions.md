@@ -121,3 +121,6 @@
 - **Overview + Detail Pattern:** Prefers summary/overview pages with "Learn more" or "View projects" links leading to detailed content pages
 - The user values clear, engaging, and informative copy for their blog homepage.
 - They prefer concise improvements and expect direct action on content updates.
+- User prefers concise, engaging, and action-oriented copy for all pages except the home page.
+- User expects automatic, minimal, and efficient improvements without disrupting existing logic or structure.
+- User values reusability and clear communication in both code and content.
