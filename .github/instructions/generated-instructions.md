@@ -119,3 +119,5 @@
 - **Hierarchical Navigation:** Favors organized, hierarchical navigation patterns that allow users to drill down into specific areas of interest
 - **Clean Interfaces:** Values scannable, clean interfaces that provide clear pathways for users to find relevant information
 - **Overview + Detail Pattern:** Prefers summary/overview pages with "Learn more" or "View projects" links leading to detailed content pages
+- The user values clear, engaging, and informative copy for their blog homepage.
+- They prefer concise improvements and expect direct action on content updates.
