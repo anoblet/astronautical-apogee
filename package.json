@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@anoblet/mixins": "github:anoblet/mixins",
+    "@astrojs/mdx": "^4.3.0",
     "astro": "^5.7.10",
     "lit": "^3.3.0"
   },

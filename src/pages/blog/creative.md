@@ -1,12 +1,14 @@
 ---
+id: 'creative'
 title: 'Creative'
 description: 'Why you should let your developers get creative'
-layout: '@layouts/default.astro'
 ---
 
 # Creative
 
 ## Why you should let your developers get creative
+
+<card-component>
 
 - We have a lot of great ideas,
 - Everyone loves to feel smart.
@@ -17,4 +19,5 @@ layout: '@layouts/default.astro'
 - It's important your employees _are_ stakeholders
 - Those who contribute as opposed to implement, are more invested in the product's success.
 
+</card-component>
 You should check out the ZSA blog for more fun : <a href="https://blog.zsa.io/">ZSA Blog</a>
