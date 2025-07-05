@@ -5,12 +5,13 @@ import Layout from '../layouts/default.astro';
 <Layout title="Mentorship">
   <mentorship-component></mentorship-component>
 </Layout>
+
 <script>
   import { Base } from '@components/base';
   import { css, html } from 'lit';
   import { customElement } from 'lit/decorators.js';
+  import '@components/button';
   import '@components/card';
-  import '@components/contact';
   import { arrowForward } from '@icons/arrow-forward';
 
   @customElement('mentorship-component')
@@ -189,7 +190,12 @@ import Layout from '../layouts/default.astro';
               Let's discuss your goals and create a mentorship plan that works
               for you.
             </p>
-            <contact-component></contact-component>
+            <span class="space"></span>
+            <a class="justify-content-center" href="https://calendar.app.google/JjnLtVR6mnM11FcS9">
+              <button-component variant="primary">
+                Book a Free Consultation
+                ${arrowForward}
+              </button-component>
           </section>
         </div>
       `;

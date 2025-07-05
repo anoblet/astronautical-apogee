@@ -123,11 +123,21 @@ import Layout from '../../layouts/default.astro';
         </card-component>
       </div>
     </section>
-    <section class="text-align-center">
+    <section class="gap grid justify-content-center text-align-center">
       <h2>Ready to Solve Your Technical Challenges?</h2>
       <p>
         Let's discuss your specific needs and find the right solution together.
       </p>
+      <span class="space"></span>
+      <a
+        class="justify-content-center"
+        href="https://calendar.app.google/JjnLtVR6mnM11FcS9"
+      >
+        <button-component variant="primary">
+          Book a Free Consultation
+          <!-- Use an inline SVG or import as needed for the arrow icon -->
+        </button-component>
+      </a>
     </section>
   </div>
 </Layout>
@@ -135,4 +145,5 @@ import Layout from '../../layouts/default.astro';
 <script>
   import '@components/card';
   import '@components/contact';
+  import '@components/button';
 </script>
