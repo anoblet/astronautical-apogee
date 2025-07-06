@@ -1,5 +1,6 @@
 #file:./instructions/lit.instructions.md
 #file:./instructions/style.instructions.md
+#file:./instructions/generated.instructions.md
 
 - Create as many new components as neccessary
 - Components should be simple and composible
@@ -38,6 +39,6 @@
   [Any insights or observations about user preferences and behavior]
   ```
 
-- After every interaction with the user through the chat interface, update `.github/instructions/generated-instructions.md` with insights on user preferences and behavior.
+- After every interaction with the user through the chat interface, update `.github/instructions/generated.instructions.md` with insights on user preferences and behavior.
 
 **_ Keep it simple! _**

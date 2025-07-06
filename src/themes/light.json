@@ -35,10 +35,6 @@
   "navigation-a-hover-color": "var(--color-sky-600)",
   "navigation-background-color": "var(--color-neutral-100)",
   "navigation-color": "var(--color-neutral-600)",
-  "navigation-desktop-a-color": "var(--color-neutral-900)",
-  "navigation-desktop-background-color": "var(--color-neutral-100)",
-  "navigation-desktop-icon-color": "var(--color-sky-600)",
-  "navigation-desktop-icon-hover-color": "var(--color-rose-600)",
   "navigation-icon-color": "var(--color-sky-600)",
   "outline": "1px solid #000",
   "padding": "1rem",
@@ -51,5 +47,7 @@
   "tertiary-color": "var(--color-blue-400)",
   "text-color": "var(--color-neutral-800)",
   "theme-toggle-background-color": "var(--color-neutral-900)",
-  "theme-toggle-icon-color": "var(--color-neutral-100)"
+  "theme-toggle-icon-color": "var(--color-neutral-100)",
+  "button-hover-color": "var(--color-neutral-900)",
+  "button-icon-color": "var(--color-neutral-900)"
 }

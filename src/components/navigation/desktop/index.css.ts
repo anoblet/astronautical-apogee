@@ -2,13 +2,13 @@ import { css } from 'lit';
 
 export const style = css`
   :host {
-    --a-color: var(--navigation-desktop-a-color);
-    --a-hover-color: var(--navigation-desktop-a-hover-color);
+    --a-color: var(--navigation-a-color);
+    --a-hover-color: var(--navigation-a-hover-color);
 
-    --icon-color: var(--navigation-desktop-icon-color);
-    --icon-hover-color: var(--navigation-desktop-icon-hover-color);
+    --icon-color: var(--navigation-icon-color);
+    --icon-hover-color: var(--navigation-icon-hover-color);
 
-    background-color: var(--navigation-desktop-background-color);
+    background-color: var(--navigation-background-color);
     display: flex;
     flex: 1;
     justify-content: space-between;
@@ -41,7 +41,7 @@ export const style = css`
   }
 
   a {
-    color: var(--navigation-desktop-a-color);
+    color: var(--navigation-a-color);
   }
 
   li {
@@ -72,7 +72,7 @@ export const style = css`
     }
 
     .dropdown-menu {
-      background-color: var(--navigation-desktop-background-color);
+      background-color: var(--navigation-background-color);
       position: absolute;
       top: 100%;
       left: 0;
