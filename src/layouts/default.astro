@@ -57,10 +57,12 @@ import { ClientRouter } from 'astro:transitions';
     <theme-toggle></theme-toggle>
   </body>
 </html>
-<script>
-  import '@components/contact';
-  import '@components/social';
-</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet"
+/>
 <style>
   @view-transition {
     navigation: auto;
@@ -85,23 +87,17 @@ import { ClientRouter } from 'astro:transitions';
     }
   }
 </style>
-<!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-  rel="stylesheet"
-/> -->
 <script>
+  import '@components/contact';
+  import '@components/social';
+  import { applyStoredTheme } from '@components/theme';
+  import '@components/theme/toggle';
+  import { globalStyles } from '@styles/global';
   import media from '../media';
 
   media.subscribe((media: string) => {
     document.body.setAttribute('data-media', media);
   });
-</script>
-<script>
-  import { applyStoredTheme } from '@components/theme';
-  import { globalStyles } from '@styles/global';
-  import '@components/theme/toggle';
 
   // Apply global styles
   if (globalStyles.styleSheet) {

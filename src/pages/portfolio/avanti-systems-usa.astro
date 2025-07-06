@@ -7,50 +7,71 @@ import '@components/tag';
 import '@components/card';
 ---
 
-<Layout>
-  <card-component>
-    <div class="flex justify-content-space-between align-items-center">
-      <h2>Avanti Systems USA</h2>
-      <div class="chips">
-        <tag-component>HTML</tag-component>
-        <tag-component>CSS</tag-component>
-        <tag-component>JavaScript</tag-component>
-        <tag-component>Wordpress</tag-component>
+<Layout title="Avanti Systems USA">
+  <div class="column flex gap page">
+    <div class="gap grid justify-content-center text-align-center">
+      <h1>Avanti Systems USA</h1>
+      <p class="bold-5 max-width-56">
+        Built a modern web presence for Avanti Systems USA, a leader in
+        commercial glass wall systems. Designed a visually engaging platform to
+        showcase diverse product lines—frameless, freestanding, and high wall
+        systems. Delivered intuitive navigation and information architecture for
+        architects, designers, and contractors. Integrated robust product
+        galleries, detailed specs, and lead generation forms to boost
+        engagement. Prioritized responsive design and easy content management
+        for featured projects and the company blog.
+      </p>
+    </div>
+    <div class="space-0-5"></div>
+    <card-component>
+      <div class="flex gap justify-content-space-between align-items-center">
+        <h2>Avanti Systems USA</h2>
+        <div class="chips">
+          <div class="flex flex-wrap gap-0-5">
+            <tag-component>HTML</tag-component>
+            <tag-component>CSS</tag-component>
+            <tag-component>JavaScript</tag-component>
+            <tag-component>Wordpress</tag-component>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="flex-1">
-      <Image
-        src={avantisystemsusa}
-        alt="Avanti Systems USA"
-        class="card-image"
-      />
-      <ul>
-        <li>
-          Built a modern web presence for Avanti Systems USA, a leader in
-          commercial glass wall systems.
-        </li>
-        <li>
-          Designed a visually engaging platform to showcase diverse product
-          lines—frameless, freestanding, and high wall systems.
-        </li>
-        <li>
-          Delivered intuitive navigation and information architecture for
-          architects, designers, and contractors.
-        </li>
-        <li>
-          Integrated robust product galleries, detailed specs, and lead
-          generation forms to boost engagement.
-        </li>
-        <li>
-          Prioritized responsive design and easy content management for featured
-          projects and the company blog.
-        </li>
-      </ul>
-    </div>
-    <a class="gap-0-5 align-self-flex-end" href="/portfolio/avanti-systems-usa">
-      Learn more <ArrowForward />
-    </a>
-  </card-component>
+      <div class="flex-1">
+        <Image
+          src={avantisystemsusa}
+          alt="Avanti Systems USA"
+          class="card-image"
+        />
+        <ul>
+          <li>
+            Built a modern web presence for Avanti Systems USA, a leader in
+            commercial glass wall systems.
+          </li>
+          <li>
+            Designed a visually engaging platform to showcase diverse product
+            lines—frameless, freestanding, and high wall systems.
+          </li>
+          <li>
+            Delivered intuitive navigation and information architecture for
+            architects, designers, and contractors.
+          </li>
+          <li>
+            Integrated robust product galleries, detailed specs, and lead
+            generation forms to boost engagement.
+          </li>
+          <li>
+            Prioritized responsive design and easy content management for
+            featured projects and the company blog.
+          </li>
+        </ul>
+      </div>
+      <a
+        class="gap-0-5 align-self-flex-end"
+        href="/portfolio/avanti-systems-usa"
+      >
+        Learn more <ArrowForward />
+      </a>
+    </card-component>
+  </div>
 </Layout>
 <style>
   .chips {
@@ -58,6 +79,7 @@ import '@components/card';
   }
 
   .card-image {
+    height: 100%;
     width: 100%;
     border-radius: 0.25rem;
     margin: 1rem 0;

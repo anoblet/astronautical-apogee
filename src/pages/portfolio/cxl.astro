@@ -3,45 +3,57 @@ import Layout from '@layouts/default.astro';
 import cxl from '@assets/cxl.com_.webp';
 import ArrowForward from '@icons/arrow-forward.svg';
 import { Image } from 'astro:assets';
-import '@components/tag';
-import '@components/card';
 ---
 
 <Layout title="CXL">
-  <card-component>
-    <div class="flex justify-content-space-between align-items-center">
-      <h2>CXL</h2>
-      <div class="chips">
-        <tag-component>HTML</tag-component>
-        <tag-component>CSS</tag-component>
-        <tag-component>JavaScript</tag-component>
-        <tag-component>Web Components</tag-component>
-        <tag-component>Lit</tag-component>
-        <tag-component>Wordpress</tag-component>
-        <tag-component>WooCommerce</tag-component>
+  <div class="column flex gap page">
+    <div class="gap grid justify-content-center text-align-center">
+      <h1>CXL</h1>
+      <p class="bold-5 max-width-56">
+        Helped build CXL.com, a top online training platform for B2B marketers.
+        Delivered a feature-rich e-learning system with dynamic content, user
+        authentication, and subscription e-commerce. Focused on a responsive,
+        high-performance experience for on-demand and live courses.
+      </p>
+    </div>
+    <div class="space-0-5"></div>
+    <card-component>
+      <div class="flex gap justify-content-space-between align-items-center">
+        <h2>CXL</h2>
+        <div class="chips">
+          <div class="flex flex-wrap gap-0-5">
+            <tag-component>HTML</tag-component>
+            <tag-component>CSS</tag-component>
+            <tag-component>JavaScript</tag-component>
+            <tag-component>Web Components</tag-component>
+            <tag-component>Lit</tag-component>
+            <tag-component>Wordpress</tag-component>
+            <tag-component>WooCommerce</tag-component>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="flex-1">
-      <Image src={cxl} alt="CXL" class="card-image" />
-      <ul>
-        <li>
-          Helped build CXL.com, a top online training platform for B2B
-          marketers.
-        </li>
-        <li>
-          Delivered a feature-rich e-learning system with dynamic content, user
-          authentication, and subscription e-commerce.
-        </li>
-        <li>
-          Focused on a responsive, high-performance experience for on-demand and
-          live courses.
-        </li>
-      </ul>
-    </div>
-    <a class="gap-0-5 align-self-flex-end" href="/portfolio/cxl">
-      Learn more <ArrowForward />
-    </a>
-  </card-component>
+      <div class="flex-1">
+        <Image src={cxl} alt="CXL" class="card-image" />
+        <ul>
+          <li>
+            Helped build CXL.com, a top online training platform for B2B
+            marketers.
+          </li>
+          <li>
+            Delivered a feature-rich e-learning system with dynamic content,
+            user authentication, and subscription e-commerce.
+          </li>
+          <li>
+            Focused on a responsive, high-performance experience for on-demand
+            and live courses.
+          </li>
+        </ul>
+      </div>
+      <a class="gap-0-5 align-self-flex-end" href="/portfolio/cxl">
+        Learn more <ArrowForward />
+      </a>
+    </card-component>
+  </div>
 </Layout>
 <style>
   .chips {
@@ -49,6 +61,7 @@ import '@components/card';
   }
 
   .card-image {
+    height: 100%;
     width: 100%;
     border-radius: 0.25rem;
     margin: 1rem 0;
