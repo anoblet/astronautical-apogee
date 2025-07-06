@@ -28,15 +28,6 @@ export const globalStyles = css`
     display: none;
   }
 
-  :root {
-    &:not(.dark) {
-      --background-color: #fff;
-      --button-secondary-color: var(--color-neutral-200);
-      --h1-color: var(--color-neutral-900);
-      --text-color: var(--color-neutral-900);
-    }
-  }
-
   a {
     align-items: center;
     color: var(--a-color);

@@ -53,7 +53,6 @@ import { ClientRouter } from 'astro:transitions';
       <slot />
     </main>
     <Footer />
-    <!-- <contrast-component></contrast-component> -->
     <contact-component></contact-component>
     <theme-toggle></theme-toggle>
   </body>
@@ -86,12 +85,12 @@ import { ClientRouter } from 'astro:transitions';
     }
   }
 </style>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
   href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
   rel="stylesheet"
-/>
+/> -->
 <script>
   import media from '../media';
 
@@ -101,7 +100,7 @@ import { ClientRouter } from 'astro:transitions';
 </script>
 <script>
   import { applyStoredTheme } from '@components/theme';
-  import { globalStyles } from '../styles/global';
+  import { globalStyles } from '@styles/global';
   import '@components/theme/toggle';
 
   // Apply global styles
