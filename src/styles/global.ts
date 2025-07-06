@@ -73,7 +73,6 @@ export const globalStyles = css`
   }
 
   button-component {
-    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
     outline: 1px solid var(--color-black);
   }
 
@@ -91,6 +90,7 @@ export const globalStyles = css`
     border: 1px solid var(--color-neutral-400);
     border-radius: 50%;
     bottom: 1rem;
+    outline: var(--button-outline);
     box-shadow: var(--box-shadow);
     cursor: pointer;
     display: flex;

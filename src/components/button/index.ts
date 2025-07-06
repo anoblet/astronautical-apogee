@@ -13,8 +13,11 @@ export class ButtonComponent extends Base {
     css`
       :host {
         align-items: center;
+        background-color: var(--button-background-color);
         border-radius: var(--border-radius);
-        color: var(--color-neutral-900);
+        box-shadow: var(--box-shadow);
+        color: var(--button-color);
+        outline: var(--button-outline);
         gap: 1rem;
         justify-content: center;
         padding: 1rem 2rem;
@@ -30,8 +33,6 @@ export class ButtonComponent extends Base {
       }
 
       :host([variant='primary']) {
-        background: var(--color-teal-200);
-        color: var(--color-neutral-800);
         outline: 1px solid var(--color-neutral-800);
 
         &:hover {

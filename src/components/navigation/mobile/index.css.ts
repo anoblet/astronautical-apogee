@@ -3,7 +3,7 @@ import { css } from 'lit';
 export const style = css`
   :host {
     background-color: var(--navigation-background-color);
-    color: var(--navigation--color);
+    color: var(--navigation-color);
     position: relative;
     transition: opacity 0.2s ease-in-out;
     width: 100%;
