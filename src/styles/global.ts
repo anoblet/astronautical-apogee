@@ -36,14 +36,6 @@ export const globalStyles = css`
     text-decoration: none;
     transition: color 0.1s ease-in-out;
 
-    &:has(card-component) {
-      // color: inherit;
-
-      &:hover {
-        // color: var(--color-neutral-200);
-      }
-    }
-
     &:has(svg) {
       align-items: center;
       display: flex;
@@ -174,9 +166,6 @@ export const globalStyles = css`
     left: 1rem;
   }
 
-  li {
-  }
-
   ul {
     margin: 0;
     padding: var(--padding);
@@ -237,12 +226,12 @@ export const globalStyles = css`
     }
   }
 
-  .chips {
+  .tags {
     color: var(--secondary-color);
     display: flex;
     gap: 1rem;
     overflow: hidden;
-    text-wrap: nowrap;
+    white-space: nowrap;
 
     &:hover {
       overflow-x: auto;
