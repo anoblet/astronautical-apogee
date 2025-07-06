@@ -15,10 +15,19 @@ const { Content } = await render(post);
 ---
 
 <Layout title={post.data.title}>
-  <div class="gap grid max-width-56">
+  <div class="blog gap grid max-width-56">
     <Content />
   </div>
 </Layout>
 <script>
   import '@components/card';
 </script>
+<style>
+  .blog {
+    card-component {
+      ul {
+        padding: 0 1rem;
+      }
+    }
+  }
+</style>
