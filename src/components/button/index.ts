@@ -14,22 +14,22 @@ export class ButtonComponent extends Base {
       :host {
         align-items: center;
         background-color: var(--button-background-color);
+        border: none;
         border-radius: var(--border-radius);
         box-shadow: var(--box-shadow);
         color: var(--button-color);
-        outline: var(--button-outline);
+        cursor: pointer;
+        font-size: 1.25rem;
+        font-weight: 600;
         gap: 1rem;
         justify-content: center;
+        letter-spacing: 0.1rem;
+        outline: var(--button-outline);
         padding: 1rem 2rem;
-        border: none;
-        cursor: pointer;
+        text-align: center;
         transition:
           background-color 0.2s ease,
           color 0.2s ease;
-        font-size: 1.25rem;
-        font-weight: 600;
-        letter-spacing: 0.1rem;
-        text-align: center;
       }
 
       :host([variant='primary']) {
