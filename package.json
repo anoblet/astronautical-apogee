@@ -3,6 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "commit": "pnpm dlx genaiscript run commit",
     "deploy": "npm run build && npm run deploy:wrangler",
     "deploy:wrangler": "wrangler deploy",
     "dev": "astro dev",
