@@ -3,6 +3,7 @@ import { css } from 'lit';
 export const style = css`
   :host {
     background-color: var(--color-neutral-900);
+    color: var(--navigation-mobile-color);
     position: relative;
     transition: opacity 0.2s ease-in-out;
     width: 100%;
@@ -35,6 +36,35 @@ export const style = css`
     }
   }
 
+  details {
+    summary {
+      cursor: pointer;
+      padding: 0.5rem 0;
+      list-style: none;
+      font-weight: 500;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::before {
+        content: '▶';
+        display: inline-block;
+        margin-right: 0.5rem;
+        transition: transform 0.2s ease-in-out;
+      }
+    }
+
+    &[open] summary::before {
+      transform: rotate(90deg);
+    }
+
+    ul {
+      padding-left: 1rem;
+      margin-top: 0.5rem;
+    }
+  }
+
   icon-component {
     color: var(--navigation-mobile-icon-color);
     cursor: pointer;
@@ -44,6 +74,17 @@ export const style = css`
   svg {
     height: 2rem;
     width: 2rem;
+  }
+
+  ul {
+    display: grid;
+    gap: 1rem;
+    list-style: none;
+    padding: 0 1rem;
+
+    li {
+      padding: 0 1rem;
+    }
   }
 
   .title {

@@ -45,7 +45,30 @@ export class NavigationMobile extends Base {
       </div>
       <aside>
         <icon-component @click=${this.toggle}>${close}</icon-component>
-        <slot name="aside"></slot>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>
+            <details>
+              <summary>Portfolio</summary>
+              <ul>
+                <li><a href="/portfolio/personal">Personal</a></li>
+                <li><a href="/portfolio/professional">Professional</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>Services</summary>
+              <ul>
+                <li><a href="/services/design">Design</a></li>
+                <li><a href="/services/hosting">Hosting</a></li>
+                <li><a href="/services/consultation">Consultation</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="/mentorship">Mentorship</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
       </aside>
     `;
   }

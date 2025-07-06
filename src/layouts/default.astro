@@ -71,7 +71,7 @@ import { ClientRouter } from 'astro:transitions';
     opacity: 1;
     transition: opacity 0.2s ease-in-out;
 
-    &:has(*:not(:defined)) {
+    *:has(*:not(:defined)) {
       opacity: 0;
     }
   }

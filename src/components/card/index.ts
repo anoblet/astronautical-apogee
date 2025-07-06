@@ -46,5 +46,3 @@ export class CardComponent extends Base {
     return html`<slot></slot>`;
   }
 }
-
-console.log('CardComponent loaded');

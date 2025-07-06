@@ -2,87 +2,11 @@
   <navigation-desktop></navigation-desktop>
 </media-component>
 <media-component mobile>
-  <navigation-mobile>
-    <aside slot="aside">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li>
-          <details>
-            <summary>Portfolio</summary>
-            <ul>
-              <li><a href="/portfolio/personal">Personal</a></li>
-              <li><a href="/portfolio/professional">Professional</a></li>
-            </ul>
-          </details>
-        </li>
-        <li>
-          <details>
-            <summary>Services</summary>
-            <ul>
-              <li><a href="/services/design">Design</a></li>
-              <li><a href="/services/hosting">Hosting</a></li>
-              <li><a href="/services/consultation">Consultation</a></li>
-            </ul>
-          </details>
-        </li>
-        <li><a href="/mentorship">Mentorship</a></li>
-        <li><a href="/blog">Blog</a></li>
-      </ul>
-    </aside>
-    <style>
-      navigation-mobile {
-        color: var(--navigation-mobile-color);
-
-        a {
-          color: var(--navigation-mobile-a-color);
-        }
-
-        details {
-          summary {
-            cursor: pointer;
-            padding: 0.5rem 0;
-            list-style: none;
-            font-weight: 500;
-
-            &::-webkit-details-marker {
-              display: none;
-            }
-
-            &::before {
-              content: '▶';
-              display: inline-block;
-              margin-right: 0.5rem;
-              transition: transform 0.2s ease-in-out;
-            }
-          }
-
-          &[open] summary::before {
-            transform: rotate(90deg);
-          }
-
-          ul {
-            padding-left: 1rem;
-            margin-top: 0.5rem;
-          }
-        }
-
-        ul {
-          display: grid;
-          gap: 1rem;
-          list-style: none;
-          padding: 0 1rem;
-
-          li {
-            padding: 0 1rem;
-          }
-        }
-      }
-    </style>
-    <script>
-      import './media';
-      import './navigation/desktop';
-      import './navigation/mobile';
-      import './social';
-    </script>
-  </navigation-mobile>
+  <navigation-mobile> </navigation-mobile>
 </media-component>
+<script>
+  import './media';
+  import './navigation/desktop';
+  import './navigation/mobile';
+  import './social';
+</script>
