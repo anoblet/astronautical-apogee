@@ -2,8 +2,8 @@ import { css } from 'lit';
 
 export const style = css`
   :host {
-    background-color: var(--color-neutral-900);
-    color: var(--navigation-mobile-color);
+    background-color: var(--navigation-background-color);
+    color: var(--navigation--color);
     position: relative;
     transition: opacity 0.2s ease-in-out;
     width: 100%;
@@ -23,7 +23,7 @@ export const style = css`
   }
 
   aside {
-    background-color: var(--color-neutral-900);
+    background-color: var(--navigation-background-color);
     height: 100vh;
     left: -100vw;
     position: fixed;
@@ -32,7 +32,7 @@ export const style = css`
     z-index: 1;
 
     a {
-      color: var(--navigation-mobile-a-color);
+      color: var(--navigation-a-color);
     }
   }
 
@@ -66,7 +66,7 @@ export const style = css`
   }
 
   icon-component {
-    color: var(--navigation-mobile-icon-color);
+    color: var(--navigation-icon-color);
     cursor: pointer;
     z-index: 1;
   }

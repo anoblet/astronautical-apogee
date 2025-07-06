@@ -43,7 +43,7 @@ export class NavigationMobile extends Base {
       <div class="space-between">
         <icon-component @click=${this.toggle}>${menu}</icon-component>
       </div>
-      <aside>
+      <aside class="column gap flex">
         <icon-component @click=${this.toggle}>${close}</icon-component>
         <ul>
           <li><a href="/">Home</a></li>
