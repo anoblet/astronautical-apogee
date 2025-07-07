@@ -227,7 +227,6 @@ export const globalStyles = css`
   }
 
   .tags {
-    color: var(--secondary-color);
     display: flex;
     gap: 1rem;
     overflow: hidden;

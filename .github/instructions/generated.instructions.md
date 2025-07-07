@@ -132,3 +132,9 @@
 - User expects automatic, minimal, and efficient improvements without disrupting existing logic or structure.
 - User values reusability and clear communication in both code and content.
 - The user requested a business plan based on the project's content and structure and expected it to be created as a new file in the workspace.
+
+- User expects strict adherence to all coding and project instructions, especially regarding chat logging and instruction updates.
+- Prefers minimal, composable, and reusable components, with minimal changes to existing logic.
+- Expects every chat interaction to be logged in the `chats/` directory using the prescribed format.
+- Wants `.github/instructions/generated.instructions.md` updated with new insights after each exchange.
+- Favors clean, organized, and efficient solutions with clear, actionable, and concise communication.

@@ -8,17 +8,17 @@ export class TagComponent extends Base {
     ...super.styles,
     css`
       :host {
-        border: 1px solid var(--color-blue-200);
+        border: 1px solid var(--primary-color);
         border-radius: 0.25rem;
-        color: var(--tag-color);
+        cursor: pointer;
         display: block;
         font-size: 0.875rem;
-        padding: 0.125rem 0.5rem;
+        padding: 0.125rem 0.75rem;
       }
 
       :host(:hover) {
-        background-color: var(--color-neutral-600);
-        cursor: pointer;
+        background-color: var(--button-background-color);
+        color: var(--button-color);
         transition: background-color 0.1s ease-in-out;
       }
     `,

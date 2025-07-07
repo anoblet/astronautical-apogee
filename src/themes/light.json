@@ -43,7 +43,7 @@
   "secondary-color": "var(--color-rose-400)",
   "step-card-background-color": "var(--color-neutral-50)",
   "surface-background-color": "#fff",
-  "tag-color": "var(--color-blue-400)",
+  "tag-color": "var(--color-sky-600)",
   "tertiary-color": "var(--color-blue-400)",
   "text-color": "var(--color-neutral-800)",
   "theme-toggle-background-color": "var(--color-neutral-900)",
