@@ -112,6 +112,13 @@
   - They are interested in iterative improvement and want to keep a record of each chat interaction for traceability.
   - The user is detail-oriented and open to further checks (e.g., mobile view, dark mode, accessibility).
 
+## Additional Insights (2025-07-07)
+
+- User expects new feature pages to be discoverable from existing navigation.
+- Prefers minimal, consistent, and reusable structures for new pages.
+- Expects strict adherence to project conventions and global styling.
+- Values clear, action-oriented navigation between related pages.
+
 ## User Preferences and Behavior Patterns
 
 - **Consistent Page Structure:** User values consistent layouts and structures across different pages (e.g., services and portfolio pages having similar formats)

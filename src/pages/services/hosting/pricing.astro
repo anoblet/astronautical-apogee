@@ -1,0 +1,74 @@
+---
+import Layout from '@layouts/default.astro';
+---
+
+<Layout title="Hosting Pricing">
+  <h1 class="text-align-center font-size-2 margin-bottom-2">Hosting Pricing</h1>
+  <p
+    class="hero-description text-align-center margin-bottom-4 max-width-48 margin-auto"
+  >
+    Reliable, secure, and scalable hosting solutions for every project size.
+    Choose the plan that fits your needs.
+  </p>
+
+  <div class="grid auto-fit-20 gap-2 width-100 max-width-64 margin-auto">
+    <card-component>
+      <h2 class="font-size-1-5">Basic Hosting</h2>
+      <p class="font-size-1-125">
+        For personal sites and small projects needing dependable uptime and
+        support.
+      </p>
+      <ul class="list margin-bottom-2">
+        <li>99.9% uptime</li>
+        <li>SSL certificate</li>
+        <li>Daily backups</li>
+        <li>Email support</li>
+      </ul>
+      <div class="font-size-2 font-weight-6 margin-bottom-2">$15/mo</div>
+      <button-component variant="primary" href="/contact"
+        >Get Hosting</button-component
+      >
+    </card-component>
+
+    <card-component>
+      <h2 class="font-size-1-5">Pro Hosting</h2>
+      <p class="font-size-1-125">
+        For businesses and growing sites requiring more resources and priority
+        support.
+      </p>
+      <ul class="list margin-bottom-2">
+        <li>Enhanced performance</li>
+        <li>Staging environment</li>
+        <li>Priority support</li>
+        <li>Advanced security</li>
+      </ul>
+      <div class="font-size-2 font-weight-6 margin-bottom-2">$49/mo</div>
+      <button-component variant="primary" href="/contact"
+        >Get Hosting</button-component
+      >
+    </card-component>
+
+    <card-component>
+      <h2 class="font-size-1-5">Enterprise Hosting</h2>
+      <p class="font-size-1-125">
+        Custom hosting for mission-critical applications, with dedicated
+        resources and support.
+      </p>
+      <ul class="list margin-bottom-2">
+        <li>Custom infrastructure</li>
+        <li>24/7 monitoring</li>
+        <li>Dedicated account manager</li>
+        <li>Custom SLAs</li>
+      </ul>
+      <div class="font-size-2 font-weight-6 margin-bottom-2">Custom</div>
+      <button-component variant="primary" href="/contact"
+        >Contact for Quote</button-component
+      >
+    </card-component>
+  </div>
+</Layout>
+
+<script>
+  import '@components/card';
+  import '@components/button';
+</script>

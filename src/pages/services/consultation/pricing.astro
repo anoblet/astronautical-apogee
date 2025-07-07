@@ -1,0 +1,76 @@
+---
+import Layout from '@layouts/default.astro';
+---
+
+<Layout title="Consultation Pricing">
+  <h1 class="text-align-center font-size-2 margin-bottom-2">
+    Consultation Pricing
+  </h1>
+  <p
+    class="hero-description text-align-center margin-bottom-4 max-width-48 margin-auto"
+  >
+    Expert guidance and strategic advice to accelerate your project. Choose the
+    consultation plan that fits your needs.
+  </p>
+
+  <div class="grid auto-fit-20 gap-2 width-100 max-width-64 margin-auto">
+    <card-component>
+      <h2 class="font-size-1-5">Quick Consult</h2>
+      <p class="font-size-1-125">
+        For those needing fast answers or a second opinion on a specific
+        challenge.
+      </p>
+      <ul class="list margin-bottom-2">
+        <li>30-minute session</li>
+        <li>Email summary</li>
+        <li>Actionable next steps</li>
+        <li>Email follow-up</li>
+      </ul>
+      <div class="font-size-2 font-weight-6 margin-bottom-2">$99</div>
+      <button-component variant="primary" href="/contact"
+        >Book Now</button-component
+      >
+    </card-component>
+
+    <card-component>
+      <h2 class="font-size-1-5">Project Consult</h2>
+      <p class="font-size-1-125">
+        For teams or individuals seeking in-depth project review and
+        recommendations.
+      </p>
+      <ul class="list margin-bottom-2">
+        <li>1-hour session</li>
+        <li>Detailed project review</li>
+        <li>Written report</li>
+        <li>Priority email support</li>
+      </ul>
+      <div class="font-size-2 font-weight-6 margin-bottom-2">$299</div>
+      <button-component variant="primary" href="/contact"
+        >Book Now</button-component
+      >
+    </card-component>
+
+    <card-component>
+      <h2 class="font-size-1-5">Ongoing Advisory</h2>
+      <p class="font-size-1-125">
+        For organizations needing regular strategy sessions and continuous
+        support.
+      </p>
+      <ul class="list margin-bottom-2">
+        <li>Monthly retainer</li>
+        <li>Up to 4 sessions/month</li>
+        <li>Priority scheduling</li>
+        <li>Dedicated advisor</li>
+      </ul>
+      <div class="font-size-2 font-weight-6 margin-bottom-2">Custom</div>
+      <button-component variant="primary" href="/contact"
+        >Contact for Quote</button-component
+      >
+    </card-component>
+  </div>
+</Layout>
+
+<script>
+  import '@components/card';
+  import '@components/button';
+</script>

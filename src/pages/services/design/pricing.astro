@@ -1,0 +1,74 @@
+---
+import Layout from '@layouts/default.astro';
+---
+
+<Layout title="Design Pricing">
+  <h1 class="text-align-center font-size-2 margin-bottom-2">Design Pricing</h1>
+  <p
+    class="hero-description text-align-center margin-bottom-4 max-width-48 margin-auto"
+  >
+    Professional, creative, and user-focused design solutions for brands and
+    products. Choose the plan that fits your vision.
+  </p>
+
+  <div class="grid auto-fit-20 gap-2 width-100 max-width-64 margin-auto">
+    <card-component>
+      <h2 class="font-size-1-5">Starter Design</h2>
+      <p class="font-size-1-125">
+        For individuals and startups needing a polished, modern look for their
+        first project.
+      </p>
+      <ul class="list margin-bottom-2">
+        <li>Logo & brand colors</li>
+        <li>1 landing page</li>
+        <li>Basic style guide</li>
+        <li>Email support</li>
+      </ul>
+      <div class="font-size-2 font-weight-6 margin-bottom-2">$299</div>
+      <button-component variant="primary" href="/contact"
+        >Get Design</button-component
+      >
+    </card-component>
+
+    <card-component>
+      <h2 class="font-size-1-5">Pro Design</h2>
+      <p class="font-size-1-125">
+        For growing businesses seeking a cohesive brand and multi-page design
+        system.
+      </p>
+      <ul class="list margin-bottom-2">
+        <li>Full brand kit</li>
+        <li>Up to 5 pages</li>
+        <li>Component library</li>
+        <li>Priority support</li>
+      </ul>
+      <div class="font-size-2 font-weight-6 margin-bottom-2">$999</div>
+      <button-component variant="primary" href="/contact"
+        >Get Design</button-component
+      >
+    </card-component>
+
+    <card-component>
+      <h2 class="font-size-1-5">Enterprise Design</h2>
+      <p class="font-size-1-125">
+        Custom design for established brands, with advanced systems and
+        dedicated support.
+      </p>
+      <ul class="list margin-bottom-2">
+        <li>Custom design system</li>
+        <li>Unlimited pages</li>
+        <li>Design tokens & documentation</li>
+        <li>Dedicated account manager</li>
+      </ul>
+      <div class="font-size-2 font-weight-6 margin-bottom-2">Custom</div>
+      <button-component variant="primary" href="/contact"
+        >Contact for Quote</button-component
+      >
+    </card-component>
+  </div>
+</Layout>
+
+<script>
+  import '@components/card';
+  import '@components/button';
+</script>
