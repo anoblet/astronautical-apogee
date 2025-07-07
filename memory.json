@@ -1,0 +1,6 @@
+{
+  "type": "entity",
+  "entityType": "Person",
+  "name": "Andrew Noblet",
+  "observations": ["User's name is Andrew Noblet.", "User lives in New York."]
+}
