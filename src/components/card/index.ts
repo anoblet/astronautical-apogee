@@ -20,9 +20,7 @@ export class CardComponent extends Base {
         gap: 1rem;
         padding: 1rem;
         border: 1px solid var(--card-border-color);
-        box-shadow:
-          0 10px 15px -3px rgb(0 0 0 / 0.2),
-          0 4px 6px -4px rgb(0 0 0 / 0.1);
+        box-shadow: var(--box-shadow);
         transition: outline-color 0.1s ease-in-out;
         /* transition: transform 0.2s ease-in-out; */
         width: 100%;

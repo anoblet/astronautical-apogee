@@ -38,7 +38,7 @@
   "navigation-icon-color": "var(--color-sky-600)",
   "outline": "1px solid #000",
   "padding": "1rem",
-  "primary-color": "var(--color-teal-200)",
+  "primary-color": "var(--color-sky-600)",
   "quaternary-color": "var(--color-amber-200)",
   "secondary-color": "var(--color-rose-400)",
   "step-card-background-color": "var(--color-neutral-50)",
