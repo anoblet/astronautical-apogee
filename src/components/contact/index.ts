@@ -1,6 +1,5 @@
 import '@components/button';
 import '@components/icon';
-import { calendarMonth } from '@icons/calendar-month';
 import { phone } from '@icons/phone';
 import { css, html } from 'lit';
 import { customElement } from 'lit/decorators.js';

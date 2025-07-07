@@ -3,11 +3,10 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "commit": "pnpm dlx genaiscript run commit",
-    "deploy": "npm run build && npm run deploy:wrangler",
-    "deploy:wrangler": "wrangler deploy",
+    "commit": "wireit",
+    "deploy": "wireit",
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "wireit",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint .",
@@ -20,7 +19,8 @@
     "@anoblet/mixins": "github:anoblet/mixins",
     "@astrojs/mdx": "^4.3.0",
     "astro": "^5.7.10",
-    "lit": "^3.3.0"
+    "lit": "^3.3.0",
+    "wireit": "^0.14.12"
   },
   "lint-staged": {
     "*.{js,mjs,ts,astro}": [
@@ -46,5 +46,22 @@
     "prettier-plugin-astro": "^0.14.1",
     "sharp": "^0.34.2",
     "wrangler": "^4.14.1"
+  },
+  "wireit": {
+    "build": {
+      "command": "astro build",
+      "dependencies": [
+        "commit"
+      ]
+    },
+    "commit": {
+      "command": "pnpm dlx genaiscript run commit"
+    },
+    "deploy": {
+      "command": "wrangler deploy",
+      "dependencies": [
+        "build"
+      ]
+    }
   }
 }

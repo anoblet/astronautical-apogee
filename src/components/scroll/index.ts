@@ -1,14 +1,13 @@
 import { Base } from '@components/base';
+import '@components/icon';
+import { chevronLeft, chevronRight } from '@icons/index';
 import { css, html } from 'lit';
 import {
   customElement,
   property,
-  state,
   query,
   queryAssignedElements,
 } from 'lit/decorators.js';
-import '@components/icon';
-import { chevronLeft, chevronRight } from '@icons/index';
 
 @customElement('scroll-component')
 export class ScrollComponent extends Base {

@@ -1,6 +1,6 @@
-import { css, html, LitElement } from 'lit';
-import { customElement } from 'lit/decorators.js';
 import { Base } from '@components/base';
+import { css, html } from 'lit';
+import { customElement } from 'lit/decorators.js';
 
 @customElement('icon-component')
 export class Icon extends Base {
