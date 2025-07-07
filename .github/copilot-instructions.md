@@ -1,7 +1,9 @@
-#file:./instructions/lit.instructions.md
 #file:./instructions/style.instructions.md
 #file:./instructions/generated.instructions.md
+#file:./instructions/memory.instructions.md
 
+- Always reference your memory before responding
+- Let the user know that you are referencing your memory
 - Create as many new components as neccessary
 - Components should be simple and composible
 - Move as much reusable structure to the layout as apossible.

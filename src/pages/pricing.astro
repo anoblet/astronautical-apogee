@@ -1,0 +1,74 @@
+---
+import Layout from '@layouts/default.astro';
+---
+
+<Layout title="Pricing">
+  <h1 class="text-align-center font-size-2 margin-bottom-2">Pricing</h1>
+  <p
+    class="hero-description text-align-center margin-bottom-4 max-width-48 margin-auto"
+  >
+    Choose the plan that fits your needs. All plans include direct
+    collaboration, modern web technologies, and ongoing support.
+  </p>
+
+  <div class="grid auto-fit-20 gap-2 width-100 max-width-64 margin-auto">
+    <card-component>
+      <h2 class="font-size-1-5">Basic</h2>
+      <p class="font-size-1-125">
+        Ideal for individuals and startups looking to establish a professional
+        web presence.
+      </p>
+      <ul class="list margin-bottom-2">
+        <li>Single-page site</li>
+        <li>Responsive design</li>
+        <li>Basic SEO</li>
+        <li>Email support</li>
+      </ul>
+      <div class="font-size-2 font-weight-6 margin-bottom-2">$999</div>
+      <button-component variant="primary" href="/contact"
+        >Get Started</button-component
+      >
+    </card-component>
+
+    <card-component>
+      <h2 class="font-size-1-5">Pro</h2>
+      <p class="font-size-1-125">
+        Perfect for growing businesses needing advanced features and
+        integrations.
+      </p>
+      <ul class="list margin-bottom-2">
+        <li>Multi-page site</li>
+        <li>Custom integrations</li>
+        <li>Performance optimization</li>
+        <li>Priority support</li>
+      </ul>
+      <div class="font-size-2 font-weight-6 margin-bottom-2">$2,499</div>
+      <button-component variant="primary" href="/contact"
+        >Get Started</button-component
+      >
+    </card-component>
+
+    <card-component>
+      <h2 class="font-size-1-5">Enterprise</h2>
+      <p class="font-size-1-125">
+        For organizations requiring bespoke solutions, scalability, and
+        dedicated support.
+      </p>
+      <ul class="list margin-bottom-2">
+        <li>Custom architecture</li>
+        <li>API integrations</li>
+        <li>Ongoing maintenance</li>
+        <li>Dedicated support</li>
+      </ul>
+      <div class="font-size-2 font-weight-6 margin-bottom-2">Custom</div>
+      <button-component variant="primary" href="/contact"
+        >Contact for Quote</button-component
+      >
+    </card-component>
+  </div>
+</Layout>
+
+<script>
+  import '@components/card';
+  import '@components/button';
+</script>
