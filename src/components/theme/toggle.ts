@@ -4,17 +4,12 @@ import dark from '@themes/dark.json' assert { type: 'json' };
 import light from '@themes/light.json' assert { type: 'json' };
 import { css, html } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
+import { applyTheme } from './index';
 
 export const applyStoredTheme = () => {
   const storedTheme = getStoredTheme();
   if (storedTheme) {
     applyTheme(storedTheme);
-  }
-};
-
-export const applyTheme = (theme: Record<string, string>) => {
-  for (const [name, value] of Object.entries(theme)) {
-    document.documentElement.style.setProperty(`--${name}`, value.trim());
   }
 };
 

@@ -4,9 +4,13 @@ title: 'Creative'
 description: 'Why you should let your developers get creative'
 ---
 
+<section>
+
 # Creative
 
-## Why you should let your developers get creative
+### Why you should let your developers get creative
+
+</section>
 
 <card-component>
 

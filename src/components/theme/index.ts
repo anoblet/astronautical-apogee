@@ -5,6 +5,13 @@ import { css, html } from 'lit';
 import { customElement, queryAll, state } from 'lit/decorators.js';
 import { BeforeRender } from '../../mixins/BeforeRenderMixin';
 
+export const applyTheme = (theme: Record<string, string>) => {
+  document.documentElement.setAttribute('data-theme', theme.name);
+  for (const [name, value] of Object.entries(theme)) {
+    document.documentElement.style.setProperty(`--${name}`, value.trim());
+  }
+};
+
 const setProperty = (name: string, value: string) => {
   document.documentElement.style.setProperty(`--${name}`, value.trim());
 };
@@ -16,7 +23,7 @@ const setProperties = (properties: Record<string, string>) => {
 };
 
 export const applyStoredTheme = () => {
-  setProperties(getTheme());
+  applyTheme(getTheme());
 };
 
 export const getTheme = (): Record<string, string> => {
