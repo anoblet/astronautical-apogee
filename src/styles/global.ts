@@ -71,10 +71,6 @@ export const globalStyles = css`
     }
   }
 
-  button-component {
-    outline: 1px solid var(--color-black);
-  }
-
   contact-component {
     right: 1rem;
   }

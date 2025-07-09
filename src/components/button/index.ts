@@ -29,40 +29,28 @@ export class ButtonComponent extends Base {
         text-align: center;
         transition:
           background-color 0.2s ease,
-          color 0.2s ease;
+          outline-color 0.2s ease;
+      }
+
+      :host(:hover) {
+        background-color: var(--button-hover-background-color);
+        color: var(--button-hover-color);
       }
 
       :host([variant='primary']) {
         outline: 1px solid var(--color-neutral-800);
-
-        &:hover {
-          background-color: var(--color-rose-400);
-          color: var(--color-neutral-800);
-        }
-      }
-
-      :host([variant='primary']:hover) {
-        background-color: var(--color-rose-400);
-        color: var(--color-neutral-800);
-
-        a {
-          color: inherit;
-        }
       }
 
       :host([variant='secondary']) {
         background: unset;
-        border: var(--button-secondary-border);
         color: var(--button-secondary-color);
+        outline: 1px solid var(--button-background-color);
       }
 
       :host([variant='secondary']:hover) {
-        background-color: color-mix(
-          in oklab,
-          var(--color-teal-200) 20%,
-          var(--color-neutral-900) 100%
-        );
-        color: var(--button-secondary-hover-color);
+        background-color: var(--button-hover-background-color);
+        color: var(--button-hover-color);
+        outline: 1px solid var(--button-hover-background-color);
       }
 
       ::slotted(span) {
