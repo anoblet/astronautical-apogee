@@ -16,7 +16,9 @@ const { Content } = await render(post);
 
 <Layout title={post.data.title}>
   <div class="blog gap grid max-width-56">
-    <Content />
+    <card-component class="gap grid">
+      <Content />
+    </card-component>
   </div>
 </Layout>
 <script>

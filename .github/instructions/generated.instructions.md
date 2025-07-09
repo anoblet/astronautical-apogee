@@ -138,3 +138,5 @@
 - Expects every chat interaction to be logged in the `chats/` directory using the prescribed format.
 - Wants `.github/instructions/generated.instructions.md` updated with new insights after each exchange.
 - Favors clean, organized, and efficient solutions with clear, actionable, and concise communication.
+
+Added insight: User values introductions that are not only concise but also clearly connect the article’s theme to actionable business outcomes. They expect the assistant to set the stage for the content that follows, making the value proposition explicit.
