@@ -1,6 +1,7 @@
 import { LitElement } from 'lit';
 import { property } from 'lit/decorators.js';
 import { globalStyles } from '../../styles/global';
+import { subscribe } from '@components/theme';
 
 export class Base extends LitElement {
   @property({ type: String }) accessor href = '';
@@ -22,6 +23,10 @@ export class Base extends LitElement {
 
     this.classes.forEach(className => {
       this.classList.add(className);
+    });
+
+    subscribe(theme => {
+      this.setAttribute('data-theme', theme);
     });
   }
 }
