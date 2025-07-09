@@ -64,7 +64,7 @@
 
 ## Chat and Instruction Management
 
-- **Chat Logging:** Save every chat interaction in `chats/[timestamp].md`. Update this file after every message exchange.
+- **Chat Logging:** Save every chat interaction in `chats/` directory using the prescribed format.
 - **Chat Log Format:**
 
   ```markdown
@@ -112,12 +112,9 @@
   - They are interested in iterative improvement and want to keep a record of each chat interaction for traceability.
   - The user is detail-oriented and open to further checks (e.g., mobile view, dark mode, accessibility).
 
-## Additional Insights (2025-07-07)
+## Additional Insights (2025-07-09)
 
-- User expects new feature pages to be discoverable from existing navigation.
-- Prefers minimal, consistent, and reusable structures for new pages.
-- Expects strict adherence to project conventions and global styling.
-- Values clear, action-oriented navigation between related pages.
+- User expects new blog posts to match the concise, actionable, and engaging style of previous posts, with clear structure and minimalism. They value consistency and actionable takeaways.
 
 ## User Preferences and Behavior Patterns
 
