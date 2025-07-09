@@ -1,22 +1,17 @@
 {
   "type": "entity",
-  "entityType": "project",
-  "name": "astronautical-apogee",
+  "entityType": "CodingStyle",
+  "name": "User Coding Style",
   "observations": [
-    "Workspace uses Astro JS, Lit, and Fluent UI for a portfolio site.",
-    "Strict adherence to a global color scheme defined in styles/global.ts and styles/colors.css.",
-    "Emphasis on minimal, composable, and reusable components, with layouts centralizing shared structure.",
-    "Project structure is organized with clear separation of assets, components, layouts, pages, and styles.",
-    "Atomic CSS and utility classes are used for brand continuity and efficiency.",
-    "Chat interactions and user preferences are logged in timestamped markdown files in the chats/ directory.",
-    "User expects every chat interaction to be logged and insights to be updated in .github/instructions/generated.instructions.md after each exchange.",
-    "There is a strong focus on decoupling, performance, and bundle size optimization.",
-    "Portfolio features projects like CXL, Graduation Source, and Avanti Systems USA, with descriptions from a developer's perspective.",
-    "Navigation component requirements: hamburger menu for mobile, tabs for desktop, and social icons on the right.",
-    "Preference for unified, reusable card components over multiple specialized ones.",
-    "Business plan and technical reports are included in the workspace (BUSINESS_PLAN.md, reports/).",
-    "User values automated, agent-driven QA and iterative improvement with traceable chat logs.",
-    "Preference for overview + detail navigation patterns and clean, scannable interfaces.",
-    "Accessibility and semantic HTML are prioritized throughout the project."
+    "Prefers minimal, composable, and reusable components.",
+    "Emphasizes decoupling and minimal changes to existing logic.",
+    "Strictly adheres to global color scheme and project conventions.",
+    "Values atomic, efficient, and scoped CSS using variables and utility classes.",
+    "Favors semantic HTML and accessibility.",
+    "Prefers clean, organized, and efficient solutions with clear, actionable, and concise communication.",
+    "Expects every chat interaction to be logged and memory updated after each exchange.",
+    "Wants configuration and code files to be tidy, well-structured, and alphabetically organized.",
+    "Dislikes unnecessary comments and prefers content-driven component design.",
+    "Values performance, bundle size reduction, and avoiding over-engineering."
   ]
 }
