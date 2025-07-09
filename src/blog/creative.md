@@ -1,6 +1,7 @@
 ---
 id: 'creative'
 title: 'Creative'
+date: '2025.07.01'
 description: 'Why you should let your developers get creative'
 ---
 

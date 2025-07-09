@@ -1,5 +1,8 @@
 ---
+import { getCollection } from 'astro:content';
 import Layout from '../layouts/default.astro';
+
+const posts = await getCollection('blog');
 ---
 
 <Layout title="Blog">
@@ -10,7 +13,15 @@ import Layout from '../layouts/default.astro';
       that inspire, inform, and spark new conversations.
     </p>
     <ul class="list">
-      <li><a href="/blog/creative">Creative</a></li>
+      {
+        posts.map(post => (
+          <li>
+            <a href={'/blog/' + post.id}>
+              {post.data.title} - {post.data.date}
+            </a>
+          </li>
+        ))
+      }
     </ul>
   </div>
 </Layout>
