@@ -11,6 +11,9 @@
       ...super.styles,
       css`
         :host {
+          --icon-color: var(--color-rose-400);
+          --icon-size: 1.5rem;
+
           gap: 0.5rem;
           justify-content: center;
           padding: var(--padding-0-2-5);
@@ -19,11 +22,6 @@
             display: inline-flex;
           }
         }
-
-        svg {
-          width: 1.5rem;
-          height: 1.5rem;
-        }
       `,
     ];
     render() {
@@ -31,7 +29,7 @@
         <!-- <span class="rose-400">${heart}</span> -->
         <!-- &copy; ${new Date().getFullYear()} Andrew Noblet. All rights reserved. -->
         <!-- <span>Made with love</span> -->
-        <span class="rose-400">${heart}</span>
+        <icon-component>${heart}</icon-component>
       `;
     }
   }

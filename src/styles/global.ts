@@ -480,6 +480,9 @@ export const globalStyles = css`
   }
 
   ul {
+    display: grid;
+    gap: 0.5rem;
+
     li {
       padding-left: 0.75rem;
 
