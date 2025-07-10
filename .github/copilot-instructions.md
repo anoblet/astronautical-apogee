@@ -1,8 +1,3 @@
-#file:./instructions/memory.instructions.md
-#file:./instructions/playwright.instructions.md
-#file:./instructions/sequential-thinking.instructions.md
-#file:./instructions/style.instructions.md
-
 - Create as many new components as neccessary
 - Components should be simple and composible
 - Move as much reusable structure to the layout as apossible.
@@ -27,3 +22,9 @@
 - After every interaction with the user through the chat interface, update `.github/instructions/generated.instructions.md` with insights on user preferences and behavior.
 
 **_ Keep it simple! _**
+
+# Tools
+
+#file:./instructions/memory.instructions.md
+#file:./instructions/playwright.instructions.md
+#file:./instructions/sequential-thinking.instructions.md

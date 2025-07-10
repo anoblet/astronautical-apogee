@@ -202,3 +202,9 @@ Added insight: User values introductions that are not only concise but also clea
 - No other overlapping entities found; 'User Coding Style' and 'user-preferences' remain distinct.
 - User prefers a single, unified profile for all personal and preference data.
 - Continue to maintain a clean, non-redundant memory structure for optimal recall and context management.
+
+- User prefers all pages to use consistent max width and layout structure.
+- Utility classes (e.g., max-width-56, width-100, margin-auto) are the standard for constraining content width.
+- Visual and accessibility validation using Playwright MCP is required and expected.
+- Minimal, composable changes are preferred, with reusable structure emphasized.
+- User expects all changes and observations to be logged to memory MCP and instructions updated after each interaction.
