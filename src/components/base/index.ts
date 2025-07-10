@@ -1,7 +1,7 @@
 import { LitElement } from 'lit';
 import { property } from 'lit/decorators.js';
 import { globalStyles } from '../../styles/global';
-import { subscribe } from '@components/theme';
+import { subscribe } from '@utility/theme';
 
 export class Base extends LitElement {
   @property({ type: String }) accessor href = '';

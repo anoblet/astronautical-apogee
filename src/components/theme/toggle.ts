@@ -4,7 +4,7 @@ import dark from '@themes/dark.json' assert { type: 'json' };
 import light from '@themes/light.json' assert { type: 'json' };
 import { css, html } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
-import { applyTheme } from './index';
+import { applyTheme } from '@utility/theme';
 
 export const applyStoredTheme = () => {
   const storedTheme = getStoredTheme();

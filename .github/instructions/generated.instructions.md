@@ -116,6 +116,10 @@
 
 - User expects new blog posts to match the concise, actionable, and engaging style of previous posts, with clear structure and minimalism. They value consistency and actionable takeaways.
 
+## Additional Insights (2025-07-10)
+
+- User expects precise, minimal, and convention-driven refactoring. They value alphabetization for maintainability and clarity, and expect no functional changes or errors after such refactors. The workflow should always include validation and memory logging.
+
 ## User Preferences and Behavior Patterns
 
 - **Consistent Page Structure:** User values consistent layouts and structures across different pages (e.g., services and portfolio pages having similar formats)

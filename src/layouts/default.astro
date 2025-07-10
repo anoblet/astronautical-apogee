@@ -68,14 +68,17 @@ import { ClientRouter } from 'astro:transitions';
     navigation: auto;
   }
 
+  * {
+    transition: opacity 0.2s ease-in-out;
+
+    &:has(*:not(:defined)) {
+      opacity: 0;
+    }
+  }
+
   body {
     min-height: 100vh;
     opacity: 1;
-    transition: opacity 0.2s ease-in-out;
-
-    *:has(*:not(:defined)) {
-      opacity: 0;
-    }
   }
 
   main {
@@ -90,10 +93,10 @@ import { ClientRouter } from 'astro:transitions';
 <script>
   import '@components/contact';
   import '@components/social';
-  import { applyStoredTheme } from '@components/theme';
   import '@components/theme/toggle';
   import { globalStyles } from '@styles/global';
   import media from '@utility/media';
+  import { applyStoredTheme } from '@utility/theme';
 
   media.subscribe((media: string) => {
     document.body.setAttribute('data-media', media);
