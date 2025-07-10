@@ -1,6 +1,3 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
 # Validate commit message format
 # Allows: feat:, fix:, docs:, style:, refactor:, test:, chore:
 # Example: "feat: add new component" or "fix: resolve navigation issue"
