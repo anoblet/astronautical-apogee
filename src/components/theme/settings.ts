@@ -1,4 +1,5 @@
 import { Base } from '@components/base';
+import { getTheme, resetTheme, setProperty } from '@utility/theme';
 import { css, html } from 'lit';
 import { customElement, queryAll, state } from 'lit/decorators.js';
 import { BeforeRender } from '../../mixins/BeforeRenderMixin';
@@ -84,11 +85,11 @@ export class ThemeComponent extends BeforeRender(Base) {
 
   render() {
     return html`
-      <h1>Theme</h1>
+      <h1>Theme Settings</h1>
       <ul>
         <li>
           <label>
-            Background Color
+            Background
             <input
               @change=${this._onChange}
               name="background-color"
@@ -99,7 +100,7 @@ export class ThemeComponent extends BeforeRender(Base) {
         </li>
         <li>
           <label>
-            Text Color
+            Text
             <input
               @change=${this._onChange}
               name="text-color"
@@ -110,7 +111,7 @@ export class ThemeComponent extends BeforeRender(Base) {
         </li>
         <li>
           <label>
-            H1 Color
+            Heading Color
             <input
               @change=${this._onChange}
               name="h1-color"
@@ -121,7 +122,7 @@ export class ThemeComponent extends BeforeRender(Base) {
         </li>
         <li>
           <label>
-            H1 Font Size
+            Heading Font Size
             <input
               @change=${this._onChange}
               name="h1-font-size"
@@ -132,7 +133,7 @@ export class ThemeComponent extends BeforeRender(Base) {
         </li>
         <li>
           <label>
-            Navigation Link Color
+            Navigation Link
             <input
               @change=${this._onChange}
               name="navigation-a-color"
@@ -142,7 +143,7 @@ export class ThemeComponent extends BeforeRender(Base) {
           </label>
         </li>
       </ul>
-      <button @click=${resetTheme}>Reset to Default Theme</button>
+      <button @click=${resetTheme}>Reset Theme</button>
     `;
   }
 }

@@ -1,7 +1,7 @@
 import dark from '@themes/dark.json' assert { type: 'json' };
 import light from '@themes/light.json' assert { type: 'json' };
 
-const setProperty = (name: string, value: string) => {
+export const setProperty = (name: string, value: string) => {
   document.documentElement.style.setProperty(`--${name}`, value.trim());
 };
 

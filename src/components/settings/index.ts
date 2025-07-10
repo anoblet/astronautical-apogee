@@ -58,11 +58,11 @@ export class SettingsComponent extends BeforeRender(Base) {
 
   render() {
     return html`
-      <h1>Settings</h1>
+      <h1>Site Settings</h1>
       <ul>
         <li>
           <label>
-            H1 Font Size
+            Heading Font Size
             <input
               @keyup=${this._onKeyUp}
               name="h1-font-size"

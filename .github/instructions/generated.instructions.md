@@ -208,3 +208,11 @@ Added insight: User values introductions that are not only concise but also clea
 - Visual and accessibility validation using Playwright MCP is required and expected.
 - Minimal, composable changes are preferred, with reusable structure emphasized.
 - User expects all changes and observations to be logged to memory MCP and instructions updated after each interaction.
+
+- User prefers minimal, composable, and decoupled code structure.
+- Efficient, atomic, and scoped CSS using variables and global utility classes is required.
+- All missing imports should be fixed without unnecessary changes or comments.
+- Rigorous validation and testing is expected, including Playwright MCP for style/design changes.
+- User expects all steps to be completed autonomously and thoroughly.
+- Always check for correct exports when importing functions.
+- Always update this file after each interaction.
