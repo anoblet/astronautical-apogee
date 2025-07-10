@@ -1,13 +1,8 @@
-#file:./instructions/generated.instructions.md
 #file:./instructions/memory.instructions.md
 #file:./instructions/playwright.instructions.md
 #file:./instructions/sequential-thinking.instructions.md
 #file:./instructions/style.instructions.md
 
-- Always reference the memory mcp server before responding
-- Let the user know that you are referencing the memory mcp server
-- Always update the memory mcp server after every interaction
-- Always use sequential thinking mcp server
 - Create as many new components as neccessary
 - Components should be simple and composible
 - Move as much reusable structure to the layout as apossible.

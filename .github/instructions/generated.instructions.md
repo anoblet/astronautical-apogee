@@ -1,3 +1,13 @@
+## Additional Insights (2025-07-10T15:45)
+
+- User expects all MCP server tools to be explicitly included in configuration files when requested.
+- User values alphabetization, minimalism, and validation after changes.
+
+## Additional Insights (2025-07-10T15:40)
+
+- User expects all available tools to be added to configuration files when requested, without further prompting.
+- User expects validation, chat logging, and instruction updates after such changes.
+
 ## Additional Insights (2025-07-10T15:00)
 
 - User expects all new blog posts to follow the intro + bulleted takeaways + closing structure, with actionable, project-based examples.
@@ -154,6 +164,10 @@
 ## Additional Insights (2025-07-10)
 
 - User expects precise, minimal, and convention-driven refactoring. They value alphabetization for maintainability and clarity, and expect no functional changes or errors after such refactors. The workflow should always include validation and memory logging.
+
+## User Identity
+
+- The user's name is Andrew Noblet. This should be remembered for future context and personalization.
 
 ## User Preferences and Behavior Patterns
 
