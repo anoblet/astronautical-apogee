@@ -68,6 +68,7 @@ export class NavigationMobile extends Base {
           </li>
           <li><a href="/mentorship">Mentorship</a></li>
           <li><a href="/blog">Blog</a></li>
+          <li><a href="/about">About</a></li>
         </ul>
       </aside>
     `;
