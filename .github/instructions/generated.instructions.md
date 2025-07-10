@@ -1,23 +1,9 @@
 ## Additional Insights (2025-07-10T15:45)
 
-- User expects all MCP server tools to be explicitly included in configuration files when requested.
 - User values alphabetization, minimalism, and validation after changes.
 
-## Additional Insights (2025-07-10T15:40)
-
-- User expects all available tools to be added to configuration files when requested, without further prompting.
 - User expects validation, chat logging, and instruction updates after such changes.
 
-## Additional Insights (2025-07-10T15:00)
-
-- User expects all new blog posts to follow the intro + bulleted takeaways + closing structure, with actionable, project-based examples.
-- User values clear, direct connections between technology choices and business outcomes.
-- User expects every chat interaction to be logged in `chats/` and `.github/instructions/generated.instructions.md` to be updated with new insights after each exchange.
-
-## Additional Insights (2025-07-10T10:25)
-
-- User prefers elaboration that still maintains a concise, actionable, and structured style.
-- User values real project examples and actionable advice in technical writing.
 - User expects closing sections to include both reflection and forward-looking statements.
 
 ## Additional Insights (2025-07-10T10:20)
@@ -216,3 +202,8 @@ Added insight: User values introductions that are not only concise but also clea
 - User expects all steps to be completed autonomously and thoroughly.
 - Always check for correct exports when importing functions.
 - Always update this file after each interaction.
+
+- No explicit corrections from the developer to the model were found in the chat logs from 2025-06-15 to 2025-07-10.
+- The developer consistently provided direct instructions and requests, but did not manually override, correct, or amend the model’s output in a way that constitutes a correction.
+- The developer’s feedback was always in the form of new requests or clarifications, not explicit corrections of errors.
+- This behavior aligns with the developer’s preference for minimal, actionable communication and autonomous agent-driven workflows.
