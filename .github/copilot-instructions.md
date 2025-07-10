@@ -1,6 +1,7 @@
-#file:./instructions/style.instructions.md
 #file:./instructions/generated.instructions.md
 #file:./instructions/memory.instructions.md
+#file:./instructions/sequential-thinking.instructions.md
+#file:./instructions/style.instructions.md
 
 - Always reference the memory mcp server before responding
 - Let the user know that you are referencing the memory mcp server
@@ -27,22 +28,6 @@
 - Emphasize decoupling
 - Avoid page specific CSS classes
 - Use utility CSS classes available in the global stylesheet when possible
-- Save every chat interaction in `chats/[timestamp].md`. Update the file with the chat interaction after every message until the conversation ends.
-- Use the following format for the chat interaction file:
-
-  ```
-  # Chat Interaction - [timestamp]
-
-  ## User Message
-  [User's message here]
-
-  ## Assistant Response
-  [Assistant's response here]
-
-  ## Insights
-  [Any insights or observations about user preferences and behavior]
-  ```
-
 - After every interaction with the user through the chat interface, update `.github/instructions/generated.instructions.md` with insights on user preferences and behavior.
 
 **_ Keep it simple! _**

@@ -1,3 +1,7 @@
+## Additional Insights (2025-07-10)
+
+- User expects strict, explicit, and enforceable instructions for always using the sequential thinking MCP server. They value directness, compatibility with project conventions, and validation of changes. The user expects all steps to be logged and instructions to be updated after each interaction.
+
 # Generated Code Style and Project Instructions
 
 ## General Project Guidelines
