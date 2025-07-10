@@ -41,20 +41,46 @@ export class NavigationDesktop extends Base {
       <ul class="overflow-x">
         <li>
           <div class="dropdown">
-            <a href="/portfolio" class="dropdown-trigger">Portfolio</a>
-            <div class="dropdown-menu">
-              <a href="/portfolio/personal">Personal</a>
-              <a href="/portfolio/professional">Professional</a>
+            <a
+              href="/portfolio"
+              class="dropdown-trigger"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="portfolio-menu"
+              >Portfolio</a
+            >
+            <div
+              class="dropdown-menu"
+              id="portfolio-menu"
+              role="menu"
+              aria-label="Portfolio submenu"
+            >
+              <a href="/portfolio/personal" role="menuitem">Personal</a>
+              <a href="/portfolio/professional" role="menuitem">Professional</a>
             </div>
           </div>
         </li>
         <li>
           <div class="dropdown">
-            <a href="/services" class="dropdown-trigger">Services</a>
-            <div class="dropdown-menu">
-              <a href="/services/design">Design</a>
-              <a href="/services/hosting">Hosting</a>
-              <a href="/services/consultation">Consultation</a>
+            <a
+              href="/services"
+              class="dropdown-trigger"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="services-menu"
+              >Services</a
+            >
+            <div
+              class="dropdown-menu"
+              id="services-menu"
+              role="menu"
+              aria-label="Services submenu"
+            >
+              <a href="/services/design" role="menuitem">Design</a>
+              <a href="/services/hosting" role="menuitem">Hosting</a>
+              <a href="/services/consultation" role="menuitem">Consultation</a>
             </div>
           </div>
         </li>

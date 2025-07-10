@@ -1,3 +1,10 @@
+# Additional Insights (2025-07-10T10:10)
+
+- User expects accessibility improvements (skip links, ARIA roles, keyboard navigation) to be implemented as a baseline for all UI work.
+- User values minimal, atomic changes that do not introduce regressions or errors.
+- User expects the assistant to autonomously proceed through the todo list, validating and logging each step.
+- User prefers direct, actionable communication and expects all errors to be resolved before moving on.
+
 ## Additional Insights (2025-07-10)
 
 - User expects strict, explicit, and enforceable instructions for always using the sequential thinking MCP server. They value directness, compatibility with project conventions, and validation of changes. The user expects all steps to be logged and instructions to be updated after each interaction.

@@ -18,14 +18,19 @@ import { ClientRouter } from 'astro:transitions';
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        (w as any)[l] = (w as any)[l] || [];
+        (w as any)[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js',
+        });
         var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
+          j = d.createElement(s) as HTMLScriptElement,
           dl = l != 'dataLayer' ? '&l=' + l : '';
         j.async = true;
         j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
+        if (f && f.parentNode) {
+          f.parentNode.insertBefore(j, f);
+        }
       })(window, document, 'script', 'dataLayer', 'GTM-N2FTVHQC');
     </script>
     <!-- End Google Tag Manager -->
@@ -39,6 +44,7 @@ import { ClientRouter } from 'astro:transitions';
     <ClientRouter />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
@@ -49,12 +55,31 @@ import { ClientRouter } from 'astro:transitions';
     >
     <!-- End Google Tag Manager (noscript) -->
     <Header />
-    <main class="column flex gap padding">
+    <main id="main-content" class="column flex gap padding">
       <slot />
     </main>
     <Footer />
     <contact-component></contact-component>
     <theme-toggle></theme-toggle>
+    <style>
+      .skip-link {
+        background: var(--color-accent-500, #19f9d8);
+        color: var(--color-neutral-900, #333);
+        left: 0;
+        padding: 0.75rem 1.5rem;
+        position: absolute;
+        top: -100px;
+        z-index: 1000;
+        transition: top 0.2s;
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 0 0 0.5rem 0.5rem;
+      }
+      .skip-link:focus {
+        top: 0;
+        outline: 2px solid var(--color-accent-500, #19f9d8);
+      }
+    </style>
   </body>
 </html>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
