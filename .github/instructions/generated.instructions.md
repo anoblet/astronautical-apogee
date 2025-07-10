@@ -1,3 +1,9 @@
+## Additional Insights (2025-07-10T15:00)
+
+- User expects all new blog posts to follow the intro + bulleted takeaways + closing structure, with actionable, project-based examples.
+- User values clear, direct connections between technology choices and business outcomes.
+- User expects every chat interaction to be logged in `chats/` and `.github/instructions/generated.instructions.md` to be updated with new insights after each exchange.
+
 ## Additional Insights (2025-07-10T10:25)
 
 - User prefers elaboration that still maintains a concise, actionable, and structured style.
