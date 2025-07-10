@@ -1,6 +1,6 @@
 import { css, html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { subscribe } from 'src/media';
+import { subscribe } from 'src/utility/media';
 
 @customElement('media-component')
 export class MediaComponent extends LitElement {

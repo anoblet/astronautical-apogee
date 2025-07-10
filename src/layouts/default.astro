@@ -93,7 +93,7 @@ import { ClientRouter } from 'astro:transitions';
   import { applyStoredTheme } from '@components/theme';
   import '@components/theme/toggle';
   import { globalStyles } from '@styles/global';
-  import media from '../media';
+  import media from '@utility/media';
 
   media.subscribe((media: string) => {
     document.body.setAttribute('data-media', media);
