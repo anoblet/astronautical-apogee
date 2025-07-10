@@ -1,4 +1,16 @@
-# Additional Insights (2025-07-10T10:15)
+## Additional Insights (2025-07-10T10:25)
+
+- User prefers elaboration that still maintains a concise, actionable, and structured style.
+- User values real project examples and actionable advice in technical writing.
+- User expects closing sections to include both reflection and forward-looking statements.
+
+## Additional Insights (2025-07-10T10:20)
+
+- User expects new blog posts to follow the concise, actionable, and engaging style of previous posts, with a clear structure and minimalism.
+- User values actionable takeaways and a direct connection between technology choices and business outcomes.
+- User’s projects consistently leverage Lit for composable, minimal, and reusable web components.
+- User’s writing style is intro + bulleted takeaways + closing statement.
+- User expects all steps to be logged and instructions updated after each exchange.
 
 - User expects strict, enforceable validation of all design and style changes using Playwright MCP.
 - User values minimal, direct, and project-aligned instructions for workflow automation.
