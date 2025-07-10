@@ -190,3 +190,9 @@
 - Favors clean, organized, and efficient solutions with clear, actionable, and concise communication.
 
 Added insight: User values introductions that are not only concise but also clearly connect the article’s theme to actionable business outcomes. They expect the assistant to set the stage for the content that follows, making the value proposition explicit.
+
+- User requested navigation on pricing pages. Navigation is already present via the default layout and Header component, which uses the Navigation component. Navigation is consistent, reusable, and uses the global color scheme. User values composability, minimal changes, and adherence to design system.
+
+- User wants each service's pricing page to be easily accessible from the main pricing page. Added navigation links to hosting, design, and consultation pricing pages at the top of the main pricing page using utility classes and a simple, composable structure.
+
+- Each service page now includes a clear, utility-styled link to its corresponding pricing page at the end of the main content. This ensures users can easily navigate from any service page to its pricing details.
