@@ -1,6 +1,9 @@
 {
   "chat.agent.maxRequests": 100,
+  "chat.instructionsFilesLocations": {
+    "awesome-copilot/instructions": true
+  },
   "chat.modeFilesLocations": {
-    ".github/chatmodes/awesome-copilot": true
+    "awesome-copilot/chatmodes": true
   }
 }
