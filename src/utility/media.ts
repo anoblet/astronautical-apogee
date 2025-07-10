@@ -5,7 +5,7 @@ const observer = window.matchMedia('(max-width: 512px)');
 
 const mediaChanged = (mediaQueryList: any) => {
   mediaSize = mediaQueryList.matches ? 'mobile' : 'desktop';
-  subscribers.map((callback: any) => callback(mediaSize));
+  subscribers.forEach((callback: any) => callback(mediaSize));
 };
 
 observer.addEventListener('change', mediaChanged);
