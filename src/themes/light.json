@@ -35,7 +35,7 @@
   "navigation-a-color": "var(--color-neutral-800)",
   "navigation-a-hover-color": "var(--color-sky-600)",
   "navigation-background-color": "var(--color-neutral-100)",
-  "navigation-color": "var(--color-neutral-600)",
+  "navigation-color": "var(--color-neutral-800)",
   "navigation-icon-color": "var(--color-sky-600)",
   "outline": "1px solid #000",
   "padding": "1rem",

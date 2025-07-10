@@ -19,6 +19,8 @@ export class NavigationMobile extends Base {
   }
 
   firstUpdated() {
+    super.firstUpdated();
+
     window.addEventListener('scroll', () => {
       if (window.scrollY > 0) {
         this.style.position = 'fixed';

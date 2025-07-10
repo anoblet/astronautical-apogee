@@ -3,11 +3,15 @@ import { css } from 'lit';
 export const style = css`
   :host {
     background-color: var(--navigation-background-color);
-    color: var(--navigation-color);
+    /* color: var(--navigation-color); */
     position: relative;
     transition: opacity 0.2s ease-in-out;
     width: 100%;
     z-index: 1;
+
+    aside > ul {
+      margin: 0 1rem;
+    }
   }
 
   :host([hidden]) {
@@ -39,19 +43,12 @@ export const style = css`
   details {
     summary {
       cursor: pointer;
-      padding: 0.5rem 0;
       list-style: none;
       font-weight: 500;
 
-      &::-webkit-details-marker {
+      &::marker {
+        content: '';
         display: none;
-      }
-
-      &::before {
-        content: '▶';
-        display: inline-block;
-        margin-right: 0.5rem;
-        transition: transform 0.2s ease-in-out;
       }
     }
 
@@ -60,8 +57,7 @@ export const style = css`
     }
 
     ul {
-      padding-left: 1rem;
-      margin-top: 0.5rem;
+      margin-top: 1rem;
     }
   }
 
