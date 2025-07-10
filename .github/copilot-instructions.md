@@ -1,5 +1,6 @@
 #file:./instructions/generated.instructions.md
 #file:./instructions/memory.instructions.md
+#file:./instructions/playwright.instructions.md
 #file:./instructions/sequential-thinking.instructions.md
 #file:./instructions/style.instructions.md
 

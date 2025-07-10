@@ -1,3 +1,9 @@
+# Additional Insights (2025-07-10T10:15)
+
+- User expects strict, enforceable validation of all design and style changes using Playwright MCP.
+- User values minimal, direct, and project-aligned instructions for workflow automation.
+- User expects all new instructions to override any conflicting guidance elsewhere in the project.
+
 # Additional Insights (2025-07-10T10:10)
 
 - User expects accessibility improvements (skip links, ARIA roles, keyboard navigation) to be implemented as a baseline for all UI work.
