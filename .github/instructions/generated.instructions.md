@@ -1,3 +1,7 @@
+## User Preference Insight (2025-07-10)
+
+The user prefers that the model prioritize using already existing entities over creating new ones when managing context, observations, or entities. New entities should only be created if no suitable existing entity is available.
+
 ## Additional Insights (2025-07-10T15:45)
 
 - User values alphabetization, minimalism, and validation after changes.
