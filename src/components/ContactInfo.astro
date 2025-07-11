@@ -1,0 +1,30 @@
+---
+interface Props {
+  email: string;
+  socials: { name: string; link: string }[];
+}
+const { email, socials } = Astro.props;
+---
+
+<section class="contact-info">
+  <h2>Contact Info</h2>
+  <p>Email: <a href={`mailto:${email}`}>{email}</a></p>
+  <ul>
+    {
+      socials.map(s => (
+        <li>
+          <a href={s.link} target="_blank" rel="noopener">
+            {s.name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<style>
+  .contact-info h2 {
+    color: var(--color-accent-600);
+    margin-bottom: 0.5rem;
+  }
+</style>

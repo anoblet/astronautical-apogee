@@ -1,0 +1,37 @@
+---
+interface Project {
+  name: string;
+  description: string;
+  link: string;
+}
+interface Props {
+  projects: Project[];
+}
+const { projects } = Astro.props;
+---
+
+<section class="notable-projects">
+  <h2>Notable Projects</h2>
+  <ul>
+    {
+      projects.map(project => (
+        <li>
+          <a href={project.link} target="_blank" rel="noopener">
+            {project.name}
+          </a>
+          : {project.description}
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<style>
+  .notable-projects h2 {
+    color: var(--color-accent-600);
+    margin-bottom: 0.5rem;
+  }
+  .notable-projects ul {
+    margin-bottom: 1rem;
+  }
+</style>

@@ -1,0 +1,18 @@
+---
+interface Props {
+  philosophy: string;
+}
+const { philosophy } = Astro.props;
+---
+
+<section class="philosophy">
+  <h2>Philosophy</h2>
+  <p>{philosophy}</p>
+</section>
+
+<style>
+  .philosophy h2 {
+    color: var(--color-accent-600);
+    margin-bottom: 0.5rem;
+  }
+</style>

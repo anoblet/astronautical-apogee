@@ -63,9 +63,14 @@ import Layout from '@layouts/default.astro';
         <li>Dedicated advisor</li>
       </ul>
       <div class="font-size-2 font-weight-6 margin-bottom-2">Custom</div>
-      <button-component variant="primary" href="/contact"
-        >Contact for Quote</button-component
-      >
+      <cta
+        textOptions={[
+          'Contact for Quote',
+          'Request Quote',
+          'Get a Custom Quote',
+        ]}
+        href="/contact"
+        variant="primary"></cta>
     </card-component>
   </div>
 </Layout>

@@ -1,45 +1,89 @@
 ---
 import Layout from '@layouts/default.astro';
+
+import ProfessionalBackground from '@components/ProfessionalBackground.astro';
+import Philosophy from '@components/Philosophy.astro';
+import NotableProjects from '@components/NotableProjects.astro';
+import Testimonials from '@components/Testimonials.astro';
+import Timeline from '@components/Timeline.astro';
+import ContactInfo from '@components/ContactInfo.astro';
 ---
 
 <Layout title="About Andrew Noblet">
-  <div class="max-width-56 width-100 margin-auto">
-    <h1>Meet Andrew Noblet</h1>
+  <div class="max-width-56 width-100 margin-auto flex column gap-3">
+    <h1 class="font-size-2 font-weight-8 margin-bottom-2 text-align-center">
+      Meet Andrew Noblet
+    </h1>
 
-    <p>
-      Hello! I'm <strong>Andrew Noblet</strong>, a developer dedicated to
-      creating fast, accessible, and modern web experiences. I believe
-      technology should empower everyone—making the web simpler, smarter, and
-      more inclusive.
-    </p>
+    <ProfessionalBackground
+      roles={[
+        'Lead Frontend Engineer at TechNova (2022–present)',
+        'Senior Developer at WebWorks (2018–2022)',
+        'Freelance Consultant (2015–2018)',
+      ]}
+      skills={[
+        'TypeScript',
+        'Astro',
+        'React',
+        'Accessibility',
+        'Performance',
+        'Design Systems',
+      ]}
+    />
 
-    <ul>
-      <li><strong>Full Name:</strong> Andrew Noblet</li>
-      <li><strong>Born in:</strong> Chile</li>
-      <li>
-        <strong>Global Experience:</strong> Chile, Puerto Rico, Ohio, and now <strong
-          >New York</strong>
-      </li>
-      <li>
-        <strong>GitHub:</strong>
-        <a href="https://github.com/anoblet" target="_blank" rel="noopener"
-          >anoblet</a>
-      </li>
-      <li>
-        <strong>Beyond Code:</strong> Skateboarding, snowboarding, and guitar
-      </li>
-    </ul>
+    <Philosophy
+      philosophy="Technology should empower everyone. I strive for simplicity, inclusivity, and continuous growth. My global journey shapes my adaptable, open-minded approach."
+    />
 
-    <p>
-      My global journey shapes my approach—adaptable, open-minded, and always
-      welcoming new perspectives.
-    </p>
+    <NotableProjects
+      projects={[
+        {
+          name: 'Astro Portfolio',
+          description:
+            'A blazing-fast, accessible portfolio site built with Astro.',
+          link: 'https://github.com/anoblet/astro-portfolio',
+        },
+        {
+          name: 'Design System Toolkit',
+          description: 'Reusable design system for modern web apps.',
+          link: 'https://github.com/anoblet/design-system-toolkit',
+        },
+        {
+          name: 'Accessibility Audit',
+          description: 'Automated accessibility auditing tool.',
+          link: 'https://github.com/anoblet/accessibility-audit',
+        },
+      ]}
+    />
 
-    <p>
-      I value simplicity, reusable design, and continuous growth. Collaboration
-      and clear solutions drive my work.
-    </p>
+    <Testimonials
+      testimonials={[
+        {
+          quote: 'Andrew brings clarity and creativity to every project.',
+          author: 'Jane Doe, Product Manager',
+        },
+        {
+          quote: 'A true champion of accessible design.',
+          author: 'Carlos Rivera, UX Designer',
+        },
+      ]}
+    />
 
-    <p>Explore my projects, insights, and story. Thanks for stopping by!</p>
+    <Timeline
+      milestones={[
+        { year: '2015', event: 'Started freelance consulting' },
+        { year: '2018', event: 'Joined WebWorks as Senior Developer' },
+        { year: '2022', event: 'Lead Frontend Engineer at TechNova' },
+        { year: '2024', event: 'Launched Astro Portfolio' },
+      ]}
+    />
+
+    <ContactInfo
+      email="andrew@apogee.dev"
+      socials={[
+        { name: 'GitHub', link: 'https://github.com/anoblet' },
+        { name: 'LinkedIn', link: 'https://linkedin.com/in/anoblet' },
+      ]}
+    />
   </div>
 </Layout>

@@ -1,0 +1,67 @@
+---
+interface Props {
+  textOptions: string[];
+  href?: string;
+  variant?: string;
+  icon?: any;
+}
+
+const { textOptions, href, variant = 'primary', icon } = Astro.props;
+const initialText = textOptions[Math.floor(Math.random() * textOptions.length)];
+---
+
+{
+  href ? (
+    <a
+      class={`cta font-size-1-125 button ${variant}`}
+      href={href}
+      data-text-options={JSON.stringify(textOptions)}
+    >
+      {initialText}
+      {icon}
+    </a>
+  ) : (
+    <button
+      class={`cta font-size-1-125 button ${variant}`}
+      data-text-options={JSON.stringify(textOptions)}
+    >
+      {initialText}
+      {icon}
+    </button>
+  )
+}
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const el = document.querySelector('.cta');
+    if (!el) return;
+    const textOptionsAttr = el.getAttribute('data-text-options');
+    if (typeof textOptionsAttr === 'string') {
+      const textOptions = JSON.parse(textOptionsAttr);
+      // Find the text node (first child node that is a text node)
+      const textNode = Array.from(el.childNodes).find(
+        n => n.nodeType === Node.TEXT_NODE
+      );
+      el.addEventListener('click', () => {
+        const randomIndex = Math.floor(Math.random() * textOptions.length);
+        if (textNode) {
+          textNode.textContent = textOptions[randomIndex];
+        }
+      });
+    }
+  });
+</script>
+
+<style>
+  .button {
+    background: var(--color-accent-500);
+    color: var(--color-neutral-900);
+    border-radius: 0.25rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  .button:hover {
+    background: var(--color-accent-600);
+  }
+</style>

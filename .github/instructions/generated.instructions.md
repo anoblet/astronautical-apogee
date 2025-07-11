@@ -1,6 +1,19 @@
 ## User Preference Insight (2025-07-10)
 
-The user prefers that the model prioritize using already existing entities over creating new ones when managing context, observations, or entities. New entities should only be created if no suitable existing entity is available.
+## Memory Update (2025-07-11)
+
+- User requests memory to be updated after every interaction, emphasizing context management and recall.
+- This aligns with the memory MCP server instructions and ensures all insights, changes, and context are logged promptly.
+
+## Insights (2025-07-11)
+
+- User prefers elaborate, well-structured pages with clear visual hierarchy and composable, reusable components.
+- Atomic CSS and global color scheme adherence are important.
+- Utility classes and scoped styles are favored for brand continuity.
+- Minimal, meaningful changes are preferred over large refactors.
+- Playwright MCP validation and accessibility are required for all design/style changes.
+- Sequential thinking and stepwise planning are expected before major actions.
+  The user prefers that the model prioritize using already existing entities over creating new ones when managing context, observations, or entities. New entities should only be created if no suitable existing entity is available.
 
 ## Additional Insights (2025-07-10T15:45)
 
@@ -24,24 +37,19 @@ The user prefers that the model prioritize using already existing entities over 
 
 # Additional Insights (2025-07-10T10:10)
 
-- User expects accessibility improvements (skip links, ARIA roles, keyboard navigation) to be implemented as a baseline for all UI work.
-- User values minimal, atomic changes that do not introduce regressions or errors.
-- User expects the assistant to autonomously proceed through the todo list, validating and logging each step.
-- User prefers direct, actionable communication and expects all errors to be resolved before moving on.
-
 ## Additional Insights (2025-07-10)
-
-- User expects strict, explicit, and enforceable instructions for always using the sequential thinking MCP server. They value directness, compatibility with project conventions, and validation of changes. The user expects all steps to be logged and instructions to be updated after each interaction.
 
 # Generated Code Style and Project Instructions
 
 ## General Project Guidelines
 
-- **Simplicity:** Keep solutions simple and straightforward. User highly values code simplification and reducing complexity.
-- **Performance Optimization:** Prioritize bundle size reduction and performance. User is concerned about over-engineering and excessive dependencies.
-- **Comments:** Remove unnecessary comments. Do not add new comments unless explicitly clarifying complex logic.
 - **File Formatting:** Always include an empty line at the end of each file.
 - **Decoupling:** Emphasize decoupled components and modules.
+  User prefers reusable, composable components for CTAs across the site.
+  CTA text should be randomized from a provided list of strings.
+  Styling must use CSS variables and utility classes from the global stylesheet.
+  Components should be simple, decoupled, and scoped.
+  Minimal changes to existing logic are preferred; refactoring should emphasize reusability and atomic styles.
 - **Reusability:** Design structures and components to be reusable. Move reusable structure to layouts.
 - **Minimal Changes:** Keep changes to existing code as minimal as possible. Only update existing logic or definitions when necessary.
 - **Clarity:** If unsure about any requirement, always ask for clarification.

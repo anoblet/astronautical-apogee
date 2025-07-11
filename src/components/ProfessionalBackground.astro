@@ -1,0 +1,28 @@
+---
+interface Props {
+  roles: string[];
+  skills: string[];
+}
+const { roles, skills } = Astro.props;
+---
+
+<section class="professional-background">
+  <h2>Professional Background</h2>
+  <ul>
+    {roles.map(role => <li>{role}</li>)}
+  </ul>
+  <h3>Skills</h3>
+  <ul>
+    {skills.map(skill => <li>{skill}</li>)}
+  </ul>
+</section>
+
+<style>
+  .professional-background h2 {
+    color: var(--color-accent-600);
+    margin-bottom: 0.5rem;
+  }
+  .professional-background ul {
+    margin-bottom: 1rem;
+  }
+</style>

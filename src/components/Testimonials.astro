@@ -1,0 +1,35 @@
+---
+interface Testimonial {
+  quote: string;
+  author: string;
+}
+interface Props {
+  testimonials: Testimonial[];
+}
+const { testimonials } = Astro.props;
+---
+
+<section class="testimonials">
+  <h2>Testimonials</h2>
+  <ul>
+    {
+      testimonials.map(t => (
+        <li>
+          <blockquote>“{t.quote}”</blockquote>
+          <span>- {t.author}</span>
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<style>
+  .testimonials h2 {
+    color: var(--color-accent-600);
+    margin-bottom: 0.5rem;
+  }
+  .testimonials blockquote {
+    font-style: italic;
+    color: var(--color-neutral-700);
+  }
+</style>
