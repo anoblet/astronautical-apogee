@@ -211,3 +211,13 @@ Added insight: User values introductions that are not only concise but also clea
 - The developer consistently provided direct instructions and requests, but did not manually override, correct, or amend the model’s output in a way that constitutes a correction.
 - The developer’s feedback was always in the form of new requests or clarifications, not explicit corrections of errors.
 - This behavior aligns with the developer’s preference for minimal, actionable communication and autonomous agent-driven workflows.
+
+- User prefers simple, composable components with atomic, scoped styles.
+- Reusable structure is emphasized, especially in layout and components.
+- CSS variables and global color scheme must be used for brand continuity.
+- Imports must use aliases, not relative paths.
+- Printability and visual correctness are important for UI components.
+- Utility CSS classes from the global stylesheet should be leveraged when possible.
+- Unnecessary comments are to be removed, and files should end with an empty line.
+- Playwright MCP validation is required for all design and style changes.
+- Memory MCP and sequential thinking MCP are required for context and reasoning.
