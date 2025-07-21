@@ -6,31 +6,35 @@ import litdev from '../assets/lit.dev_.webp';
 <Layout title="Lit">
   <h1>Lit</h1>
   <card-component>
-    <img src={litdev.src} alt="Lit" slot="image" />
-    <h2 slot="title">
+    <h2>
       <a href="https://lit.dev/">Lit</a>
     </h2>
-    <div class="tags" slot="tags">
-      <tag-component>JavaScript</tag-component>
-      <tag-component>TypeScript</tag-component>
-      <tag-component>Web Components</tag-component>
-      <tag-component>LitElement</tag-component>
-      <tag-component>Open Source</tag-component>
+    <div class="flex-1">
+      <img src={litdev.src} alt="Lit" />
+      <ul class="flex column gap padding color-neutral-200">
+        <li>
+          Lit is a fast, modern library for building web components and reactive
+          UIs.
+        </li>
+        <li>
+          I've spent 5+ years learning Lit and contributing to its ecosystem,
+          sharing ideas and improvements with the community.
+        </li>
+        <li>
+          My work includes building reusable UI components, exploring advanced
+          patterns, and championing web standards.
+        </li>
+      </ul>
     </div>
-    <ul class="flex column gap padding color-neutral-200" slot="content">
-      <li>
-        Lit is a fast, modern library for building web components and reactive
-        UIs.
-      </li>
-      <li>
-        I’ve spent 5+ years learning Lit and contributing to its ecosystem,
-        sharing ideas and improvements with the community.
-      </li>
-      <li>
-        My work includes building reusable UI components, exploring advanced
-        patterns, and championing web standards.
-      </li>
-    </ul>
+    <div class="tags">
+      <div class="flex flex-wrap gap-0-5">
+        <tag-component>JavaScript</tag-component>
+        <tag-component>TypeScript</tag-component>
+        <tag-component>Web Components</tag-component>
+        <tag-component>LitElement</tag-component>
+        <tag-component>Open Source</tag-component>
+      </div>
+    </div>
   </card-component>
 </Layout>
 
