@@ -1,6 +1,6 @@
 import { Base } from '@components/base';
 import '@components/button';
-import { arrowBack } from '@icons/arrow-back';
+import { arrowBack } from '@icons/index';
 import { css, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 

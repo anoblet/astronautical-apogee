@@ -1,5 +1,5 @@
 import { Base } from '@components/base';
-import { home } from '@icons/home';
+import { home } from '@icons/index';
 import { globalStyles } from '@styles/global';
 import { html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';

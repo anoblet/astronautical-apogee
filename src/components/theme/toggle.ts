@@ -1,5 +1,5 @@
 import { Base } from '@components/base';
-import { contrast } from '@icons/contrast';
+import { contrast } from '@icons/index';
 import dark from '@themes/dark.json' assert { type: 'json' };
 import light from '@themes/light.json' assert { type: 'json' };
 import { css, html } from 'lit';

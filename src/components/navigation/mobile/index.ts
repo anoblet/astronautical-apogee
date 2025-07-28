@@ -1,7 +1,6 @@
 import { Base } from '@components/base';
 import '@components/icon';
-import { close } from '@icons/close';
-import { menu } from '@icons/menu';
+import { close, menu } from '@icons/index';
 import { html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { style } from './index.css';

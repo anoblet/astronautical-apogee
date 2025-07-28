@@ -1,6 +1,6 @@
 import { Base } from '@components/base';
 import '@components/icon';
-import { contrast } from '@icons/contrast';
+import { contrast } from '@icons/index';
 import { html } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 

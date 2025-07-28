@@ -1,6 +1,6 @@
 import '@components/button';
 import '@components/icon';
-import { phone } from '@icons/phone';
+import { phone } from '@icons/index';
 import { css, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { Base } from '../base';
