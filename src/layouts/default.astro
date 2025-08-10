@@ -147,6 +147,7 @@ const { title, description = 'Astro description' } = Astro.props;
   import '@components/theme/toggle';
   import { globalStyles } from '@styles/global';
   import { applyStoredTheme } from '@utility/theme';
+  import { initializePreloader } from '@utility/preloader';
 
   // Apply global styles
   if (globalStyles.styleSheet) {
@@ -161,6 +162,9 @@ const { title, description = 'Astro description' } = Astro.props;
   applyStoredTheme();
 
   document.addEventListener('astro:after-swap', applyStoredTheme);
+
+  // Initialize URL preloader
+  initializePreloader();
 
   // Interstitial management with fallback for browsers that don't support :has()
   function checkCustomElements() {
