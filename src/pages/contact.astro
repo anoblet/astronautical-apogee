@@ -14,14 +14,16 @@ import Layout from '@layouts/default.astro';
       obligation.
     </p>
     <div class="flex justify-content-center margin-top-2 margin-bottom-2">
-      <a
-        class="button button-primary"
+      <button-component
         href="https://calendar.app.google/JjnLtVR6mnM11FcS9"
-        target="_blank"
-        rel="noopener"
+        variant="primary"
       >
         Book Now
-      </a>
+      </button-component>
     </div>
   </div>
 </Layout>
+
+<script>
+  import '@components/button';
+</script>

@@ -4,9 +4,6 @@ import Card from '@components/Card.astro';
 import Layout from '../layouts/default.astro';
 ---
 
-mport ArrowForward from '@icons/arrow-forward.svg'; import Layout from
-'@layouts/default.astro'; ---
-
 <Layout
   title="Portfolio"
   description="Discover professional and personal projects showcasing expertise in web development, component architecture, and creative solutions. View real-world applications and technical achievements."
@@ -67,8 +64,12 @@ mport ArrowForward from '@icons/arrow-forward.svg'; import Layout from
         to life.
       </p>
       <div class="gap grid">
-        <a href="/contact" class="button button-primary">Get in Touch</a>
+        <button-component href="/contact"> Get in Touch </button-component>
       </div>
     </section>
   </div>
 </Layout>
+
+<script>
+  import '@components/button';
+</script>

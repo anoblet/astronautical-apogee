@@ -94,12 +94,13 @@ import Card from '@components/Card.astro';
     </section>
 
     <div class="text-align-center margin-top-4">
-      <a
-        href="/services/design/pricing"
-        class="button button-primary font-size-1-125"
-      >
+      <button-component href="/services/design/pricing" variant="primary">
         View Design Pricing
-      </a>
+      </button-component>
     </div>
   </div>
 </Layout>
+
+<script>
+  import '@components/button';
+</script>
