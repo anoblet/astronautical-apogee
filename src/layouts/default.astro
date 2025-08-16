@@ -25,25 +25,9 @@ const { title, description = 'Astro description' } = Astro.props;
     <ViewTransitions />
   </head>
   <body>
-    <loading-bar id="loading-bar"></loading-bar>
-    <div id="interstitial" class="interstitial">
-      <div class="interstitial-content">
-        <svg
-          class="interstitial-planet"
-          xmlns="http://www.w3.org/2000/svg"
-          height="6rem"
-          viewBox="0 -960 960 960"
-          width="6rem"
-        >
-          <path
-            d="M449-539q21 0 35.5-14.5T499-589q0-21-14.5-35.5T449-639q-21 0-35.5 14.5T399-589q0 21 14.5 35.5T449-539ZM822-80q-42 0-113-35t-152-95q-19 5-38.5 7.5T479-200q-117 0-198-81t-81-198q0-20 3-40t8-39q-59-81-94.5-151.5T81-822q0-27 15-42.5t41-15.5q26 0 67.5 18T319-801q-21 11-39 23t-35 26q-19-11-37-19t-38-17q18 38 38.5 74t43.5 71q38-54 97-85t130-31q117 0 198.5 81.5T759-479q0 71-31.5 130T642-252q35 23 71.5 44t74.5 38q-8-19-16.5-37T752-244q15-17 27-36t22-39q46 78 62.5 116.5T880-138q0 29-16 43.5T822-80ZM549-359q17 0 28.5-11.5T589-399q0-17-11.5-28.5T549-439q-17 0-28.5 11.5T509-399q0 17 11.5 28.5T549-359Zm50-140q13 0 21.5-8.5T629-529q0-13-8.5-21.5T599-559q-13 0-21.5 8.5T569-529q0 13 8.5 21.5T599-499ZM468-281q-51-44-98-91t-90-98q2 38 17 71.5t41 59.5q26 26 59 41t71 17Zm103-21q48-25 78-72.5T679-480q0-83-58.5-141T479-679q-58 0-105 30t-72 78q57 76 125 144t144 125Zm-197-73Zm117-116Z"
-          ></path>
-        </svg>
-      </div>
-    </div>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <Header />
-    <main id="main-content" class="column flex gap hidden-until-loaded">
+    <main id="main-content" class="column flex gap">
       <slot />
     </main>
     <Footer />
@@ -78,61 +62,6 @@ const { title, description = 'Astro description' } = Astro.props;
     min-height: 100vh;
   }
 
-  /* Interstitial: Show while any custom elements are not yet defined */
-  #interstitial {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: oklch(0.205 0 0); /* Dark theme background */
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease-in-out;
-  }
-
-  #interstitial .interstitial-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #interstitial .interstitial-planet {
-    fill: oklch(0.91 0.096 180.426); /* Teal color for dark theme */
-    animation: breathe 2s ease-in-out infinite;
-  }
-
-  @keyframes breathe {
-    0%,
-    100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.3;
-    }
-  }
-
-  /* Show interstitial when any custom elements are not defined */
-  *:not(:defined) ~ #interstitial,
-  body:has(*:not(:defined)) #interstitial {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  /* Hide main content while custom elements are loading */
-  body:has(*:not(:defined)) .hidden-until-loaded {
-    visibility: hidden;
-  }
-
-  /* Show main content when all custom elements are defined */
-  .hidden-until-loaded {
-    visibility: visible;
-  }
-
   main {
     align-items: center;
     flex: 1;
@@ -147,7 +76,6 @@ const { title, description = 'Astro description' } = Astro.props;
   import '@components/contact';
   import '@components/social';
   import '@components/theme/toggle';
-  import '@components/loading-bar';
   import { globalStyles } from '@styles/global';
   import { applyStoredTheme } from '@utility/theme';
 
@@ -164,29 +92,4 @@ const { title, description = 'Astro description' } = Astro.props;
   applyStoredTheme();
 
   document.addEventListener('astro:after-swap', applyStoredTheme);
-
-  // Loading bar integration with ViewTransitions
-  const loadingBar = document.getElementById('loading-bar') as any;
-  let loadingTimeout: number;
-
-  // Start loading bar on navigation
-  document.addEventListener('astro:before-preparation', () => {
-    if (loadingBar) {
-      loadingBar.start();
-      // Set a timeout to complete the loading bar if navigation takes too long
-      loadingTimeout = window.setTimeout(() => {
-        if (loadingBar) loadingBar.complete();
-      }, 5000);
-    }
-  });
-
-  // Complete loading bar after swap
-  document.addEventListener('astro:after-swap', () => {
-    if (loadingTimeout) {
-      clearTimeout(loadingTimeout);
-    }
-    if (loadingBar) {
-      loadingBar.complete();
-    }
-  });
 </script>
