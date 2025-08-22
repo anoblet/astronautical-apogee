@@ -54,6 +54,38 @@ export default [
     },
   },
   {
+    files: ['**/*.test.{js,ts}', 'tests/**/*.{js,ts}'],
+    languageOptions: {
+      globals: {
+        // Test framework globals
+        describe: 'readonly',
+        it: 'readonly',
+        before: 'readonly',
+        after: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        browser: 'readonly',
+        page: 'readonly',
+        expect: 'readonly',
+        should: 'readonly',
+        assert: 'readonly',
+        chai: 'readonly',
+        // Playwright globals
+        test: 'readonly',
+        context: 'readonly',
+        request: 'readonly',
+        // Additional test utilities
+        fixture: 'readonly',
+        DEV_SERVER_URL: 'readonly',
+      },
+    },
+    rules: {
+      '@typescript-eslint/no-unused-expressions': 'off', // Allow expect() assertions
+      '@typescript-eslint/no-unused-vars': 'warn',
+      'no-console': 'off', // Allow console in tests
+    },
+  },
+  {
     files: ['**/*.d.ts'],
     rules: {
       '@typescript-eslint/no-explicit-any': 'off',
