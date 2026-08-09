@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/default.astro';
+
+const posts = (await getCollection('lauren')).sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+---
+
+<Layout title="Lauren" description="Posts by Lauren.">
+  <div class="gap grid max-width-56 width-100">
+    <h1 class="text-align-center">Lauren</h1>
+    <p class="text-align-center">Posts by Lauren.</p>
+    <span></span>
+    <ul class="gap-2 list">
+      {
+        posts.map(post => (
+          <li class="gap-0-25 grid">
+            <div class="gap-0-5 grid">
+              <span class="color-tertiary font-weight-700">
+                {new Date(post.data.date).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}
+              </span>
+              <hr />
+              <a class="font-weight-6" href={'/lauren/' + post.id}>
+                {post.data.title}
+              </a>
+            </div>
+            <div>{post.data.description}</div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Layout>
+<style>
+  ul,
+  li {
+    padding: 0;
+  }
+</style>

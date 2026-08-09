@@ -1,0 +1,33 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '@layouts/default.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('lauren');
+  return posts.map(post => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout title={post.data.title}>
+  <div class="blog gap grid max-width-56">
+    <Content />
+  </div>
+</Layout>
+<script>
+  import '@components/card';
+</script>
+<style>
+  .blog {
+    card-component {
+      ul {
+        padding: 0 1rem;
+      }
+    }
+  }
+</style>
