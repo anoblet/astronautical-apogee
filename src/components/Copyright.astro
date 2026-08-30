@@ -2,10 +2,8 @@
 <script>
   import { Base } from '@components/base';
   import { heart } from '@icons/index';
-  import { customElement } from 'lit/decorators.js';
   import { css, html } from 'lit';
 
-  @customElement('copyright-component')
   class CopyrightComponent extends Base {
     static styles = [
       ...super.styles,
@@ -33,4 +31,6 @@
       `;
     }
   }
+
+  customElements.define('copyright-component', CopyrightComponent);
 </script>

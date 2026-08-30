@@ -27,7 +27,9 @@
                 "src/utility/*"
             ]
         },
-        "target": "esnext"
+        "experimentalDecorators": true,
+        "target": "es2022",
+        "useDefineForClassFields": false
     },
     "extends": "astro/tsconfigs/strict",
     "include": [

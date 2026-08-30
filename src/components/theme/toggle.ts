@@ -1,7 +1,7 @@
 import { Base } from '@components/base';
 import { contrast } from '@icons/index';
-import dark from '@themes/dark.json' assert { type: 'json' };
-import light from '@themes/light.json' assert { type: 'json' };
+import dark from '@themes/dark.json';
+import light from '@themes/light.json';
 import { css, html } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { applyTheme } from '@utility/theme';

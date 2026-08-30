@@ -13,7 +13,6 @@ import Layout from '../layouts/default.astro';
   import '@components/button';
   import { globalStyles } from '@styles/global.ts';
   import { css, html } from 'lit';
-  import { customElement } from 'lit/decorators.js';
 
   const taglines = [
     'Crafting Modern, Accessible Web Experiences',
@@ -26,7 +25,6 @@ import Layout from '../layouts/default.astro';
     'Championing Inclusive Web Design',
   ];
 
-  @customElement('index-component')
   class IndexComponent extends Base {
     private randomTagline =
       taglines[Math.floor(Math.random() * taglines.length)];
@@ -120,4 +118,6 @@ import Layout from '../layouts/default.astro';
       `;
     }
   }
+
+  customElements.define('index-component', IndexComponent);
 </script>

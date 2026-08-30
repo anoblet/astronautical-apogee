@@ -10,8 +10,10 @@ export default defineConfig({
     build: {
       rollupOptions: {
         output: {
-          manualChunks: {
-            lit: ['lit'],
+          manualChunks(id) {
+            if (id.includes('/node_modules/lit/')) {
+              return 'lit';
+            }
           },
         },
       },
