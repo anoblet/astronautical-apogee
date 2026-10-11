@@ -1,0 +1,16 @@
+---
+import { MaterialDemoComponent } from '../components/angular/material-demo.component';
+import Layout from '../layouts/default.astro';
+---
+
+<Layout
+  title="Angular"
+  description="An Angular Material component rendered and hydrated inside Astro."
+>
+  <h1>Angular</h1>
+  <MaterialDemoComponent client:load />
+</Layout>
+
+<style is:global>
+  @import '@angular/material/prebuilt-themes/cyan-orange.css';
+</style>

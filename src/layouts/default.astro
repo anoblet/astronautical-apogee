@@ -34,10 +34,6 @@ const { title, description = 'Astro description' } = Astro.props;
     <contact-component></contact-component>
     <theme-toggle></theme-toggle>
     <style>
-      *:has(:not(:defined)) {
-        opacity: 0;
-      }
-
       .skip-link {
         background: var(--color-accent-500, #19f9d8);
         color: var(--color-neutral-900, #333);
