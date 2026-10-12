@@ -1,0 +1,101 @@
+---
+import CallToAction from '@components/CallToAction.astro';
+import Layout from '@layouts/default.astro';
+import PricingCard from '@components/PricingCard.astro';
+
+const bookingUrl = 'https://calendar.app.google/JjnLtVR6mnM11FcS9';
+---
+
+<Layout
+  title="Social Media Management Pricing"
+  description="Local community social packages: a $99 one-time starter, Local Basic at $149/month, and Local Pro at $299/month. Explore post writing, reply support, and optional add-ons."
+>
+  <div class="grid gap-3 page">
+    <section class="gap grid text-align-center">
+      <h1>Social Media Management Pricing</h1>
+      <p class="hero-description">
+        Start with one community post or choose ongoing support. Every package
+        includes group-rule review and your approval before posting.
+      </p>
+      <a href="/services/community-social">See how the service works</a>
+    </section>
+    <div class="grid auto-fit-20 gap-2 width-100 max-width-64 margin-auto">
+      <PricingCard
+        title="Community Post Starter"
+        description="Try the service with one post and no monthly commitment."
+        features={[
+          'Profile and page setup',
+          'Group-rule audit',
+          'One approved community post',
+          '48 hours of reply monitoring',
+        ]}
+        price="$99 one-time"
+        buttonText="Discuss Your First Post"
+        buttonHref={bookingUrl}
+      />
+      <PricingCard
+        title="Local Basic"
+        description="A steady presence in your neighborhood."
+        features={[
+          '1–2 community groups',
+          '4 posts per month',
+          'Reply handling',
+          'Monthly one-page summary',
+        ]}
+        price="$149/month"
+        buttonText="Discuss Local Basic"
+        buttonHref={bookingUrl}
+      />
+      <PricingCard
+        title="Local Pro"
+        description="More conversations and support for a growing local business."
+        features={[
+          '2–4 community groups',
+          '8–12 posts per month across groups',
+          'Comment and direct-message triage',
+          'Basic engagement metrics',
+          'One photo or video prompt per month',
+        ]}
+        price="$299/month"
+        buttonText="Discuss Local Pro"
+        buttonHref={bookingUrl}
+      />
+    </div>
+    <section class="gap grid">
+      <h2>Optional Add-ons</h2>
+      <ul>
+        <li>Standalone profile and page setup: $249</li>
+        <li>Extra approved post for existing clients: $35</li>
+        <li>
+          Boosted-post setup and management: $99/month, plus separate ad spend
+        </li>
+        <li>Google and Facebook review responses: $75/month</li>
+        <li>Seasonal campaign: $199 per campaign</li>
+      </ul>
+      <p>
+        Boosted posts are separate from community-group posts and subject to the
+        relevant placement rules.
+      </p>
+    </section>
+    <section class="gap grid">
+      <h2>Already on Pro Hosting?</h2>
+      <p>
+        Clients on Pro Hosting ($99.99/month) can add Local Basic for $99/month.
+        Hosting is billed separately.
+      </p>
+      <a href="/services/hosting/pricing">View hosting plans</a>
+    </section>
+    <section class="gap grid text-align-center">
+      <h2>Find the Right Fit</h2>
+      <p>
+        We'll confirm your groups, posting permissions, and who will publish
+        before work begins. Engagement metrics are included where available.
+      </p>
+      <div class="flex justify-content-center">
+        <CallToAction href={bookingUrl} newTab>
+          Book a Free Consultation
+        </CallToAction>
+      </div>
+    </section>
+  </div>
+</Layout>

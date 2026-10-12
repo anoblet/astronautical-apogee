@@ -81,6 +81,9 @@ export class NavigationDesktop extends Base {
               <a href="/services/design" role="menuitem">Design</a>
               <a href="/services/hosting" role="menuitem">Hosting</a>
               <a href="/services/consultation" role="menuitem">Consultation</a>
+              <a href="/services/community-social" role="menuitem"
+                >Social Media Management</a
+              >
             </div>
           </div>
         </li>

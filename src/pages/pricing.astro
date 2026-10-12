@@ -1,4 +1,5 @@
 ---
+import CallToAction from '@components/CallToAction.astro';
 import Layout from '@layouts/default.astro';
 import PricingCard from '@components/PricingCard.astro';
 ---
@@ -15,25 +16,19 @@ import PricingCard from '@components/PricingCard.astro';
     collaboration, modern web technologies, and ongoing support.
   </p>
 
-  <div class="flex gap-2 justify-center margin-bottom-4">
-    <a
-      href="/services/hosting/pricing"
-      class="button button-primary font-size-1-125"
-    >
+  <div class="pricing-links flex gap-2 justify-center margin-bottom-4">
+    <CallToAction href="/services/hosting/pricing">
       Hosting Pricing
-    </a>
-    <a
-      href="/services/design/pricing"
-      class="button button-primary font-size-1-125"
-    >
+    </CallToAction>
+    <CallToAction href="/services/design/pricing">
       Design Pricing
-    </a>
-    <a
-      href="/services/consultation/pricing"
-      class="button button-primary font-size-1-125"
-    >
+    </CallToAction>
+    <CallToAction href="/services/consultation/pricing">
       Consultation Pricing
-    </a>
+    </CallToAction>
+    <CallToAction href="/services/community-social/pricing">
+      Social Media Pricing
+    </CallToAction>
   </div>
   <div class="grid auto-fit-20 gap-2 width-100 max-width-64 margin-auto">
     <PricingCard
@@ -64,3 +59,9 @@ import PricingCard from '@components/PricingCard.astro';
     />
   </div>
 </Layout>
+
+<style>
+  .pricing-links {
+    flex-wrap: wrap;
+  }
+</style>

@@ -1,4 +1,5 @@
 ---
+import CallToAction from './CallToAction.astro';
 export interface Props {
   title: string;
   description: string;
@@ -21,13 +22,10 @@ const { title, description, features, price, buttonText, buttonHref } =
     {price}
   </div>
   <div class="flex justify-content-center">
-    <button-component variant="primary" href={buttonHref}
-      >{buttonText}</button-component
-    >
+    <CallToAction href={buttonHref}>{buttonText}</CallToAction>
   </div>
 </card-component>
 
 <script>
   import '@components/card';
-  import '@components/button';
 </script>

@@ -57,7 +57,7 @@ export class Consultation extends Base {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button-component>
+          <button-component variant="primary">
             Schedule a consultation<icon-component
               >${arrowForward}</icon-component
             >

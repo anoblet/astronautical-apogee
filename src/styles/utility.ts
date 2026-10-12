@@ -154,10 +154,10 @@ export const utility = css`
   }
 
   .button {
-    background: var(--button-background-color, var(--color-primary));
-    border: 1px solid var(--button-border-color, var(--color-primary));
+    background: var(--button-background-color);
+    border: 1px solid var(--button-background-color);
     border-radius: 0.375rem;
-    color: var(--button-text-color, var(--color-primary-contrast));
+    color: var(--button-color);
     cursor: pointer;
     display: inline-flex;
     align-items: center;
@@ -171,20 +171,27 @@ export const utility = css`
   }
 
   .button:hover {
-    background: var(--button-hover-background-color, var(--color-primary-700));
-    border-color: var(--button-hover-border-color, var(--color-primary-700));
+    color: var(--button-hover-color);
+    background: var(--button-hover-background-color);
+    border-color: var(--button-hover-background-color);
     text-decoration: none;
   }
 
   .button-primary {
-    background: var(--color-primary);
-    border-color: var(--color-primary);
-    color: var(--color-primary-contrast);
+    background: var(--button-background-color);
+    border-color: var(--button-background-color);
+    color: var(--button-color);
   }
 
   .button-primary:hover {
-    background: var(--color-primary-700);
-    border-color: var(--color-primary-700);
+    color: var(--button-hover-color);
+    background: var(--button-hover-background-color);
+    border-color: var(--button-hover-background-color);
+  }
+
+  .button:focus-visible {
+    outline: 2px solid var(--button-background-color);
+    outline-offset: 3px;
   }
 
   /* Responsive utility classes */

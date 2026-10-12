@@ -1,0 +1,33 @@
+---
+interface Props {
+  href: string;
+  newTab?: boolean;
+}
+const { href, newTab = false } = Astro.props;
+---
+
+<a
+  href={href}
+  target={newTab ? '_blank' : undefined}
+  rel={newTab ? 'noopener noreferrer' : undefined}
+  class="call-to-action"
+>
+  <button-component variant="primary"><slot /></button-component>
+</a>
+
+<style>
+  .call-to-action {
+    display: inline-flex;
+    max-width: 100%;
+    text-decoration: none;
+  }
+  .call-to-action:focus-visible {
+    outline: 2px solid var(--button-background-color);
+    outline-offset: 4px;
+    border-radius: var(--border-radius);
+  }
+</style>
+
+<script>
+  import '@components/button';
+</script>
