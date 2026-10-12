@@ -1,9 +1,10 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { render } from 'astro:content';
+import { getLaurenPosts } from '../../utility/lauren';
 import Layout from '@layouts/default.astro';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('lauren');
+  const posts = await getLaurenPosts();
   return posts.map(post => ({
     params: { id: post.id },
     props: { post },

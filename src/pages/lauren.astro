@@ -1,8 +1,8 @@
 ---
-import { getCollection } from 'astro:content';
+import { getLaurenPosts } from '../utility/lauren';
 import Layout from '../layouts/default.astro';
 
-const posts = (await getCollection('lauren')).sort(
+const posts = (await getLaurenPosts()).sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
 ---
