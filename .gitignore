@@ -9,6 +9,7 @@
 chats
 dist
 node_modules
+reports
 
 genaiscript.d.ts
 tsconfig.json
