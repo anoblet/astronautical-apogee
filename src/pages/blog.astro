@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import EditorialImage from '@components/EditorialImage.astro';
 import Layout from '../layouts/default.astro';
 
 const postCollection = await getCollection('blog');
@@ -36,7 +37,7 @@ const posts = postCollection.sort(
     <ul class="gap-2 list">
       {
         posts.map(post => (
-          <li class="gap-0-25 grid">
+          <li class="gap grid">
             <div class="gap-0-5 grid">
               <span class="color-tertiary font-weight-700">
                 {new Date(post.data.date).toLocaleDateString('en-US', {
@@ -51,6 +52,15 @@ const posts = postCollection.sort(
               </a>
             </div>
             <div>{post.data.description}</div>
+            {post.data.image && (
+              <a
+                class="post-image"
+                href={'/blog/' + post.id}
+                aria-label={post.data.title}
+              >
+                <EditorialImage src={post.data.image} alt="" />
+              </a>
+            )}
           </li>
         ))
       }
@@ -58,6 +68,10 @@ const posts = postCollection.sort(
   </div>
 </Layout>
 <style>
+  .post-image {
+    display: block;
+  }
+
   ul,
   li {
     padding: 0;

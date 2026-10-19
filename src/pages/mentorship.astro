@@ -1,4 +1,6 @@
 ---
+import EditorialImage from '@components/EditorialImage.astro';
+import pageImage from '@assets/images/collaboration-team-fist-bump.webp';
 import Layout from '../layouts/default.astro';
 import Card from '@components/Card.astro';
 import ArrowForward from '@icons/arrow-forward.svg';
@@ -71,6 +73,7 @@ import ArrowForward from '@icons/arrow-forward.svg';
       </Card>
     </div>
 
+    <EditorialImage src={pageImage} />
     <section class="gap grid">
       <h2 class="text-align-center">What You Can Expect</h2>
       <div class="mentor-grid">

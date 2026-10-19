@@ -1,0 +1,42 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  src: ImageMetadata;
+  alt?: string;
+  priority?: boolean;
+  sizes?: string;
+}
+
+const {
+  src,
+  alt = '',
+  priority = false,
+  sizes = '(max-width: 60rem) calc(100vw - 2rem), 56rem',
+} = Astro.props;
+---
+
+<Image
+  src={src}
+  alt={alt}
+  widths={[400, 800, 1200, 1600]}
+  sizes={sizes}
+  format="webp"
+  loading={priority ? 'eager' : 'lazy'}
+  fetchpriority={priority ? 'high' : 'auto'}
+  decoding="async"
+  class="editorial-image"
+/>
+
+<style>
+  .editorial-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+</style>

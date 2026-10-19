@@ -1,4 +1,5 @@
 ---
+image: ../assets/images/collaboration-team-laptops.webp
 ai: true
 title: Community Engagement Lessons Learned
 date: 2025-06-30

@@ -1,4 +1,6 @@
 ---
+import EditorialImage from '@components/EditorialImage.astro';
+import pageImage from '@assets/images/development-keyboard.webp';
 import Layout from '../../layouts/default.astro';
 import Card from '@components/Card.astro';
 import ArrowForward from '@icons/arrow-forward.svg';
@@ -43,6 +45,7 @@ import ArrowForward from '@icons/arrow-forward.svg';
         </div>
       </div>
     </section>
+    <EditorialImage src={pageImage} />
     <section class="gap grid">
       <h2>Hosting Solutions</h2>
       <div class="column gap grid">

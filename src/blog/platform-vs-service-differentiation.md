@@ -1,4 +1,5 @@
 ---
+image: ../assets/images/workspace-minimal-keyboard.webp
 ai: true
 title: Platform vs Service Differentiating Your Offering
 date: 2025-02-10

@@ -1,4 +1,6 @@
 ---
+import EditorialImage from '@components/EditorialImage.astro';
+import pageImage from '@assets/images/design-digital-workspace.webp';
 import Layout from '../../layouts/default.astro';
 import Card from '@components/Card.astro';
 import ArrowForward from '@icons/arrow-forward.svg';
@@ -49,6 +51,7 @@ import ArrowForward from '@icons/arrow-forward.svg';
         </div>
       </div>
     </section>
+    <EditorialImage src={pageImage} />
     <section class="gap-2 grid">
       <h2>Design Services</h2>
       <div class="grid auto-fit-20 gap-2">

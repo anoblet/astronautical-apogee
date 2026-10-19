@@ -1,4 +1,5 @@
 ---
+image: ../assets/images/development-laptop-workspace.webp
 ai: true
 title: Technical Case Study Portfolio Project Deep Dive
 date: 2025-04-15

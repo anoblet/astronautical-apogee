@@ -1,4 +1,5 @@
 ---
+image: ../assets/images/workspace-clean-office.webp
 ai: false
 id: 'focus'
 title: 'Focus'

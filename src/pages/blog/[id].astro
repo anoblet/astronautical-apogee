@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+import EditorialImage from '@components/EditorialImage.astro';
 import Layout from '@layouts/default.astro';
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
@@ -14,9 +15,14 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<Layout title={post.data.title}>
+<Layout title={post.data.title} description={post.data.description}>
   <div class="blog gap grid max-width-56">
     <Content />
+    {
+      post.data.image && (
+        <EditorialImage src={post.data.image} alt={post.data.imageAlt} />
+      )
+    }
   </div>
 </Layout>
 <script>

@@ -1,4 +1,5 @@
 ---
+image: ../assets/images/architecture-modular-facade.webp
 ai: true
 id: modular-architecture-scalable-platforms
 title: Modular Architecture for Scalable Platforms

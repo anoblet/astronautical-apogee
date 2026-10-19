@@ -1,4 +1,5 @@
 ---
+image: ../assets/images/design-ux-research.webp
 ai: true
 title: Content Driven Navigation Enhancing UX
 date: 2025-02-14

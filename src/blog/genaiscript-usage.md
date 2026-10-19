@@ -1,4 +1,5 @@
 ---
+image: ../assets/images/development-html-code.webp
 ai: true
 id: 'genaiscript-usage'
 title: 'How I Use GenAIScript to Automate, Validate, and Accelerate My Workflow'

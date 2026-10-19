@@ -1,4 +1,5 @@
 ---
+image: ../assets/images/design-paper-prototyping.webp
 ai: true
 id: 'lit-experience'
 title: 'Building with Lit'

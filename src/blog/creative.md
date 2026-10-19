@@ -1,4 +1,5 @@
 ---
+image: ../assets/images/design-wireframe-tablet.webp
 ai: false
 id: 'creative'
 title: 'Creative'

@@ -1,4 +1,5 @@
 ---
+image: ../assets/images/development-react-source.webp
 ai: true
 title: AI Driven Features Practical Use Cases
 date: 2025-05-22

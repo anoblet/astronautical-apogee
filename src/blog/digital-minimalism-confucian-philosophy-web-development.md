@@ -1,4 +1,5 @@
 ---
+image: ../assets/images/minimalism-balanced-stones.webp
 id: digital-minimalism-confucian-philosophy-web-development
 title: The Art of Digital Minimalism - Lessons from Confucian Philosophy for Modern Web Development
 date: 2025-07-20

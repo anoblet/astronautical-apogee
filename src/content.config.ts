@@ -6,11 +6,14 @@ const laurenLoader = glob({ pattern: '**/*.md', base: './src/lauren' });
 
 const blog = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/blog' }),
-  schema: z.object({
-    date: z.date(),
-    description: z.string(),
-    title: z.string(),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      image: image().optional(),
+      imageAlt: z.string().default(''),
+      date: z.date(),
+      description: z.string(),
+      title: z.string(),
+    }),
 });
 
 const lauren = defineCollection({

@@ -1,4 +1,5 @@
 ---
+image: ../assets/images/space-milky-way.webp
 ai: true
 id: 'astro-experience'
 title: 'Building with Astro: Fast, Flexible, and Future-Proof'

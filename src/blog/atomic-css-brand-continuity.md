@@ -1,4 +1,5 @@
 ---
+image: ../assets/images/architecture-geometric-building.webp
 ai: true
 title: Atomic CSS and Brand Continuity
 date: 2025-04-18

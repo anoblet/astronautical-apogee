@@ -1,4 +1,5 @@
 ---
+image: ../assets/images/architecture-structural-patterns.webp
 ai: true
 title: Sustainable Business Models for Tech Platforms
 date: 2025-03-14

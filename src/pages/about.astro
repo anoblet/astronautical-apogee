@@ -1,4 +1,8 @@
 ---
+import EditorialImage from '@components/EditorialImage.astro';
+import balanceImage from '@assets/images/minimalism-water-stones.webp';
+import bridgeImage from '@assets/images/new-york-brooklyn-bridge.webp';
+import skylineImage from '@assets/images/new-york-empire-state.webp';
 import Layout from '@layouts/default.astro';
 import Card from '@components/Card.astro';
 import profileImage from '@assets/images/profile.webp';
@@ -115,6 +119,7 @@ import ArrowForward from '@icons/arrow-forward.svg';
     </Card>
     <Card>
       <h2>Life Philosophy</h2>
+      <EditorialImage src={balanceImage} />
       <p>
         My worldview is shaped by a blend of Eastern wisdom traditions that
         complement each other beautifully. <strong>Confucian</strong> principles
@@ -178,6 +183,10 @@ import ArrowForward from '@icons/arrow-forward.svg';
     </Card>
     <Card>
       <h2>Life in New York</h2>
+      <EditorialImage
+        src={bridgeImage}
+        alt="Brooklyn Bridge and the Manhattan skyline at dusk"
+      />
       <p>
         New York perfectly matches my energy for exploration and growth. The
         city's diversity mirrors my own global journey, and I love how every
@@ -204,6 +213,10 @@ import ArrowForward from '@icons/arrow-forward.svg';
       </p>
     </Card>
     <section class="gap grid justify-content-center text-align-center">
+      <EditorialImage
+        src={skylineImage}
+        alt="Empire State Building above the New York skyline at sunset"
+      />
       <h2>Let's Connect!</h2>
       <p>
         Let's connect and discuss how my experience can help bring your vision
