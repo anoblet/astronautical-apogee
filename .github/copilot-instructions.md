@@ -1,5 +1,9 @@
 # Project Instructions
 
+Always run the `anoblet-commit` skill after finishing work, before the final response.
+Follow the standing authorization and scope rules in [AGENTS.md](../AGENTS.md),
+using [.agents/skills/anoblet-commit/SKILL.md](../.agents/skills/anoblet-commit/SKILL.md).
+
 #file:../.copilot/instructions/index.instructions.md
 
 ## 🎯 PRIORITY: USER CLARIFICATIONS & MANUAL MODIFICATIONS 🎯
