@@ -1,14 +1,16 @@
 ---
-// import Layout from "@layouts/default.astro";
 import Layout from '@layouts/default.astro';
 ---
 
 <Layout
-  title="Theme Settings"
-  description="Customize your visual experience with theme settings. Choose between light and dark modes, adjust colors, and personalize the interface design to match your preferences."
+  title="Theme settings"
+  description="Choose a theme and customize your appearance settings."
+  noindex
 >
-  <theme-component></theme-component>
+  <section class="gap-2 grid max-width-48 width-100">
+    <h1>Theme settings</h1><p>
+      Theme and display preferences now live together.
+    </p><a class="editorial-button" href="/settings">Open appearance settings</a
+    >
+  </section>
 </Layout>
-<script>
-  import '@components/theme/settings';
-</script>

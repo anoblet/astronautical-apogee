@@ -1,5 +1,7 @@
 # Application review — November 12, 2026
 
+Implementation: [changes and verification](2026-11-12-implementation.md).
+
 Reviewed root revision: `05f816b`, branch `main`. Scope: the complete public
 website, including all generated routes, shared components, theme/settings,
 framework demos, content, and build/CI configuration. Private records and the

@@ -1,149 +1,137 @@
 import { Base } from '@components/base';
-import { getTheme, resetTheme, setProperty } from '@utility/theme';
+import {
+  getTheme,
+  resetTheme,
+  selectTheme,
+  setProperty,
+  subscribe,
+} from '@utility/theme';
 import { css, html } from 'lit';
-import { customElement, queryAll, state } from 'lit/decorators.js';
-import { BeforeRender } from '../../mixins/BeforeRenderMixin';
+import { customElement, state } from 'lit/decorators.js';
 
+const fields = [
+  ['body-background-color', 'Background', 'color'],
+  ['text-color', 'Text', 'color'],
+  ['h1-color', 'Heading color', 'color'],
+  ['navigation-a-color', 'Navigation links', 'color'],
+] as const;
 @customElement('theme-component')
-export class ThemeComponent extends BeforeRender(Base) {
-  @queryAll('input') accessor items!: NodeListOf<HTMLInputElement>;
-
-  @state() accessor properties: Record<string, string> = {};
-
+export class ThemeComponent extends Base {
+  @state() accessor properties = getTheme();
+  private stop?: () => void;
   static styles = [
     ...super.styles,
     css`
       :host {
-        flex-direction: column;
+        display: grid;
+        gap: 1.5rem;
+        max-width: 40rem;
         width: 100%;
       }
-
-      input {
-        border: 1px solid var(--color-neutral-200);
-        border-radius: var(--border-radius);
-        padding: 0.5rem;
-        font-family: inherit;
-        font-size: inherit;
-        background-color: var(--background-color);
-        color: var(--text-color);
-
-        &:focus {
-          outline: 2px solid var(--color-teal-200);
-          outline-offset: 2px;
-        }
+      form {
+        display: grid;
+        gap: 1.5rem;
       }
-
       label {
-        display: flex;
-        flex-direction: column;
+        display: grid;
         gap: 0.5rem;
-        font-weight: 500;
       }
-
-      ul {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-      }
-
+      input,
+      select,
       button {
-        padding: 0.75rem 1.5rem;
-        background-color: var(--color-teal-200);
-        color: var(--color-neutral-900);
-        border: none;
-        border-radius: var(--border-radius);
-        font-weight: 600;
+        padding: 0.75rem;
+        font: inherit;
+        background: var(--body-background-color);
+        color: var(--text-color);
+        border: 1px solid var(--card-border-color);
+        border-radius: 0.25rem;
+        max-width: 100%;
+      }
+      input[type='color'] {
+        width: 100%;
+        height: 3rem;
+        padding: 0.25rem;
+      }
+      button {
         cursor: pointer;
-        margin-top: 1rem;
-
-        &:hover {
-          background-color: var(--color-teal-300);
-        }
       }
     `,
   ];
-
-  constructor() {
-    super();
-
-    this.properties = getTheme();
+  connectedCallback() {
+    super.connectedCallback();
+    this.stop = subscribe(() => {
+      this.properties = getTheme();
+    });
   }
-
-  _onChange(e: Event): void {
-    const target = e.target as HTMLInputElement;
-    if (target && target.name) {
-      setProperty(target.name, target.value.trim());
-      this.properties[target.name] = target.value.trim();
-      this._saveProperties();
+  disconnectedCallback() {
+    this.stop?.();
+    super.disconnectedCallback();
+  }
+  private change = (event: Event) => {
+    const input = event.target as HTMLInputElement;
+    if (input.reportValidity()) setProperty(input.name, input.value);
+  };
+  private colorValue(name: string) {
+    const value = this.properties[name];
+    if (/^#[\da-f]{6}$/i.test(value || '')) return value;
+    const probe = document.createElement('span');
+    probe.style.color = `var(--${name})`;
+    document.body.append(probe);
+    const context = document.createElement('canvas').getContext('2d');
+    if (!context) {
+      probe.remove();
+      return '#000000';
     }
+    context.fillStyle = getComputedStyle(probe).color;
+    context.fillRect(0, 0, 1, 1);
+    const pixel = context.getImageData(0, 0, 1, 1).data;
+    probe.remove();
+    return (
+      '#' +
+      [...pixel]
+        .slice(0, 3)
+        .map(n => n.toString(16).padStart(2, '0'))
+        .join('')
+    );
   }
-
-  _saveProperties(): void {
-    window.localStorage.setItem('theme', JSON.stringify(this.properties));
-  }
-
   render() {
-    return html`
-      <h1>Theme Settings</h1>
-      <ul>
-        <li>
-          <label>
-            Background
-            <input
-              @change=${this._onChange}
-              name="background-color"
-              value=${this.properties['background-color'] || ''}
-              type="color"
-            />
-          </label>
-        </li>
-        <li>
-          <label>
-            Text
-            <input
-              @change=${this._onChange}
-              name="text-color"
-              value=${this.properties['text-color'] || ''}
-              type="color"
-            />
-          </label>
-        </li>
-        <li>
-          <label>
-            Heading Color
-            <input
-              @change=${this._onChange}
-              name="h1-color"
-              value=${this.properties['h1-color'] || ''}
-              type="color"
-            />
-          </label>
-        </li>
-        <li>
-          <label>
-            Heading Font Size
-            <input
-              @change=${this._onChange}
-              name="h1-font-size"
-              value=${this.properties['h1-font-size'] || ''}
-              type="text"
-            />
-          </label>
-        </li>
-        <li>
-          <label>
-            Navigation Link
-            <input
-              @change=${this._onChange}
-              name="navigation-a-color"
-              value=${this.properties['navigation-a-color'] || ''}
-              type="color"
-            />
-          </label>
-        </li>
-      </ul>
-      <button @click=${resetTheme}>Reset Theme</button>
-    `;
+    return html`<form @submit=${(event: Event) => event.preventDefault()}>
+      <label
+        >Theme<select
+          .value=${this.properties.name}
+          @change=${(event: Event) =>
+            selectTheme(
+              (event.target as HTMLSelectElement).value as 'light' | 'dark'
+            )}
+        >
+          <option value="dark">Dark</option>
+          <option value="light">Light</option>
+        </select></label
+      >
+      ${fields.map(
+        ([name, label, type]) =>
+          html`<label
+            >${label}<input
+              type=${type}
+              name=${name}
+              .value=${this.colorValue(name)}
+              @change=${this.change}
+          /></label>`
+      )}
+      <label
+        >Heading size (px or rem)<input
+          name="h1-font-size"
+          .value=${this.properties['h1-font-size'] || ''}
+          placeholder="40px"
+          pattern="(?:[1-9][0-9]?(?:[.][0-9]+)?px|[1-5](?:[.][0-9]+)?rem)"
+          @change=${this.change}
+      /></label>
+      <p>
+        Changes apply immediately and stay in this browser when local storage is
+        available. Reset restores the default dark theme and removes custom
+        values.
+      </p>
+      <button type="button" @click=${resetTheme}>Reset appearance</button>
+    </form>`;
   }
 }

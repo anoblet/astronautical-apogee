@@ -2,6 +2,31 @@
 
 A modern, performance-focused portfolio website showcasing professional web development expertise. Built with cutting-edge technologies including Astro, Lit Web Components, and TypeScript.
 
+## Website development and verification
+
+Run `pnpm dev` for the live development server or `pnpm build && pnpm preview`
+for a production-build preview. Preview does not rebuild source changes.
+
+Run `pnpm check:site` to lint the public application (including Astro files),
+check website TypeScript, build, and run Chromium regressions. Install the browser
+once with `pnpm exec playwright install chromium`. The browser tests serve `dist/`
+on port 4330 using Python 3; they check generated routes, internal links, keyboard
+navigation, themes, no-JavaScript content, metadata, and mobile reflow. Internal
+submodules have separate responsibilities and are excluded from website lint and
+type checks.
+
+Static global/utility CSS is shared with Lit shadow roots. Theme CSS is generated
+from `src/themes/*.json` at `/theme.css`, while `src/utility/theme.ts` handles
+validated browser preferences. Shared editorial patterns live in
+`src/styles/editorial.css` and `src/components/ContactPanel.astro`. The Design
+service page remains the visual reference. Public portfolio contributions live
+in `src/data/work.ts`; new results and metrics need supporting evidence.
+
+The Angular/Oxc and server-source-map adapters in `astro.config.mjs` accommodate
+the installed Angular integration. Framework upgrades should include the Angular
+browser regression. CI also audits representative routes with Lighthouse;
+local test results do not establish production deployment or field performance.
+
 ## � Lighthouse Scores
 
 [![Lighthouse Performance](https://img.shields.io/badge/Performance-70%2F100-orange?style=flat-square&logo=lighthouse)](https://pagespeed.web.dev/analysis/https-andrewnoblet-com/u0qtn8h2zc?form_factor=mobile)
@@ -28,14 +53,14 @@ Astronautical Apogee is a professional portfolio website that demonstrates moder
 - **Responsive Design**: Mobile-first approach with adaptive layouts
 - **Performance Optimized**: Static site generation with selective hydration
 - **Accessibility First**: Semantic HTML, proper ARIA attributes, and keyboard navigation
-- **TypeScript**: Full type safety across the entire codebase
+- **TypeScript**: Website-scoped checks for application TypeScript and browser regressions
 - **Modern Tooling**: ESLint, Prettier, Husky for code quality and consistency
 
 ## 🛠 Technology Stack
 
 ### Core Framework
 
-- **[Astro 5.7.10](https://astro.build/)** - Static site generator with component islands
+- **[Astro 7.2.9](https://astro.build/)** - Static site generator with component islands
 - **[Lit 3.3.0](https://lit.dev/)** - Lightweight web components library
 - **[TypeScript](https://www.typescriptlang.org/)** - Type-safe JavaScript
 
@@ -60,7 +85,7 @@ astronautical-apogee/
 │   │   ├── base/           # Base component classes
 │   │   ├── button/         # Button components
 │   │   ├── card/           # Card layouts
-│   │   ├── navigation/     # Navigation components
+│   │   ├── Navigation.astro # Server-rendered navigation
 │   │   └── theme/          # Theme system
 │   ├── layouts/            # Astro layout components
 │   ├── pages/              # Site pages and routes

@@ -1,150 +1,69 @@
 ---
 import Layout from '@layouts/default.astro';
 import Card from '@components/Card.astro';
-import Tag from '@components/Tag.astro';
-import genaiscript from '@assets/microsoft.github.io_genaiscript_.webp';
-import lit from '@assets/lit.dev_.webp';
-import astro from '@assets/astro.build_.webp';
-import ArrowForward from '@icons/arrow-forward.svg';
-import { Image } from 'astro:assets';
+import ContactPanel from '@components/ContactPanel.astro';
 ---
 
 <Layout
-  title="Andrew Noblet - Personal"
-  description="Explore personal projects showcasing passion for web development, open-source contributions, and experimental technologies. Creative solutions and innovative approaches to modern web challenges."
+  title="Personal projects — Andrew Noblet"
+  description="Explore the source of Andrew Noblet’s website, a working Angular island, and Web Component experiments."
 >
-  <div class="column flex gap page">
-    <div class="gap grid justify-content-center text-align-center">
-      <h1>Personal</h1>
-      <p class="bold-5 max-width-56">
-        Explore personal projects that showcase my passion for web development,
-        component architecture, and AI-driven workflows.
-      </p>
-    </div>
-    <div class="space-0-5"></div>
-    <Card>
-      <h2>Astro</h2>
-      <Image src={astro} alt="Astro" class="card-image" />
-      <div class="flex-1">
-        <ul>
-          <li>
-            Astro is a modern static site builder focused on performance and
-            component-driven architecture.
-          </li>
-          <li>
-            <strong>Production Experience:</strong> I use Astro to build fast, maintainable,
-            and composable web projects with a focus on reusability and best practices,
-            including this very portfolio site.
-          </li>
-          <li>
-            <strong>Community Involvement:</strong> I engage with the Astro community
-            by sharing feedback, testing new features, and contributing insights
-            from real-world project implementations.
-          </li>
-          <li>
-            My experience includes creating complex layouts, building reusable
-            component systems, and integrating Astro with various frameworks
-            like Lit for optimal performance and developer experience.
-          </li>
-        </ul>
+  <div class="editorial-page">
+    <section class="editorial-section">
+      <div class="section-heading">
+        <p class="eyebrow">Personal projects</p><h1 class="editorial-title">
+          Ideas you can<br />look inside.
+        </h1><p>
+          Small experiments and an evolving website. These examples show the
+          code and interactions behind the presentation.
+        </p>
       </div>
-      <div class="flex flex-wrap gap-0-5 justify-content-center tags">
-        <Tag>JavaScript</Tag>
-        <Tag>TypeScript</Tag>
-        <Tag>Static Site Generator</Tag>
-        <Tag>Astro</Tag>
-        <Tag>Open Source</Tag>
+    </section>
+    <section class="editorial-section">
+      <div class="editorial-grid">
+        <Card
+          ><p class="eyebrow">01 / This website</p><h2>Astro portfolio</h2><p>
+            A static website combining service pages, content collections,
+            reusable components, and selected interactive islands. The
+            repository shows the implementation and its development history.
+          </p><a href="https://github.com/anoblet/astronautical-apogee"
+            >Explore the source on GitHub →</a
+          ></Card
+        >
+        <Card
+          ><p class="eyebrow">02 / Framework integration</p><h2>
+            Angular island
+          </h2><p>
+            A working Angular Material component rendered inside Astro. The
+            increment interaction provides a small example of client hydration
+            on a static page.
+          </p><a href="/angular">Try the Angular demo →</a><a
+            href="https://github.com/anoblet/astronautical-apogee/blob/main/src/components/angular/material-demo.component.ts"
+            >View the component source →</a
+          ></Card
+        >
+        <Card
+          ><p class="eyebrow">03 / Web Components</p><h2>Lit components</h2><p>
+            The website’s appearance controls use Lit. Explore a small component
+            page and browse the implementation of the shared controls.
+          </p><a href="/lit">Explore the Lit page →</a><a
+            href="https://github.com/anoblet/astronautical-apogee/tree/main/src/components"
+            >Browse component source →</a
+          ></Card
+        >
+        <Card
+          ><p class="eyebrow">04 / Development workflows</p><h2>
+            Automation experiments
+          </h2><p>
+            Experiments with scripting and AI-assisted workflows are part of how
+            I explore repetitive development work. Read the notes and inspect
+            the repository rather than treating a tool description as a finished
+            product.
+          </p><a href="/blog/genaiscript-usage">Read the workflow notes →</a
+          ></Card
+        >
       </div>
-      <span></span>
-      <a class="align-self-flex-end gap-0-5" href="https://astro.build/">
-        Learn more <ArrowForward />
-      </a>
-    </Card>
-    <Card>
-      <h2>Lit</h2>
-      <Image src={lit} alt="Lit" class="card-image" />
-      <div class="flex-1">
-        <ul>
-          <li>
-            Lit is a fast, simple library for building web components and
-            reactive UIs.
-          </li>
-          <li>
-            <strong>Active Open-Source Contributor:</strong> I have been contributing
-            to Lit's ecosystem for over 5 years, providing feedback on APIs, reporting
-            issues, and sharing improvements with the core team and community.
-          </li>
-          <li>
-            <strong>Community Engagement:</strong> I participate in discussions on
-            GitHub, help other developers troubleshoot issues, and advocate for web
-            standards and best practices in the Lit community.
-          </li>
-          <li>
-            My work with Lit includes building production-ready reusable UI
-            components, exploring advanced patterns, and implementing complex
-            component architectures.
-          </li>
-        </ul>
-      </div>
-      <div class="flex flex-wrap gap-0-5 justify-content-center tags">
-        <Tag>JavaScript</Tag>
-        <Tag>TypeScript</Tag>
-        <Tag>Web Components</Tag>
-        <Tag>LitElement</Tag>
-        <Tag>Open Source</Tag>
-      </div>
-      <span></span>
-      <a class="align-self-flex-end gap-0-5" href="https://lit.dev/">
-        Learn more <ArrowForward />
-      </a>
-    </Card>
-    <Card>
-      <h2>GenAIScript</h2>
-      <Image src={genaiscript} alt="GenAIScript" class="card-image" />
-      <div class="flex-1">
-        <ul>
-          <li>
-            <strong>Early Adopter & Contributor:</strong> I am actively learning
-            GenAIScript, an open-source scripting language for generative AI workflows
-            by Microsoft, and contributing to its growing community.
-          </li>
-          <li>
-            <strong>Open-Source Contributions:</strong> I actively contribute to
-            the project by sharing feedback with the Microsoft team, reporting issues
-            and bugs, and engaging with other users to improve the project's documentation
-            and usability.
-          </li>
-          <li>
-            <strong>Production Implementation:</strong> I am implementing GenAIScript
-            in my daily workflow to automate content generation, experiment with
-            prompt engineering, and streamline repetitive development tasks using
-            AI.
-          </li>
-        </ul>
-      </div>
-      <div class="flex flex-wrap gap-0-5 justify-content-center tags">
-        <Tag>TypeScript</Tag>
-        <Tag>Node.js</Tag>
-        <Tag>AI</Tag>
-        <Tag>CLI</Tag>
-        <Tag>OpenAI</Tag>
-        <Tag>Prompt Engineering</Tag>
-      </div>
-      <span></span>
-      <a
-        class="align-self-flex-end gap-0-5"
-        href="https://microsoft.github.io/genaiscript/"
-      >
-        Learn more <ArrowForward />
-      </a>
-    </Card>
+    </section>
+    <ContactPanel />
   </div>
 </Layout>
-
-<style>
-  .card-image {
-    border-radius: 0.25rem;
-    height: 100%;
-    width: 100%;
-  }
-</style>

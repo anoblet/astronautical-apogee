@@ -14,3 +14,5 @@ reports
 genaiscript.d.ts
 tsconfig.json
 jsconfig.json
+playwright-report
+test-results

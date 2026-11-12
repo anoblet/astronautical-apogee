@@ -2,38 +2,70 @@
 import { getCollection, render } from 'astro:content';
 import EditorialImage from '@components/EditorialImage.astro';
 import Layout from '@layouts/default.astro';
-// 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
-  return posts.map(post => ({
+  return (await getCollection('blog')).map(post => ({
     params: { id: post.id },
     props: { post },
   }));
 }
-// 2. For your template, you can get the entry directly from the prop
 const { post } = Astro.props;
 const { Content } = await render(post);
+const related = (await getCollection('blog'))
+  .filter(item => item.id !== post.id)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 2);
 ---
 
-<Layout title={post.data.title} description={post.data.description}>
-  <div class="blog gap grid max-width-56">
-    <Content />
+<Layout
+  title={`${post.data.title} — Andrew Noblet`}
+  description={post.data.description}
+>
+  <article class="max-width-48 width-100">
+    <header class="article-header">
+      <a href="/blog">← All articles</a><p class="eyebrow">
+        Notes by Andrew Noblet
+      </p><h1>{post.data.title}</h1><p>{post.data.description}</p><p>
+        <time datetime={post.data.date.toISOString()}
+          >{
+            post.data.date.toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+              timeZone: 'UTC',
+            })
+          }</time
+        >{post.data.ai && <span> · AI-assisted article</span>}
+      </p>{
+        post.data.illustrative && (
+          <p class="example-note">
+            Illustrative example: this article explores a hypothetical project,
+            not a client engagement or measured result.
+          </p>
+        )
+      }
+    </header>
     {
       post.data.image && (
         <EditorialImage src={post.data.image} alt={post.data.imageAlt} />
       )
     }
-  </div>
+    <div class="article-body"><Content /></div>
+    <footer class="editorial-section">
+      <h2>Keep exploring</h2>{
+        related.map(item => (
+          <a href={'/blog/' + item.id}>{item.data.title} →</a>
+        ))
+      }<a href="/blog">Back to the notebook →</a>
+    </footer>
+  </article>
 </Layout>
-<script>
-  import '@components/card';
-</script>
 <style>
-  .blog {
-    card-component {
-      ul {
-        padding: 0 1rem;
-      }
-    }
+  .article-body {
+    margin-top: 2.5rem;
+  }
+  .example-note {
+    border-left: 3px solid var(--a-color);
+    padding: 1rem;
+    background: var(--surface-background-color);
   }
 </style>
