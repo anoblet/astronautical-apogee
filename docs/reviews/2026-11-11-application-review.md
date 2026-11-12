@@ -1,5 +1,8 @@
 # Application review — November 11, 2026
 
+Follow-up: [November 12 review](2026-11-12-application-review.md) adds a fresh
+three-width browser sweep and a design-led improvement plan.
+
 Reviewed revision: `5414d4b`, branch `docs/require-completion-commit`.
 This is a review of the public Astro website, including its Lit components,
 Angular demo, content routes, build configuration, and CI. Internal tools and

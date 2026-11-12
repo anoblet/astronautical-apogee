@@ -1,0 +1,1795 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "route": "/about/",
+      "status": 200,
+      "errors": [],
+      "title": "About",
+      "description": "Meet Andrew Noblet - A curious software engineer with global perspective. Born in Chile, lived across Puerto Rico, Ohio, and New York. Passionate about minimalist philosophy and accessible web development.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Meet Andrew Noblet",
+        "H2: Personal Facts",
+        "H2: Hobbies & Passions",
+        "H3: Physical & Outdoor",
+        "H3: Creative & Technical",
+        "H3: Intellectual Pursuits",
+        "H2: Life Philosophy",
+        "H2: Early Adventures",
+        "H2: Life in New York",
+        "H2: Let's Connect!"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/angular/",
+      "status": 200,
+      "errors": [],
+      "title": "Angular",
+      "description": "An Angular Material component rendered and hydrated inside Astro.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Angular"]
+    },
+    {
+      "width": 1440,
+      "route": "/blog/ai-driven-features-practical-use-cases/",
+      "status": 200,
+      "errors": [],
+      "title": "AI Driven Features Practical Use Cases",
+      "description": "Real world examples of integrating AI into web platforms to enhance user experience and automate workflows.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: AI Driven Features Practical Use Cases"]
+    },
+    {
+      "width": 1440,
+      "route": "/blog/astro-experience/",
+      "status": 200,
+      "errors": [],
+      "title": "Building with Astro: Fast, Flexible, and Future-Proof",
+      "description": "Astro delivers blazing-fast, flexible sites\u2014optimizing performance, maintainability, and business impact.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Building with Astro: Fast, Flexible, and Future-Proof",
+        "H3: What makes Astro stand out?",
+        "H3: Reflection & What\u2019s Next"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/blog/atomic-css-brand-continuity/",
+      "status": 200,
+      "errors": [],
+      "title": "Atomic CSS and Brand Continuity",
+      "description": "The role of atomic CSS in maintaining a consistent brand identity and improving performance across components.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Atomic CSS and Brand Continuity"]
+    },
+    {
+      "width": 1440,
+      "route": "/blog/community-engagement-lessons-learned/",
+      "status": 200,
+      "errors": [],
+      "title": "Community Engagement Lessons Learned",
+      "description": "Insights and actionable tips from building and sustaining an active user and contributor community.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Community Engagement: Lessons Learned"]
+    },
+    {
+      "width": 1440,
+      "route": "/blog/content-driven-navigation-enhancing-ux/",
+      "status": 200,
+      "errors": [],
+      "title": "Content Driven Navigation Enhancing UX",
+      "description": "Best practices for structuring content and navigation to support overview detail patterns and hierarchical linking.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Content Driven Navigation: Enhancing UX"]
+    },
+    {
+      "width": 1440,
+      "route": "/blog/creative/",
+      "status": 200,
+      "errors": [],
+      "title": "Creative",
+      "description": "Empowering developer creativity fuels innovation, product quality, and deeper team investment in business outcomes.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Creative",
+        "H3: Why you should let your developers get creative"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/blog/digital-minimalism-confucian-philosophy-web-development/",
+      "status": 200,
+      "errors": [],
+      "title": "The Art of Digital Minimalism - Lessons from Confucian Philosophy for Modern Web Development",
+      "description": "Discover how ancient Confucian principles of harmony, simplicity, and respect can transform your approach to modern web development and create more meaningful digital experiences.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: The Art of Digital Minimalism: Lessons from Confucian Philosophy for Modern Web Development",
+        "H2: The Foundation: \u4ec1 (R\u00e9n) - Benevolence in Code",
+        "H2: \u4e2d\u5eb8 (Zh\u014dngy\u014dng) - The Doctrine of the Mean in Design",
+        "H2: \u793c (L\u01d0) - Proper Conduct in Digital Spaces",
+        "H2: \u7b80\u7ea6 (Ji\u01cenyu\u0113) - The Power of Simplicity",
+        "H2: \u5b66\u800c\u65f6\u4e60\u4e4b (Xu\u00e9 \u00e9r sh\u00ed x\u00ed zh\u012b) - Continuous Learning and Iteration",
+        "H2: Implementation: Building with Philosophical Intention",
+        "H2: The Long View"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/blog/focus/",
+      "status": 200,
+      "errors": [],
+      "title": "Focus",
+      "description": "Prioritizing focus empowers teams to deliver higher quality, faster results, and greater business value.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Focus",
+        "H3: How focus drives meaningful results in software development"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/blog/genaiscript-usage/",
+      "status": 200,
+      "errors": [],
+      "title": "How I Use GenAIScript to Automate, Validate, and Accelerate My Workflow",
+      "description": "A practical overview of how GenAIScript powers minimal, composable automation and validation in the astronautical-apogee project.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H2: How I Use GenAIScript to Automate, Validate, and Accelerate My Workflow",
+        "H3: Overview: GenAIScript in My Workflow",
+        "H3: How I Use GenAIScript",
+        "H3: Actionable Outcomes",
+        "H3: Conclusion"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/blog/",
+      "status": 200,
+      "errors": [],
+      "title": "Blog",
+      "description": "Discover new ideas, stories, and updates about web development, AI-driven features, creative workflows, and minimalist philosophy. Technical insights and practical guides from Andrew Noblet.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Blog"]
+    },
+    {
+      "width": 1440,
+      "route": "/blog/lit-experience/",
+      "status": 200,
+      "errors": [],
+      "title": "Building with Lit",
+      "description": "Discover how Lit enables fast, reusable, and accessible web components\u2014streamlining UI development and driving project success.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Building with Lit",
+        "H3: How Lit transformed my approach to web components and UI development"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/blog/modular-architecture-scalable-platforms/",
+      "status": 200,
+      "errors": [],
+      "title": "Modular Architecture for Scalable Platforms",
+      "description": "How modular design enables rapid iteration, maintainability, and business agility in open-source projects.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Modular Architecture for Scalable Platforms"]
+    },
+    {
+      "width": 1440,
+      "route": "/blog/open-source-strategy-community-value/",
+      "status": 200,
+      "errors": [],
+      "title": "Open Source Strategy Building Community and Value",
+      "description": "Actionable steps for fostering community engagement transparency and sustainable growth through open source principles.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Open Source Strategy: Building Community and Value"]
+    },
+    {
+      "width": 1440,
+      "route": "/blog/performance-optimization-bundle-size-loading-speed/",
+      "status": 200,
+      "errors": [],
+      "title": "Performance Optimization Bundle Size and Loading Speed",
+      "description": "Strategies for reducing bundle size improving loading times and delivering a seamless user experience.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Performance Optimization: Bundle Size and Loading Speed"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/blog/platform-vs-service-differentiation/",
+      "status": 200,
+      "errors": [],
+      "title": "Platform vs Service Differentiating Your Offering",
+      "description": "How to clearly communicate the value of both product and service aspects to drive conversions and user trust.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Platform vs Service: Differentiating Your Offering"]
+    },
+    {
+      "width": 1440,
+      "route": "/blog/sustainable-business-models-tech-platforms/",
+      "status": 200,
+      "errors": [],
+      "title": "Sustainable Business Models for Tech Platforms",
+      "description": "Exploring open source monetization service differentiation and long term sustainability.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": []
+    },
+    {
+      "width": 1440,
+      "route": "/blog/technical-case-study-portfolio-deep-dive/",
+      "status": 200,
+      "errors": [],
+      "title": "Technical Case Study Portfolio Project Deep Dive",
+      "description": "A detailed breakdown of a recent portfolio project highlighting technical challenges solutions and business impact.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Technical Case Study: Portfolio Project Deep Dive"]
+    },
+    {
+      "width": 1440,
+      "route": "/business-card/",
+      "status": 200,
+      "errors": [],
+      "title": "Business Card",
+      "description": "Andrew Noblet's digital business card featuring contact information, services, and professional details. Modern web component showcasing design expertise and accessibility.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Andrew Noblet"]
+    },
+    {
+      "width": 1440,
+      "route": "/contact/",
+      "status": 200,
+      "errors": [],
+      "title": "Contact & Consultation",
+      "description": "Schedule a free 30-minute consultation with Andrew Noblet. Get expert advice on web development, design, and hosting. No obligation - discuss your project requirements and ask questions.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Book a Free Consultation"]
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "title": "Andrew Noblet",
+      "description": "Andrew Noblet - Software Engineer specializing in modern, accessible web experiences. Crafting inclusive digital solutions with expert design, hosting, and consultation services.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Andrew Noblet |\n              Fostering Accessibility in Web Development"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/lauren/",
+      "status": 200,
+      "errors": [],
+      "title": "Lauren",
+      "description": "Posts by Lauren.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Lauren"]
+    },
+    {
+      "width": 1440,
+      "route": "/lit/",
+      "status": 200,
+      "errors": [],
+      "title": "Lit",
+      "description": "Discover Lit - A simple library for building fast, lightweight web components. Learn about modern JavaScript/TypeScript development with this efficient, standards-based framework.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Lit"]
+    },
+    {
+      "width": 1440,
+      "route": "/mentorship/",
+      "status": 200,
+      "errors": [],
+      "title": "Mentorship",
+      "description": "Professional mentorship in software development and career guidance. Learn modern web technologies, build your portfolio, and advance your career with personalized coaching and technical skills development.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Mentorship",
+        "H3: Career Guidance",
+        "H3: Technical Skills Development",
+        "H3: Project Mentorship",
+        "H2: What You Can Expect",
+        "H2: Mentorship Process",
+        "H2: Ready to Level Up Your Skills?"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/portfolio/",
+      "status": 200,
+      "errors": [],
+      "title": "Portfolio",
+      "description": "Discover professional and personal projects showcasing expertise in web development, component architecture, and creative solutions. View real-world applications and technical achievements.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Portfolio",
+        "H3: Professional Projects",
+        "H3: Personal Projects",
+        "H2: Let's Connect!"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/portfolio/personal/",
+      "status": 200,
+      "errors": [],
+      "title": "Andrew Noblet - Personal",
+      "description": "Explore personal projects showcasing passion for web development, open-source contributions, and experimental technologies. Creative solutions and innovative approaches to modern web challenges.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Personal", "H2: Astro", "H2: Lit", "H2: GenAIScript"]
+    },
+    {
+      "width": 1440,
+      "route": "/portfolio/professional/",
+      "status": 200,
+      "errors": [],
+      "title": "Andrew Noblet - Professional",
+      "description": "Professional web development portfolio featuring scalable e-commerce platforms, high-performance applications, and enterprise solutions. Real-world client projects and technical achievements.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Professional",
+        "H2: CXL",
+        "H2: Graduation Source",
+        "H2: Avanti Systems USA"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/pricing/",
+      "status": 200,
+      "errors": [],
+      "title": "Pricing",
+      "description": "Transparent pricing for web development services. Choose from flexible plans that include direct collaboration, modern web technologies, and ongoing support. Get started today.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Pricing", "H2: Basic", "H2: Pro"]
+    },
+    {
+      "width": 1440,
+      "route": "/services/consultation/",
+      "status": 200,
+      "errors": [],
+      "title": "Technical Consultation Services",
+      "description": "Expert technical consultation to solve complex challenges and optimize development processes. Strategic advice on architecture, performance, and technical solutions that drive results.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Technical Consultation",
+        "H2: My Approach",
+        "H3: Assessment",
+        "H3: Strategy",
+        "H3: Implementation",
+        "H3: Follow-up",
+        "H2: Consultation Services",
+        "H3: Technology Strategy",
+        "H3: Code Review & Audits",
+        "H3: Project Planning & Estimation",
+        "H3: Performance Optimization",
+        "H3: Team Mentoring",
+        "H3: Problem Solving",
+        "H2: Let\u2019s Create Something Amazing Together!"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/services/consultation/pricing/",
+      "status": 200,
+      "errors": [],
+      "title": "Consultation Pricing",
+      "description": "Expert technical consultation pricing plans. Strategic advice and guidance to accelerate your project development. Choose consultation plans that fit your specific needs and timeline.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Consultation Pricing",
+        "H2: Quick Consult",
+        "H2: Project Consult"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/services/design/",
+      "status": 200,
+      "errors": [],
+      "title": "Brand & UI/UX Design Services",
+      "description": "Brand identity, website, and UI/UX design for small businesses and digital products. Explore a collaborative process, practical deliverables, and design packages.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: A clear identity.A better experience.",
+        "H2: Good design bringseverything together.",
+        "H3: Brand Identity & Landing Pages",
+        "H3: User Experience Design",
+        "H3: User Interface Design",
+        "H3: Design Systems",
+        "H2: A thoughtful process.Room for your feedback.",
+        "H3: Research & Discovery",
+        "H3: Structure & Wireframes",
+        "H3: Visual Design",
+        "H3: Prototype & Refine",
+        "H2: Every detail startswith a real need.",
+        "H2: Ready forwhat comes next.",
+        "H2: Bring an idea.We\u2019ll find the starting point.",
+        "H2: Let\u2019s make somethingthat feels like you."
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/services/design/pricing/",
+      "status": 200,
+      "errors": [],
+      "title": "Design Pricing",
+      "description": "Professional UI/UX design pricing plans. Creative and user-focused design solutions for brands and products. Choose flexible pricing options that fit your vision and budget.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Design Pricing", "H2: Starter Design", "H2: Pro Design"]
+    },
+    {
+      "width": 1440,
+      "route": "/services/hosting/",
+      "status": 200,
+      "errors": [],
+      "title": "Web Hosting & Deployment Services",
+      "description": "Scalable, reliable web hosting and deployment services. Expert management of static sites to complex applications with focus on speed, security, and uptime for optimal performance.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Web Hosting & Deployment",
+        "H2: Why Choose My Hosting Services",
+        "H3: 99.9% Uptime",
+        "H3: Lightning Fast",
+        "H3: Secure by Default",
+        "H3: 24/7 Support",
+        "H2: Hosting Solutions",
+        "H3: Static Site Hosting",
+        "H3: Cloud Infrastructure",
+        "H3: Performance Optimization",
+        "H3: Security & Monitoring",
+        "H3: Migration Support",
+        "H3: Maintenance & Support"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/services/hosting/pricing/",
+      "status": 200,
+      "errors": [],
+      "title": "Hosting Pricing",
+      "description": "Reliable, secure, and scalable web hosting pricing plans. Professional hosting solutions for every project size with transparent pricing that fits your needs and budget.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Hosting Pricing",
+        "H2: Basic Hosting",
+        "H2: Pro Hosting"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/services/",
+      "status": 200,
+      "errors": [],
+      "title": "Services",
+      "description": "End-to-end digital solutions from design to deployment. Quality web development, hosting, and consultation services focused on performance and seamless user experiences.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Services",
+        "H3: UI/UX Design",
+        "H3: Web Hosting & Deployment",
+        "H3: Technical Consultation",
+        "H3: Social Media Management",
+        "H2: Ready to Get Started?"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/services/social/",
+      "status": 200,
+      "errors": [],
+      "title": "Social Media Management | Andrew Noblet",
+      "description": "Thoughtful Facebook community-group posts for local small businesses. Friendly post writing, ideas for your business, owner approval, and reply follow-up with one-time and monthly packages.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Social Media Management",
+        "H2: A Community Post, From Idea to Follow-up",
+        "H3: Your Business, Your Voice",
+        "H3: A Little Help Finding the Words",
+        "H3: Your Approval Comes First",
+        "H3: Follow Through",
+        "H2: Give Your Neighbors Something Useful",
+        "H3: Introduce What You Do",
+        "H3: Share Practical Advice",
+        "H3: Share a Timely Update",
+        "H2: Build a Presence That Fits Your Business",
+        "H2: Plan the Message Before Writing the Post",
+        "H3: Start With a Question Your Customers Ask",
+        "H3: Use Details You Can Stand Behind",
+        "H3: Give Readers One Clear Next Step",
+        "H2: What a Month of Local Posts Could Look Like",
+        "H2: Keep the Conversation Moving",
+        "H2: Choose the Support You Need",
+        "H3: Community Post Starter",
+        "H3: Local Basic",
+        "H3: Local Pro",
+        "H2: Helpful, Honest, and Local",
+        "H2: Getting Ready for Your First Post",
+        "H2: Let's Talk About Your Neighborhood"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/services/social/pricing/",
+      "status": 200,
+      "errors": [],
+      "title": "Social Media Management Pricing",
+      "description": "Local community social packages: a $99 one-time starter, Local Basic at $149/month, and Local Pro at $299/month. Explore post writing, reply support, and optional add-ons.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Social Media Management Pricing",
+        "H2: Community Post Starter",
+        "H2: Local Basic",
+        "H2: Local Pro",
+        "H2: Optional Add-ons",
+        "H2: Already on Pro Hosting?",
+        "H2: Find the Right Fit"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/settings/",
+      "status": 200,
+      "errors": [],
+      "title": "Settings",
+      "description": "Customize your experience with theme settings and accessibility preferences. Personalize the interface to match your viewing preferences and accessibility needs.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Site Settings"]
+    },
+    {
+      "width": 1440,
+      "route": "/theme/",
+      "status": 200,
+      "errors": [],
+      "title": "Theme Settings",
+      "description": "Customize your visual experience with theme settings. Choose between light and dark modes, adjust colors, and personalize the interface design to match your preferences.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Theme Settings"]
+    },
+    {
+      "width": 390,
+      "route": "/about/",
+      "status": 200,
+      "errors": [],
+      "title": "About",
+      "description": "Meet Andrew Noblet - A curious software engineer with global perspective. Born in Chile, lived across Puerto Rico, Ohio, and New York. Passionate about minimalist philosophy and accessible web development.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Meet Andrew Noblet",
+        "H2: Personal Facts",
+        "H2: Hobbies & Passions",
+        "H3: Physical & Outdoor",
+        "H3: Creative & Technical",
+        "H3: Intellectual Pursuits",
+        "H2: Life Philosophy",
+        "H2: Early Adventures",
+        "H2: Life in New York",
+        "H2: Let's Connect!"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/angular/",
+      "status": 200,
+      "errors": [],
+      "title": "Angular",
+      "description": "An Angular Material component rendered and hydrated inside Astro.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Angular"]
+    },
+    {
+      "width": 390,
+      "route": "/blog/ai-driven-features-practical-use-cases/",
+      "status": 200,
+      "errors": [],
+      "title": "AI Driven Features Practical Use Cases",
+      "description": "Real world examples of integrating AI into web platforms to enhance user experience and automate workflows.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: AI Driven Features Practical Use Cases"]
+    },
+    {
+      "width": 390,
+      "route": "/blog/astro-experience/",
+      "status": 200,
+      "errors": [],
+      "title": "Building with Astro: Fast, Flexible, and Future-Proof",
+      "description": "Astro delivers blazing-fast, flexible sites\u2014optimizing performance, maintainability, and business impact.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Building with Astro: Fast, Flexible, and Future-Proof",
+        "H3: What makes Astro stand out?",
+        "H3: Reflection & What\u2019s Next"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/blog/atomic-css-brand-continuity/",
+      "status": 200,
+      "errors": [],
+      "title": "Atomic CSS and Brand Continuity",
+      "description": "The role of atomic CSS in maintaining a consistent brand identity and improving performance across components.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Atomic CSS and Brand Continuity"]
+    },
+    {
+      "width": 390,
+      "route": "/blog/community-engagement-lessons-learned/",
+      "status": 200,
+      "errors": [],
+      "title": "Community Engagement Lessons Learned",
+      "description": "Insights and actionable tips from building and sustaining an active user and contributor community.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Community Engagement: Lessons Learned"]
+    },
+    {
+      "width": 390,
+      "route": "/blog/content-driven-navigation-enhancing-ux/",
+      "status": 200,
+      "errors": [],
+      "title": "Content Driven Navigation Enhancing UX",
+      "description": "Best practices for structuring content and navigation to support overview detail patterns and hierarchical linking.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Content Driven Navigation: Enhancing UX"]
+    },
+    {
+      "width": 390,
+      "route": "/blog/creative/",
+      "status": 200,
+      "errors": [],
+      "title": "Creative",
+      "description": "Empowering developer creativity fuels innovation, product quality, and deeper team investment in business outcomes.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Creative",
+        "H3: Why you should let your developers get creative"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/blog/digital-minimalism-confucian-philosophy-web-development/",
+      "status": 200,
+      "errors": [],
+      "title": "The Art of Digital Minimalism - Lessons from Confucian Philosophy for Modern Web Development",
+      "description": "Discover how ancient Confucian principles of harmony, simplicity, and respect can transform your approach to modern web development and create more meaningful digital experiences.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: The Art of Digital Minimalism: Lessons from Confucian Philosophy for Modern Web Development",
+        "H2: The Foundation: \u4ec1 (R\u00e9n) - Benevolence in Code",
+        "H2: \u4e2d\u5eb8 (Zh\u014dngy\u014dng) - The Doctrine of the Mean in Design",
+        "H2: \u793c (L\u01d0) - Proper Conduct in Digital Spaces",
+        "H2: \u7b80\u7ea6 (Ji\u01cenyu\u0113) - The Power of Simplicity",
+        "H2: \u5b66\u800c\u65f6\u4e60\u4e4b (Xu\u00e9 \u00e9r sh\u00ed x\u00ed zh\u012b) - Continuous Learning and Iteration",
+        "H2: Implementation: Building with Philosophical Intention",
+        "H2: The Long View"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/blog/focus/",
+      "status": 200,
+      "errors": [],
+      "title": "Focus",
+      "description": "Prioritizing focus empowers teams to deliver higher quality, faster results, and greater business value.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Focus",
+        "H3: How focus drives meaningful results in software development"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/blog/genaiscript-usage/",
+      "status": 200,
+      "errors": [],
+      "title": "How I Use GenAIScript to Automate, Validate, and Accelerate My Workflow",
+      "description": "A practical overview of how GenAIScript powers minimal, composable automation and validation in the astronautical-apogee project.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H2: How I Use GenAIScript to Automate, Validate, and Accelerate My Workflow",
+        "H3: Overview: GenAIScript in My Workflow",
+        "H3: How I Use GenAIScript",
+        "H3: Actionable Outcomes",
+        "H3: Conclusion"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/blog/",
+      "status": 200,
+      "errors": [],
+      "title": "Blog",
+      "description": "Discover new ideas, stories, and updates about web development, AI-driven features, creative workflows, and minimalist philosophy. Technical insights and practical guides from Andrew Noblet.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Blog"]
+    },
+    {
+      "width": 390,
+      "route": "/blog/lit-experience/",
+      "status": 200,
+      "errors": [],
+      "title": "Building with Lit",
+      "description": "Discover how Lit enables fast, reusable, and accessible web components\u2014streamlining UI development and driving project success.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Building with Lit",
+        "H3: How Lit transformed my approach to web components and UI development"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/blog/modular-architecture-scalable-platforms/",
+      "status": 200,
+      "errors": [],
+      "title": "Modular Architecture for Scalable Platforms",
+      "description": "How modular design enables rapid iteration, maintainability, and business agility in open-source projects.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Modular Architecture for Scalable Platforms"]
+    },
+    {
+      "width": 390,
+      "route": "/blog/open-source-strategy-community-value/",
+      "status": 200,
+      "errors": [],
+      "title": "Open Source Strategy Building Community and Value",
+      "description": "Actionable steps for fostering community engagement transparency and sustainable growth through open source principles.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Open Source Strategy: Building Community and Value"]
+    },
+    {
+      "width": 390,
+      "route": "/blog/performance-optimization-bundle-size-loading-speed/",
+      "status": 200,
+      "errors": [],
+      "title": "Performance Optimization Bundle Size and Loading Speed",
+      "description": "Strategies for reducing bundle size improving loading times and delivering a seamless user experience.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Performance Optimization: Bundle Size and Loading Speed"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/blog/platform-vs-service-differentiation/",
+      "status": 200,
+      "errors": [],
+      "title": "Platform vs Service Differentiating Your Offering",
+      "description": "How to clearly communicate the value of both product and service aspects to drive conversions and user trust.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Platform vs Service: Differentiating Your Offering"]
+    },
+    {
+      "width": 390,
+      "route": "/blog/sustainable-business-models-tech-platforms/",
+      "status": 200,
+      "errors": [],
+      "title": "Sustainable Business Models for Tech Platforms",
+      "description": "Exploring open source monetization service differentiation and long term sustainability.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": []
+    },
+    {
+      "width": 390,
+      "route": "/blog/technical-case-study-portfolio-deep-dive/",
+      "status": 200,
+      "errors": [],
+      "title": "Technical Case Study Portfolio Project Deep Dive",
+      "description": "A detailed breakdown of a recent portfolio project highlighting technical challenges solutions and business impact.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Technical Case Study: Portfolio Project Deep Dive"]
+    },
+    {
+      "width": 390,
+      "route": "/business-card/",
+      "status": 200,
+      "errors": [],
+      "title": "Business Card",
+      "description": "Andrew Noblet's digital business card featuring contact information, services, and professional details. Modern web component showcasing design expertise and accessibility.",
+      "canonical": false,
+      "overflow": 330,
+      "headings": ["H1: Andrew Noblet"]
+    },
+    {
+      "width": 390,
+      "route": "/contact/",
+      "status": 200,
+      "errors": [],
+      "title": "Contact & Consultation",
+      "description": "Schedule a free 30-minute consultation with Andrew Noblet. Get expert advice on web development, design, and hosting. No obligation - discuss your project requirements and ask questions.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Book a Free Consultation"]
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "title": "Andrew Noblet",
+      "description": "Andrew Noblet - Software Engineer specializing in modern, accessible web experiences. Crafting inclusive digital solutions with expert design, hosting, and consultation services.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Andrew Noblet\n              Crafting Modern, Accessible Web Experiences"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/lauren/",
+      "status": 200,
+      "errors": [],
+      "title": "Lauren",
+      "description": "Posts by Lauren.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Lauren"]
+    },
+    {
+      "width": 390,
+      "route": "/lit/",
+      "status": 200,
+      "errors": [],
+      "title": "Lit",
+      "description": "Discover Lit - A simple library for building fast, lightweight web components. Learn about modern JavaScript/TypeScript development with this efficient, standards-based framework.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Lit"]
+    },
+    {
+      "width": 390,
+      "route": "/mentorship/",
+      "status": 200,
+      "errors": [],
+      "title": "Mentorship",
+      "description": "Professional mentorship in software development and career guidance. Learn modern web technologies, build your portfolio, and advance your career with personalized coaching and technical skills development.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Mentorship",
+        "H3: Career Guidance",
+        "H3: Technical Skills Development",
+        "H3: Project Mentorship",
+        "H2: What You Can Expect",
+        "H2: Mentorship Process",
+        "H2: Ready to Level Up Your Skills?"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/portfolio/",
+      "status": 200,
+      "errors": [],
+      "title": "Portfolio",
+      "description": "Discover professional and personal projects showcasing expertise in web development, component architecture, and creative solutions. View real-world applications and technical achievements.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Portfolio",
+        "H3: Professional Projects",
+        "H3: Personal Projects",
+        "H2: Let's Connect!"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/portfolio/personal/",
+      "status": 200,
+      "errors": [],
+      "title": "Andrew Noblet - Personal",
+      "description": "Explore personal projects showcasing passion for web development, open-source contributions, and experimental technologies. Creative solutions and innovative approaches to modern web challenges.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Personal", "H2: Astro", "H2: Lit", "H2: GenAIScript"]
+    },
+    {
+      "width": 390,
+      "route": "/portfolio/professional/",
+      "status": 200,
+      "errors": [],
+      "title": "Andrew Noblet - Professional",
+      "description": "Professional web development portfolio featuring scalable e-commerce platforms, high-performance applications, and enterprise solutions. Real-world client projects and technical achievements.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Professional",
+        "H2: CXL",
+        "H2: Graduation Source",
+        "H2: Avanti Systems USA"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/pricing/",
+      "status": 200,
+      "errors": [],
+      "title": "Pricing",
+      "description": "Transparent pricing for web development services. Choose from flexible plans that include direct collaboration, modern web technologies, and ongoing support. Get started today.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Pricing", "H2: Basic", "H2: Pro"]
+    },
+    {
+      "width": 390,
+      "route": "/services/consultation/",
+      "status": 200,
+      "errors": [],
+      "title": "Technical Consultation Services",
+      "description": "Expert technical consultation to solve complex challenges and optimize development processes. Strategic advice on architecture, performance, and technical solutions that drive results.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Technical Consultation",
+        "H2: My Approach",
+        "H3: Assessment",
+        "H3: Strategy",
+        "H3: Implementation",
+        "H3: Follow-up",
+        "H2: Consultation Services",
+        "H3: Technology Strategy",
+        "H3: Code Review & Audits",
+        "H3: Project Planning & Estimation",
+        "H3: Performance Optimization",
+        "H3: Team Mentoring",
+        "H3: Problem Solving",
+        "H2: Let\u2019s Bring Your Project to Life!"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/services/consultation/pricing/",
+      "status": 200,
+      "errors": [],
+      "title": "Consultation Pricing",
+      "description": "Expert technical consultation pricing plans. Strategic advice and guidance to accelerate your project development. Choose consultation plans that fit your specific needs and timeline.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Consultation Pricing",
+        "H2: Quick Consult",
+        "H2: Project Consult"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/services/design/",
+      "status": 200,
+      "errors": [],
+      "title": "Brand & UI/UX Design Services",
+      "description": "Brand identity, website, and UI/UX design for small businesses and digital products. Explore a collaborative process, practical deliverables, and design packages.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: A clear identity.A better experience.",
+        "H2: Good design bringseverything together.",
+        "H3: Brand Identity & Landing Pages",
+        "H3: User Experience Design",
+        "H3: User Interface Design",
+        "H3: Design Systems",
+        "H2: A thoughtful process.Room for your feedback.",
+        "H3: Research & Discovery",
+        "H3: Structure & Wireframes",
+        "H3: Visual Design",
+        "H3: Prototype & Refine",
+        "H2: Every detail startswith a real need.",
+        "H2: Ready forwhat comes next.",
+        "H2: Bring an idea.We\u2019ll find the starting point.",
+        "H2: Let\u2019s make somethingthat feels like you."
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/services/design/pricing/",
+      "status": 200,
+      "errors": [],
+      "title": "Design Pricing",
+      "description": "Professional UI/UX design pricing plans. Creative and user-focused design solutions for brands and products. Choose flexible pricing options that fit your vision and budget.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Design Pricing", "H2: Starter Design", "H2: Pro Design"]
+    },
+    {
+      "width": 390,
+      "route": "/services/hosting/",
+      "status": 200,
+      "errors": [],
+      "title": "Web Hosting & Deployment Services",
+      "description": "Scalable, reliable web hosting and deployment services. Expert management of static sites to complex applications with focus on speed, security, and uptime for optimal performance.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Web Hosting & Deployment",
+        "H2: Why Choose My Hosting Services",
+        "H3: 99.9% Uptime",
+        "H3: Lightning Fast",
+        "H3: Secure by Default",
+        "H3: 24/7 Support",
+        "H2: Hosting Solutions",
+        "H3: Static Site Hosting",
+        "H3: Cloud Infrastructure",
+        "H3: Performance Optimization",
+        "H3: Security & Monitoring",
+        "H3: Migration Support",
+        "H3: Maintenance & Support"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/services/hosting/pricing/",
+      "status": 200,
+      "errors": [],
+      "title": "Hosting Pricing",
+      "description": "Reliable, secure, and scalable web hosting pricing plans. Professional hosting solutions for every project size with transparent pricing that fits your needs and budget.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Hosting Pricing",
+        "H2: Basic Hosting",
+        "H2: Pro Hosting"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/services/",
+      "status": 200,
+      "errors": [],
+      "title": "Services",
+      "description": "End-to-end digital solutions from design to deployment. Quality web development, hosting, and consultation services focused on performance and seamless user experiences.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Services",
+        "H3: UI/UX Design",
+        "H3: Web Hosting & Deployment",
+        "H3: Technical Consultation",
+        "H3: Social Media Management",
+        "H2: Ready to Get Started?"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/services/social/",
+      "status": 200,
+      "errors": [],
+      "title": "Social Media Management | Andrew Noblet",
+      "description": "Thoughtful Facebook community-group posts for local small businesses. Friendly post writing, ideas for your business, owner approval, and reply follow-up with one-time and monthly packages.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Social Media Management",
+        "H2: A Community Post, From Idea to Follow-up",
+        "H3: Your Business, Your Voice",
+        "H3: A Little Help Finding the Words",
+        "H3: Your Approval Comes First",
+        "H3: Follow Through",
+        "H2: Give Your Neighbors Something Useful",
+        "H3: Introduce What You Do",
+        "H3: Share Practical Advice",
+        "H3: Share a Timely Update",
+        "H2: Build a Presence That Fits Your Business",
+        "H2: Plan the Message Before Writing the Post",
+        "H3: Start With a Question Your Customers Ask",
+        "H3: Use Details You Can Stand Behind",
+        "H3: Give Readers One Clear Next Step",
+        "H2: What a Month of Local Posts Could Look Like",
+        "H2: Keep the Conversation Moving",
+        "H2: Choose the Support You Need",
+        "H3: Community Post Starter",
+        "H3: Local Basic",
+        "H3: Local Pro",
+        "H2: Helpful, Honest, and Local",
+        "H2: Getting Ready for Your First Post",
+        "H2: Let's Talk About Your Neighborhood"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/services/social/pricing/",
+      "status": 200,
+      "errors": [],
+      "title": "Social Media Management Pricing",
+      "description": "Local community social packages: a $99 one-time starter, Local Basic at $149/month, and Local Pro at $299/month. Explore post writing, reply support, and optional add-ons.",
+      "canonical": false,
+      "overflow": 650,
+      "headings": [
+        "H1: Social Media Management Pricing",
+        "H2: Community Post Starter",
+        "H2: Local Basic",
+        "H2: Local Pro",
+        "H2: Optional Add-ons",
+        "H2: Already on Pro Hosting?",
+        "H2: Find the Right Fit"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/settings/",
+      "status": 200,
+      "errors": [],
+      "title": "Settings",
+      "description": "Customize your experience with theme settings and accessibility preferences. Personalize the interface to match your viewing preferences and accessibility needs.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Site Settings"]
+    },
+    {
+      "width": 390,
+      "route": "/theme/",
+      "status": 200,
+      "errors": [],
+      "title": "Theme Settings",
+      "description": "Customize your visual experience with theme settings. Choose between light and dark modes, adjust colors, and personalize the interface design to match your preferences.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Theme Settings"]
+    },
+    {
+      "width": 320,
+      "route": "/about/",
+      "status": 200,
+      "errors": [],
+      "title": "About",
+      "description": "Meet Andrew Noblet - A curious software engineer with global perspective. Born in Chile, lived across Puerto Rico, Ohio, and New York. Passionate about minimalist philosophy and accessible web development.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Meet Andrew Noblet",
+        "H2: Personal Facts",
+        "H2: Hobbies & Passions",
+        "H3: Physical & Outdoor",
+        "H3: Creative & Technical",
+        "H3: Intellectual Pursuits",
+        "H2: Life Philosophy",
+        "H2: Early Adventures",
+        "H2: Life in New York",
+        "H2: Let's Connect!"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/angular/",
+      "status": 200,
+      "errors": [],
+      "title": "Angular",
+      "description": "An Angular Material component rendered and hydrated inside Astro.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Angular"]
+    },
+    {
+      "width": 320,
+      "route": "/blog/ai-driven-features-practical-use-cases/",
+      "status": 200,
+      "errors": [],
+      "title": "AI Driven Features Practical Use Cases",
+      "description": "Real world examples of integrating AI into web platforms to enhance user experience and automate workflows.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: AI Driven Features Practical Use Cases"]
+    },
+    {
+      "width": 320,
+      "route": "/blog/astro-experience/",
+      "status": 200,
+      "errors": [],
+      "title": "Building with Astro: Fast, Flexible, and Future-Proof",
+      "description": "Astro delivers blazing-fast, flexible sites\u2014optimizing performance, maintainability, and business impact.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Building with Astro: Fast, Flexible, and Future-Proof",
+        "H3: What makes Astro stand out?",
+        "H3: Reflection & What\u2019s Next"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/blog/atomic-css-brand-continuity/",
+      "status": 200,
+      "errors": [],
+      "title": "Atomic CSS and Brand Continuity",
+      "description": "The role of atomic CSS in maintaining a consistent brand identity and improving performance across components.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Atomic CSS and Brand Continuity"]
+    },
+    {
+      "width": 320,
+      "route": "/blog/community-engagement-lessons-learned/",
+      "status": 200,
+      "errors": [],
+      "title": "Community Engagement Lessons Learned",
+      "description": "Insights and actionable tips from building and sustaining an active user and contributor community.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Community Engagement: Lessons Learned"]
+    },
+    {
+      "width": 320,
+      "route": "/blog/content-driven-navigation-enhancing-ux/",
+      "status": 200,
+      "errors": [],
+      "title": "Content Driven Navigation Enhancing UX",
+      "description": "Best practices for structuring content and navigation to support overview detail patterns and hierarchical linking.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Content Driven Navigation: Enhancing UX"]
+    },
+    {
+      "width": 320,
+      "route": "/blog/creative/",
+      "status": 200,
+      "errors": [],
+      "title": "Creative",
+      "description": "Empowering developer creativity fuels innovation, product quality, and deeper team investment in business outcomes.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Creative",
+        "H3: Why you should let your developers get creative"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/blog/digital-minimalism-confucian-philosophy-web-development/",
+      "status": 200,
+      "errors": [],
+      "title": "The Art of Digital Minimalism - Lessons from Confucian Philosophy for Modern Web Development",
+      "description": "Discover how ancient Confucian principles of harmony, simplicity, and respect can transform your approach to modern web development and create more meaningful digital experiences.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: The Art of Digital Minimalism: Lessons from Confucian Philosophy for Modern Web Development",
+        "H2: The Foundation: \u4ec1 (R\u00e9n) - Benevolence in Code",
+        "H2: \u4e2d\u5eb8 (Zh\u014dngy\u014dng) - The Doctrine of the Mean in Design",
+        "H2: \u793c (L\u01d0) - Proper Conduct in Digital Spaces",
+        "H2: \u7b80\u7ea6 (Ji\u01cenyu\u0113) - The Power of Simplicity",
+        "H2: \u5b66\u800c\u65f6\u4e60\u4e4b (Xu\u00e9 \u00e9r sh\u00ed x\u00ed zh\u012b) - Continuous Learning and Iteration",
+        "H2: Implementation: Building with Philosophical Intention",
+        "H2: The Long View"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/blog/focus/",
+      "status": 200,
+      "errors": [],
+      "title": "Focus",
+      "description": "Prioritizing focus empowers teams to deliver higher quality, faster results, and greater business value.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Focus",
+        "H3: How focus drives meaningful results in software development"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/blog/genaiscript-usage/",
+      "status": 200,
+      "errors": [],
+      "title": "How I Use GenAIScript to Automate, Validate, and Accelerate My Workflow",
+      "description": "A practical overview of how GenAIScript powers minimal, composable automation and validation in the astronautical-apogee project.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H2: How I Use GenAIScript to Automate, Validate, and Accelerate My Workflow",
+        "H3: Overview: GenAIScript in My Workflow",
+        "H3: How I Use GenAIScript",
+        "H3: Actionable Outcomes",
+        "H3: Conclusion"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/blog/",
+      "status": 200,
+      "errors": [],
+      "title": "Blog",
+      "description": "Discover new ideas, stories, and updates about web development, AI-driven features, creative workflows, and minimalist philosophy. Technical insights and practical guides from Andrew Noblet.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Blog"]
+    },
+    {
+      "width": 320,
+      "route": "/blog/lit-experience/",
+      "status": 200,
+      "errors": [],
+      "title": "Building with Lit",
+      "description": "Discover how Lit enables fast, reusable, and accessible web components\u2014streamlining UI development and driving project success.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Building with Lit",
+        "H3: How Lit transformed my approach to web components and UI development"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/blog/modular-architecture-scalable-platforms/",
+      "status": 200,
+      "errors": [],
+      "title": "Modular Architecture for Scalable Platforms",
+      "description": "How modular design enables rapid iteration, maintainability, and business agility in open-source projects.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Modular Architecture for Scalable Platforms"]
+    },
+    {
+      "width": 320,
+      "route": "/blog/open-source-strategy-community-value/",
+      "status": 200,
+      "errors": [],
+      "title": "Open Source Strategy Building Community and Value",
+      "description": "Actionable steps for fostering community engagement transparency and sustainable growth through open source principles.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Open Source Strategy: Building Community and Value"]
+    },
+    {
+      "width": 320,
+      "route": "/blog/performance-optimization-bundle-size-loading-speed/",
+      "status": 200,
+      "errors": [],
+      "title": "Performance Optimization Bundle Size and Loading Speed",
+      "description": "Strategies for reducing bundle size improving loading times and delivering a seamless user experience.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Performance Optimization: Bundle Size and Loading Speed"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/blog/platform-vs-service-differentiation/",
+      "status": 200,
+      "errors": [],
+      "title": "Platform vs Service Differentiating Your Offering",
+      "description": "How to clearly communicate the value of both product and service aspects to drive conversions and user trust.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Platform vs Service: Differentiating Your Offering"]
+    },
+    {
+      "width": 320,
+      "route": "/blog/sustainable-business-models-tech-platforms/",
+      "status": 200,
+      "errors": [],
+      "title": "Sustainable Business Models for Tech Platforms",
+      "description": "Exploring open source monetization service differentiation and long term sustainability.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": []
+    },
+    {
+      "width": 320,
+      "route": "/blog/technical-case-study-portfolio-deep-dive/",
+      "status": 200,
+      "errors": [],
+      "title": "Technical Case Study Portfolio Project Deep Dive",
+      "description": "A detailed breakdown of a recent portfolio project highlighting technical challenges solutions and business impact.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Technical Case Study: Portfolio Project Deep Dive"]
+    },
+    {
+      "width": 320,
+      "route": "/business-card/",
+      "status": 200,
+      "errors": [],
+      "title": "Business Card",
+      "description": "Andrew Noblet's digital business card featuring contact information, services, and professional details. Modern web component showcasing design expertise and accessibility.",
+      "canonical": false,
+      "overflow": 365,
+      "headings": ["H1: Andrew Noblet"]
+    },
+    {
+      "width": 320,
+      "route": "/contact/",
+      "status": 200,
+      "errors": [],
+      "title": "Contact & Consultation",
+      "description": "Schedule a free 30-minute consultation with Andrew Noblet. Get expert advice on web development, design, and hosting. No obligation - discuss your project requirements and ask questions.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Book a Free Consultation"]
+    },
+    {
+      "width": 320,
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "title": "Andrew Noblet",
+      "description": "Andrew Noblet - Software Engineer specializing in modern, accessible web experiences. Crafting inclusive digital solutions with expert design, hosting, and consultation services.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Andrew Noblet\n              Fostering Accessibility in Web Development"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/lauren/",
+      "status": 200,
+      "errors": [],
+      "title": "Lauren",
+      "description": "Posts by Lauren.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Lauren"]
+    },
+    {
+      "width": 320,
+      "route": "/lit/",
+      "status": 200,
+      "errors": [],
+      "title": "Lit",
+      "description": "Discover Lit - A simple library for building fast, lightweight web components. Learn about modern JavaScript/TypeScript development with this efficient, standards-based framework.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Lit"]
+    },
+    {
+      "width": 320,
+      "route": "/mentorship/",
+      "status": 200,
+      "errors": [],
+      "title": "Mentorship",
+      "description": "Professional mentorship in software development and career guidance. Learn modern web technologies, build your portfolio, and advance your career with personalized coaching and technical skills development.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Mentorship",
+        "H3: Career Guidance",
+        "H3: Technical Skills Development",
+        "H3: Project Mentorship",
+        "H2: What You Can Expect",
+        "H2: Mentorship Process",
+        "H2: Ready to Level Up Your Skills?"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/portfolio/",
+      "status": 200,
+      "errors": [],
+      "title": "Portfolio",
+      "description": "Discover professional and personal projects showcasing expertise in web development, component architecture, and creative solutions. View real-world applications and technical achievements.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Portfolio",
+        "H3: Professional Projects",
+        "H3: Personal Projects",
+        "H2: Let's Connect!"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/portfolio/personal/",
+      "status": 200,
+      "errors": [],
+      "title": "Andrew Noblet - Personal",
+      "description": "Explore personal projects showcasing passion for web development, open-source contributions, and experimental technologies. Creative solutions and innovative approaches to modern web challenges.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Personal", "H2: Astro", "H2: Lit", "H2: GenAIScript"]
+    },
+    {
+      "width": 320,
+      "route": "/portfolio/professional/",
+      "status": 200,
+      "errors": [],
+      "title": "Andrew Noblet - Professional",
+      "description": "Professional web development portfolio featuring scalable e-commerce platforms, high-performance applications, and enterprise solutions. Real-world client projects and technical achievements.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Professional",
+        "H2: CXL",
+        "H2: Graduation Source",
+        "H2: Avanti Systems USA"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/pricing/",
+      "status": 200,
+      "errors": [],
+      "title": "Pricing",
+      "description": "Transparent pricing for web development services. Choose from flexible plans that include direct collaboration, modern web technologies, and ongoing support. Get started today.",
+      "canonical": false,
+      "overflow": 16,
+      "headings": ["H1: Pricing", "H2: Basic", "H2: Pro"]
+    },
+    {
+      "width": 320,
+      "route": "/services/consultation/",
+      "status": 200,
+      "errors": [],
+      "title": "Technical Consultation Services",
+      "description": "Expert technical consultation to solve complex challenges and optimize development processes. Strategic advice on architecture, performance, and technical solutions that drive results.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Technical Consultation",
+        "H2: My Approach",
+        "H3: Assessment",
+        "H3: Strategy",
+        "H3: Implementation",
+        "H3: Follow-up",
+        "H2: Consultation Services",
+        "H3: Technology Strategy",
+        "H3: Code Review & Audits",
+        "H3: Project Planning & Estimation",
+        "H3: Performance Optimization",
+        "H3: Team Mentoring",
+        "H3: Problem Solving",
+        "H2: Let\u2019s Bring Your Project to Life!"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/services/consultation/pricing/",
+      "status": 200,
+      "errors": [],
+      "title": "Consultation Pricing",
+      "description": "Expert technical consultation pricing plans. Strategic advice and guidance to accelerate your project development. Choose consultation plans that fit your specific needs and timeline.",
+      "canonical": false,
+      "overflow": 16,
+      "headings": [
+        "H1: Consultation Pricing",
+        "H2: Quick Consult",
+        "H2: Project Consult"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/services/design/",
+      "status": 200,
+      "errors": [],
+      "title": "Brand & UI/UX Design Services",
+      "description": "Brand identity, website, and UI/UX design for small businesses and digital products. Explore a collaborative process, practical deliverables, and design packages.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: A clear identity.A better experience.",
+        "H2: Good design bringseverything together.",
+        "H3: Brand Identity & Landing Pages",
+        "H3: User Experience Design",
+        "H3: User Interface Design",
+        "H3: Design Systems",
+        "H2: A thoughtful process.Room for your feedback.",
+        "H3: Research & Discovery",
+        "H3: Structure & Wireframes",
+        "H3: Visual Design",
+        "H3: Prototype & Refine",
+        "H2: Every detail startswith a real need.",
+        "H2: Ready forwhat comes next.",
+        "H2: Bring an idea.We\u2019ll find the starting point.",
+        "H2: Let\u2019s make somethingthat feels like you."
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/services/design/pricing/",
+      "status": 200,
+      "errors": [],
+      "title": "Design Pricing",
+      "description": "Professional UI/UX design pricing plans. Creative and user-focused design solutions for brands and products. Choose flexible pricing options that fit your vision and budget.",
+      "canonical": false,
+      "overflow": 16,
+      "headings": ["H1: Design Pricing", "H2: Starter Design", "H2: Pro Design"]
+    },
+    {
+      "width": 320,
+      "route": "/services/hosting/",
+      "status": 200,
+      "errors": [],
+      "title": "Web Hosting & Deployment Services",
+      "description": "Scalable, reliable web hosting and deployment services. Expert management of static sites to complex applications with focus on speed, security, and uptime for optimal performance.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Web Hosting & Deployment",
+        "H2: Why Choose My Hosting Services",
+        "H3: 99.9% Uptime",
+        "H3: Lightning Fast",
+        "H3: Secure by Default",
+        "H3: 24/7 Support",
+        "H2: Hosting Solutions",
+        "H3: Static Site Hosting",
+        "H3: Cloud Infrastructure",
+        "H3: Performance Optimization",
+        "H3: Security & Monitoring",
+        "H3: Migration Support",
+        "H3: Maintenance & Support"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/services/hosting/pricing/",
+      "status": 200,
+      "errors": [],
+      "title": "Hosting Pricing",
+      "description": "Reliable, secure, and scalable web hosting pricing plans. Professional hosting solutions for every project size with transparent pricing that fits your needs and budget.",
+      "canonical": false,
+      "overflow": 16,
+      "headings": [
+        "H1: Hosting Pricing",
+        "H2: Basic Hosting",
+        "H2: Pro Hosting"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/services/",
+      "status": 200,
+      "errors": [],
+      "title": "Services",
+      "description": "End-to-end digital solutions from design to deployment. Quality web development, hosting, and consultation services focused on performance and seamless user experiences.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Services",
+        "H3: UI/UX Design",
+        "H3: Web Hosting & Deployment",
+        "H3: Technical Consultation",
+        "H3: Social Media Management",
+        "H2: Ready to Get Started?"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/services/social/",
+      "status": 200,
+      "errors": [],
+      "title": "Social Media Management | Andrew Noblet",
+      "description": "Thoughtful Facebook community-group posts for local small businesses. Friendly post writing, ideas for your business, owner approval, and reply follow-up with one-time and monthly packages.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": [
+        "H1: Social Media Management",
+        "H2: A Community Post, From Idea to Follow-up",
+        "H3: Your Business, Your Voice",
+        "H3: A Little Help Finding the Words",
+        "H3: Your Approval Comes First",
+        "H3: Follow Through",
+        "H2: Give Your Neighbors Something Useful",
+        "H3: Introduce What You Do",
+        "H3: Share Practical Advice",
+        "H3: Share a Timely Update",
+        "H2: Build a Presence That Fits Your Business",
+        "H2: Plan the Message Before Writing the Post",
+        "H3: Start With a Question Your Customers Ask",
+        "H3: Use Details You Can Stand Behind",
+        "H3: Give Readers One Clear Next Step",
+        "H2: What a Month of Local Posts Could Look Like",
+        "H2: Keep the Conversation Moving",
+        "H2: Choose the Support You Need",
+        "H3: Community Post Starter",
+        "H3: Local Basic",
+        "H3: Local Pro",
+        "H2: Helpful, Honest, and Local",
+        "H2: Getting Ready for Your First Post",
+        "H2: Let's Talk About Your Neighborhood"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/services/social/pricing/",
+      "status": 200,
+      "errors": [],
+      "title": "Social Media Management Pricing",
+      "description": "Local community social packages: a $99 one-time starter, Local Basic at $149/month, and Local Pro at $299/month. Explore post writing, reply support, and optional add-ons.",
+      "canonical": false,
+      "overflow": 720,
+      "headings": [
+        "H1: Social Media Management Pricing",
+        "H2: Community Post Starter",
+        "H2: Local Basic",
+        "H2: Local Pro",
+        "H2: Optional Add-ons",
+        "H2: Already on Pro Hosting?",
+        "H2: Find the Right Fit"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/settings/",
+      "status": 200,
+      "errors": [],
+      "title": "Settings",
+      "description": "Customize your experience with theme settings and accessibility preferences. Personalize the interface to match your viewing preferences and accessibility needs.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Site Settings"]
+    },
+    {
+      "width": 320,
+      "route": "/theme/",
+      "status": 200,
+      "errors": [],
+      "title": "Theme Settings",
+      "description": "Customize your visual experience with theme settings. Choose between light and dark modes, adjust colors, and personalize the interface design to match your preferences.",
+      "canonical": false,
+      "overflow": 0,
+      "headings": ["H1: Theme Settings"]
+    }
+  ],
+  "broken": [
+    {
+      "url": "http://127.0.0.1:4321/services/services/consultation",
+      "status": 404
+    }
+  ],
+  "themes": ["dark", "dark", "light"],
+  "escapeOpened": true,
+  "noJsText": "Skip to main content"
+}
