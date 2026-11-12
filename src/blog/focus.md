@@ -7,9 +7,7 @@ date: 2025-07-01
 description: 'Prioritizing focus empowers teams to deliver higher quality, faster results, and greater business value.'
 ---
 
-# Focus
-
-### How focus drives meaningful results in software development
+## How focus drives meaningful results in software development
 
 In a world full of distractions, focus is a superpower. When developers are empowered to concentrate on what matters most, they deliver higher quality work, solve harder problems, and move projects forward with clarity.
 

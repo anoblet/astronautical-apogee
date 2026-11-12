@@ -1,139 +1,121 @@
 ---
-import EditorialImage from '@components/EditorialImage.astro';
-import pageImage from '@assets/images/workspace-notebook-planning.webp';
-import Layout from '../../layouts/default.astro';
+import Layout from '@layouts/default.astro';
 import Card from '@components/Card.astro';
+import EditorialImage from '@components/EditorialImage.astro';
+import ContactPanel from '@components/ContactPanel.astro';
+import image from '@assets/images/workspace-notebook-planning.webp';
 ---
 
 <Layout
-  title="Technical Consultation Services"
-  description="Expert technical consultation to solve complex challenges and optimize development processes. Strategic advice on architecture, performance, and technical solutions that drive results."
+  title="Technical consultation — Andrew Noblet"
+  description="A practical second perspective on architecture, code, performance, and project planning. Explore paid sessions and start with a free discovery call."
 >
-  <div class="grid gap-3 page">
-    <section class="column flex gap-2 align-items-center">
-      <h1>Technical Consultation</h1>
-      <p class="hero-description">
-        Get expert guidance to solve complex technical challenges and optimize
-        your development process. From architecture to performance, I deliver
-        strategic advice that drives results.
-      </p>
+  <div class="editorial-page">
+    <section class="editorial-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Technical consultation</p><h1>
+          Work through the question.<br />Find the next step.
+        </h1><p>
+          When a project gets complicated, an outside perspective can help. We
+          review the problem, weigh the options, and identify practical actions
+          your team can take.
+        </p><div class="editorial-actions">
+          <a class="editorial-button" href="/contact?service=consultation"
+            >Book a free discovery call →</a
+          ><a href="/services/consultation/pricing">Explore paid sessions →</a>
+        </div>
+      </div><figure><EditorialImage src={image} priority /></figure>
     </section>
-    <section class="gap grid">
-      <h2>My Approach</h2>
-      <div class="grid auto-fit-15 gap-2">
-        <div class="step-card">
-          <h3>Assessment</h3>
-          <p>Analyze your current situation, challenges, and goals.</p>
-        </div>
-        <div class="step-card">
-          <h3>Strategy</h3>
-          <p>
-            Tailored recommendations based on best practices and your needs.
-          </p>
-        </div>
-        <div class="step-card">
-          <h3>Implementation</h3>
-          <p>Guidance and support during implementation.</p>
-        </div>
-        <div class="step-card">
-          <h3>Follow-up</h3>
-          <p>
-            Ongoing support for successful outcomes and continuous improvement.
-          </p>
-        </div>
+    <section class="editorial-section">
+      <div class="section-heading">
+        <p class="eyebrow">01 / What we can examine</p><h2>
+          Decisions grounded<br />in your project.
+        </h2><p>
+          Choose a focused question or arrange a broader project review. We
+          agree on the material to review and the expected output before the
+          session.
+        </p>
+      </div><div class="editorial-grid">
+        <Card
+          ><h3>Architecture & technology</h3><p>
+            Compare approaches in the context of your team, existing systems,
+            and operating constraints. Discuss integrations, maintainability,
+            and future changes.
+          </p></Card
+        ><Card
+          ><h3>Code & performance</h3><p>
+            Review a specific area of code or a measured performance problem.
+            Identify places to simplify, investigate, or improve reliability.
+          </p></Card
+        ><Card
+          ><h3>Planning & delivery</h3><p>
+            Break requirements into practical stages. Review dependencies,
+            implementation risks, and the information needed for a useful
+            estimate.
+          </p></Card
+        ><Card
+          ><h3>Team development</h3><p>
+            Talk through code review, component architecture, and development
+            practices. For ongoing individual learning, explore <a
+              href="/mentorship">mentorship</a
+            >.
+          </p></Card
+        >
       </div>
     </section>
-    <EditorialImage src={pageImage} />
-    <section class="gap grid">
-      <h2>Consultation Services</h2>
-      <div class="column gap grid">
-        <Card>
-          <h3>Technology Strategy</h3>
-          <p>
-            Strategic guidance on technology choices, architecture, and
-            long-term roadmaps for sustainable growth.
+    <section class="editorial-section">
+      <div class="section-heading">
+        <p class="eyebrow">02 / A focused conversation</p><h2>
+          Prepare, discuss, move forward.
+        </h2>
+      </div><ol class="process-list">
+        <li>
+          <h3>Define the question</h3><p>
+            Share the decision or problem and what a useful result would look
+            like.
           </p>
-          <ul>
-            <li>Technology stack evaluation</li>
-            <li>Architecture planning</li>
-            <li>Scalability assessment</li>
-            <li>Future-proofing strategies</li>
-          </ul>
-        </Card>
-        <Card>
-          <h3>Code Review & Audits</h3>
-          <p>
-            Comprehensive code reviews and technical audits to identify
-            improvements, security vulnerabilities, and performance bottlenecks.
+        </li><li>
+          <h3>Prepare the context</h3><p>
+            Agree on relevant code, diagrams, measurements, or requirements to
+            review.
           </p>
-          <ul>
-            <li>Code quality assessment</li>
-            <li>Security vulnerability analysis</li>
-            <li>Performance bottleneck identification</li>
-            <li>Best practices recommendations</li>
-          </ul>
-        </Card>
-        <Card>
-          <h3>Project Planning & Estimation</h3>
-          <p>
-            Expert project planning and timeline estimation to break down
-            complex requirements into manageable phases with realistic
-            deliverables.
+        </li><li>
+          <h3>Compare options</h3><p>
+            Discuss the evidence, tradeoffs, and work needed to test an
+            approach.
           </p>
-          <ul>
-            <li>Requirements analysis</li>
-            <li>Timeline estimation</li>
-            <li>Risk assessment</li>
-            <li>Milestone planning</li>
-          </ul>
-        </Card>
-        <Card>
-          <h3>Performance Optimization</h3>
-          <p>
-            Deep-dive analysis of application performance with actionable
-            recommendations for optimization across all layers of your
-            application.
+        </li><li>
+          <h3>Plan next steps</h3><p>
+            Use the summary or report included in your chosen package to guide
+            follow-up work.
           </p>
-          <ul>
-            <li>Performance profiling</li>
-            <li>Database optimization</li>
-            <li>Frontend optimization</li>
-            <li>Infrastructure tuning</li>
-          </ul>
-        </Card>
-        <Card>
-          <h3>Team Mentoring</h3>
-          <p>
-            Technical mentoring for development teams, including best practices,
-            code standards, and professional development guidance.
-          </p>
-          <ul>
-            <li>Development best practices</li>
-            <li>Code review processes</li>
-            <li>Team skill development</li>
-            <li>Technical leadership</li>
-          </ul>
-        </Card>
-        <Card>
-          <h3>Problem Solving</h3>
-          <p>
-            Expert troubleshooting for complex technical challenges, system
-            issues, and architectural problems that require deep technical
-            expertise.
-          </p>
-          <ul>
-            <li>Technical troubleshooting</li>
-            <li>System debugging</li>
-            <li>Architecture problem solving</li>
-            <li>Emergency support</li>
-          </ul>
-        </Card>
+        </li>
+      </ol>
+    </section>
+    <section class="editorial-section editorial-split">
+      <div class="section-heading">
+        <p class="eyebrow">03 / Choose the right session</p><h2>
+          A discovery call<br />is the starting point.
+        </h2>
+      </div><div class="editorial-prose">
+        <p>
+          The free introductory call helps us understand your needs and decide
+          on the scope. Paid technical consultation starts at $99 for a
+          30-minute session with an email summary and next steps. A $299 project
+          consultation includes a one-hour session and written report.
+        </p><p>
+          Implementation, ongoing support, and additional reviews are scoped
+          separately. Bring a short problem description and relevant examples;
+          share project access only after we agree on what is needed.
+        </p><a href="/services/consultation/pricing"
+          >Compare consultation packages →</a
+        >
       </div>
     </section>
-    <consultation-component></consultation-component>
+    <ContactPanel
+      title="Bring the question you are working on."
+      description="Tell me about the project and the decision you need to make. We’ll use a free discovery call to define a useful next step."
+      href="/contact?service=consultation"
+    />
   </div>
 </Layout>
-
-<script>
-  import '@components/consultation';
-</script>

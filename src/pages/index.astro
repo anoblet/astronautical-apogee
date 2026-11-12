@@ -1,123 +1,105 @@
 ---
-import Layout from '../layouts/default.astro';
+import Layout from '@layouts/default.astro';
+import EditorialImage from '@components/EditorialImage.astro';
+import ContactPanel from '@components/ContactPanel.astro';
+import Card from '@components/Card.astro';
+import hero from '@assets/images/workspace-minimal-keyboard.webp';
 ---
 
 <Layout
-  title="Andrew Noblet"
-  description="Andrew Noblet - Software Engineer specializing in modern, accessible web experiences. Crafting inclusive digital solutions with expert design, hosting, and consultation services."
+  title="Andrew Noblet — Design & development"
+  description="Brand and interface design, web development, hosting, and practical technical guidance. Work directly with Andrew Noblet to build a clearer digital presence."
 >
-  <index-component></index-component>
+  <div class="editorial-page">
+    <section class="editorial-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Independent design & development</p><h1>
+          Good ideas.<br />Thoughtfully built.
+        </h1><p>
+          I help small businesses and teams turn their ideas into clear, useful
+          websites and digital experiences. From the first design to deployment,
+          you work directly with me.
+        </p><div class="editorial-actions">
+          <a class="editorial-button" href="/contact"
+            >Let’s talk about your project <span aria-hidden="true">→</span></a
+          ><a href="/portfolio/professional">Explore my work →</a>
+        </div><p class="eyebrow">Design · Development · Technical guidance</p>
+      </div>
+      <figure>
+        <EditorialImage
+          src={hero}
+          priority
+          sizes="(max-width: 760px) calc(100vw - 2rem), 540px"
+        />
+      </figure>
+    </section>
+    <section class="editorial-section">
+      <div class="section-heading">
+        <p class="eyebrow">01 / A useful starting point</p><h2>
+          From a clearer identity<br />to a working website.
+        </h2><p>
+          A project can start with a new brand, an existing website that needs
+          attention, or a technical question. We define the work around what
+          your audience needs to do.
+        </p>
+      </div>
+      <div class="editorial-grid">
+        <Card
+          ><p class="eyebrow">01 / Design</p><h3>
+            Make the next step feel clear.
+          </h3><p>
+            Brand identity, page layouts, and interfaces that help people
+            understand your business and find what they need.
+          </p><a href="/services/design">Explore design services →</a></Card
+        >
+        <Card
+          ><p class="eyebrow">02 / Development & hosting</p><h3>
+            Bring the experience to life.
+          </h3><p>
+            Responsive websites, deployment, and ongoing care. We agree on the
+            build and support your project needs before work begins.
+          </p><a href="/services/hosting">Explore hosting & deployment →</a
+          ></Card
+        >
+        <Card
+          ><p class="eyebrow">03 / Consultation</p><h3>
+            Work through a difficult decision.
+          </h3><p>
+            Get a second perspective on architecture, code, performance, or the
+            next phase of a project.
+          </p><a href="/services/consultation"
+            >Explore technical consultation →</a
+          ></Card
+        >
+        <Card
+          ><p class="eyebrow">04 / Local outreach</p><h3>
+            Start a useful conversation.
+          </h3><p>
+            Thoughtful Facebook community-group posts, with your approval and
+            help following up on replies.
+          </p><a href="/services/social">Explore social media support →</a
+          ></Card
+        >
+      </div>
+    </section>
+    <section class="editorial-section editorial-split">
+      <div class="section-heading">
+        <p class="eyebrow">02 / Selected experience</p><h2>
+          Work built around<br />real tasks.
+        </h2>
+      </div>
+      <div class="editorial-prose">
+        <p>
+          My professional work includes online learning at CXL, e-commerce for
+          Graduation Source, and product discovery for Avanti Systems USA. Each
+          asks a different question about how people find information and take
+          action.
+        </p><a href="/portfolio/professional">Read about the work →</a><p>
+          This website is also a working project: static pages, reusable
+          components, and interactive demos brought together with Astro.
+        </p><a href="/portfolio/personal">Explore personal projects →</a>
+      </div>
+    </section>
+    <ContactPanel />
+  </div>
 </Layout>
-<script>
-  import { Base } from '@components/base';
-  import '@components/button';
-  import { globalStyles } from '@styles/global.ts';
-  import { css, html } from 'lit';
-
-  const taglines = [
-    'Crafting Modern, Accessible Web Experiences',
-    'Building Inclusive Digital Solutions',
-    'Designing for Everyone, Everywhere',
-    'Empowering Users with Accessible Design',
-    'Innovating for a Better Web Experience',
-    'Creating Seamless, Accessible Interfaces',
-    'Fostering Accessibility in Web Development',
-    'Championing Inclusive Web Design',
-  ];
-
-  class IndexComponent extends Base {
-    private randomTagline =
-      taglines[Math.floor(Math.random() * taglines.length)];
-
-    static styles = [
-      globalStyles,
-      css`
-        :host {
-          flex: 1;
-          width: 100%;
-        }
-
-        section {
-          display: flex;
-          flex: 1;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-
-          h1 {
-            color: var(--index-h1-color);
-            font-size: 1.75rem;
-            font-weight: 500;
-            margin: 0;
-            padding: 2rem;
-          }
-
-          #buttons {
-            min-width: 50%;
-
-            > * {
-              display: flex;
-
-              button-component {
-                flex: 1;
-              }
-            }
-
-            a {
-              &:hover {
-                text-decoration: none;
-              }
-            }
-          }
-        }
-      `,
-    ];
-
-    render() {
-      return html`
-        <section>
-          <div class="desktop">
-            <h1 class="text-align-center">
-              Andrew Noblet |
-              <span class="font-weight-800">${this.randomTagline}</span>
-            </h1>
-          </div>
-          <div class="mobile">
-            <h1 class="grid text-align-center">
-              <span class="text-align-center">Andrew Noblet</span>
-              <span class="font-weight-800">${this.randomTagline}</span>
-            </h1>
-          </div>
-          <div class="desktop align-items-center">
-            <div class="flex gap min-width-50 padding" id="buttons">
-              <button-component href="/portfolio/personal" variant="primary">
-                Personal Projects
-              </button-component>
-              <button-component
-                href="/portfolio/professional"
-                variant="secondary"
-              >
-                Professional Work
-              </button-component>
-            </div>
-          </div>
-          <div class="mobile">
-            <div class="column gap grid min-width-50 padding" id="buttons">
-              <button-component href="/portfolio/personal" variant="primary">
-                Personal Projects
-              </button-component>
-              <button-component
-                href="/portfolio/professional"
-                variant="secondary"
-              >
-                Professional Work
-              </button-component>
-            </div>
-          </div>
-        </section>
-      `;
-    }
-  }
-
-  customElements.define('index-component', IndexComponent);
-</script>

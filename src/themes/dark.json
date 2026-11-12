@@ -23,7 +23,7 @@
   "contact-component-width": "2.5rem",
   "dropdown-menu-a-color": "var(--color-neutral-300)",
   "gap": "1rem",
-  "h1-color": "var(--color-teal-200)",
+  "h1-color": "var(--color-neutral-200)",
   "h2-color": "var(--color-blue-200)",
   "h3-color": "var(--color-amber-200)",
   "hero-description-color": "var(--color-neutral-300)",

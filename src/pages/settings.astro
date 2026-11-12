@@ -1,14 +1,24 @@
 ---
-// import Layout from "@layouts/default.astro";
 import Layout from '@layouts/default.astro';
 ---
 
 <Layout
-  title="Settings"
-  description="Customize your experience with theme settings and accessibility preferences. Personalize the interface to match your viewing preferences and accessibility needs."
+  title="Appearance settings"
+  description="Choose a light or dark theme and customize colors and heading size for this browser."
+  noindex
 >
-  <settings-component></settings-component>
+  <section class="gap-2 grid max-width-48 width-100">
+    <p class="eyebrow">Make yourself comfortable</p><h1>
+      Appearance settings
+    </h1><p>
+      Choose your colors and heading size. Your browser’s zoom and
+      reduced-motion preferences also work throughout the site.
+    </p><theme-component></theme-component><noscript
+      >Appearance controls require JavaScript. The default theme and all main
+      pages remain available.</noscript
+    >
+  </section>
 </Layout>
 <script>
-  import '@components/settings';
+  import '@components/theme/settings';
 </script>

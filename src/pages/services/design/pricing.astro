@@ -1,4 +1,5 @@
 ---
+import PackageExpectations from '@components/PackageExpectations.astro';
 import Layout from '@layouts/default.astro';
 import PricingCard from '@components/PricingCard.astro';
 ---
@@ -25,7 +26,7 @@ import PricingCard from '@components/PricingCard.astro';
         'Basic style guide',
         'Email support',
       ]}
-      price="$499"
+      price="$499 one-time"
       buttonText="Get Design"
       buttonHref="/contact"
     />
@@ -38,9 +39,16 @@ import PricingCard from '@components/PricingCard.astro';
         'Component library',
         'Priority support',
       ]}
-      price="$999"
+      price="$999 one-time"
       buttonText="Get Design"
       buttonHref="/contact"
     />
   </div>
+  <p class="max-width-48">
+    These packages cover design assets and layouts. Website implementation,
+    hosting, and ongoing maintenance are agreed separately. <a href="/pricing"
+      >Compare website build packages →</a
+    >
+  </p>
+  <PackageExpectations />
 </Layout>

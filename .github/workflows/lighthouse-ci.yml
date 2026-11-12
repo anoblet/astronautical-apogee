@@ -34,8 +34,20 @@ jobs:
       - name: Install Lighthouse CI
         run: npm install -g @lhci/cli@0.15.x
 
+      - name: Lint website
+        run: pnpm lint
+
+      - name: Check website types
+        run: pnpm check:types
+
       - name: Build project
         run: pnpm run build
+
+      - name: Install Chromium
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Check routes and browser interactions
+        run: pnpm test
 
       - name: Start preview server
         run: pnpm run preview &

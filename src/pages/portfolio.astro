@@ -1,82 +1,47 @@
 ---
-import ArrowForward from '@icons/arrow-forward.svg';
+import Layout from '@layouts/default.astro';
 import Card from '@components/Card.astro';
-import Layout from '../layouts/default.astro';
+import ContactPanel from '@components/ContactPanel.astro';
 ---
 
 <Layout
-  title="Portfolio"
-  description="Discover professional and personal projects showcasing expertise in web development, component architecture, and creative solutions. View real-world applications and technical achievements."
+  title="Selected work — Andrew Noblet"
+  description="Explore Andrew Noblet’s contributions to learning platforms, e-commerce, and business websites, alongside personal projects and working demos."
 >
-  <div class="column flex gap-3 page">
-    <div class="gap grid">
-      <h1 class="text-align-center">Portfolio</h1>
-      <p class="hero-description text-align-center">
-        Discover professional and personal projects that showcase expertise in
-        web development, component architecture, and creative solutions.
-      </p>
-    </div>
-    <div class="column gap-2 grid">
-      <Card>
-        <h3>Professional Projects</h3>
-        <div class="flex-1">
-          <p>
-            Scalable web projects for e-commerce, education, and corporate
-            sites—delivering modern technology and user-focused results.
-          </p>
-          <ul>
-            <li>Enterprise e-commerce platforms</li>
-            <li>Educational and training systems</li>
-            <li>Corporate websites and branding</li>
-            <li>Performance optimization and scalability</li>
-          </ul>
-        </div>
-        <a
-          class="gap-0-5 justify-content-flex-end"
-          href="/portfolio/professional"
-        >
-          View projects <ArrowForward />
-        </a>
-      </Card>
-      <Card>
-        <h3>Personal Projects</h3>
-        <div class="flex-1">
-          <p>
-            Personal projects driven by passion for web tech, component systems,
-            and AI workflows—my space for innovation and new ideas.
-          </p>
-          <ul>
-            <li>Experimental web technologies</li>
-            <li>Component libraries and design systems</li>
-            <li>AI-driven development tools</li>
-            <li>Open source contributions</li>
-          </ul>
-        </div>
-        <a class="gap-0-5 justify-content-flex-end" href="/portfolio/personal">
-          View projects <ArrowForward />
-        </a>
-      </Card>
-    </div>
-    <section class="gap grid justify-content-center text-align-center">
-      <h2>Let's Connect!</h2>
-      <p>
-        Let's connect and discuss how my experience can help bring your vision
-        to life.
-      </p>
-      <div class="gap grid justify-content-center">
-        <button-component
-          href="/contact"
-          variant="primary"
-          class="min-width-25vw"
-        >
-          Get in Touch
-          <ArrowForward />
-        </button-component>
+  <div class="editorial-page">
+    <section class="editorial-section">
+      <div class="section-heading">
+        <p class="eyebrow">The portfolio</p><h1 class="editorial-title">
+          From an idea<br />to something useful.
+        </h1><p>
+          Explore professional contributions and personal experiments, with
+          context about the work and links to the implementation where
+          available.
+        </p>
       </div>
     </section>
+    <section class="editorial-section">
+      <div class="editorial-grid">
+        <Card
+          ><p class="eyebrow">01 / Professional work</p><h2>
+            Learning, shopping,<br />and discovery.
+          </h2><p>
+            Selected contributions to CXL, Graduation Source, and Avanti Systems
+            USA. Read about my role, the features involved, and the technologies
+            used.
+          </p><a href="/portfolio/professional">Explore professional work →</a
+          ></Card
+        ><Card
+          ><p class="eyebrow">02 / Personal projects</p><h2>
+            Room to<br />try things.
+          </h2><p>
+            Look inside this website’s source, try the Angular island, and
+            explore component and workflow experiments.
+          </p><a href="/portfolio/personal">Explore personal projects →</a
+          ></Card
+        >
+      </div>
+    </section>
+    <ContactPanel />
   </div>
 </Layout>
-
-<script>
-  import '@components/button';
-</script>

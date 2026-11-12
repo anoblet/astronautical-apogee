@@ -2,10 +2,30 @@ import js from '@eslint/js';
 import tsParser from '@typescript-eslint/parser';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
 import litPlugin from 'eslint-plugin-lit';
+import astroPlugin from 'eslint-plugin-astro';
 import prettierConfig from 'eslint-config-prettier';
 
 export default [
+  {
+    ignores: [
+      'copilot/**',
+      'storage/**',
+      'node_modules/**',
+      'dist/**',
+      'build/**',
+      '.astro/**',
+      'reports/**',
+      'chats/**',
+      'bin/**',
+      '.genaiscript/**',
+      'genaisrc/**',
+      '.wireit/**',
+      'test-results/**',
+      'playwright-report/**',
+    ],
+  },
   js.configs.recommended,
+  ...astroPlugin.configs['flat/recommended'],
   {
     files: ['**/*.{js,mjs,ts}'],
     languageOptions: {
@@ -63,18 +83,9 @@ export default [
     },
   },
   {
-    ignores: [
-      'node_modules/**',
-      'dist/**',
-      'build/**',
-      '.astro/**',
-      'reports/**',
-      'chats/**',
-      'bin/**',
-      '.genaiscript/**',
-      'genaisrc/**',
-      '**/*.astro', // Skip Astro files for now
-    ],
+    files: ['**/*.astro'],
+    languageOptions: { parserOptions: { parser: tsParser } },
+    rules: { 'no-undef': 'off' },
   },
   prettierConfig,
 ];

@@ -5,6 +5,7 @@ import { readFile } from 'node:fs/promises';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://andrewnoblet.com',
   integrations: [angular()],
   vite: {
     oxc: { target: 'es2022' },
