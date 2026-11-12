@@ -12,41 +12,16 @@ export class BusinessCard extends Base {
     css`
       :host {
         --icon-padding: 0;
-        --h1-color: var(--color-neutral-200);
         --icon-size: 24px;
 
         background-color: var(--color-neutral-900);
         /* border: 1px solid var(--color-neutral-500); */
         border-radius: 0.5rem;
-        min-height: 360px;
-        height: auto;
-        aspect-ratio: 1050 / 600;
+        height: calc(600px);
         justify-content: center;
-        width: 1050px;
-        max-width: 100%;
-        color: var(--color-neutral-200);
+        width: calc(1050px);
       }
 
-      :host([export]) {
-        width: 1050px;
-        max-width: none;
-        height: 600px;
-      }
-      @media (max-width: 760px) {
-        :host(:not([export])) {
-          aspect-ratio: auto;
-        }
-        .space-around {
-          flex-wrap: wrap;
-          gap: 1rem;
-        }
-        .font-size-1-5 {
-          font-size: 1rem;
-        }
-        span {
-          overflow-wrap: anywhere;
-        }
-      }
       ::marker {
         content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1rem' viewBox='0 -960 960 960' width='1rem' fill='currentColor'%0A%3E%3Cpath d='M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z' /%3E%3C/svg%3E");
       }
@@ -78,7 +53,7 @@ export class BusinessCard extends Base {
       }
 
       h1 {
-        font-size: clamp(1.75rem, 6vw, 5rem);
+        font-size: 5rem;
       }
 
       li {

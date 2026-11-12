@@ -1,93 +1,95 @@
 ---
 import '../styles/colors.css';
-import '../styles/fonts.css';
-import '../styles/global.css';
-import '../styles/utility.css';
-import '../styles/editorial.css';
+import '@styles/fonts.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { ClientRouter } from 'astro:transitions';
+
 interface Props {
   title: string;
   description?: string;
-  image?: string;
-  noindex?: boolean;
 }
-const {
-  title,
-  description = 'Design, web development, hosting, and technical guidance from Andrew Noblet.',
-  image = '/social-card.png',
-  noindex = false,
-} = Astro.props;
-const canonical = new URL(Astro.url.pathname, Astro.site);
-const socialImage = new URL(image, Astro.site);
+
+const { title, description = 'Astro description' } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/theme.css" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#171717" />
-    {noindex && <meta name="robots" content="noindex, follow" />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="canonical" href={canonical} />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Andrew Noblet" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={socialImage} />
-    <meta
-      property="og:image:alt"
-      content="Andrew Noblet — Design & development"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <script is:inline>
-      try {
-        const saved = JSON.parse(localStorage.getItem('theme') || 'null');
-        document.documentElement.dataset.theme =
-          saved?.name === 'light' ? 'light' : 'dark';
-      } catch {
-        document.documentElement.dataset.theme = 'dark';
-      }
-    </script>
     <ClientRouter />
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <Header />
-    <main id="main-content" tabindex="-1" class="column flex gap">
+    <main id="main-content" class="column flex gap">
       <slot />
     </main>
     <Footer />
+    <contact-component></contact-component>
+    <theme-toggle></theme-toggle>
+    <style>
+      .skip-link {
+        background: var(--color-accent-500, #19f9d8);
+        color: var(--color-neutral-900, #333);
+        left: 0;
+        padding: 0.75rem 1.5rem;
+        position: absolute;
+        top: -100px;
+        z-index: 1000;
+        transition: top 0.2s;
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 0 0 0.5rem 0.5rem;
+      }
+      .skip-link:focus {
+        top: 0;
+        outline: 2px solid var(--color-accent-500, #19f9d8);
+      }
+    </style>
   </body>
 </html>
 <style>
+  * {
+  }
+
+  body {
+    min-height: 100vh;
+  }
+
   main {
     align-items: center;
     flex: 1;
-    padding: 3rem 1rem;
-    min-width: 0;
-  }
-  .skip-link {
-    position: fixed;
-    top: -100px;
-    left: 1rem;
-    z-index: 1000;
-    padding: 0.75rem 1.5rem;
-    background: var(--button-background-color);
-    color: var(--button-color);
-  }
-  .skip-link:focus {
-    top: 1rem;
+    padding: 5rem 1rem;
+
+    p {
+      align-items: initial;
+    }
   }
 </style>
 <script>
+  import '@components/contact';
+  import '@components/social';
+  import '@components/theme/toggle';
+  import { globalStyles } from '@styles/global';
   import { applyStoredTheme } from '@utility/theme';
+
+  // Apply global styles
+  if (globalStyles.styleSheet) {
+    document.adoptedStyleSheets = [
+      ...document.adoptedStyleSheets,
+      globalStyles.styleSheet,
+    ];
+  } else {
+    console.error('Global styles not loaded');
+  }
+
   applyStoredTheme();
+
   document.addEventListener('astro:after-swap', applyStoredTheme);
 </script>

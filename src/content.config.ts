@@ -8,8 +8,6 @@ const blog = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/blog' }),
   schema: ({ image }) =>
     z.object({
-      ai: z.boolean().default(false),
-      illustrative: z.boolean().default(false),
       image: image().optional(),
       imageAlt: z.string().default(''),
       date: z.date(),

@@ -7,9 +7,11 @@ date: 2025-01-23
 description: 'Astro delivers blazing-fast, flexible sites—optimizing performance, maintainability, and business impact.'
 ---
 
+# Building with Astro: Fast, Flexible, and Future-Proof
+
 Astro has fundamentally changed how I approach web development. As a developer focused on performance, maintainability, and modern standards, I needed a framework that could deliver blazing speed without sacrificing flexibility or composability. Astro delivered—and then some.
 
-## What makes Astro stand out?
+### What makes Astro stand out?
 
 - **Server-First Rendering & Islands Architecture**  
   Astro renders pages on the server and sends only essential HTML to the browser. Interactive components become "islands," loaded only where needed. This means faster loads, better SEO, and a snappy user experience.
@@ -33,6 +35,6 @@ Astro has fundamentally changed how I approach web development. As a developer f
 - **Effortless Deployment**  
   With Cloudflare Pages and Astro’s static output, CI/CD is simple and reliable. Every push is instantly live, with edge caching for global speed.
 
-## Reflection & What’s Next
+### Reflection & What’s Next
 
 Astro has made my sites faster, my codebase cleaner, and my workflow more enjoyable. I’m excited to keep exploring Astro’s ecosystem—especially new integrations and the growing theme marketplace. If you care about performance, maintainability, and future-proofing your web projects, Astro is worth a serious look.

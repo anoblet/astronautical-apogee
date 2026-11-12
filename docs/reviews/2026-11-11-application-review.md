@@ -1,7 +1,5 @@
 # Application review — November 11, 2026
 
-Implementation: [changes and verification](2026-11-12-implementation.md).
-
 Follow-up: [November 12 review](2026-11-12-application-review.md) adds a fresh
 three-width browser sweep and a design-led improvement plan.
 

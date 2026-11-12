@@ -1,1 +1,36 @@
-<small>© {new Date().getFullYear()} Andrew Noblet</small>
+<copyright-component class="align-items-center flex"></copyright-component>
+<script>
+  import { Base } from '@components/base';
+  import { heart } from '@icons/index';
+  import { css, html } from 'lit';
+
+  class CopyrightComponent extends Base {
+    static styles = [
+      ...super.styles,
+      css`
+        :host {
+          --icon-color: var(--color-rose-400);
+          --icon-size: 1.5rem;
+
+          gap: 0.5rem;
+          justify-content: center;
+          padding: var(--padding-0-2-5);
+
+          > * {
+            display: inline-flex;
+          }
+        }
+      `,
+    ];
+    render() {
+      return html`
+        <!-- <span class="rose-400">${heart}</span> -->
+        <!-- &copy; ${new Date().getFullYear()} Andrew Noblet. All rights reserved. -->
+        <!-- <span>Made with love</span> -->
+        <icon-component>${heart}</icon-component>
+      `;
+    }
+  }
+
+  customElements.define('copyright-component', CopyrightComponent);
+</script>

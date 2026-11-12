@@ -1,96 +1,79 @@
 ---
 import { getCollection } from 'astro:content';
-import Layout from '@layouts/default.astro';
-const posts = (await getCollection('blog')).sort(
-  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+import EditorialImage from '@components/EditorialImage.astro';
+import Layout from '../layouts/default.astro';
+
+const postCollection = await getCollection('blog');
+
+const originalPosts = postCollection
+  .filter(post => post.data.ai !== true)
+  .sort(
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+  );
+
+const generatedPosts = postCollection
+  .filter(post => post.data.ai === true)
+  .sort(
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+  );
+
+// const posts = [...originalPosts, ...generatedPosts];
+const posts = postCollection.sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
 ---
 
 <Layout
-  title="Notes on design & development — Andrew Noblet"
-  description="Notes on web development, component architecture, creative workflows, and digital minimalism. Articles by Andrew Noblet with AI-assisted content labeled."
+  title="Blog"
+  description="Discover new ideas, stories, and updates about web development, AI-driven features, creative workflows, and minimalist philosophy. Technical insights and practical guides from Andrew Noblet."
 >
-  <div class="editorial-page">
-    <section class="editorial-section">
-      <div class="section-heading">
-        <p class="eyebrow">The notebook</p><h1 class="editorial-title">
-          Ideas, experiments,<br />and things learned.
-        </h1><p>
-          Notes on building for the web, keeping things simple, and exploring
-          new tools. AI-assisted articles are labeled so their provenance is
-          clear.
-        </p>
-      </div>
-    </section>
-    <ol class="post-list">
+  <div class="gap grid max-width-56 width-100">
+    <h1 class="text-align-center">Blog</h1>
+    <p class="text-align-center">
+      Discover new ideas, stories, and updates. Dive into topics that inspire,
+      inform, and spark conversation—from web development to creative workflows.
+    </p>
+    <span></span>
+    <ul class="gap-2 list">
       {
         posts.map(post => (
-          <li>
-            <>
-              <div>
-                <time datetime={post.data.date.toISOString()}>
-                  {post.data.date.toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                    timeZone: 'UTC',
-                  })}
-                </time>
-                {post.data.ai && <span>AI-assisted</span>}
-              </div>
-              <h2>
-                <a href={'/blog/' + post.id}>{post.data.title}</a>
-              </h2>
-              <p>{post.data.description}</p>
-              <a
-                href={'/blog/' + post.id}
-                aria-label={`Read ${post.data.title}`}
-              >
-                Read article →
+          <li class="gap grid">
+            <div class="gap-0-5 grid">
+              <span class="color-tertiary font-weight-700">
+                {new Date(post.data.date).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}
+              </span>
+              <hr />
+              <a class="font-weight-6" href={'/blog/' + post.id}>
+                {post.data.title}
               </a>
-            </>
+            </div>
+            <div>{post.data.description}</div>
+            {post.data.image && (
+              <a
+                class="post-image"
+                href={'/blog/' + post.id}
+                aria-label={post.data.title}
+              >
+                <EditorialImage src={post.data.image} alt="" />
+              </a>
+            )}
           </li>
         ))
       }
-    </ol>
+    </ul>
   </div>
 </Layout>
 <style>
-  .post-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    list-style: none;
-    gap: 0 3rem;
-    padding: 0;
+  .post-image {
+    display: block;
   }
+
+  ul,
   li {
-    border-top: 1px solid var(--card-border-color);
-    padding: 2rem 0;
-    display: grid;
-    gap: 1.25rem;
-    align-content: start;
-  }
-  li::marker {
-    content: '';
-  }
-  li > div {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    color: var(--hero-description-color);
-    font-size: 0.75rem;
-  }
-  h2 {
-    font-size: 1.4rem;
-    line-height: 1.4;
-  }
-  p {
-    color: var(--hero-description-color);
-    line-height: 1.8;
-  }
-  @media (max-width: 760px) {
-    .post-list {
-      grid-template-columns: minmax(0, 1fr);
-    }
+    padding: 0;
   }
 </style>

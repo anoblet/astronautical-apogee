@@ -1,120 +1,185 @@
 ---
-import Layout from '@layouts/default.astro';
-import Card from '@components/Card.astro';
 import EditorialImage from '@components/EditorialImage.astro';
-import ContactPanel from '@components/ContactPanel.astro';
-import image from '@assets/images/collaboration-team-fist-bump.webp';
+import pageImage from '@assets/images/collaboration-team-fist-bump.webp';
+import Layout from '../layouts/default.astro';
+import Card from '@components/Card.astro';
+import ArrowForward from '@icons/arrow-forward.svg';
 ---
 
 <Layout
-  title="Software development mentorship — Andrew Noblet"
-  description="Practical guidance for developers working on technical skills, portfolios, and career decisions. Start with a free discovery call to discuss your goals."
+  title="Mentorship"
+  description="Professional mentorship in software development and career guidance. Learn modern web technologies, build your portfolio, and advance your career with personalized coaching and technical skills development."
 >
-  <div class="editorial-page">
-    <section class="editorial-hero">
-      <div class="hero-copy">
-        <p class="eyebrow">Mentorship</p><h1>
-          Build your skills.<br />Find your direction.
-        </h1><p>
-          Work through software development with someone alongside you. We start
-          with your experience, the questions you have, and what you want to be
-          able to do next.
-        </p><div class="editorial-actions">
-          <a class="editorial-button" href="/contact?service=mentorship"
-            >Discuss your learning goals →</a
-          ><a href="#mentorship-process">How sessions work ↓</a>
+  <div class="column flex gap-3 page">
+    <div class="gap grid">
+      <h1 class="text-align-center">Mentorship</h1>
+      <p class="hero-description text-align-center">
+        Fast-track your growth with personalized mentorship and industry
+        insight. Whether you're starting out or advancing your skills, I help
+        you navigate software development and reach your goals.
+      </p>
+    </div>
+
+    <div class="column gap-2 grid">
+      <Card>
+        <h3>Career Guidance</h3>
+        <div class="flex-1">
+          <p>
+            Build your software career with confidence. Get guidance on
+            technology choices, job search, and strategic planning for success.
+          </p>
+          <ul>
+            <li>Career path planning and goal setting</li>
+            <li>Portfolio and resume review</li>
+            <li>Interview preparation and practice</li>
+            <li>Salary negotiation strategies</li>
+            <li>Professional networking guidance</li>
+          </ul>
         </div>
-      </div><figure><EditorialImage src={image} priority /></figure>
+      </Card>
+
+      <Card>
+        <h3>Technical Skills Development</h3>
+        <div class="flex-1">
+          <p>
+            Master modern web technologies and best practices with hands-on
+            learning tailored to your goals and experience.
+          </p>
+          <ul>
+            <li>Web Components and Lit framework</li>
+            <li>Modern JavaScript and TypeScript</li>
+            <li>CSS architecture and design systems</li>
+            <li>Performance optimization techniques</li>
+            <li>Testing and quality assurance</li>
+          </ul>
+        </div>
+      </Card>
+
+      <Card>
+        <h3>Project Mentorship</h3>
+        <div class="flex-1">
+          <p>
+            Get expert support for your projects—from architecture decisions to
+            implementation challenges—so you can build better software.
+          </p>
+          <ul>
+            <li>Code review and architecture feedback</li>
+            <li>Problem-solving and debugging support</li>
+            <li>Best practices and design patterns</li>
+            <li>Project planning and execution</li>
+            <li>Technology selection and evaluation</li>
+          </ul>
+        </div>
+      </Card>
+    </div>
+
+    <EditorialImage src={pageImage} />
+    <section class="gap grid">
+      <h2 class="text-align-center">What You Can Expect</h2>
+      <div class="mentor-grid">
+        <div class="testimonial">
+          "Invaluable insights into modern web development helped me land my
+          first developer role in three months."
+          <div class="testimonial-author">— Jamie Carter</div>
+        </div>
+        <div class="testimonial">
+          "Andrew's mentorship transformed my approach to problem-solving and
+          clean architecture—making me a more effective developer."
+          <div class="testimonial-author">— Riley Morgan</div>
+        </div>
+      </div>
     </section>
-    <section class="editorial-section">
-      <div class="section-heading">
-        <p class="eyebrow">01 / Your learning goals</p><h2>
-          Make room for<br />practice and feedback.
-        </h2><p>
-          Mentorship suits developers building confidence in their work,
-          exploring a technical direction, or preparing a portfolio. We choose a
-          focus that matches your starting point.
-        </p>
-      </div><div class="editorial-grid">
-        <Card
-          ><h3>Technical skills</h3><p>
-            Practice JavaScript, TypeScript, CSS, and Web Components through
-            code you can discuss and improve. Explore testing, performance, and
-            component structure in context.
-          </p></Card
-        ><Card
-          ><h3>Project feedback</h3><p>
-            Bring a personal project or a piece of code you are working on. We
-            can examine the approach, work through a blocker, and identify the
-            next exercise or improvement.
-          </p></Card
-        ><Card
-          ><h3>Career direction</h3><p>
-            Discuss your portfolio, resume, interview preparation, and the kinds
-            of work you want to pursue. Use concrete examples to explain your
-            experience.
-          </p></Card
-        ><Card
-          ><h3>A focused technical decision</h3><p>
-            If you need a review or recommendation for a project rather than
-            ongoing learning, <a href="/services/consultation"
-              >technical consultation</a
-            > may be a better starting point.
-          </p></Card
+
+    <section class="gap grid">
+      <h2 class="text-align-center">Mentorship Process</h2>
+      <div class="mentor-grid">
+        <Card>
+          <h4>1. Initial Assessment</h4>
+          <p>
+            We begin with a discussion of your background, goals, and challenges
+            to create a personalized learning plan.
+          </p>
+        </Card>
+        <Card>
+          <h4>2. Regular Sessions</h4>
+          <p>
+            Weekly or bi-weekly sessions focused on your needs—technical skills,
+            career guidance, or project support.
+          </p>
+        </Card>
+        <Card>
+          <h4>3. Practical Application</h4>
+          <p>
+            Hands-on projects and real-world challenges reinforce learning and
+            build your portfolio with feedback.
+          </p>
+        </Card>
+        <Card>
+          <h4>4. Ongoing Support</h4>
+          <p>
+            Access resources, code reviews, and ongoing guidance as you
+            progress.
+          </p>
+        </Card>
+      </div>
+    </section>
+
+    <section class="gap grid justify-content-center text-align-center">
+      <h2>Ready to Level Up Your Skills?</h2>
+      <p>
+        Let's discuss your goals and create a mentorship plan tailored for you.
+      </p>
+      <span class="space"></span>
+      <div class="flex justify-content-center">
+        <button-component
+          href="https://calendar.app.google/JjnLtVR6mnM11FcS9"
+          variant="primary"
+          class="min-width-25vw"
         >
+          Book a Free Consultation
+          <ArrowForward />
+        </button-component>
       </div>
     </section>
-    <section id="mentorship-process" class="editorial-section">
-      <div class="section-heading">
-        <p class="eyebrow">02 / How we work</p><h2>
-          A conversation.<br />A practical exercise.<br />Something to build on.
-        </h2>
-      </div><ol class="process-list">
-        <li>
-          <h3>Start with your goals</h3><p>
-            Use a free discovery call to discuss experience, questions, and a
-            useful focus.
-          </p>
-        </li><li>
-          <h3>Agree on a plan</h3><p>
-            Confirm session format, frequency, fees, preparation, and feedback
-            expectations before ongoing work.
-          </p>
-        </li><li>
-          <h3>Work on real examples</h3><p>
-            Bring code, a portfolio draft, or a technical question. Discuss the
-            reasoning as well as the result.
-          </p>
-        </li><li>
-          <h3>Review your progress</h3><p>
-            Use what you learn between sessions and adjust the plan as your
-            needs change.
-          </p>
-        </li>
-      </ol>
-    </section>
-    <section class="editorial-section editorial-split">
-      <div class="section-heading">
-        <p class="eyebrow">03 / Before we begin</p><h2>
-          Bring your curiosity.
-        </h2>
-      </div><div class="editorial-prose">
-        <p>
-          You do not need a polished portfolio to start. A small project, a
-          rough draft, or a description of where you get stuck gives us
-          something to discuss.
-        </p><p>
-          Mentorship provides guidance and feedback. It does not promise a job,
-          a promotion, or a particular learning timeline. We define the scope
-          and terms together after the introductory conversation.
-        </p>
-      </div>
-    </section>
-    <ContactPanel
-      title="What would you like to learn next?"
-      description="Tell me about your experience and the work you want to do. We’ll use a free discovery call to see whether mentorship is a useful fit."
-      href="/contact?service=mentorship"
-      label="Discuss mentorship"
-    />
   </div>
 </Layout>
+
+<script>
+  import '@components/button';
+</script>
+
+<style>
+  a {
+    font-weight: 800;
+  }
+
+  .mentor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+  }
+
+  .testimonial {
+    background-color: var(--card-background-color);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+    font-style: italic;
+  }
+
+  .testimonial-author {
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero-description {
+      font-size: 1rem;
+    }
+
+    .mentor-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+</style>

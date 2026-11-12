@@ -7,6 +7,8 @@ date: 2025-03-05
 description: 'Discover how Lit enables fast, reusable, and accessible web components—streamlining UI development and driving project success.'
 ---
 
+# Building with Lit
+
 ### How Lit transformed my approach to web components and UI development
 
 When I set out to modernize my portfolio and client projects, I wanted a UI foundation that was fast, future-proof, and didn’t lock me into a single ecosystem. Lit stood out for its simplicity and its commitment to web standards. Over the past year, it’s become the backbone of my workflow—powering everything from this portfolio to internal tools and CMS experiments.
@@ -24,7 +26,7 @@ Here’s what I’ve learned building with Lit:
   - Centralize and reuse UI logic, so updates are consistent and bugs are rare
   - Move faster with fewer bugs, thanks to clear patterns and minimal boilerplate
 
-## If you’re considering Lit
+**If you’re considering Lit:**
 
 - Start small—wrap a single UI element as a Lit component and see how it fits your stack.
 - Use CSS variables and the Shadow DOM to keep styles maintainable and themeable.

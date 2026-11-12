@@ -1,97 +1,124 @@
 ---
-import Layout from '@layouts/default.astro';
-import Card from '@components/Card.astro';
 import EditorialImage from '@components/EditorialImage.astro';
-import ContactPanel from '@components/ContactPanel.astro';
-import image from '@assets/images/workspace-desk-plant.webp';
-const services = [
-  [
-    'Brand & interface design',
-    'Give your business a recognizable identity and your visitors a clear path. Brand direction, responsive page layouts, and product interfaces.',
-    '/services/design',
-    'Design services',
-  ],
-  [
-    'Web development & hosting',
-    'Build and maintain a practical web presence. Deployment, domains, performance, and ongoing care shaped around your project.',
-    '/services/hosting',
-    'Hosting & deployment',
-  ],
-  [
-    'Technical consultation',
-    'Work through architecture decisions, code quality, performance, and project planning with a second technical perspective.',
-    '/services/consultation',
-    'Technical consultation',
-  ],
-  [
-    'Social media support',
-    'Reach your neighbors through Facebook community groups. Post writing, owner approval, and reply follow-up with clear responsibilities.',
-    '/services/social',
-    'Social media support',
-  ],
-];
+import pageImage from '@assets/images/workspace-desk-plant.webp';
+import ArrowForward from '@icons/arrow-forward.svg';
+import Card from '@components/Card.astro';
+import { Image } from 'astro:assets';
+import Layout from '../layouts/default.astro';
+
+const arrowForward = '';
 ---
 
 <Layout
-  title="Services — Andrew Noblet"
-  description="Explore design, website development, hosting, technical consultation, and local social media support. Define a practical scope with Andrew Noblet."
+  title="Services"
+  description="End-to-end digital solutions from design to deployment. Quality web development, hosting, and consultation services focused on performance and seamless user experiences."
 >
-  <div class="editorial-page">
-    <section class="editorial-hero">
-      <div class="hero-copy">
-        <p class="eyebrow">Services</p><h1>
-          A clearer presence.<br />A practical next step.
-        </h1><p>
-          Whether you are starting fresh or improving something already in use,
-          we begin with your audience, your goals, and the work that will make a
-          difference.
-        </p><div class="editorial-actions">
-          <a class="editorial-button" href="/contact">Discuss your project →</a
-          ><a href="/pricing">Explore packages →</a>
+  <div class="column flex gap-3 page">
+    <div class="gap grid">
+      <h1 class="text-align-center">Services</h1>
+      <p class="hero-description text-align-center">
+        End-to-end digital solutions to bring your ideas to life. From design
+        and deployment to local community outreach, I help your business build a
+        useful digital presence.
+      </p>
+    </div>
+    <div class="column gap-2 grid">
+      <Card>
+        <h3>UI/UX Design</h3>
+        <div class="flex-1">
+          <p>
+            Intuitive, user-friendly interfaces designed for engagement and
+            clarity—always focused on user needs.
+          </p>
+          <ul>
+            <li>User experience research and analysis</li>
+            <li>Wireframing and prototyping</li>
+            <li>Component-based design systems</li>
+            <li>Accessibility-focused design</li>
+          </ul>
         </div>
-      </div><figure><EditorialImage src={image} priority /></figure>
-    </section>
-    <section class="editorial-section">
-      <div class="section-heading">
-        <p class="eyebrow">01 / Choose your starting point</p><h2>
-          Support for each stage<br />of your project.
-        </h2><p>
-          Start with one service or combine several. Your proposal confirms the
-          deliverables, review stages, and responsibilities before paid work
-          begins.
-        </p>
-      </div><div class="editorial-grid">
-        {
-          services.map(([title, description, href, label], index) => (
-            <Card>
-              <>
-                <p class="eyebrow">0{index + 1}</p>
-                <h3>{title}</h3>
-                <p>{description}</p>
-                <a href={href}>{label} →</a>
-              </>
-            </Card>
-          ))
-        }
+        <span></span>
+        <a class="gap-0-5 align-self-flex-end" href="/services/design">
+          Learn more <ArrowForward />
+        </a>
+      </Card>
+      <Card>
+        <h3>Web Hosting & Deployment</h3>
+        <div class="flex-1">
+          <p>
+            Scalable, reliable hosting for any project. I manage deployment,
+            optimization, and security so you can focus on growth.
+          </p>
+          <ul>
+            <li>Server setup and configuration</li>
+            <li>Performance optimization</li>
+            <li>Security and maintenance</li>
+            <li>CI/CD pipeline setup</li>
+          </ul>
+        </div>
+        <span></span>
+        <a class="gap-0-5 align-self-flex-end" href="/services/hosting">
+          Learn more <ArrowForward />
+        </a>
+      </Card>
+      <Card>
+        <h3>Technical Consultation</h3>
+        <div class="flex-1">
+          <p>
+            Strategic guidance for software development challenges—expert advice
+            on technology, planning, and optimization.
+          </p>
+          <ul class="flex-1">
+            <li>Technology stack recommendations</li>
+            <li>Architecture planning</li>
+            <li>Code review and optimization</li>
+            <li>Project planning and strategy</li>
+          </ul>
+        </div>
+        <span></span>
+        <a class="gap-0-5 align-self-flex-end" href="services/consultation">
+          Learn more <ArrowForward />
+        </a>
+      </Card>
+      <Card>
+        <h3>Social Media Management</h3>
+        <div class="flex-1">
+          <p>
+            Reach your neighbors with thoughtful Facebook community-group posts
+            written in your voice, approved by you, and tailored to each group's
+            rules.
+          </p>
+          <ul>
+            <li>Community-group research and rule review</li>
+            <li>Post writing and owner approval</li>
+            <li>Reply follow-up and lead tracking</li>
+            <li>One-time and monthly packages</li>
+          </ul>
+        </div>
+        <a class="gap-0-5 align-self-flex-end" href="/services/social">
+          Learn more <ArrowForward />
+        </a>
+      </Card>
+    </div>
+    <EditorialImage src={pageImage} />
+    <section class="gap grid justify-content-center text-align-center">
+      <h2>Ready to Get Started?</h2>
+      <p>Let's connect and find the perfect solution for your project.</p>
+      <span class="space"></span>
+      <div class="flex justify-content-center">
+        <button-component
+          href="https://calendar.app.google/JjnLtVR6mnM11FcS9"
+          variant="primary"
+          class="min-width-25vw"
+        >
+          Book a Free Consultation
+          <ArrowForward />
+        </button-component>
       </div>
     </section>
-    <section class="editorial-section editorial-split">
-      <div class="section-heading">
-        <p class="eyebrow">02 / Working together</p><h2>
-          Define the work.<br />Keep the conversation open.
-        </h2>
-      </div><div class="editorial-prose">
-        <p>
-          Bring your current website, a rough idea, or a question you have been
-          trying to answer. We use an introductory call to understand the
-          situation and decide whether there is a useful fit.
-        </p><p>
-          If we move ahead, the proposal sets the scope, schedule, feedback
-          stages, and support expectations. You know what is being designed,
-          built, or reviewed.
-        </p><a href="/portfolio/professional">See professional work →</a>
-      </div>
-    </section>
-    <ContactPanel />
   </div>
 </Layout>
+
+<script>
+  import '@components/button';
+</script>

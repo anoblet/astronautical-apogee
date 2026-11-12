@@ -1,95 +1,241 @@
 ---
-import Layout from '@layouts/default.astro';
 import EditorialImage from '@components/EditorialImage.astro';
-import ContactPanel from '@components/ContactPanel.astro';
-import profile from '@assets/images/profile.webp';
-import skyline from '@assets/images/new-york-brooklyn-bridge.webp';
+import balanceImage from '@assets/images/minimalism-water-stones.webp';
+import bridgeImage from '@assets/images/new-york-brooklyn-bridge.webp';
+import skylineImage from '@assets/images/new-york-empire-state.webp';
+import Layout from '@layouts/default.astro';
+import Card from '@components/Card.astro';
+import profileImage from '@assets/images/profile.webp';
+import ArrowForward from '@icons/arrow-forward.svg';
 ---
 
 <Layout
-  title="About Andrew Noblet"
-  description="Meet Andrew Noblet, a New York-based software engineer working on design, web development, and accessible digital experiences."
+  title="About"
+  description="Meet Andrew Noblet - A curious software engineer with global perspective. Born in Chile, lived across Puerto Rico, Ohio, and New York. Passionate about minimalist philosophy and accessible web development."
 >
-  <div class="editorial-page">
-    <section class="editorial-hero">
-      <div class="hero-copy">
-        <p class="eyebrow">Hello, I’m Andrew</p><h1>
-          Curious by nature.<br />Practical by choice.
-        </h1><p>
-          I’m a software engineer in New York. I work on websites, interfaces,
-          and the systems behind them, with an interest in making technology
-          easier to understand and use.
-        </p><div class="editorial-actions">
-          <a class="editorial-button" href="/portfolio/professional"
-            >Explore my work →</a
-          ><a href="/contact">Let’s talk →</a>
-        </div>
-      </div><figure>
-        <EditorialImage src={profile} alt="Andrew Noblet" priority />
-      </figure>
+  <div class="max-width-56 width-100 margin-auto column flex gap-2">
+    <span></span>
+    <section class="gap grid justify-content-center text-align-center">
+      <img
+        src={profileImage.src}
+        alt="Andrew Noblet profile photo"
+        class="margin-auto border-radius-50 box-shadow-tertiary block height-16 width-16 object-fit-cover relative z-index-1"
+        loading="lazy"
+        decoding="async"
+        width={profileImage.width}
+        height={profileImage.height}
+      />
+      <h1>Meet Andrew Noblet</h1>
+      <p>
+        Hello! I'm <strong>Andrew Noblet</strong>, a curious soul with a truly
+        global perspective—born in Chile and shaped by rich experiences living
+        in Puerto Rico's vibrant culture, Ohio's midwestern values, and now New
+        York's endless energy. Each place taught me something different:
+        resilience from my Chilean roots, warmth and community from Puerto Rico,
+        steady determination from Ohio, and boundless possibility from New York.
+      </p>
+      <p>
+        I'm passionate about exploring life through diverse interests that span
+        the physical, creative, and intellectual. Whether I'm building with my
+        favorite technologies like Astro and Lit, tinkering with smart home
+        automation, or diving deep into Eastern philosophy and Greek mythology,
+        I believe in living authentically and embracing the adventure that each
+        day brings.
+      </p>
     </section>
-    <section class="editorial-section editorial-split">
-      <div class="section-heading">
-        <p class="eyebrow">01 / How I work</p><h2>
-          Less noise.<br />More meaning.
-        </h2>
-      </div><div class="editorial-prose">
-        <p>
-          I like to understand the problem before adding complexity. Who is
-          using the website? What are they trying to do? Which parts need to
-          work together? Those questions guide choices about content, layout,
-          and implementation.
-        </p><p>
-          My work includes online learning, e-commerce, and business websites. I
-          use tools such as Astro, Lit, JavaScript, and TypeScript, choosing an
-          approach around the project rather than starting with a framework.
-        </p><p>
-          You work directly with me. We define the scope, make room for
-          feedback, and keep practical details such as handoff and maintenance
-          part of the conversation.
-        </p><a href="/services">See how I can help →</a>
-      </div>
-    </section>
-    <section class="editorial-section editorial-split">
-      <div class="section-heading">
-        <p class="eyebrow">02 / Beyond the screen</p><h2>
-          A little background.
-        </h2><EditorialImage
-          src={skyline}
-          alt="Brooklyn Bridge and Manhattan at dusk"
-        />
-      </div><div class="editorial-prose">
-        <p>
-          I was born in Chile and have lived in Puerto Rico, Ohio, and New York.
-          My interests range from skateboarding, snowboarding, and biking to
-          guitar, 3D printing, and home automation.
-        </p><p>
-          Eastern philosophy and Greek mythology are recurring interests. I
-          value curiosity, preparation, and simplicity in both my work and daily
-          life.
-        </p><details>
-          <summary>Early projects and interests</summary><div
-            class="editorial-prose"
+    <Card>
+      <h2>Personal Facts</h2>
+      <ul class="column flex gap-0-5 padding-horizontal-1">
+        <li><strong>Full Name:</strong> Andrew Noblet</li>
+        <li><strong>Born in:</strong> Chile</li>
+        <li>
+          <strong>Life Journey:</strong> Chile → Puerto Rico → Ohio → <strong
+            >New York</strong
           >
-            <p>
-              I built my first website at 13 and explored PHP, php-nuke,
-              Dreamweaver, and ColdFusion. Building a water-cooled computer also
-              taught me a practical lesson about preparation and testing.
-            </p><p>
-              At 14, I petitioned my town for a skatepark. That experience stays
-              with me as an example of turning an idea into something useful
-              through persistence and communication.
-            </p><p>
-              Today I still enjoy projects that connect ideas to physical
-              things, whether that is a 3D-printed object, a smart-home
-              automation, or learning a new piece of music.
-            </p>
-          </div>
-        </details><a href="https://github.com/anoblet"
-          >Find my work on GitHub →</a
+        </li>
+        <li>
+          <strong>GitHub:</strong>
+          <a href="https://github.com/anoblet" target="_blank" rel="noopener"
+            >anoblet</a
+          >
+        </li>
+        <li>
+          <strong>Philosophy:</strong> Eastern wisdom meets Western curiosity—drawing
+          from Confucianism, Buddhism, and Shintoism while staying grounded in practical
+          application
+        </li>
+        <li>
+          <strong>Favorite Tech:</strong> Astro, Lit, Linux, and the pnpm workflow—tools
+          that embrace simplicity and performance
+        </li>
+        <li>
+          <strong>Motto:</strong> "Less noise, more meaning"
+        </li>
+        <li>
+          <strong>Fun Fact:</strong> I love a good plate of spaghetti, but you won't
+          catch me eating lamb!
+        </li>
+      </ul>
+    </Card>
+    <Card>
+      <h2>Hobbies & Passions</h2>
+      <div class="column flex gap">
+        <div>
+          <h3>Physical & Outdoor</h3>
+          <p>
+            Skateboarding has been a passion since childhood—passionate enough
+            that at 14, I successfully petitioned my town to build a skatepark!
+            The persistence paid off, and seeing that project come to life
+            taught me the power of advocacy and community engagement. I also
+            love snowboarding for the pure exhilaration and bike riding through
+            New York's diverse neighborhoods, connecting with the rhythm and
+            flow of movement.
+          </p>
+        </div>
+        <div>
+          <h3>Creative & Technical</h3>
+          <p>
+            Playing guitar gives me a creative outlet that balances my technical
+            work. My 3D printing projects range from practical household
+            solutions to experimental designs—there's something satisfying about
+            bringing digital ideas into physical reality. Smart home technology
+            fascinates me; I love building automated systems that make daily
+            life more efficient while staying true to minimalist principles.
+          </p>
+        </div>
+        <div>
+          <h3>Intellectual Pursuits</h3>
+          <p>
+            I'm deeply interested in politics and how policy shapes our digital
+            future, and I find history essential for understanding today's
+            technological and social patterns. Eastern philosophy—Confucianism's
+            harmony, Buddhist mindfulness, and Shinto reverence for natural
+            balance—guides my approach to both code architecture and life
+            decisions. Greek mythology reminds me that human struggles with
+            technology, power, and purpose are as old as civilization itself.
+          </p>
+        </div>
+      </div>
+    </Card>
+    <Card>
+      <h2>Life Philosophy</h2>
+      <EditorialImage src={balanceImage} />
+      <p>
+        My worldview is shaped by a blend of Eastern wisdom traditions that
+        complement each other beautifully. <strong>Confucian</strong> principles
+        of harmony and continuous learning influence how I approach both code architecture
+        and relationships—everything should be balanced, purposeful, and constantly
+        improving. <strong>Buddhist</strong> mindfulness keeps me present and compassionate,
+        especially valuable in our fast-paced digital world. <strong
+          >Shinto</strong
+        > reverence for natural balance reminds me to respect both the digital and
+        physical environments I inhabit.
+      </p>
+      <p>
+        Greek mythology grounds me in the understanding that human struggles
+        with technology, power, and purpose are timeless. Whether it's
+        Prometheus bringing fire to humanity or Pandora's box of unintended
+        consequences, these ancient stories offer profound insights for
+        navigating modern innovation responsibly.
+      </p>
+      <p>
+        All of this culminates in my core belief: <em
+          >less noise, more meaning</em
+        >. Whether I'm writing code, building relationships, or making life
+        decisions, I strive for simplicity, intentionality, and authentic
+        connection.
+      </p>
+    </Card>
+    <Card>
+      <h2>Early Adventures</h2>
+      <p>
+        My curiosity started young and led to some memorable learning
+        experiences. At <strong>13</strong>, I built my first website at <strong
+          >nebulae.org</strong
         >
+        and dove deep into PHP development with php-nuke—my first taste of content
+        management systems. This was back when Adobe Dreamweaver was the tool of
+        choice, and I used it religiously for every project.
+      </p>
+      <p>
+        I was so fascinated by web development that I bought a
+        several-hundred-page book on Adobe ColdFusion and read it
+        cover-to-cover, absorbing every detail about server-side programming. By
+        my teens, I was ambitious enough to build my own water-cooled computer
+        system—let's just say I learned the importance of preparation and leak
+        testing the hard way. Towels were definitely needed, and the experience
+        taught me valuable lessons about both hardware and humility! 😅
+      </p>
+      <p>
+        Meanwhile, my skateboarding passion was equally strong. At <strong
+          >14</strong
+        >, I didn't just wish for better facilities—I petitioned my town council
+        to build a skatepark, presenting a case for youth engagement and
+        community recreation. They listened, and the skatepark became a reality,
+        teaching me that persistence and clear communication can turn ideas into
+        action.
+      </p>
+      <p>
+        These early adventures shaped my core belief that curiosity,
+        persistence, preparation, and a willingness to learn from mistakes
+        (sometimes messy ones!) are the best tools for any journey.
+      </p>
+    </Card>
+    <Card>
+      <h2>Life in New York</h2>
+      <EditorialImage
+        src={bridgeImage}
+        alt="Brooklyn Bridge and the Manhattan skyline at dusk"
+      />
+      <p>
+        New York perfectly matches my energy for exploration and growth. The
+        city's diversity mirrors my own global journey, and I love how every
+        neighborhood offers something new to discover. Whether I'm exploring on
+        my bike through different boroughs, testing out a new 3D printing
+        technique in my apartment, or finding quiet spots to read about history
+        and philosophy, the city provides endless opportunities for curiosity
+        and connection.
+      </p>
+      <p>
+        The tech community here is incredible—I particularly enjoy connecting
+        with people who share my passion for open-source development, minimalist
+        design principles, and building technology that genuinely improves
+        people's lives. There's something special about discussing the parallels
+        between ancient Stoicism and modern minimalism over coffee, or sharing
+        skateboarding stories that bridge generations and cultures.
+      </p>
+      <p>
+        Living here reinforces my belief that the best solutions—whether in
+        code, design, or life—often come from embracing complexity while
+        maintaining simplicity at the core. It's the perfect environment for
+        someone who appreciates both cutting-edge innovation and timeless
+        wisdom.
+      </p>
+    </Card>
+    <section class="gap grid justify-content-center text-align-center">
+      <EditorialImage
+        src={skylineImage}
+        alt="Empire State Building above the New York skyline at sunset"
+      />
+      <h2>Let's Connect!</h2>
+      <p>
+        Let's connect and discuss how my experience can help bring your vision
+        to life.
+      </p>
+      <div class="gap grid justify-content-center">
+        <button-component
+          href="/contact"
+          variant="primary"
+          class="min-width-25vw"
+        >
+          Get in Touch
+          <ArrowForward />
+        </button-component>
       </div>
     </section>
-    <ContactPanel title="Have something in mind?" />
   </div>
 </Layout>
+
+<script>
+  import '@components/button';
+</script>

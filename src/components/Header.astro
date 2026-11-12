@@ -2,14 +2,16 @@
 import Navigation from './Navigation.astro';
 ---
 
-<header><Navigation /></header>
+<header>
+  <Navigation />
+</header>
 <style>
   header {
-    background: var(--navigation-background-color);
-    border-bottom: 1px solid var(--card-border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     width: 100%;
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 100;
+    left: 0;
+    z-index: 1000;
   }
 </style>

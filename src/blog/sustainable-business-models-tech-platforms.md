@@ -12,7 +12,7 @@ Sustainability ensures long-term success:
 - Differentiate services for diverse customer needs
 - Build partnerships and community support
 
-## Actionable Steps
+**Actionable Steps:**
 
 - Offer tiered pricing and value-added services
 - Engage with sponsors and contributors

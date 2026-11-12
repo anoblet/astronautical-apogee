@@ -11,14 +11,7 @@ const posts = (await getLaurenPosts()).sort(
   <div class="gap grid max-width-56 width-100">
     <h1 class="text-align-center">Lauren</h1>
     <p class="text-align-center">Posts by Lauren.</p>
-    {
-      posts.length === 0 && (
-        <p>
-          No posts have been published here yet.{' '}
-          <a href="/blog">Explore the notebook instead →</a>
-        </p>
-      )
-    }
+    <span></span>
     <ul class="gap-2 list">
       {
         posts.map(post => (

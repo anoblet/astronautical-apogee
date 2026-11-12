@@ -10,7 +10,7 @@
  *   node scripts/screenshot-business-card.js
  *
  * Requirements:
- *   - Development server running on http://localhost:4321
+ *   - Development server running on http://localhost:4322
  *   - Playwright browser installed
  *   - cwebp binary available in bin/ directory
  */
@@ -43,7 +43,7 @@ async function checkDevServer() {
       console.log('✓ Development server is running');
       return true;
     }
-  } catch {
+  } catch (error) {
     console.log('✗ Development server is not running');
     console.log('Please start the development server with: pnpm run dev');
     return false;
@@ -82,12 +82,6 @@ async function takeBusinessCardScreenshots() {
     // Wait for business card components to load
     await page.waitForSelector('business-card');
     console.log('✓ Business card components loaded');
-
-    await page
-      .locator('business-card')
-      .evaluateAll(cards =>
-        cards.forEach(card => card.setAttribute('export', ''))
-      );
 
     // Take screenshot of front side (first business card)
     console.log('📸 Taking screenshot of front side...');

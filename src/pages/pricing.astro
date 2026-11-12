@@ -1,6 +1,5 @@
 ---
 import CallToAction from '@components/CallToAction.astro';
-import PackageExpectations from '@components/PackageExpectations.astro';
 import Layout from '@layouts/default.astro';
 import PricingCard from '@components/PricingCard.astro';
 ---
@@ -41,7 +40,7 @@ import PricingCard from '@components/PricingCard.astro';
         'Basic SEO',
         'Email support',
       ]}
-      price="$999 one-time"
+      price="$999"
       buttonText="Get Started"
       buttonHref="/contact"
     />
@@ -54,18 +53,11 @@ import PricingCard from '@components/PricingCard.astro';
         'Performance optimization',
         'Priority support',
       ]}
-      price="$2,499 one-time"
+      price="$2,499"
       buttonText="Get Started"
       buttonHref="/contact"
     />
   </div>
-  <p class="max-width-48">
-    These are website build packages. <a href="/services/design/pricing"
-      >Design-only packages</a
-    > start at $499. We confirm which design work, integrations, and support are
-    included in your website proposal.
-  </p>
-  <PackageExpectations />
 </Layout>
 
 <style>

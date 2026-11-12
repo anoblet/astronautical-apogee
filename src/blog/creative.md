@@ -7,7 +7,9 @@ date: 2025-07-01
 description: 'Empowering developer creativity fuels innovation, product quality, and deeper team investment in business outcomes.'
 ---
 
-## Why you should let your developers get creative
+# Creative
+
+### Why you should let your developers get creative
 
 Unlocking developer creativity isn’t just good for morale—it’s a catalyst for innovation and growth. When developers are empowered to think beyond the task list, they bring fresh perspectives, drive meaningful change, and help your product stand out.
 

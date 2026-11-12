@@ -1,40 +1,13 @@
 ---
 import Copyright from './Copyright.astro';
-import ThemeToggle from './ThemeToggle.astro';
 ---
 
 <footer>
-  <a class="footer-name" href="/">Andrew Noblet</a>
-  <p>Thoughtful design. Useful technology.</p>
-  <nav aria-label="Footer">
-    <a href="/contact">Contact</a><a href="mailto:andrewbnoblet@gmail.com"
-      >Email</a
-    ><a href="https://github.com/anoblet">GitHub</a><a
-      href="https://www.linkedin.com/in/andrew-noblet/">LinkedIn</a
-    ><a href="/settings">Appearance</a>
-  </nav>
-  <ThemeToggle />
   <Copyright />
 </footer>
+
 <style>
   footer {
-    width: calc(100% - 2rem);
-    max-width: 1160px;
-    margin: 2rem auto 0;
-    border-top: 1px solid var(--card-border-color);
-    padding: 2.5rem 0 6rem;
-    display: grid;
-    gap: 1rem;
-    color: var(--hero-description-color);
-    font-size: 0.85rem;
-  }
-  .footer-name {
-    font-size: 1rem;
-    font-weight: 600;
-  }
-  nav {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
+    padding: 0.5rem 1rem;
   }
 </style>
