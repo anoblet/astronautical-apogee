@@ -19,7 +19,18 @@ Static global/utility CSS is shared with Lit shadow roots. Theme CSS is generate
 from `src/themes/*.json` at `/theme.css`, while `src/utility/theme.ts` handles
 validated browser preferences. Shared editorial patterns live in
 `src/styles/editorial.css` and `src/components/ContactPanel.astro`. The Design
-service page remains the visual reference. Public portfolio contributions live
+service page remains the visual reference. The homepage introduces Andrew with his portrait and early maker projects;
+the About page adds his Santiago-to-New-York background. See the
+[page responsibility guide](src/pages/_readme.md) for public content boundaries.
+
+```mermaid
+flowchart LR
+    Background[Andrew’s public background and work] --> Pages[Homepage and About]
+    Pages --> Identity[Portrait, maker stories, and New York connection]
+    Identity --> Conversation[Portfolio exploration and direct contact]
+```
+
+Public portfolio contributions live
 in `src/data/work.ts`; new results and metrics need supporting evidence.
 
 The Angular/Oxc and server-source-map adapters in `astro.config.mjs` accommodate

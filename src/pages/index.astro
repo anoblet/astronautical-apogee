@@ -3,7 +3,7 @@ import Layout from '@layouts/default.astro';
 import EditorialImage from '@components/EditorialImage.astro';
 import ContactPanel from '@components/ContactPanel.astro';
 import Card from '@components/Card.astro';
-import hero from '@assets/images/workspace-minimal-keyboard.webp';
+import hero from '@assets/images/profile.webp';
 ---
 
 <Layout
@@ -13,24 +13,29 @@ import hero from '@assets/images/workspace-minimal-keyboard.webp';
   <div class="editorial-page">
     <section class="editorial-hero">
       <div class="hero-copy">
-        <p class="eyebrow">Independent design & development</p><h1>
+        <p class="eyebrow">Andrew Noblet / New York</p><h1>
           Good ideas.<br />Thoughtfully built.
         </h1><p>
-          I help small businesses and teams turn their ideas into clear, useful
-          websites and digital experiences. From the first design to deployment,
-          you work directly with me.
+          I’m Andrew, a software engineer with a designer’s eye and a habit of
+          making things. I help small businesses and teams turn their ideas into
+          clear, useful websites. From the first design to deployment, you work
+          directly with me.
         </p><div class="editorial-actions">
           <a class="editorial-button" href="/contact"
             >Let’s talk about your project <span aria-hidden="true">→</span></a
           ><a href="/portfolio/professional">Explore my work →</a>
-        </div><p class="eyebrow">Design · Development · Technical guidance</p>
+        </div><p class="eyebrow">Curiosity · Craft · Useful technology</p>
       </div>
       <figure>
         <EditorialImage
           src={hero}
+          alt="Andrew Noblet"
           priority
           sizes="(max-width: 760px) calc(100vw - 2rem), 540px"
         />
+        <figcaption>
+          Andrew Noblet · Design, code, and a little curiosity.
+        </figcaption>
       </figure>
     </section>
     <section class="editorial-section">
@@ -100,6 +105,34 @@ import hero from '@assets/images/workspace-minimal-keyboard.webp';
         </p><a href="/portfolio/personal">Explore personal projects →</a>
       </div>
     </section>
+    <section class="editorial-section editorial-split">
+      <div class="section-heading">
+        <p class="eyebrow">03 / Always making something</p>
+        <h2>It started with a website.<br />And a skatepark.</h2>
+      </div>
+      <div class="editorial-prose">
+        <p>
+          I built my first website at 13. At 14, I petitioned my town for a
+          skatepark. Different projects, same starting point: an idea worth
+          doing something about.
+        </p>
+        <p>
+          That curiosity still takes me from web components to 3D printing, home
+          automation, and guitar. I like learning how things work and making
+          something useful with what I find.
+        </p>
+        <a href="/about">A little more about me →</a>
+      </div>
+    </section>
     <ContactPanel />
   </div>
 </Layout>
+
+<style>
+  figcaption {
+    margin-top: 1rem;
+    color: var(--hero-description-color);
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+</style>
