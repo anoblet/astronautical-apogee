@@ -1,5 +1,5 @@
 ---
-import CallToAction from '@components/CallToAction.astro';
+import PricingNavigation from '@components/PricingNavigation.astro';
 import PackageExpectations from '@components/PackageExpectations.astro';
 import Layout from '@layouts/default.astro';
 import PricingCard from '@components/PricingCard.astro';
@@ -13,24 +13,15 @@ import PricingCard from '@components/PricingCard.astro';
   <p
     class="hero-description text-align-center margin-bottom-4 max-width-48 margin-auto"
   >
-    Select the plan that suits your goals. Every plan includes direct
-    collaboration, modern web technologies, and ongoing support.
+    Find the right support for your next step, from a new website to ongoing
+    hosting. Choose a service to compare packages and billing options.
   </p>
 
-  <div class="pricing-links flex gap-2 justify-center margin-bottom-4">
-    <CallToAction href="/services/hosting/pricing">
-      Hosting Pricing
-    </CallToAction>
-    <CallToAction href="/services/design/pricing">
-      Design Pricing
-    </CallToAction>
-    <CallToAction href="/services/consultation/pricing">
-      Consultation Pricing
-    </CallToAction>
-    <CallToAction href="/services/social/pricing">
-      Social Media Pricing
-    </CallToAction>
-  </div>
+  <PricingNavigation />
+  <h2 class="text-align-center">Website packages</h2>
+  <p class="text-align-center margin-bottom-2">
+    One-time builds for a new launch or your next stage of growth.
+  </p>
   <div class="grid auto-fit-20 gap-2 width-100 max-width-64 margin-auto">
     <PricingCard
       title="Basic"
@@ -67,9 +58,3 @@ import PricingCard from '@components/PricingCard.astro';
   </p>
   <PackageExpectations />
 </Layout>
-
-<style>
-  .pricing-links {
-    flex-wrap: wrap;
-  }
-</style>

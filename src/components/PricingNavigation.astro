@@ -1,0 +1,112 @@
+---
+const categories = [
+  { label: 'Websites', detail: 'Build & launch', href: '/pricing' },
+  {
+    label: 'Design',
+    detail: 'Brand & interface',
+    href: '/services/design/pricing',
+  },
+  {
+    label: 'Hosting',
+    detail: 'Keep it running',
+    href: '/services/hosting/pricing',
+  },
+  {
+    label: 'Consultation',
+    detail: 'Advice & direction',
+    href: '/services/consultation/pricing',
+  },
+  {
+    label: 'Social media',
+    detail: 'Community & content',
+    href: '/services/social/pricing',
+  },
+];
+const pathname = Astro.url.pathname.replace(/\/$/, '');
+---
+
+<nav class="pricing-navigation" aria-label="Pricing categories">
+  <p>Explore pricing by service</p>
+  <ul>
+    {
+      categories.map(({ label, detail, href }) => (
+        <li>
+          <a href={href} aria-current={pathname === href ? 'page' : undefined}>
+            <span>{label}</span>
+            <small>{detail}</small>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  .pricing-navigation {
+    width: 100%;
+    max-width: 64rem;
+    margin: 0 auto 2rem;
+  }
+  p {
+    margin-bottom: 0.75rem;
+    color: var(--hero-description-color);
+    font-size: 0.8rem;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.5rem;
+    padding: 0;
+    list-style: none;
+  }
+  .pricing-navigation li {
+    display: block;
+    padding: 0;
+  }
+  a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    height: 100%;
+    padding: 1rem;
+    border: 1px solid var(--card-border-color);
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  span {
+    font-weight: 600;
+  }
+  small {
+    color: var(--hero-description-color);
+    font-size: 0.75rem;
+  }
+  a:hover,
+  a[aria-current='page'] {
+    border-color: var(--a-color);
+    background: color-mix(
+      in srgb,
+      var(--a-color) 9%,
+      var(--body-background-color)
+    );
+  }
+  a[aria-current='page'] {
+    box-shadow: inset 0 -3px var(--a-color);
+  }
+  a:focus-visible {
+    outline: 2px solid var(--a-color);
+    outline-offset: 3px;
+  }
+  @media (max-width: 700px) {
+    ul {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    li:first-child {
+      grid-column: 1 / -1;
+    }
+    a {
+      padding: 0.85rem;
+    }
+  }
+</style>
