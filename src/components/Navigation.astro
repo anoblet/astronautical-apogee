@@ -1,4 +1,6 @@
 ---
+import Planet from '@assets/icons/planet.svg';
+
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const current = (href: string) => (path === href ? 'page' : undefined);
 const groups = [
@@ -25,9 +27,12 @@ const groups = [
 
 <site-navigation>
   <nav aria-label="Main navigation">
-    <a class="brand" href="/" aria-current={current('/')}
-      >Andrew Noblet<span>Design & development</span></a
-    >
+    <a class="brand" href="/" aria-current={current('/')}>
+      <Planet class="brand-icon" aria-hidden="true" focusable="false" />
+      <span class="brand-text">
+        Andrew Noblet<span class="brand-tagline">Design & development</span>
+      </span>
+    </a>
     <details class="navigation-menu" open>
       <summary class="mobile-menu">Menu</summary>
       <div class="nav-links">
@@ -100,18 +105,29 @@ const groups = [
   summary:hover {
     color: var(--a-color);
   }
-  a[aria-current='page'] {
+  a[aria-current='page']:not(.brand) {
     text-decoration: underline;
     text-underline-offset: 0.35rem;
   }
-  .brand {
+  a.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    text-decoration: none;
+  }
+  .brand-icon {
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+  }
+  .brand-text {
     display: grid;
     font-size: 1rem;
     font-weight: 600;
     white-space: nowrap;
     gap: 0.2rem;
   }
-  .brand span {
+  .brand-tagline {
     font-size: 0.65rem;
     font-weight: 400;
     color: var(--hero-description-color);
