@@ -134,10 +134,17 @@ export class ScrollComponent extends Base {
 
     this.shadowRoot
       ?.querySelector('#container')
-      ?.addEventListener('scrollsnapchanging', ({ snapTargetInline }: any) => {
-        this.index = Array.from(snapTargetInline.parentNode.children).indexOf(
-          snapTargetInline
-        );
+      ?.addEventListener('scrollsnapchanging', event => {
+        if (!('snapTargetInline' in event)) return;
+        const { snapTargetInline } = event;
+        if (
+          !(snapTargetInline instanceof Element) ||
+          !snapTargetInline.parentElement
+        )
+          return;
+        this.index = Array.from(
+          snapTargetInline.parentElement.children
+        ).indexOf(snapTargetInline);
 
         if (this.index === 0) {
           this.leftIcon.hidden = true;
