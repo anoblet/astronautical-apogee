@@ -1,4 +1,5 @@
 ---
+import './navigation.css';
 import Planet from '@assets/icons/planet.svg';
 
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
@@ -34,7 +35,20 @@ const groups = [
       </span>
     </a>
     <details class="navigation-menu" open>
-      <summary class="mobile-menu">Menu</summary>
+      <summary class="mobile-menu"
+        ><svg
+          class="menu-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          aria-hidden="true"
+          ><path class="menu-open" d="M4 6h16M4 12h16M4 18h16"></path><path
+            class="menu-close"
+            d="m6 6 12 12M6 18 18 6"></path></svg
+        ><span class="menu-open">Menu</span><span class="menu-close">Close</span
+        ></summary
+      >
       <div class="nav-links">
         {
           groups.map(group => (
@@ -82,162 +96,7 @@ const groups = [
     ?.querySelector('.navigation-menu')
     ?.toggleAttribute('open', matchMedia('(min-width: 1024px)').matches);
 </script>
-<style>
-  site-navigation {
-    display: block;
-  }
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: auto;
-    padding: 1rem;
-    background: var(--navigation-background-color);
-  }
-  a,
-  summary {
-    color: var(--navigation-a-color);
-    font-size: 0.85rem;
-  }
-  a:hover,
-  summary:hover {
-    color: var(--a-color);
-  }
-  a[aria-current='page']:not(.brand) {
-    text-decoration: underline;
-    text-underline-offset: 0.35rem;
-  }
-  a.brand {
-    display: flex;
-    align-items: center;
-    gap: 0.65rem;
-    text-decoration: none;
-  }
-  .brand-icon {
-    width: 2rem;
-    height: 2rem;
-    flex-shrink: 0;
-  }
-  .brand-text {
-    display: grid;
-    font-size: 1rem;
-    font-weight: 600;
-    white-space: nowrap;
-    gap: 0.2rem;
-  }
-  .brand-tagline {
-    font-size: 0.65rem;
-    font-weight: 400;
-    color: var(--hero-description-color);
-  }
-  summary {
-    cursor: pointer;
-    list-style: none;
-    padding: 0.7rem;
-    min-width: 44px;
-    min-height: 44px;
-    text-align: center;
-  }
-  summary::-webkit-details-marker {
-    display: none;
-  }
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 1.3rem;
-  }
-  .nav-group {
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-  .nav-disclosure summary::after {
-    content: '';
-    display: inline-block;
-    width: 0.45rem;
-    height: 0.45rem;
-    border-right: 1px solid currentColor;
-    border-bottom: 1px solid currentColor;
-    transform: rotate(45deg);
-    vertical-align: 0.2rem;
-  }
-  .nav-disclosure[open] summary::after {
-    transform: rotate(225deg);
-  }
-  .nav-disclosure summary {
-    font-size: 1.2rem;
-  }
-  .submenu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 13rem;
-    background: var(--navigation-background-color);
-    border: 1px solid var(--card-border-color);
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-    box-shadow: var(--box-shadow);
-    display: grid;
-  }
-  .submenu a {
-    padding: 0.75rem;
-  }
-  .nav-contact {
-    border-bottom: 1px solid var(--a-color);
-    padding-block: 0.5rem;
-    gap: 0.75rem;
-  }
-  @media (min-width: 1024px) {
-    .mobile-menu {
-      display: none;
-    }
-  }
-  @media (max-width: 1023px) {
-    nav {
-      flex-wrap: wrap;
-    }
-    .navigation-menu[open] {
-      width: 100%;
-    }
-    .navigation-menu[open] > summary {
-      position: absolute;
-      right: 1rem;
-      top: 1rem;
-    }
-    .nav-links {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 0.25rem;
-      padding-block: 1rem;
-      max-height: calc(100dvh - 7rem);
-      overflow-y: auto;
-    }
-    .nav-links > a,
-    .nav-group > a {
-      padding: 0.75rem;
-    }
-    .nav-group {
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    .nav-group > a {
-      flex: 1;
-    }
-    .nav-disclosure {
-      display: contents;
-    }
-    .nav-disclosure .submenu {
-      position: static;
-      width: 100%;
-      box-shadow: none;
-      border: 0;
-      border-left: 1px solid var(--card-border-color);
-      margin-left: 0.75rem;
-    }
-  }
-</style>
+
 <script>
   class SiteNavigation extends HTMLElement {
     private controller?: AbortController;
