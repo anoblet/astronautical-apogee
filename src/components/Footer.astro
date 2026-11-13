@@ -4,17 +4,39 @@ import ThemeToggle from './ThemeToggle.astro';
 ---
 
 <footer>
-  <a class="footer-name" href="/">Andrew Noblet</a>
-  <p>Thoughtful design. Useful technology.</p>
-  <nav aria-label="Footer">
-    <a href="/contact">Contact</a><a href="mailto:andrewbnoblet@gmail.com"
-      >Email</a
-    ><a href="https://github.com/anoblet">GitHub</a><a
-      href="https://www.linkedin.com/in/andrew-noblet/">LinkedIn</a
-    ><a href="/settings">Appearance</a>
-  </nav>
-  <ThemeToggle />
-  <Copyright />
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a class="footer-name" href="/"
+        >Andrew Noblet<span aria-hidden="true">.</span></a
+      >
+      <p>Thoughtful design.<br />Useful technology.</p>
+    </div>
+    <nav aria-label="Footer">
+      <div class="footer-group">
+        <h2>Start a conversation</h2>
+        <a href="/contact">Contact <span aria-hidden="true">→</span></a>
+        <a href="mailto:andrewbnoblet@gmail.com"
+          >Email <span aria-hidden="true">↗</span></a
+        >
+      </div>
+      <div class="footer-group">
+        <h2>Elsewhere</h2>
+        <a href="https://github.com/anoblet"
+          >GitHub <span aria-hidden="true">↗</span></a
+        >
+        <a href="https://www.linkedin.com/in/andrew-noblet/"
+          >LinkedIn <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <Copyright />
+    <div class="footer-appearance">
+      <a href="/settings">Appearance</a>
+      <ThemeToggle />
+    </div>
+  </div>
 </footer>
 <style>
   footer {
@@ -22,19 +44,117 @@ import ThemeToggle from './ThemeToggle.astro';
     max-width: 1160px;
     margin: 2rem auto 0;
     border-top: 1px solid var(--card-border-color);
-    padding: 2.5rem 0 6rem;
-    display: grid;
-    gap: 1rem;
     color: var(--hero-description-color);
     font-size: 0.85rem;
   }
+  .footer-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    padding-block: 3.5rem;
+  }
+  .footer-brand {
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+  }
   .footer-name {
-    font-size: 1rem;
+    color: var(--text-color);
+    font-size: 1.5rem;
     font-weight: 600;
+    letter-spacing: -0.04em;
+    line-height: 1.2;
+    text-decoration: none;
+  }
+  .footer-name span {
+    color: var(--a-color);
+  }
+  .footer-brand p {
+    margin: 0;
+    line-height: 1.8;
   }
   nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(2rem, 7vw, 7rem);
+  }
+  .footer-group {
+    display: grid;
+    align-content: start;
+    gap: 0.25rem;
+  }
+  .footer-group h2 {
+    margin: 0 0 0.75rem;
+    color: var(--hero-description-color);
+    font-size: 0.65rem;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .footer-group a {
     display: flex;
-    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    min-height: 44px;
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  .footer-group a span {
+    color: var(--a-color);
+  }
+  a:hover {
+    color: var(--a-color);
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--a-color);
+    outline-offset: 5px;
+    border-radius: 2px;
+  }
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 1rem 2rem;
+    padding-block: 1.5rem 3rem;
+    border-top: 1px solid var(--card-border-color);
+  }
+  .footer-appearance {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .footer-appearance > a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--hero-description-color);
+    text-underline-offset: 0.3em;
+  }
+  @media (max-width: 640px) {
+    .footer-main {
+      flex-direction: column;
+      gap: 2.5rem;
+      padding-block: 2.5rem;
+    }
+    nav {
+      gap: 1.5rem;
+    }
+    .footer-group a {
+      gap: 0.75rem;
+    }
+    .footer-bottom {
+      align-items: flex-start;
+      flex-direction: column-reverse;
+      padding-bottom: 2rem;
+    }
+    .footer-appearance {
+      width: 100%;
+      justify-content: space-between;
+    }
   }
 </style>
