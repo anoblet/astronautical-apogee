@@ -56,7 +56,7 @@ const groups = [
               <a href={group.href} aria-current={current(group.href)}>
                 {group.title}
               </a>
-              <details class="nav-disclosure" name="main-navigation-submenu">
+              <details class="nav-disclosure">
                 <summary
                   aria-label={`Show ${group.title.toLowerCase()} links`}
                 />
@@ -107,7 +107,11 @@ const groups = [
       const menu = this.querySelector<HTMLDetailsElement>('.navigation-menu')!;
       const close = () => {
         this.querySelectorAll<HTMLDetailsElement>('.nav-disclosure').forEach(
-          detail => (detail.open = false)
+          detail => {
+            detail.open = false;
+            if (desktop.matches) detail.name = 'main-navigation-submenu';
+            else detail.removeAttribute('name');
+          }
         );
         menu.open = desktop.matches;
       };
