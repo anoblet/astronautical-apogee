@@ -1,10 +1,30 @@
 import cxl from '@assets/cxl.com_.webp';
 import graduation from '@assets/graduationsource.com_.webp';
 import avanti from '@assets/avantisystemsusa.com_.webp';
+import hvshs from '@assets/hvshs.com_.webp';
 
 // These contributions come from the existing professional portfolio. Add outcomes
 // or metrics only when they can be substantiated; client sites can change later.
 export const work = [
+  {
+    id: 'hudson-valley-smart-home-solutions',
+    name: 'Hudson Valley Smart Home Solutions',
+    category: 'Founder-led business',
+    image: hvshs,
+    url: 'https://hvshs.com/',
+    description:
+      'My smart home organization, connecting homeowners with installation and support through a dedicated website.',
+    context:
+      'Hudson Valley Smart Home Solutions introduces smart home installation and support, with a website that gives visitors a direct path to services and contact information.',
+    role: 'I founded Hudson Valley Smart Home Solutions and launched its web presence.',
+    contributions: [
+      'Creating and launching the organization',
+      'Establishing its web presence at hvshs.com',
+    ],
+    technologies: ['Web', 'Smart home technology'],
+    focus:
+      'Connecting my interest in software and hands-on technology with a service business. The website introduces the organization and helps visitors take the next step.',
+  },
   {
     id: 'cxl',
     name: 'CXL',
