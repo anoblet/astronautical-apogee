@@ -1,5 +1,7 @@
 # Astronautical Apogee
 
+The [social-media copy guide](docs/social-media/readme.md) owns the Facebook services post. Version `0.3.1` records this documentation maintenance. The compatibility contract is the documented site routes and npm commands; compatible documentation maintenance increments PATCH.
+
 A modern, performance-focused portfolio website showcasing professional web development expertise. Built with cutting-edge technologies including Astro, Lit Web Components, and TypeScript.
 
 ## Website development and verification
@@ -25,6 +27,7 @@ the About page adds his Santiago-to-New-York background. See the
 
 ```mermaid
 flowchart LR
+    SOCIAL["Facebook services copy"] --> GUIDE["docs/social-media responsibility guide"]
     Background[Andrew’s public background and work] --> Pages[Homepage and About]
     Pages --> Identity[Portrait, maker stories, and New York connection]
     Identity --> Conversation[Portfolio exploration and direct contact]
