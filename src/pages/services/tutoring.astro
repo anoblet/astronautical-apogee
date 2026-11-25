@@ -1,0 +1,63 @@
+---
+import Layout from '@layouts/default.astro';
+import Card from '@components/Card.astro';
+
+const topics = [
+  [
+    'Computer basics',
+    'Practice typing, finding files, and using a computer with more confidence.',
+  ],
+  [
+    'Scratch',
+    'Snap blocks together to make a character move, tell a story, or build a simple game.',
+  ],
+  [
+    'Python',
+    'Write a short program and see how variables, decisions, and loops work together.',
+  ],
+];
+---
+
+<Layout
+  title="Computer tutoring for children — Andrew Noblet"
+  description="Hands-on computer tutoring for children in the Tarrytown and Westchester area. Explore computer basics, Scratch, and beginner Python."
+>
+  <div class="editorial-page">
+    <section class="editorial-section editorial-split">
+      <div class="section-heading">
+        <h1 class="editorial-title">Computer tutoring for children</h1>
+        <p>
+          Hands-on lessons for families in Tarrytown and nearby Westchester
+          communities. Start with everyday computer skills or try a first coding
+          project.
+        </p>
+      </div>
+      <div class="editorial-prose">
+        <h2>Find a starting point for your child</h2>
+        <p>
+          Parents and guardians can tell me what their child has tried, what
+          interests them, and what they’d like to learn. We can discuss lesson
+          options and choose a project that fits their experience.
+        </p>
+        <a
+          class="editorial-button"
+          href="mailto:andrewbnoblet@gmail.com?subject=Computer%20tutoring%20inquiry"
+          >Ask about tutoring →</a
+        >
+      </div>
+    </section>
+    <section class="editorial-section">
+      <div class="section-heading"><h2>What we can work on</h2></div>
+      <div class="editorial-grid">
+        {
+          topics.map(([title, description]) => (
+            <Card>
+              <h3>{title}</h3>
+              <p>{description}</p>
+            </Card>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</Layout>

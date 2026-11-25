@@ -335,4 +335,12 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Built with ❤️ using modern web technologies**
 
-_Current Version: 0.1.1_
+_Current Version: 0.4.0_
+
+The [computer tutoring service](src/pages/services/tutoring.astro) introduces beginner learning options for children and gives families a direct way to inquire.
+
+```mermaid
+flowchart LR
+    Services[Services and site navigation] --> Tutoring[Computer tutoring for children]
+    Tutoring --> Inquiry[Parent or guardian email inquiry]
+```

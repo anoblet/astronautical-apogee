@@ -1,6 +1,7 @@
 # Shared website components
 
 [Navigation.astro](Navigation.astro) renders the brand and native menu disclosures.
+The Services menu includes computer tutoring for children.
 Desktop submenus share a disclosure group, so opening one closes the previous
 submenu. Mobile submenus open independently. The group updates at the 1024px
 breakpoint; without JavaScript, all submenus open independently.
@@ -27,5 +28,5 @@ flowchart LR
   Footer --> Utilities[Copyright, accessibility settings and theme toggle]
   Routes[Astro pages] --> Header[Header and Navigation]
   Header --> Menu[Exclusive desktop submenus and independent mobile submenus]
-  Menu --> Destinations[Portfolio, services and contact]
+  Menu --> Destinations[Portfolio, services including tutoring, and contact]
 ```

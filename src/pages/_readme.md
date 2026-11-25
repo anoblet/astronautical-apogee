@@ -6,6 +6,7 @@ maker projects; [About](about.astro) connects that work to his background and
 interests. [Accessibility settings](settings.astro) groups theme, color and heading-size controls. Other routes cover services, portfolios, writing, contact, and demos.
 [Pricing](pricing.astro) introduces website packages and links the four service
 pricing routes through a shared category selector. Shared layouts and components provide navigation, themes, imagery, and actions.
+[Computer tutoring](services/tutoring.astro) introduces beginner topics for children and provides a parent or guardian inquiry link. See the [service routes guide](services/_readme.md).
 Keep public biographical copy grounded in approved facts and existing site content.
 
 ```mermaid
@@ -16,6 +17,7 @@ flowchart LR
     Layout[Shared layout and components] --> Routes
     Routes --> Accessibility[Accessibility settings: theme, colors and heading size]
     Routes --> Pricing[Website packages and linked service pricing categories]
+    Routes --> Tutoring[Computer tutoring topics and family inquiries]
     Home --> Contact[Work exploration and contact]
     About --> Contact
 ```
