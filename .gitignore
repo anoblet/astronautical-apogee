@@ -9,7 +9,8 @@
 chats
 dist
 node_modules
-reports
+/reports/*
+!/reports/2026-11-25-site-review.md
 
 genaiscript.d.ts
 tsconfig.json
