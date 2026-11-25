@@ -8,8 +8,7 @@ import ThemeToggle from './ThemeToggle.astro';
   <div class="footer-main">
     <div class="footer-brand">
       <a class="footer-name" href="/"
-        >Andrew Noblet<span aria-hidden="true">.</span>
-        <ArrowForward class="footer-arrow" aria-hidden="true" /></a
+        >Andrew Noblet<span aria-hidden="true">.</span></a
       >
       <p>Thoughtful design.<br />Useful technology.</p>
     </div>
@@ -116,9 +115,7 @@ import ThemeToggle from './ThemeToggle.astro';
     flex: none;
     color: var(--a-color);
     fill: currentColor;
-  }
-  .footer-name .footer-arrow {
-    vertical-align: -0.1em;
+    transform: rotate(-45deg);
   }
   a:hover {
     color: var(--a-color);

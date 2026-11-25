@@ -335,7 +335,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Built with ❤️ using modern web technologies**
 
-_Current Version: 0.4.1_
+_Current Version: 0.4.2_
 
 The [computer tutoring service](src/pages/services/tutoring.astro) introduces beginner learning options for children and gives families a direct way to inquire.
 
@@ -343,5 +343,5 @@ The [computer tutoring service](src/pages/services/tutoring.astro) introduces be
 flowchart LR
     Services[Services and site navigation] --> Tutoring[Computer tutoring for children]
     Tutoring --> Inquiry[Parent or guardian email inquiry]
-    Services --> Footer[Shared footer links with a consistent right-arrow icon]
+    Services --> Footer[Shared footer with a text brand and diagonal link arrows]
 ```
