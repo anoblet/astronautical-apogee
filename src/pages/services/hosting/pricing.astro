@@ -9,7 +9,9 @@ import PricingCard from '@components/PricingCard.astro';
   title="Hosting Pricing"
   description="Reliable, secure, and scalable web hosting pricing plans. Professional hosting solutions for every project size with transparent pricing that fits your needs and budget."
 >
-  <h1 class="text-align-center font-size-2 margin-bottom-2">Hosting Pricing</h1>
+  <h1 class="text-align-center pricing-heading margin-bottom-2">
+    Hosting Pricing
+  </h1>
   <p
     class="hero-description text-align-center margin-bottom-4 max-width-48 margin-auto"
   >
@@ -29,7 +31,7 @@ import PricingCard from '@components/PricingCard.astro';
         'Email support',
       ]}
       price="$49.99/mo"
-      buttonText="Get Hosting"
+      buttonText="Discuss on a free call"
       buttonHref="/contact"
     />
     <PricingCard
@@ -42,9 +44,13 @@ import PricingCard from '@components/PricingCard.astro';
         'Advanced security',
       ]}
       price="$99.99/mo"
-      buttonText="Get Hosting"
+      buttonText="Discuss on a free call"
       buttonHref="/contact"
     />
   </div>
+  <p class="max-width-48">
+    We confirm backup retention and restoration, response times, and any
+    migration work in your proposal.
+  </p>
   <PackageExpectations />
 </Layout>

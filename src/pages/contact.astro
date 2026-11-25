@@ -3,13 +3,13 @@ import Layout from '@layouts/default.astro';
 ---
 
 <Layout
-  title="Let’s talk — Andrew Noblet"
+  title="Contact Andrew Noblet"
   description="Book a free 30-minute discovery call or email Andrew Noblet about your design, website, hosting, or consultation project."
 >
   <div class="editorial-page">
     <section class="editorial-section editorial-split">
       <div class="section-heading">
-        <p class="eyebrow">Start a conversation</p><h1 class="editorial-title">
+        <p class="eyebrow">Contact Andrew</p><h1 class="editorial-title">
           Tell me what<br />you have in mind.
         </h1><p>
           Bring an idea, an existing website, or a question. A free 30-minute
@@ -19,7 +19,7 @@ import Layout from '@layouts/default.astro';
       </div>
       <div class="editorial-prose">
         <p id="selected-package" hidden></p><h2>
-          Book an introductory call.
+          Book a free 30-minute discovery call
         </h2><p>
           Choose an available time through Google Calendar. The introductory
           call is free and has no obligation. Booking is an inquiry, not a
@@ -31,8 +31,9 @@ import Layout from '@layouts/default.astro';
             >Choose a time →</a
           >
         </div><p>
-          Prefer to write first? Email <a href="mailto:andrewbnoblet@gmail.com"
-            >andrewbnoblet@gmail.com</a
+          Prefer to write first? Email <a
+            id="inquiry-email"
+            href="mailto:andrewbnoblet@gmail.com">andrewbnoblet@gmail.com</a
           >.
         </p><h2>Helpful things to bring</h2><ul>
           <li>Your current website or a brief description of the idea.</li><li>
@@ -78,12 +79,21 @@ import Layout from '@layouts/default.astro';
     const label =
       choice && packages.has(choice)
         ? choice
-        : services[query.get('service') || ''];
+        : Object.hasOwn(services, query.get('service') || '')
+          ? services[query.get('service') || '']
+          : undefined;
     const element = document.querySelector<HTMLElement>('#selected-package');
+    const email = document.querySelector<HTMLAnchorElement>('#inquiry-email');
+    if (email) {
+      const address = 'mailto:andrewbnoblet@gmail.com';
+      email.href = label
+        ? address + '?subject=' + encodeURIComponent(`Inquiry about ${label}`)
+        : address;
+    }
     if (element) {
       element.hidden = !label;
       element.textContent = label
-        ? `You’re interested in ${label}. Mention this when you book or email so we can discuss the right scope.`
+        ? `You’re interested in ${label}. Mention it when booking so we can discuss the right scope.`
         : '';
     }
   }

@@ -18,12 +18,13 @@ const href =
 ---
 
 <article class="pricing-card">
-  <h2>{title}</h2><p>{description}</p>
+  <h2>{title}</h2>
   <p class="price">
     {price}<span
       >{price.includes('/mo') ? 'Recurring service' : 'One-time package'}</span
     >
   </p>
+  <p>{description}</p>
   <ul>{features.map(feature => <li>{feature}</li>)}</ul>
   <CallToAction href={href}>{buttonText}</CallToAction>
 </article>

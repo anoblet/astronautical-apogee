@@ -1,7 +1,7 @@
 ---
 image: ../assets/images/collaboration-team-laptops.webp
 ai: true
-title: Community Engagement Lessons Learned
+title: 'Community Engagement: Lessons Learned'
 date: 2025-06-30
 description: Insights and actionable tips from building and sustaining an active user and contributor community.
 ---

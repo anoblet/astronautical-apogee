@@ -46,7 +46,7 @@ const services = [
     <section class="editorial-hero">
       <div class="hero-copy">
         <p class="eyebrow">Services</p><h1>
-          A clearer presence.<br />A practical next step.
+          Design, websites, and ongoing support
         </h1><p>
           Whether you are starting fresh or improving something already in use,
           we begin with your audience, your goals, and the work that will make a
@@ -59,7 +59,7 @@ const services = [
     </section>
     <section class="editorial-section">
       <div class="section-heading">
-        <p class="eyebrow">01 / Choose your starting point</p><h2>
+        <p class="eyebrow">Choose your starting point</p><h2>
           Support for each stage<br />of your project.
         </h2><p>
           Start with one service or combine several. Your proposal confirms the
@@ -68,10 +68,9 @@ const services = [
         </p>
       </div><div class="editorial-grid">
         {
-          services.map(([title, description, href, label], index) => (
+          services.map(([title, description, href, label]) => (
             <Card>
               <>
-                <p class="eyebrow">0{index + 1}</p>
                 <h3>{title}</h3>
                 <p>{description}</p>
                 <a href={href}>{label} →</a>
@@ -83,7 +82,7 @@ const services = [
     </section>
     <section class="editorial-section editorial-split">
       <div class="section-heading">
-        <p class="eyebrow">02 / Working together</p><h2>
+        <p class="eyebrow">Working together</p><h2>
           Define the work.<br />Keep the conversation open.
         </h2>
       </div><div class="editorial-prose">

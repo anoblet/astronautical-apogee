@@ -19,7 +19,8 @@ site-navigation {
   summary:hover {
     color: var(--a-color);
   }
-  a[aria-current='page']:not(.brand) {
+  a[aria-current='page']:not(.brand),
+  .section-current {
     text-decoration: underline;
     text-underline-offset: 0.35rem;
   }

@@ -9,7 +9,7 @@ import PricingCard from '@components/PricingCard.astro';
   title="Consultation Pricing"
   description="Expert technical consultation pricing plans. Strategic advice and guidance to accelerate your project development. Choose consultation plans that fit your specific needs and timeline."
 >
-  <h1 class="text-align-center font-size-2 margin-bottom-2">
+  <h1 class="text-align-center pricing-heading margin-bottom-2">
     Consultation Pricing
   </h1>
   <p
@@ -20,6 +20,10 @@ import PricingCard from '@components/PricingCard.astro';
   </p>
 
   <PricingNavigation />
+  <p class="hero-description text-align-center">
+    The $99 Quick Consult is a paid working session with an email summary. Start
+    with a free discovery call to discuss which session fits.
+  </p>
   <div class="grid auto-fit-20 gap-2 width-100 max-width-64 margin-auto">
     <PricingCard
       title="Quick Consult"
@@ -31,7 +35,7 @@ import PricingCard from '@components/PricingCard.astro';
         'Email follow-up',
       ]}
       price="$99 one-time"
-      buttonText="Discuss this session"
+      buttonText="Discuss on a free call"
       buttonHref="/contact"
     />
     <PricingCard
@@ -44,7 +48,7 @@ import PricingCard from '@components/PricingCard.astro';
         'Priority email support',
       ]}
       price="$299 one-time"
-      buttonText="Discuss this session"
+      buttonText="Discuss on a free call"
       buttonHref="/contact"
     />
   </div>

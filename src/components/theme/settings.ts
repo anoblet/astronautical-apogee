@@ -55,6 +55,18 @@ export class ThemeComponent extends Base {
       button {
         cursor: pointer;
       }
+      [role='status'] {
+        background: #fff4d6;
+        color: #32270d;
+        border-radius: 0.25rem;
+        padding: 0.75rem;
+      }
+      .preview {
+        color: var(--h1-color);
+        font-size: var(--h1-font-size, 2.5rem);
+        line-height: 1.12;
+        overflow-wrap: anywhere;
+      }
     `,
   ];
   connectedCallback() {
@@ -94,7 +106,34 @@ export class ThemeComponent extends Base {
         .join('')
     );
   }
+  private luminance(color: string) {
+    const channels = color.slice(1).match(/.{2}/g) ?? [];
+    const [red, green, blue] = channels.map(channel => {
+      const value = parseInt(channel, 16) / 255;
+      return value <= 0.04045
+        ? value / 12.92
+        : ((value + 0.055) / 1.055) ** 2.4;
+    });
+    return 0.2126 * red + 0.7152 * green + 0.0722 * blue;
+  }
   render() {
+    const surface = this.luminance(this.colorValue('body-background-color'));
+    const navigation = this.luminance(
+      this.colorValue('navigation-background-color')
+    );
+    const lowContrast = [
+      ['Text', 'text-color', surface],
+      ['Heading color', 'h1-color', surface],
+      ['Navigation links', 'navigation-a-color', navigation],
+    ] as const;
+    const warnings = lowContrast.filter(([, property, background]) => {
+      const foreground = this.luminance(this.colorValue(property));
+      return (
+        (Math.max(foreground, background) + 0.05) /
+          (Math.min(foreground, background) + 0.05) <
+        4.5
+      );
+    });
     return html`<form @submit=${(event: Event) => event.preventDefault()}>
       <label
         >Theme<select
@@ -126,10 +165,18 @@ export class ThemeComponent extends Base {
           pattern="(?:[1-9][0-9]?(?:[.][0-9]+)?px|[1-5](?:[.][0-9]+)?rem)"
           @change=${this.change}
       /></label>
+      <div>
+        <p>Heading preview</p>
+        <p class="preview">A heading on this site</p>
+      </div>
+      <p role="status" ?hidden=${warnings.length === 0}>
+        Low contrast: ${warnings.map(([label]) => label).join(', ')}. Adjust the
+        colors or reset appearance.
+      </p>
       <p>
-        Changes apply immediately and stay in this browser when local storage is
-        available. Reset restores the default dark theme and removes custom
-        values.
+        Heading size updates when you leave the field. Other changes apply
+        immediately and stay in this browser when local storage is available.
+        Reset restores the default dark theme and removes custom values.
       </p>
       <button type="button" @click=${resetTheme}>Reset appearance</button>
     </form>`;

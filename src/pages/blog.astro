@@ -4,6 +4,11 @@ import Layout from '@layouts/default.astro';
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.date.getTime() - a.data.date.getTime()
 );
+const readingPaths = [
+  ['Web development', 'astro-experience'],
+  ['Design and navigation', 'content-driven-navigation-enhancing-ux'],
+  ['Development workflows', 'genaiscript-usage'],
+];
 ---
 
 <Layout
@@ -21,6 +26,13 @@ const posts = (await getCollection('blog')).sort(
           clear.
         </p>
       </div>
+      <nav class="reading-paths" aria-label="Start with a topic">
+        {
+          readingPaths.map(([label, id]) => (
+            <a href={'/blog/' + id}>{label} →</a>
+          ))
+        }
+      </nav>
     </section>
     <ol class="post-list">
       {
@@ -56,6 +68,16 @@ const posts = (await getCollection('blog')).sort(
   </div>
 </Layout>
 <style>
+  .reading-paths {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+  }
+  .reading-paths a {
+    min-height: 44px;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
   .post-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));

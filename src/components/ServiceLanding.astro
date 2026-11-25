@@ -10,6 +10,7 @@ interface Props {
   areaServed: string[];
   topics: { title: string; description: string }[];
   pricing: string;
+  detailsHref: string;
   local?: boolean;
 }
 
@@ -22,6 +23,7 @@ const {
   areaServed,
   topics,
   pricing,
+  detailsHref,
   local,
 } = Astro.props;
 const booking = 'https://calendar.app.google/JjnLtVR6mnM11FcS9';
@@ -65,6 +67,10 @@ const schema = {
       <div class="section-heading">
         <h2 id="service-topics">What I can help with</h2>
         <p>{pricing}</p>
+        <div class="editorial-actions">
+          <a href={detailsHref}>See service details →</a>
+          <a href={detailsHref + '/pricing'}>Compare paid options →</a>
+        </div>
       </div>
       <div class="editorial-prose">
         {

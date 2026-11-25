@@ -81,7 +81,7 @@ test('essential content and navigation work without JavaScript', async ({
   await expect(page.locator('.nav-links > a[href="/contact"]')).toBeVisible();
   await page.locator('.nav-group > a[href="/services"]').click();
   await expect(page.getByRole('heading', { level: 1 })).toContainText(
-    'clearer presence'
+    'Design, websites, and ongoing support'
   );
   await context.close();
 });
@@ -205,11 +205,15 @@ test('package inquiries retain context and Angular still hydrates', async ({
 }) => {
   await page.goto('/services/design/pricing/');
   await page
-    .getByRole('link', { name: 'Get Design', exact: true })
+    .getByRole('link', { name: 'Discuss on a free call', exact: true })
     .first()
     .click();
   await expect(page.locator('#selected-package')).toContainText(
     'Starter Design'
+  );
+  await expect(page.locator('#inquiry-email')).toHaveAttribute(
+    'href',
+    /subject=Inquiry%20about%20Starter%20Design/
   );
   await page.goto('/angular/');
   await page.getByRole('button', { name: 'Increment', exact: true }).click();
@@ -223,7 +227,9 @@ test('client navigation preserves theme and disclosure behavior', async ({
   await page.getByRole('button', { name: 'Dark theme', exact: true }).click();
   for (let i = 0; i < 3; i++) {
     await page.locator('.nav-group > a[href="/services"]').click();
-    await expect(page.locator('h1')).toContainText('clearer presence');
+    await expect(page.locator('h1')).toContainText(
+      'Design, websites, and ongoing support'
+    );
     await page.locator('.brand').click();
     await expect(page.locator('h1')).toContainText('Good ideas.');
   }
@@ -337,4 +343,45 @@ test('mobile menu settles before the first paint without shifting content', asyn
         ) || 0
     )
   ).toBeLessThan(0.1);
+});
+
+test('Lit content renders and mobile pricing jumps clear the sticky header', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/lit/');
+  await expect(
+    page.getByRole('link', { name: 'Lit', exact: true })
+  ).toBeVisible();
+  await page.goto('/services/tutoring/');
+  await page.getByRole('link', { name: 'View tutoring pricing' }).click();
+  const heading = page.getByRole('heading', { name: 'Tutoring pricing' });
+  const header = await page.locator('body > header').boundingBox();
+  await expect
+    .poll(async () => (await heading.boundingBox())?.y ?? 0)
+    .toBeGreaterThanOrEqual(header!.height);
+});
+
+test('large custom headings wrap at mobile widths including on pricing pages', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 320, height: 740 });
+  await page.goto('/settings/');
+  const input = page.getByLabel('Heading size');
+  await input.fill('5rem');
+  await input.press('Tab');
+  for (const route of [
+    '/',
+    '/pricing/',
+    '/services/social/pricing/',
+    '/blog/digital-minimalism-confucian-philosophy-web-development/',
+  ]) {
+    await page.goto(route);
+    await expect(page.locator('h1')).toHaveCSS('font-size', '80px');
+    expect(
+      await page.evaluate(() => document.documentElement.scrollWidth),
+      route
+    ).toBe(320);
+  }
 });

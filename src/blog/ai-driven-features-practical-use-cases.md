@@ -1,7 +1,7 @@
 ---
 image: ../assets/images/development-react-source.webp
 ai: true
-title: AI Driven Features Practical Use Cases
+title: 'AI-Driven Features: Practical Use Cases'
 date: 2025-05-22
 description: Real world examples of integrating AI into web platforms to enhance user experience and automate workflows.
 ---

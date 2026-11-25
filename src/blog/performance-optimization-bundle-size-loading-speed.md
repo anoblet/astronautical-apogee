@@ -1,7 +1,7 @@
 ---
 image: ../assets/images/development-code-monitor.webp
 ai: true
-title: Performance Optimization Bundle Size and Loading Speed
+title: 'Performance Optimization: Bundle Size and Loading Speed'
 date: 2025-05-22
 description: Strategies for reducing bundle size improving loading times and delivering a seamless user experience.
 ---

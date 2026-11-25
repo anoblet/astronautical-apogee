@@ -1,7 +1,7 @@
 ---
 image: ../assets/images/design-ux-research.webp
 ai: true
-title: Content Driven Navigation Enhancing UX
+title: 'Content-Driven Navigation: Improving the User Experience'
 date: 2025-02-14
 description: Best practices for structuring content and navigation to support overview detail patterns and hierarchical linking.
 ---

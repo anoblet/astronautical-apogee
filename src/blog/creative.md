@@ -2,7 +2,7 @@
 image: ../assets/images/design-wireframe-tablet.webp
 ai: false
 id: 'creative'
-title: 'Creative'
+title: 'Give Developers Room to Get Creative'
 date: 2025-07-01
 description: 'Empowering developer creativity fuels innovation, product quality, and deeper team investment in business outcomes.'
 ---

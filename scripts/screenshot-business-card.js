@@ -89,25 +89,25 @@ async function takeBusinessCardScreenshots() {
         cards.forEach(card => card.setAttribute('export', ''))
       );
 
-    // Take screenshot of front side (first business card)
+    // Take screenshot of logo side
     console.log('📸 Taking screenshot of front side...');
     const frontScreenshotPath = path.join(
       SCREENSHOT_DIR,
       'business-card-front.png'
     );
-    await page.locator('business-card').first().screenshot({
+    await page.locator('business-card:not([side])').screenshot({
       path: frontScreenshotPath,
       type: 'png',
     });
     console.log(`✓ Front side saved: ${frontScreenshotPath}`);
 
-    // Take screenshot of back side (second business card)
+    // Take screenshot of contact side
     console.log('📸 Taking screenshot of back side...');
     const backScreenshotPath = path.join(
       SCREENSHOT_DIR,
       'business-card-back.png'
     );
-    await page.locator('business-card').nth(1).screenshot({
+    await page.locator('business-card[side=back]').screenshot({
       path: backScreenshotPath,
       type: 'png',
     });

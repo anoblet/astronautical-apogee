@@ -11,139 +11,89 @@ export class BusinessCard extends Base {
     ...super.styles,
     css`
       :host {
-        --icon-padding: 0;
-        --h1-color: var(--color-neutral-200);
-        --icon-size: 24px;
-
-        background-color: var(--color-neutral-900);
-        /* border: 1px solid var(--color-neutral-500); */
+        display: grid;
+        width: 100%;
+        overflow-wrap: anywhere;
+        background: var(--color-neutral-900);
+        border: 1px solid var(--color-neutral-600);
         border-radius: 0.5rem;
-        min-height: 360px;
-        height: auto;
-        aspect-ratio: 1050 / 600;
-        justify-content: center;
-        width: 1050px;
-        max-width: 100%;
         color: var(--color-neutral-200);
       }
-
       :host([export]) {
         width: 1050px;
-        max-width: none;
         height: 600px;
       }
-      @media (max-width: 760px) {
-        :host(:not([export])) {
-          aspect-ratio: auto;
-        }
-        .space-around {
-          flex-wrap: wrap;
-          gap: 1rem;
-        }
-        .font-size-1-5 {
-          font-size: 1rem;
-        }
-        span {
-          overflow-wrap: anywhere;
-        }
+      .front {
+        display: grid;
+        place-items: center;
+        min-height: clamp(10rem, 25vw, 20rem);
       }
-      ::marker {
-        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1rem' viewBox='0 -960 960 960' width='1rem' fill='currentColor'%0A%3E%3Cpath d='M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z' /%3E%3C/svg%3E");
+      .front svg {
+        width: clamp(4rem, 18vw, 13rem);
+        height: auto;
       }
-
-      :host([data-theme='dark']) {
-        li::marker {
-          content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1rem' viewBox='0 -960 960 960' width='1rem' fill='oklch(0.91 0.096 180.426)'%0A%3E%3Cpath d='M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z' /%3E%3C/svg%3E");
-        }
+      .back {
+        display: grid;
+        align-content: center;
+        gap: 1.5rem;
+        padding: clamp(1rem, 5vw, 3rem);
+        text-align: center;
       }
-
-      :host([side='back']) {
-        icon-component {
-          margin-top: 0.25rem;
-        }
+      .name {
+        font-size: clamp(1.5rem, 5vw, 3.5rem);
+        line-height: 1.1;
+        font-weight: 600;
       }
-
-      .amber-300 {
+      ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr));
+        gap: 0.5rem;
+        padding: 0;
+        list-style: none;
         color: var(--color-amber-300);
       }
-
-      .front {
-        icon-component {
-          --icon-size: calc(50% * (1 / 1.618));
-        }
-      }
-
-      .sky-200 {
-        color: var(--color-sky-200);
-      }
-
-      h1 {
-        font-size: clamp(1.75rem, 6vw, 5rem);
-      }
-
       li {
-        line-height: unset;
+        padding: 0;
       }
-
-      span {
-        align-items: center;
+      li::marker {
+        content: '';
+      }
+      .contact {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem 1.5rem;
       }
-
-      ul {
-        height: max-content;
-        padding: 0.5rem;
+      .contact span {
+        display: inline-flex;
+        gap: 0.4rem;
+        align-items: center;
+      }
+      .contact svg {
+        flex: none;
       }
     `,
   ];
 
   render() {
-    return html`
-      ${this.side === 'front'
-        ? html`
-            <div
-              class="align-items-center flex front justify-content-center width-100"
-            >
-              <icon-component class="width-100">${planet}</icon-component>
-            </div>
-          `
-        : html`
-            <div
-              class="column flex padding justify-content-space-around width-100"
-            >
-              <h1 class="font-weight-6 text-align-center">Andrew Noblet</h1>
-              <p class="font-size-1-5 text-align-center">
-                Empowering your online presence with design, hosting, and expert
-                guidance.
-              </p>
-              <div class="align-items-center flex space-around">
-                <ul class="amber-300 font-size-1-5 gap-2 grid">
-                  <li>Design</li>
-                  <li>Hosting</li>
-                  <li>Consultation</li>
-                </ul>
-                <ul class="amber-300 font-size-1-5 gap-2 grid">
-                  <li>Mentorship</li>
-                  <li>Workshops</li>
-                  <li>Strategy</li>
-                </ul>
-              </div>
-              <div class="flex font-size-1-5 space-around">
-                <span class="align-items-center flex gap-0-5">
-                  <icon-component>${phone}</icon-component>
-                  (914) 417-9070
-                </span>
-                <span class="align-items-center flex gap-0-5">
-                  <icon-component>${mail}</icon-component>
-                  andrewbnoblet@gmail.com
-                </span>
-                <span class="align-items-center flex gap-0-5">
-                  <icon-component>${language}</icon-component>
-                  andrewnoblet.com
-                </span>
-              </div>
-            </div>
-          `}
-    `;
+    return this.side === 'front'
+      ? html`<div class="front" aria-hidden="true">${planet}</div>`
+      : html`<div class="back">
+          <p class="name">Andrew Noblet</p>
+          <p>Website design, hosting, and technical guidance.</p>
+          <ul>
+            <li>Design</li>
+            <li>Hosting</li>
+            <li>Consultation</li>
+            <li>Mentorship</li>
+            <li>Tutoring</li>
+            <li>Social media support</li>
+          </ul>
+          <div class="contact">
+            <span>${phone} (914) 417-9070</span>
+            <span>${mail} andrewbnoblet@gmail.com</span>
+            <span>${language} andrewnoblet.com</span>
+          </div>
+        </div>`;
   }
 }

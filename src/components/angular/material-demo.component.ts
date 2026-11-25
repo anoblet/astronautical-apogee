@@ -13,7 +13,9 @@ import { MatCardModule } from '@angular/material/card';
         <mat-card-subtitle>Running as an Astro island</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
-        <p>The button has been clicked {{ count() }} times.</p>
+        <p aria-live="polite">
+          The button has been clicked {{ count() }} times.
+        </p>
       </mat-card-content>
       <mat-card-actions>
         <button matButton="filled" type="button" (click)="increment()">
@@ -30,6 +32,12 @@ import { MatCardModule } from '@angular/material/card';
 
     mat-card {
       padding: 1rem;
+      color: var(--mat-card-subtitle-text-color, #e0e3e2);
+    }
+
+    mat-card-title,
+    mat-card-content p {
+      color: inherit;
     }
   `,
 })

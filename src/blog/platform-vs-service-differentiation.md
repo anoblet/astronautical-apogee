@@ -1,7 +1,7 @@
 ---
 image: ../assets/images/workspace-minimal-keyboard.webp
 ai: true
-title: Platform vs Service Differentiating Your Offering
+title: 'Platform vs. Service: Differentiating Your Offering'
 date: 2025-02-10
 description: How to clearly communicate the value of both product and service aspects to drive conversions and user trust.
 ---

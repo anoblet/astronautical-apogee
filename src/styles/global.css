@@ -67,7 +67,12 @@ h6 {
 
 h1 {
   color: var(--h1-color);
-  font-size: var(--h1-font-size, 2.5rem);
+  font-size: var(--h1-font-size, var(--page-heading-size, 2.5rem));
+  overflow-wrap: anywhere;
+}
+
+.pricing-heading {
+  --page-heading-size: 2rem;
 }
 
 h2 {
@@ -87,6 +92,14 @@ hr {
 
 main {
   position: relative;
+}
+main [id] {
+  scroll-margin-top: 6rem;
+}
+main :where(p, .article-body li) a:not([class]) {
+  display: inline;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 
 p {

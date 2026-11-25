@@ -1,4 +1,5 @@
 ---
+import EditorialImage from '@components/EditorialImage.astro';
 import Layout from '../layouts/default.astro';
 import litdev from '../assets/lit.dev_.webp';
 ---
@@ -8,28 +9,24 @@ import litdev from '../assets/lit.dev_.webp';
   description="Discover Lit - A simple library for building fast, lightweight web components. Learn about modern JavaScript/TypeScript development with this efficient, standards-based framework."
 >
   <h1>Lit</h1>
-  <card-component>
-    <img
-      src={litdev.src}
-      alt="Lit"
-      slot="image"
-      loading="lazy"
-      decoding="async"
-      fetchpriority="auto"
-      width={litdev.width}
-      height={litdev.height}
-    />
-    <h2 slot="title">
-      <a href="https://lit.dev/">Lit</a>
-    </h2>
-    <div class="tags" slot="tags">
+  <card-component class="max-width-48">
+    <h2><a href="https://lit.dev/">Lit</a></h2>
+    <div class="lit-preview">
+      <EditorialImage
+        src={litdev}
+        alt="Lit project website"
+        priority
+        sizes="(max-width: 48rem) calc(100vw - 4rem), 46rem"
+      />
+    </div>
+    <div class="columns">
       <tag-component>JavaScript</tag-component>
       <tag-component>TypeScript</tag-component>
       <tag-component>Web Components</tag-component>
       <tag-component>LitElement</tag-component>
       <tag-component>Open Source</tag-component>
     </div>
-    <ul class="flex column gap padding color-neutral-200" slot="content">
+    <ul class="flex column gap padding">
       <li>
         Lit is a fast, modern library for building web components and reactive
         UIs.
@@ -44,6 +41,7 @@ import litdev from '../assets/lit.dev_.webp';
       </li>
     </ul>
   </card-component>
+  <a href="/settings">Try the Lit-powered appearance controls →</a>
   <a href="/portfolio/personal">← Back to personal projects</a>
 </Layout>
 
@@ -51,3 +49,9 @@ import litdev from '../assets/lit.dev_.webp';
   import '../components/card';
   import '../components/tag.ts';
 </script>
+
+<style>
+  .lit-preview :global(img) {
+    object-position: top;
+  }
+</style>

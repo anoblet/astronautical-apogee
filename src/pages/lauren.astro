@@ -7,7 +7,11 @@ const posts = (await getLaurenPosts()).sort(
 );
 ---
 
-<Layout title="Lauren" description="Posts by Lauren.">
+<Layout
+  title="Lauren"
+  description="Posts by Lauren."
+  noindex={posts.length === 0}
+>
   <div class="gap grid max-width-56 width-100">
     <h1 class="text-align-center">Lauren</h1>
     <p class="text-align-center">Posts by Lauren.</p>

@@ -1,6 +1,6 @@
 ---
 import EditorialImage from '@components/EditorialImage.astro';
-import pageImage from '@assets/images/design-digital-workspace.webp';
+import pageImage from '@assets/images/design-paper-prototyping.webp';
 import Layout from '../../layouts/default.astro';
 import Card from '@components/Card.astro';
 import ArrowForward from '@icons/arrow-forward.svg';
@@ -22,14 +22,17 @@ import ArrowForward from '@icons/arrow-forward.svg';
           experience.
         </p>
         <div class="hero-actions">
-          <a class="design-button" href="/contact"
+          <a class="design-button" href="/contact?service=design"
             >Let’s talk about your project <ArrowForward /></a
           >
-          <a class="text-link" href="#design-services"
-            >Explore services <span aria-hidden="true">↓</span></a
+          <a class="text-link" href="/services/design/pricing"
+            >View design packages →</a
           >
         </div>
-        <p class="hero-note">Brand identity · Websites · Digital products</p>
+        <p class="hero-note">
+          Starter Design starts at $499 and includes a logo, brand colors, one
+          landing page design, and a basic style guide.
+        </p>
       </div>
       <figure class="hero-image">
         <EditorialImage
@@ -235,24 +238,6 @@ import ArrowForward from '@icons/arrow-forward.svg';
       </div>
     </section>
 
-    <section class="design-section getting-started">
-      <p class="eyebrow">05 / Getting started</p>
-      <h2>Bring an idea.<br />We’ll find the starting point.</h2>
-      <p>
-        Bring your current website, existing brand materials, and a short
-        description of what you want to improve. Customer questions or examples
-        of places where people get stuck are especially useful. If you are
-        starting fresh, a description of your audience and your main service
-        gives us enough to begin the conversation.
-      </p>
-      <p>
-        Starter Design pairs a logo and brand colors with one landing page and a
-        basic style guide. Pro Design expands the scope to a full brand kit, up
-        to five pages, and a component library. For research, prototypes, or a
-        larger design system, we can discuss a scope tailored to the project.
-      </p>
-    </section>
-
     <section class="contact-panel">
       <div>
         <p class="eyebrow">Your next chapter</p>
@@ -263,7 +248,7 @@ import ArrowForward from '@icons/arrow-forward.svg';
         </p>
       </div>
       <div class="contact-actions">
-        <a class="design-button" href="/contact"
+        <a class="design-button" href="/contact?service=design"
           >Tell me about your project <ArrowForward /></a
         >
         <a class="text-link" href="/services/design/pricing"
@@ -483,13 +468,6 @@ import ArrowForward from '@icons/arrow-forward.svg';
   }
   .deliverables-section ul {
     padding-block: 0;
-  }
-  .getting-started {
-    max-width: 760px;
-  }
-  .getting-started > p:not(.eyebrow) {
-    margin-top: 1.5rem;
-    color: var(--design-muted);
   }
   .contact-panel {
     display: grid;

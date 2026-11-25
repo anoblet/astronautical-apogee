@@ -11,10 +11,40 @@ import Layout from '@layouts/default.astro';
       href="mailto:andrewbnoblet@gmail.com">andrewbnoblet@gmail.com</a
     > · <a href="/contact">Discuss a project</a>
   </p>
-  <business-card></business-card>
-  <business-card side="back"></business-card>
+  <div class="card-previews">
+    <figure>
+      <business-card side="back"></business-card><figcaption>
+        Contact side
+      </figcaption>
+    </figure>
+    <figure>
+      <business-card></business-card><figcaption>Logo side</figcaption>
+    </figure>
+  </div>
   <a href="/portfolio/personal">← Back to personal projects</a>
 </Layout>
 <script>
   import '@components/business-card';
 </script>
+
+<style>
+  .card-previews {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: 72rem;
+    gap: 1rem;
+  }
+  figure {
+    margin: 0;
+  }
+  figcaption {
+    margin-top: 0.5rem;
+    color: var(--hero-description-color);
+  }
+  @media (max-width: 1000px) {
+    .card-previews {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>

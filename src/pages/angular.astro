@@ -8,6 +8,10 @@ import Layout from '../layouts/default.astro';
   description="An Angular Material component rendered and hydrated inside Astro."
 >
   <h1>Angular</h1>
+  <p class="max-width-48">
+    Astro renders the page, and Angular makes the counter interactive in the
+    browser. Try Increment to see a state update inside the Angular component.
+  </p>
   <MaterialDemoComponent client:load />
   <a href="/portfolio/personal">← Back to personal projects</a>
 </Layout>

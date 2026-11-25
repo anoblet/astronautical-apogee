@@ -54,7 +54,13 @@ const groups = [
         {
           groups.map(group => (
             <div class="nav-group">
-              <a href={group.href} aria-current={current(group.href)}>
+              <a
+                href={group.href}
+                aria-current={current(group.href)}
+                class:list={{
+                  'section-current': path.startsWith(group.href + '/'),
+                }}
+              >
                 {group.title}
               </a>
               <details class="nav-disclosure">
@@ -63,7 +69,13 @@ const groups = [
                 />
                 <div class="submenu">
                   {group.children.map(([label, href]) => (
-                    <a href={href} aria-current={current(href)}>
+                    <a
+                      href={href}
+                      aria-current={current(href)}
+                      class:list={{
+                        'section-current': path.startsWith(href + '/'),
+                      }}
+                    >
                       {label}
                     </a>
                   ))}

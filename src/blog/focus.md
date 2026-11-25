@@ -2,7 +2,7 @@
 image: ../assets/images/workspace-clean-office.webp
 ai: false
 id: 'focus'
-title: 'Focus'
+title: 'How Focus Improves Software Delivery'
 date: 2025-07-01
 description: 'Prioritizing focus empowers teams to deliver higher quality, faster results, and greater business value.'
 ---
