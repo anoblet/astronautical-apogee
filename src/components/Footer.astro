@@ -1,4 +1,5 @@
 ---
+import ArrowForward from '@icons/arrow-forward.svg';
 import Copyright from './Copyright.astro';
 import ThemeToggle from './ThemeToggle.astro';
 ---
@@ -7,25 +8,28 @@ import ThemeToggle from './ThemeToggle.astro';
   <div class="footer-main">
     <div class="footer-brand">
       <a class="footer-name" href="/"
-        >Andrew Noblet<span aria-hidden="true">.</span></a
+        >Andrew Noblet<span aria-hidden="true">.</span>
+        <ArrowForward class="footer-arrow" aria-hidden="true" /></a
       >
       <p>Thoughtful design.<br />Useful technology.</p>
     </div>
     <nav aria-label="Footer">
       <div class="footer-group">
         <h2>Start a conversation</h2>
-        <a href="/contact">Contact <span aria-hidden="true">→</span></a>
+        <a href="/contact"
+          >Contact <ArrowForward class="footer-arrow" aria-hidden="true" /></a
+        >
         <a href="mailto:andrewbnoblet@gmail.com"
-          >Email <span aria-hidden="true">↗</span></a
+          >Email <ArrowForward class="footer-arrow" aria-hidden="true" /></a
         >
       </div>
       <div class="footer-group">
         <h2>Elsewhere</h2>
         <a href="https://github.com/anoblet"
-          >GitHub <span aria-hidden="true">↗</span></a
+          >GitHub <ArrowForward class="footer-arrow" aria-hidden="true" /></a
         >
         <a href="https://www.linkedin.com/in/andrew-noblet/"
-          >LinkedIn <span aria-hidden="true">↗</span></a
+          >LinkedIn <ArrowForward class="footer-arrow" aria-hidden="true" /></a
         >
       </div>
     </nav>
@@ -33,7 +37,12 @@ import ThemeToggle from './ThemeToggle.astro';
   <div class="footer-bottom">
     <Copyright />
     <div class="footer-appearance">
-      <a href="/settings">Accessibility</a>
+      <a href="/settings"
+        >Accessibility <ArrowForward
+          class="footer-arrow"
+          aria-hidden="true"
+        /></a
+      >
       <ThemeToggle />
     </div>
   </div>
@@ -101,8 +110,15 @@ import ThemeToggle from './ThemeToggle.astro';
     color: var(--text-color);
     text-decoration: none;
   }
-  .footer-group a span {
+  .footer-arrow {
+    width: 1em;
+    height: 1em;
+    flex: none;
     color: var(--a-color);
+    fill: currentColor;
+  }
+  .footer-name .footer-arrow {
+    vertical-align: -0.1em;
   }
   a:hover {
     color: var(--a-color);
@@ -131,6 +147,7 @@ import ThemeToggle from './ThemeToggle.astro';
   .footer-appearance > a {
     display: inline-flex;
     align-items: center;
+    gap: 0.5rem;
     min-height: 44px;
     color: var(--hero-description-color);
     text-underline-offset: 0.3em;
