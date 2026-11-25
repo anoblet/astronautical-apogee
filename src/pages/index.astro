@@ -4,12 +4,40 @@ import EditorialImage from '@components/EditorialImage.astro';
 import ContactPanel from '@components/ContactPanel.astro';
 import Card from '@components/Card.astro';
 import hero from '@assets/images/profile.webp';
+const home = new URL('/', Astro.site).href;
+const person = home + '#andrew-noblet';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': person,
+      name: 'Andrew Noblet',
+      url: home,
+      jobTitle: 'Software engineer',
+    },
+    {
+      '@type': 'LocalBusiness',
+      '@id': home + '#web-services',
+      name: 'Andrew Noblet',
+      url: new URL('/hosting/', Astro.site).href,
+      founder: { '@id': person },
+      areaServed: ['Westchester County, New York', 'New York City, New York'],
+    },
+  ],
+};
+const primaryAction = 'Book a free 30-minute discovery call';
 ---
 
 <Layout
   title="Andrew Noblet — Design & development"
   description="Brand and interface design, web development, hosting, and practical technical guidance. Work directly with Andrew Noblet to build a clearer digital presence."
 >
+  <script
+    type="application/ld+json"
+    is:inline
+    set:html={JSON.stringify(schema).replaceAll('<', '\\u003c')}
+  />
   <div class="editorial-page">
     <section class="editorial-hero">
       <div class="hero-copy">
@@ -19,10 +47,11 @@ import hero from '@assets/images/profile.webp';
           I’m Andrew, a software engineer with a designer’s eye and a habit of
           making things. I help small businesses and teams turn their ideas into
           clear, useful websites. From the first design to deployment, you work
-          directly with me.
+          directly with me. I serve Westchester County and New York City, and
+          offer remote technical consultation across the United States.
         </p><div class="editorial-actions">
           <a class="editorial-button" href="/contact"
-            >Let’s talk about your project <span aria-hidden="true">→</span></a
+            >{primaryAction} <span aria-hidden="true">→</span></a
           ><a href="/portfolio/professional">Explore my work →</a>
         </div><p class="eyebrow">Curiosity · Craft · Useful technology</p>
       </div>
@@ -124,7 +153,7 @@ import hero from '@assets/images/profile.webp';
         <a href="/about">A little more about me →</a>
       </div>
     </section>
-    <ContactPanel />
+    <ContactPanel label={primaryAction} />
   </div>
 </Layout>
 

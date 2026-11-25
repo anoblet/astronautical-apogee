@@ -7,6 +7,12 @@ interests. [Accessibility settings](settings.astro) groups theme, color and head
 [Pricing](pricing.astro) introduces website packages and links the four service
 pricing routes through a shared category selector. Shared layouts and components provide navigation, themes, imagery, and actions.
 [Computer tutoring](services/tutoring.astro) uses the service hero and contact panel to introduce beginner topics and invite family inquiries. See the [service routes guide](services/_readme.md).
+[Hosting](hosting.astro) and [consultation](consultation.astro) provide focused
+landing pages with service-area details, Service structured data, and a shared
+discovery-call action. The homepage declares the person and local web-service
+business in structured data. [Privacy](privacy.astro) describes preferences
+and appointments, while [Accessibility](accessibility.astro) covers site features
+and access requests. The XML sitemap includes the four new public destinations.
 Keep public biographical copy grounded in approved facts and existing site content.
 
 ```mermaid
@@ -16,6 +22,9 @@ flowchart LR
     Routes --> About[About: background and hands-on interests]
     Layout[Shared layout and components] --> Routes
     Routes --> Accessibility[Accessibility settings: theme, colors and heading size]
+    Routes --> Ads[Hosting and consultation with service areas and structured data]
+    Ads --> Booking[Free Google Calendar discovery call]
+    Routes --> Policies[Privacy and accessibility statement]
     Routes --> Pricing[Website packages and linked service pricing categories]
     Routes --> Tutoring[Computer tutoring hero, topics, and family contact panel]
     Home --> Contact[Work exploration and contact]

@@ -24,13 +24,20 @@ validated browser preferences. Shared editorial patterns live in
 service page remains the visual reference. The homepage introduces Andrew with his portrait and early maker projects;
 the About page adds his Santiago-to-New-York background. See the
 [page responsibility guide](src/pages/_readme.md) for public content boundaries.
+The [hosting landing page](src/pages/hosting.astro) covers Westchester and New
+York City, and the [consultation landing page](src/pages/consultation.astro)
+offers remote technical advice across the United States. Both lead to the same
+free discovery-call booking.
 
 ```mermaid
 flowchart LR
     SOCIAL["Facebook services copy"] --> GUIDE["docs/social-media responsibility guide"]
     Background[Andrew’s public background and work] --> Pages[Homepage and About]
     Pages --> Identity[Portrait, maker stories, and New York connection]
-    Identity --> Conversation[Portfolio exploration and direct contact]
+    Identity --> Conversation[Portfolio exploration and discovery call]
+    Search[Search ad traffic] --> Landing[Hosting and consultation landing pages]
+    Landing --> Booking[Google Calendar discovery-call booking]
+    Landing --> Policies[Privacy and accessibility footer pages]
 ```
 
 Public portfolio contributions live

@@ -1,0 +1,103 @@
+---
+import Layout from '@layouts/default.astro';
+
+interface Props {
+  title: string;
+  headline: string;
+  description: string;
+  serviceType: string;
+  area: string;
+  areaServed: string[];
+  topics: { title: string; description: string }[];
+  pricing: string;
+  local?: boolean;
+}
+
+const {
+  title,
+  headline,
+  description,
+  serviceType,
+  area,
+  areaServed,
+  topics,
+  pricing,
+  local,
+} = Astro.props;
+const booking = 'https://calendar.app.google/JjnLtVR6mnM11FcS9';
+const bookingLabel = 'Book a free 30-minute discovery call';
+const home = new URL('/', Astro.site).href;
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: title,
+  serviceType,
+  description,
+  url: new URL(Astro.url.pathname, Astro.site).href,
+  areaServed,
+  provider: { '@id': `${home}#${local ? 'web-services' : 'andrew-noblet'}` },
+};
+---
+
+<Layout title={`${title} — Andrew Noblet`} description={description}>
+  <script
+    type="application/ld+json"
+    is:inline
+    set:html={JSON.stringify(schema).replaceAll('<', '\\u003c')}
+  />
+  <div class="editorial-page">
+    <section class="editorial-section">
+      <div class="section-heading">
+        <p class="eyebrow">{area}</p>
+        <h1 class="editorial-title">{headline}</h1>
+        <p>{description}</p>
+        <div class="editorial-actions">
+          <a class="editorial-button" href={booking}
+            >{bookingLabel} <span aria-hidden="true">→</span></a
+          >
+        </div>
+      </div>
+    </section>
+    <section
+      class="editorial-section editorial-split"
+      aria-labelledby="service-topics"
+    >
+      <div class="section-heading">
+        <h2 id="service-topics">What I can help with</h2>
+        <p>{pricing}</p>
+      </div>
+      <div class="editorial-prose">
+        {
+          topics.map(topic => (
+            <div>
+              <>
+                <h3>{topic.title}</h3>
+                <p>{topic.description}</p>
+              </>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+    <section
+      class="editorial-section editorial-split"
+      aria-labelledby="discovery-call"
+    >
+      <div class="section-heading">
+        <h2 id="discovery-call">Tell me what’s going wrong.</h2>
+      </div>
+      <div class="editorial-prose">
+        <p>
+          Bring your website URL, the issue you’ve noticed, or the decision
+          you’re facing. We’ll use the free call to clarify what you need and
+          whether I can help.
+        </p>
+        <div>
+          <a class="editorial-button" href={booking}
+            >{bookingLabel} <span aria-hidden="true">→</span></a
+          >
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

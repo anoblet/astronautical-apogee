@@ -68,7 +68,9 @@ test('essential content and navigation work without JavaScript', async ({
     'Good ideas.'
   );
   await expect(
-    page.getByRole('link', { name: /talk about your project/ })
+    page
+      .locator('.editorial-hero')
+      .getByRole('link', { name: /book a free 30-minute discovery call/i })
   ).toBeVisible();
   await expect(page.locator('.nav-links > a[href="/contact"]')).toBeVisible();
   await page.locator('.mobile-menu').click();
@@ -103,7 +105,9 @@ test('mobile menu hides closed links and restores focus on Escape', async ({
   ).not.toBeVisible();
   await page.keyboard.press('Tab');
   await expect(
-    page.getByRole('link', { name: /talk about your project/ })
+    page
+      .locator('.editorial-hero')
+      .getByRole('link', { name: /book a free 30-minute discovery call/i })
   ).toBeFocused();
 });
 

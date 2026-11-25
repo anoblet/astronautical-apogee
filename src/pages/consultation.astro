@@ -1,0 +1,30 @@
+---
+import ServiceLanding from '@components/ServiceLanding.astro';
+---
+
+<ServiceLanding
+  title="Remote technical consultation for websites"
+  headline="Stuck on a website problem or a technical decision?"
+  description="Get a second opinion on website performance, accessibility, or architecture. I help small businesses and teams across the United States decide what to fix and what to tackle first."
+  serviceType="Website technical consultation"
+  area="Remote across the United States"
+  areaServed={['United States']}
+  pricing="Paid consultations are $99 for a quick consult or $299 for a project consult. The discovery call is free."
+  topics={[
+    {
+      title: 'Slow or difficult-to-use pages',
+      description:
+        'Review what’s getting in the way, from slow loads to keyboard navigation and accessibility issues.',
+    },
+    {
+      title: 'Code and architecture',
+      description:
+        'Talk through a framework choice, a migration, or a part of the codebase that keeps causing trouble.',
+    },
+    {
+      title: 'What to fix first',
+      description:
+        'Turn a backlog of issues or competing proposals into a short list of priorities you can act on.',
+    },
+  ]}
+/>
