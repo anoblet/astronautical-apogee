@@ -1,6 +1,9 @@
 ---
 import Layout from '@layouts/default.astro';
 import Card from '@components/Card.astro';
+import EditorialImage from '@components/EditorialImage.astro';
+import ContactPanel from '@components/ContactPanel.astro';
+import image from '@assets/images/workspace-minimal-keyboard.webp';
 
 const topics = [
   [
@@ -23,30 +26,24 @@ const topics = [
   description="Hands-on computer tutoring for children in the Tarrytown and Westchester area. Explore computer basics, Scratch, and beginner Python."
 >
   <div class="editorial-page">
-    <section class="editorial-section editorial-split">
-      <div class="section-heading">
-        <h1 class="editorial-title">Computer tutoring for children</h1>
+    <section class="editorial-hero">
+      <div class="hero-copy">
+        <h1>Computer tutoring for children</h1>
         <p>
           Hands-on lessons for families in Tarrytown and nearby Westchester
           communities. Start with everyday computer skills or try a first coding
           project.
         </p>
+        <div class="editorial-actions">
+          <a class="editorial-button" href="#tutoring-inquiry"
+            >Ask about tutoring →</a
+          >
+          <a href="#tutoring-topics">Explore lesson topics →</a>
+        </div>
       </div>
-      <div class="editorial-prose">
-        <h2>Find a starting point for your child</h2>
-        <p>
-          Parents and guardians can tell me what their child has tried, what
-          interests them, and what they’d like to learn. We can discuss lesson
-          options and choose a project that fits their experience.
-        </p>
-        <a
-          class="editorial-button"
-          href="mailto:andrewbnoblet@gmail.com?subject=Computer%20tutoring%20inquiry"
-          >Ask about tutoring →</a
-        >
-      </div>
+      <figure><EditorialImage src={image} priority /></figure>
     </section>
-    <section class="editorial-section">
+    <section class="editorial-section" id="tutoring-topics">
       <div class="section-heading"><h2>What we can work on</h2></div>
       <div class="editorial-grid">
         {
@@ -59,5 +56,13 @@ const topics = [
         }
       </div>
     </section>
+    <div id="tutoring-inquiry">
+      <ContactPanel
+        title="Find a starting point for your child"
+        description="Tell me what your child has tried, what interests them, and what they’d like to learn. We can discuss lesson options and choose a project that fits their experience."
+        href="mailto:andrewbnoblet@gmail.com?subject=Computer%20tutoring%20inquiry"
+        label="Email Andrew about tutoring"
+      />
+    </div>
   </div>
 </Layout>
