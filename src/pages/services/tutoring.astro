@@ -22,28 +22,29 @@ const topics = [
 ---
 
 <Layout
-  title="Computer tutoring for children — Andrew Noblet"
-  description="Hands-on computer tutoring for children in the Tarrytown and Westchester area. Explore computer basics, Scratch, and beginner Python."
+  title="Computer tutoring for all ages — Andrew Noblet"
+  description="Hands-on computer tutoring for all ages in the Tarrytown and Westchester area. Explore computer basics, Scratch, and beginner Python."
 >
   <div class="editorial-page">
     <section class="editorial-hero">
       <div class="hero-copy">
-        <h1>Computer tutoring for children</h1>
+        <p class="eyebrow">Computer tutoring</p>
+        <h1>Build computer skills at your own pace.</h1>
         <p>
-          Hands-on lessons for families in Tarrytown and nearby Westchester
-          communities. Start with everyday computer skills or try a first coding
-          project.
+          Learners of all ages are welcome. Build everyday computer skills or
+          try a first coding project with hands-on lessons in Tarrytown and
+          nearby Westchester communities.
         </p>
         <div class="editorial-actions">
-          <a class="editorial-button" href="#tutoring-inquiry"
+          <a class="editorial-button" href="/contact?service=tutoring"
             >Ask about tutoring →</a
           >
-          <a href="#tutoring-topics">Explore lesson topics →</a>
+          <a href="#tutoring-pricing">View tutoring pricing →</a>
         </div>
       </div>
       <figure><EditorialImage src={image} priority /></figure>
     </section>
-    <section class="editorial-section" id="tutoring-topics">
+    <section class="editorial-section">
       <div class="section-heading"><h2>What we can work on</h2></div>
       <div class="editorial-grid">
         {
@@ -56,13 +57,23 @@ const topics = [
         }
       </div>
     </section>
-    <div id="tutoring-inquiry">
-      <ContactPanel
-        title="Find a starting point for your child"
-        description="Tell me what your child has tried, what interests them, and what they’d like to learn. We can discuss lesson options and choose a project that fits their experience."
-        href="mailto:andrewbnoblet@gmail.com?subject=Computer%20tutoring%20inquiry"
-        label="Email Andrew about tutoring"
-      />
-    </div>
+    <section class="editorial-section editorial-split" id="tutoring-pricing">
+      <div class="section-heading">
+        <h2>Tutoring pricing</h2>
+      </div>
+      <div class="editorial-prose">
+        <p>
+          Contact me for current rates and lesson options. Tell me what you or
+          the learner you’re reaching out for would like to work on.
+        </p>
+        <a href="/contact?service=tutoring">Ask about rates →</a>
+      </div>
+    </section>
+    <ContactPanel
+      title="Find a starting point."
+      description="Tell me what you’d like to learn or share the goals of the learner you’re contacting me for. We’ll choose a starting point based on what the learner already knows."
+      href="/contact?service=tutoring"
+      label="Ask about tutoring"
+    />
   </div>
 </Layout>

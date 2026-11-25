@@ -6,7 +6,7 @@ maker projects; [About](about.astro) connects that work to his background and
 interests. [Accessibility settings](settings.astro) groups theme, color and heading-size controls. Other routes cover services, portfolios, writing, contact, and demos.
 [Pricing](pricing.astro) introduces website packages and links the four service
 pricing routes through a shared category selector. Shared layouts and components provide navigation, themes, imagery, and actions.
-[Computer tutoring](services/tutoring.astro) uses the service hero and contact panel to introduce beginner topics and invite family inquiries. See the [service routes guide](services/_readme.md).
+[Computer tutoring](services/tutoring.astro) uses the service hero and contact panel to introduce beginner topics for all ages and point visitors to Contact for rates and lesson options. See the [service routes guide](services/_readme.md).
 [Hosting](hosting.astro) and [consultation](consultation.astro) provide focused
 landing pages with service-area details, Service structured data, and a shared
 discovery-call action. The homepage declares the person and local web-service
@@ -26,7 +26,7 @@ flowchart LR
     Ads --> Booking[Free Google Calendar discovery call]
     Routes --> Policies[Privacy and accessibility statement]
     Routes --> Pricing[Website packages and linked service pricing categories]
-    Routes --> Tutoring[Computer tutoring hero, topics, and family contact panel]
+    Routes --> Tutoring[Computer tutoring for all ages, pricing inquiry, and Contact]
     Home --> Contact[Work exploration and contact]
     About --> Contact
 ```
