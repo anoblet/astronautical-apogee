@@ -1,7 +1,7 @@
 # Shared website components
 
 [Navigation.astro](Navigation.astro) renders the brand and native menu disclosures.
-The Services menu includes computer tutoring for all ages.
+The Services menu includes tutoring and mentorship.
 Desktop submenus share a disclosure group, so opening one closes the previous
 submenu. Mobile submenus open independently. The group updates at the 1024px
 breakpoint; without JavaScript, all submenus open independently.
@@ -19,14 +19,19 @@ targets support both light and dark appearances.
 offer, coverage, pricing, and one repeated booking action. It emits Service
 structured data referencing the site’s provider.
 
-[PricingNavigation.astro](PricingNavigation.astro) links all five pricing categories
+[ProjectGrid.astro](ProjectGrid.astro) links screenshot cards directly to case studies.
+[ServiceList.astro](ServiceList.astro) presents the same website service summaries on the homepage and services index.
+
+[PricingNavigation.astro](PricingNavigation.astro) links all six pricing categories
 with service descriptions and a route-based current-page indicator.
 [PricingCard.astro](PricingCard.astro) presents prices and billing terms before
 features, with package-aware contact links.
 
 ```mermaid
 flowchart LR
-  Routes[Astro pages] --> Pricing[Pricing category navigation and price-first plan cards]
+  Routes[Astro pages] --> Projects[Case study cards]
+  Routes --> Services[Website and local services]
+  Routes --> Pricing[Pricing category navigation and price-first plan cards]
   Pricing --> Inquiry[Package-specific contact inquiry]
   Routes --> Footer[Responsive footer with text brand and diagonal link arrows]
   Footer --> Utilities[Privacy, accessibility statement, and theme toggle]

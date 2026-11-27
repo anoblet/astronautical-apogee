@@ -1,0 +1,87 @@
+---
+import EditorialImage from './EditorialImage.astro';
+import type { work } from '../data/work';
+
+interface Props {
+  projects: typeof work;
+}
+const { projects } = Astro.props;
+---
+
+<div class="project-grid">
+  {
+    projects.map(project => (
+      <article>
+        <a
+          href={`/portfolio/work/${project.id}`}
+          aria-labelledby={`project-${project.id}`}
+        >
+          <EditorialImage
+            src={project.image}
+            sizes="(max-width: 760px) calc(100vw - 2rem), 560px"
+          />
+          <div class="project-copy">
+            <p class="eyebrow">{project.category}</p>
+            <h3 id={`project-${project.id}`}>
+              <span>{project.name}</span> <span aria-hidden="true">↗</span>
+            </h3>
+            <p>{project.role}</p>
+          </div>
+        </a>
+      </article>
+    ))
+  }
+</div>
+
+<style>
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+  a {
+    display: grid;
+    align-content: start;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid var(--card-border-color);
+    border-radius: 0.75rem;
+    background: var(--card-background-color);
+    color: var(--text-color);
+  }
+  a :global(img) {
+    aspect-ratio: 2 / 1;
+    object-position: top;
+    border-radius: 0;
+    border-bottom: 1px solid var(--card-border-color);
+  }
+  .project-copy {
+    display: grid;
+    gap: 0.6rem;
+    padding: clamp(1rem, 3vw, 1.75rem);
+  }
+  h3 {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    color: inherit;
+    line-height: 1.35;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  }
+  h3 [aria-hidden] {
+    color: var(--a-color);
+  }
+  a:hover h3 span:first-child,
+  a:focus-visible h3 span:first-child {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+  p:last-child {
+    color: var(--hero-description-color);
+  }
+  @media (max-width: 760px) {
+    .project-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>

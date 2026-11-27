@@ -6,15 +6,17 @@ import PricingCard from '@components/PricingCard.astro';
 ---
 
 <Layout
-  title="Pricing"
+  title="Website pricing — Andrew Noblet"
   description="Transparent pricing for web development services. Choose from flexible plans that include direct collaboration, modern web technologies, and ongoing support. Get started today."
 >
-  <h1 class="text-align-center pricing-heading margin-bottom-2">Pricing</h1>
+  <h1 class="text-align-center pricing-heading margin-bottom-2">
+    Website pricing
+  </h1>
   <p
     class="hero-description text-align-center margin-bottom-4 max-width-48 margin-auto"
   >
-    Find the right support for your next step, from a new website to ongoing
-    hosting. Choose a service to compare packages and billing options.
+    Compare one-time website builds below, or choose a service to see its
+    packages and billing options.
   </p>
 
   <PricingNavigation />
@@ -25,7 +27,7 @@ import PricingCard from '@components/PricingCard.astro';
   <div class="grid auto-fit-20 gap-2 width-100 max-width-64 margin-auto">
     <PricingCard
       title="Basic"
-      description="Perfect for individuals and startups to launch a professional web presence."
+      description="A single-page website for launching a business or introducing a service."
       features={[
         'Single-page site',
         'Responsive design',
@@ -38,7 +40,7 @@ import PricingCard from '@components/PricingCard.astro';
     />
     <PricingCard
       title="Pro"
-      description="Designed for growing businesses needing advanced features and integrations."
+      description="A multi-page website for businesses that need custom integrations."
       features={[
         'Multi-page site',
         'Custom integrations',

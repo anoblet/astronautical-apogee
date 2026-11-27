@@ -1,0 +1,103 @@
+---
+const mainServices = [
+  {
+    title: 'Brand & interface design',
+    description:
+      'Brand identities, responsive page layouts, and product interfaces.',
+    href: '/services/design',
+    label: 'Explore design services',
+  },
+  {
+    title: 'Website development & hosting',
+    description:
+      'Responsive websites, deployment, domains, and ongoing maintenance.',
+    href: '/services/hosting',
+    label: 'Explore hosting & deployment',
+  },
+  {
+    title: 'Technical consultation',
+    description:
+      'Get help with architecture decisions, code quality, performance, or project planning.',
+    href: '/services/consultation',
+    label: 'Explore technical consultation',
+  },
+];
+const additionalServices = [
+  {
+    title: 'Local social media support',
+    description:
+      'Facebook community-group posts and help following up on replies.',
+    href: '/services/social',
+    label: 'Explore social media support',
+  },
+  {
+    title: 'Computer tutoring',
+    description:
+      'Hands-on help with everyday computer skills, Scratch, and beginner Python in the Tarrytown area.',
+    href: '/services/tutoring',
+    label: 'Explore computer tutoring',
+  },
+];
+
+interface Props {
+  additional?: boolean;
+}
+const { additional = false } = Astro.props;
+const services = additional ? additionalServices : mainServices;
+---
+
+<ul class:list={['service-list', { additional }]}>
+  {
+    services.map(({ title, description, href, label }) => (
+      <li>
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <a href={href}>
+          {label} <span aria-hidden="true">↗</span>
+        </a>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .service-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 1.5rem;
+    list-style: none;
+    padding: 0;
+  }
+  .additional {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  li {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 0.5rem;
+    padding: 1.25rem 0;
+    border-top: 2px solid var(--card-border-color);
+  }
+  li::marker {
+    content: '';
+  }
+  h3 {
+    color: var(--text-color);
+    line-height: 1.35;
+    font-size: 1.15rem;
+  }
+  p {
+    color: var(--hero-description-color);
+  }
+  a {
+    justify-self: start;
+    gap: 0.35rem;
+    min-height: 44px;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+  @media (max-width: 760px) {
+    .service-list {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>

@@ -1,41 +1,7 @@
 ---
 import Layout from '@layouts/default.astro';
-import Card from '@components/Card.astro';
-import EditorialImage from '@components/EditorialImage.astro';
+import ServiceList from '@components/ServiceList.astro';
 import ContactPanel from '@components/ContactPanel.astro';
-import image from '@assets/images/workspace-desk-plant.webp';
-const services = [
-  [
-    'Brand & interface design',
-    'Give your business a recognizable identity and your visitors a clear path. Brand direction, responsive page layouts, and product interfaces.',
-    '/services/design',
-    'Design services',
-  ],
-  [
-    'Web development & hosting',
-    'Build and maintain a practical web presence. Deployment, domains, performance, and ongoing care shaped around your project.',
-    '/services/hosting',
-    'Hosting & deployment',
-  ],
-  [
-    'Technical consultation',
-    'Work through architecture decisions, code quality, performance, and project planning with a second technical perspective.',
-    '/services/consultation',
-    'Technical consultation',
-  ],
-  [
-    'Social media support',
-    'Reach your neighbors through Facebook community groups. Post writing, owner approval, and reply follow-up with clear responsibilities.',
-    '/services/social',
-    'Social media support',
-  ],
-  [
-    'Computer tutoring for all ages',
-    'Build everyday computer skills or get started with Scratch and Python. Learners of all ages are welcome.',
-    '/services/tutoring',
-    'Explore computer tutoring',
-  ],
-];
 ---
 
 <Layout
@@ -43,59 +9,34 @@ const services = [
   description="Explore design, website development, hosting, technical consultation, local social media support, and computer tutoring for all ages. Define a practical scope with Andrew Noblet."
 >
   <div class="editorial-page">
-    <section class="editorial-hero">
-      <div class="hero-copy">
-        <p class="eyebrow">Services</p><h1>
-          Design, websites, and ongoing support
-        </h1><p>
-          Whether you are starting fresh or improving something already in use,
-          we begin with your audience, your goals, and the work that will make a
-          difference.
-        </p><div class="editorial-actions">
-          <a class="editorial-button" href="/contact">Discuss your project ↗</a
-          ><a href="/pricing">Explore packages ↗</a>
-        </div>
-      </div><figure><EditorialImage src={image} priority /></figure>
+    <section class="editorial-section editorial-lead">
+      <div class="section-heading">
+        <h1 class="editorial-title">Design, websites, and ongoing support</h1>
+        <p>
+          Work directly with me on a new site, improvements to an existing one,
+          or a technical decision. We’ll agree on the scope, schedule, and cost
+          before work begins.
+        </p>
+      </div>
+      <div class="editorial-actions">
+        <a class="editorial-button" href="/pricing">Compare pricing</a>
+        <a href="/contact"
+          >Discuss your project <span aria-hidden="true">↗</span></a
+        >
+      </div>
     </section>
     <section class="editorial-section">
-      <div class="section-heading">
-        <p class="eyebrow">Choose your starting point</p><h2>
-          Support for each stage<br />of your project.
-        </h2><p>
-          Start with one service or combine several. Your proposal confirms the
-          deliverables, review stages, and responsibilities before paid work
-          begins.
-        </p>
-      </div><div class="editorial-grid">
-        {
-          services.map(([title, description, href, label]) => (
-            <Card>
-              <>
-                <h3>{title}</h3>
-                <p>{description}</p>
-                <a href={href}>{label} ↗</a>
-              </>
-            </Card>
-          ))
-        }
-      </div>
+      <h2>Website services</h2>
+      <ServiceList />
     </section>
-    <section class="editorial-section editorial-split">
-      <div class="section-heading">
-        <p class="eyebrow">Working together</p><h2>
-          Define the work.<br />Keep the conversation open.
-        </h2>
-      </div><div class="editorial-prose">
-        <p>
-          Bring your current website, a rough idea, or a question you have been
-          trying to answer. We use an introductory call to understand the
-          situation and decide whether there is a useful fit.
-        </p><p>
-          If we move ahead, the proposal sets the scope, schedule, feedback
-          stages, and support expectations. You know what is being designed,
-          built, or reviewed.
-        </p><a href="/portfolio/professional">See professional work ↗</a>
-      </div>
+    <section class="editorial-section">
+      <h2>Local support & tutoring</h2>
+      <ServiceList additional />
+      <p>
+        Developers looking for ongoing guidance can also <a href="/mentorship"
+          >explore mentorship</a
+        >.
+      </p>
     </section>
     <ContactPanel />
   </div>

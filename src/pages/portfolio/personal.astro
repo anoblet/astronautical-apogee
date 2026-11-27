@@ -9,11 +9,9 @@ import ContactPanel from '@components/ContactPanel.astro';
   description="Explore the source of Andrew Noblet’s website, a working Angular island, and Web Component experiments."
 >
   <div class="editorial-page">
-    <section class="editorial-section">
+    <section class="editorial-section editorial-lead">
       <div class="section-heading">
-        <p class="eyebrow">Personal projects</p><h1 class="editorial-title">
-          Ideas you can<br />look inside.
-        </h1><p>
+        <h1 class="editorial-title">Personal projects</h1><p>
           Small experiments and an evolving website. These examples show the
           code and interactions behind the presentation.
         </p>
@@ -22,7 +20,7 @@ import ContactPanel from '@components/ContactPanel.astro';
     <section class="editorial-section">
       <div class="editorial-grid">
         <Card
-          ><p class="eyebrow">01 / This website</p><h2>Astro portfolio</h2><p>
+          ><p class="eyebrow">This website</p><h2>Astro portfolio</h2><p>
             A static website combining service pages, content collections,
             reusable components, and selected interactive islands. The
             repository shows the implementation and its development history.
@@ -31,9 +29,8 @@ import ContactPanel from '@components/ContactPanel.astro';
           ></Card
         >
         <Card
-          ><p class="eyebrow">02 / Framework integration</p><h2>
-            Angular island
-          </h2><p>
+          ><p class="eyebrow">Framework integration</p><h2>Angular island</h2><p
+          >
             A working Angular Material component rendered inside Astro. The
             increment interaction provides a small example of client hydration
             on a static page.
@@ -43,7 +40,7 @@ import ContactPanel from '@components/ContactPanel.astro';
           ></Card
         >
         <Card
-          ><p class="eyebrow">03 / Web Components</p><h2>Lit components</h2><p>
+          ><p class="eyebrow">Web Components</p><h2>Lit components</h2><p>
             The website’s appearance controls use Lit. Explore a small component
             page and browse the implementation of the shared controls.
           </p><a href="/lit">Explore the Lit page ↗</a><a
@@ -52,7 +49,7 @@ import ContactPanel from '@components/ContactPanel.astro';
           ></Card
         >
         <Card
-          ><p class="eyebrow">04 / Development workflows</p><h2>
+          ><p class="eyebrow">Development workflows</p><h2>
             Automation experiments
           </h2><p>
             Experiments with scripting and AI-assisted workflows are part of how

@@ -7,50 +7,83 @@ import Layout from '@layouts/default.astro';
   description="Book a free 30-minute discovery call or email Andrew Noblet about your design, website, hosting, or consultation project."
 >
   <div class="editorial-page">
-    <section class="editorial-section editorial-split">
-      <div class="section-heading">
-        <p class="eyebrow">Contact Andrew</p><h1 class="editorial-title">
-          Tell me what<br />you have in mind.
-        </h1><p>
-          Bring an idea, an existing website, or a question. A free 30-minute
-          discovery call gives us a chance to understand the project and decide
-          on a useful next step.
+    <div class="editorial-section editorial-lead editorial-split">
+      <section class="section-heading">
+        <h1 class="editorial-title">Contact Andrew</h1>
+        <p>
+          Tell me about your website, design project, or technical question.
+          We’ll use a free 30-minute discovery call to talk through what you
+          need and decide on a next step.
         </p>
-      </div>
-      <div class="editorial-prose">
-        <p id="selected-package" hidden></p><h2>
-          Book a free 30-minute discovery call
-        </h2><p>
-          Choose an available time through Google Calendar. The introductory
-          call is free and has no obligation. Booking is an inquiry, not a
-          purchase of a paid package.
-        </p><div>
+      </section>
+      <section class="editorial-prose booking">
+        <h2>Book a discovery call</h2>
+        <p id="selected-package" hidden></p>
+        <div>
           <a
             class="editorial-button"
             href="https://calendar.app.google/JjnLtVR6mnM11FcS9"
-            >Choose a time ↗</a
+            >Choose a time on Google Calendar <span aria-hidden="true">↗</span
+            ></a
           >
-        </div><p>
-          Prefer to write first? Email <a
+        </div>
+        <p>
+          Prefer email? Write to <a
             id="inquiry-email"
             href="mailto:andrewbnoblet@gmail.com">andrewbnoblet@gmail.com</a
           >.
-        </p><h2>Helpful things to bring</h2><ul>
-          <li>Your current website or a brief description of the idea.</li><li>
-            Who it is for and what you want people to do.
-          </li><li>
-            Any constraints, questions, or timing you already know about.
-          </li>
-        </ul><p>
-          If we decide to work together, your proposal will confirm
-          deliverables, schedule, revisions, costs, and support before paid work
-          begins. Paid consultation sessions are separate from this free
-          discovery call.
-        </p><a href="/pricing">Explore packages before we talk ↗</a>
+        </p>
+      </section>
+    </div>
+    <section class="editorial-section editorial-split">
+      <h2>What to bring</h2>
+      <div class="editorial-prose">
+        <ul>
+          <li>Your current website or a brief description of your idea.</li>
+          <li>Who it’s for and what you want them to be able to do.</li>
+          <li>Any deadlines, constraints, or questions you have.</li>
+        </ul>
+        <p>
+          If we decide to work together, I’ll send a proposal with deliverables,
+          timing, costs, and support before paid work begins.
+        </p>
+        <a href="/pricing"
+          >Compare packages before we talk <span aria-hidden="true">↗</span></a
+        >
       </div>
     </section>
   </div>
 </Layout>
+<style>
+  .section-heading {
+    align-content: start;
+  }
+  .booking {
+    padding: clamp(1rem, 4vw, 2rem);
+    border: 1px solid var(--card-border-color);
+    border-radius: 0.75rem;
+    background: color-mix(
+      in srgb,
+      var(--a-color) 7%,
+      var(--body-background-color)
+    );
+    overflow-wrap: anywhere;
+  }
+  .booking .editorial-button {
+    text-align: center;
+  }
+  ul {
+    list-style: disc;
+    padding: 0 0 0 1.25rem;
+  }
+  li {
+    padding: 0;
+  }
+  li::marker {
+    content: normal;
+  }
+</style>
+
 <script>
   const packages = new Set([
     'Basic',

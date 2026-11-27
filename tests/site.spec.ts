@@ -65,7 +65,7 @@ test('essential content and navigation work without JavaScript', async ({
   const page = await context.newPage();
   await page.goto('http://127.0.0.1:4330/');
   await expect(page.getByRole('heading', { level: 1 })).toContainText(
-    'Good ideas.'
+    'Web design & development for small businesses.'
   );
   await expect(
     page
@@ -234,7 +234,9 @@ test('client navigation preserves theme and disclosure behavior', async ({
       'Design, websites, and ongoing support'
     );
     await page.locator('.brand').click();
-    await expect(page.locator('h1')).toContainText('Good ideas.');
+    await expect(page.locator('h1')).toContainText(
+      'Web design & development for small businesses.'
+    );
   }
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
   await page.getByLabel('Show services links').click();

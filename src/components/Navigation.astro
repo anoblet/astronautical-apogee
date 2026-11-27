@@ -9,8 +9,8 @@ const groups = [
     title: 'Portfolio',
     href: '/portfolio',
     children: [
-      ['Personal projects', '/portfolio/personal'],
       ['Professional work', '/portfolio/professional'],
+      ['Personal projects', '/portfolio/personal'],
     ],
   },
   {
@@ -22,6 +22,7 @@ const groups = [
       ['Consultation', '/services/consultation'],
       ['Social media', '/services/social'],
       ['Tutoring', '/services/tutoring'],
+      ['Mentorship', '/mentorship'],
     ],
   },
 ];
@@ -58,7 +59,9 @@ const groups = [
                 href={group.href}
                 aria-current={current(group.href)}
                 class:list={{
-                  'section-current': path.startsWith(group.href + '/'),
+                  'section-current':
+                    path.startsWith(group.href + '/') ||
+                    group.children.some(([, href]) => path === href),
                 }}
               >
                 {group.title}
@@ -85,7 +88,7 @@ const groups = [
           ))
         }
         {
-          ['Mentorship', 'Blog', 'About', 'Pricing'].map(label => (
+          ['Pricing', 'About', 'Blog'].map(label => (
             <a
               href={'/' + label.toLowerCase()}
               aria-current={current('/' + label.toLowerCase())}
@@ -98,7 +101,7 @@ const groups = [
           class="nav-contact"
           href="/contact"
           aria-current={current('/contact')}
-          >Let’s talk <span aria-hidden="true">↗</span></a
+          >Contact <span aria-hidden="true">↗</span></a
         >
       </div>
     </details>

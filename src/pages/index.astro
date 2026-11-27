@@ -2,7 +2,9 @@
 import Layout from '@layouts/default.astro';
 import EditorialImage from '@components/EditorialImage.astro';
 import ContactPanel from '@components/ContactPanel.astro';
-import Card from '@components/Card.astro';
+import ProjectGrid from '@components/ProjectGrid.astro';
+import ServiceList from '@components/ServiceList.astro';
+import { work } from '../data/work';
 import hero from '@assets/images/profile.webp';
 const home = new URL('/', Astro.site).href;
 const person = home + '#andrew-noblet';
@@ -39,20 +41,20 @@ const primaryAction = 'Book a free 30-minute discovery call';
     set:html={JSON.stringify(schema).replaceAll('<', '\\u003c')}
   />
   <div class="editorial-page">
-    <section class="editorial-hero">
+    <section class="editorial-hero home-hero">
       <div class="hero-copy">
-        <p class="eyebrow">Web design, development & hosting</p><h1>
-          Good ideas. Thoughtfully built.
-        </h1><p>
-          I’m Andrew, a software engineer with a designer’s eye and a habit of
-          making things. I help small businesses and teams turn their ideas into
-          clear, useful websites. From the first design to deployment, you work
-          directly with me. I serve Westchester County and New York City, and
-          offer remote technical consultation across the United States.
-        </p><div class="editorial-actions">
-          <a class="editorial-button" href="/contact"
-            >{primaryAction} <span aria-hidden="true">↗</span></a
-          ><a href="/portfolio/professional">Explore my work ↗</a>
+        <p class="eyebrow">Tarrytown, New York</p>
+        <h1>Web design & development for small businesses.</h1>
+        <p>
+          I’m Andrew Noblet, a software engineer serving Westchester and New
+          York City. Work directly with me from design through launch, or get
+          remote technical guidance anywhere in the United States.
+        </p>
+        <div class="editorial-actions">
+          <a class="editorial-button" href="/contact">{primaryAction}</a>
+          <a href="/services"
+            >Explore services <span aria-hidden="true">↗</span></a
+          >
         </div>
       </div>
       <figure>
@@ -62,94 +64,37 @@ const primaryAction = 'Book a free 30-minute discovery call';
           priority
           sizes="(max-width: 760px) calc(100vw - 2rem), 540px"
         />
-        <figcaption>
-          Andrew Noblet · Design, code, and a little curiosity.
-        </figcaption>
       </figure>
     </section>
     <section class="editorial-section">
       <div class="section-heading">
-        <p class="eyebrow">Services</p><h2>
-          From a clearer identity to a working website.
-        </h2><p>
-          A project can start with a new brand, an existing website that needs
-          attention, or a technical question. We define the work around what
-          your audience needs to do.
-        </p>
+        <h2>Selected work</h2>
       </div>
-      <div class="editorial-grid">
-        <Card
-          ><h3>Brand and interface design</h3><p>
-            Brand identity, page layouts, and interfaces that help people
-            understand your business and find what they need.
-          </p><a href="/services/design">Explore design services ↗</a></Card
-        >
-        <Card
-          ><h3>Website development and hosting</h3><p>
-            Responsive websites, deployment, and ongoing care. We agree on the
-            build and support your project needs before work begins.
-          </p><a href="/services/hosting">Explore hosting & deployment ↗</a
-          ></Card
-        >
-        <Card
-          ><h3>Technical consultation</h3><p>
-            Get a second perspective on architecture, code, performance, or the
-            next phase of a project.
-          </p><a href="/services/consultation"
-            >Explore technical consultation ↗</a
-          ></Card
-        >
-        <Card
-          ><h3>Local social media support</h3><p>
-            Thoughtful Facebook community-group posts, with your approval and
-            help following up on replies.
-          </p><a href="/services/social">Explore social media support ↗</a
-          ></Card
-        >
-        <Card>
-          <h3>Computer tutoring</h3>
-          <p>
-            Hands-on lessons in computer basics, Scratch, and beginner Python in
-            the Tarrytown area.
-          </p>
-          <a href="/services/tutoring">Explore computer tutoring ↗</a>
-        </Card>
+      <ProjectGrid projects={work.slice(0, 2)} />
+      <a class="section-link" href="/portfolio"
+        >View the full portfolio <span aria-hidden="true">↗</span></a
+      >
+    </section>
+    <section class="editorial-section">
+      <div class="section-heading">
+        <h2>How I can help</h2>
       </div>
+      <ServiceList />
+      <a class="section-link" href="/services"
+        >View all services <span aria-hidden="true">↗</span></a
+      >
     </section>
     <section class="editorial-section editorial-split">
       <div class="section-heading">
-        <p class="eyebrow">Selected experience</p><h2>
-          Work built around<br />real tasks.
-        </h2>
+        <h2>About Andrew</h2>
       </div>
       <div class="editorial-prose">
         <p>
-          My work includes launching Hudson Valley Smart Home Solutions,
-          building learning features at CXL, supporting e-commerce at Graduation
-          Source, and improving product discovery at Avanti Systems USA.
-        </p><a href="/portfolio/professional">Read about the work ↗</a><p>
-          This website is also a working project: static pages, reusable
-          components, and interactive demos brought together with Astro.
-        </p><a href="/portfolio/personal">Explore personal projects ↗</a>
-      </div>
-    </section>
-    <section class="editorial-section editorial-split">
-      <div class="section-heading">
-        <p class="eyebrow">About Andrew</p>
-        <h2>It started with a website.<br />And a skatepark.</h2>
-      </div>
-      <div class="editorial-prose">
-        <p>
-          I built my first website at 13. At 14, I petitioned my town for a
-          skatepark. Different projects, same starting point: an idea worth
-          doing something about.
+          I built my first website at 13 and petitioned my town for a skatepark
+          at 14. These days I make things with web components, 3D printers, and
+          home automation.
         </p>
-        <p>
-          That curiosity still takes me from web components to 3D printing, home
-          automation, and guitar. I like learning how things work and making
-          something useful with what I find.
-        </p>
-        <a href="/about">A little more about me ↗</a>
+        <a href="/about">More about me <span aria-hidden="true">↗</span></a>
       </div>
     </section>
     <ContactPanel label={primaryAction} />
@@ -157,10 +102,21 @@ const primaryAction = 'Book a free 30-minute discovery call';
 </Layout>
 
 <style>
-  figcaption {
-    margin-top: 1rem;
-    color: var(--hero-description-color);
-    font-size: 0.8rem;
-    line-height: 1.6;
+  .home-hero h1 {
+    max-width: 20ch;
+  }
+  .home-hero :global(img) {
+    aspect-ratio: 4 / 3;
+    object-position: center 42%;
+  }
+  .section-link {
+    justify-self: start;
+    gap: 0.35rem;
+    min-height: 44px;
+  }
+  @media (max-width: 760px) {
+    .home-hero :global(img) {
+      aspect-ratio: 16 / 10;
+    }
   }
 </style>

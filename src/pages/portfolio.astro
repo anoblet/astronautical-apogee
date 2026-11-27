@@ -1,43 +1,37 @@
 ---
 import Layout from '@layouts/default.astro';
-import Card from '@components/Card.astro';
+import ProjectGrid from '@components/ProjectGrid.astro';
 import ContactPanel from '@components/ContactPanel.astro';
+import { work } from '../data/work';
 ---
 
 <Layout
-  title="Selected work — Andrew Noblet"
+  title="Portfolio — Andrew Noblet"
   description="Explore Andrew Noblet’s contributions to learning platforms, e-commerce, and business websites, alongside personal projects and working demos."
 >
   <div class="editorial-page">
-    <section class="editorial-section">
+    <section class="editorial-section editorial-lead">
       <div class="section-heading">
-        <p class="eyebrow">The portfolio</p><h1 class="editorial-title">
-          From an idea<br />to something useful.
-        </h1><p>
-          Explore professional contributions and personal experiments, with
-          context about the work and links to the implementation where
-          available.
+        <h1 class="editorial-title">Portfolio</h1>
+        <p>
+          My work on business websites, online learning, and e-commerce, along
+          with personal projects and web demos.
         </p>
       </div>
     </section>
     <section class="editorial-section">
-      <div class="editorial-grid">
-        <Card
-          ><p class="eyebrow">Professional work</p><h2>
-            Learning, shopping,<br />and discovery.
-          </h2><p>
-            Client work for CXL, Graduation Source, and Avanti Systems USA,
-            alongside my own venture, Hudson Valley Smart Home Solutions.
-          </p><a href="/portfolio/professional">Explore professional work ↗</a
-          ></Card
-        ><Card
-          ><p class="eyebrow">Personal projects</p><h2>
-            Room to<br />try things.
-          </h2><p>
-            Look inside this website’s source, try the Angular island, and
-            explore component and workflow experiments.
-          </p><a href="/portfolio/personal">Explore personal projects ↗</a
-          ></Card
+      <h2>Professional work</h2>
+      <ProjectGrid projects={work} />
+    </section>
+    <section class="editorial-section editorial-split">
+      <h2>Personal projects</h2>
+      <div class="editorial-prose">
+        <p>
+          Explore how this site is built, try the Angular and Lit demos, and see
+          my component and workflow experiments.
+        </p>
+        <a href="/portfolio/personal"
+          >Explore personal projects <span aria-hidden="true">↗</span></a
         >
       </div>
     </section>
