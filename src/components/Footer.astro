@@ -36,15 +36,8 @@ import ThemeToggle from './ThemeToggle.astro';
   <div class="footer-bottom">
     <Copyright />
     <div class="footer-appearance">
-      <a href="/privacy"
-        >Privacy <ArrowForward class="footer-arrow" aria-hidden="true" /></a
-      >
-      <a href="/accessibility"
-        >Accessibility <ArrowForward
-          class="footer-arrow"
-          aria-hidden="true"
-        /></a
-      >
+      <a href="/privacy">Privacy</a>
+      <a href="/accessibility">Accessibility</a>
       <a href="/settings">Accessibility settings</a>
       <ThemeToggle />
     </div>
@@ -119,7 +112,6 @@ import ThemeToggle from './ThemeToggle.astro';
     flex: none;
     color: var(--a-color);
     fill: currentColor;
-    transform: rotate(-45deg);
   }
   a:hover {
     color: var(--a-color);

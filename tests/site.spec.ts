@@ -136,12 +136,13 @@ test('desktop disclosures work with keyboard and native state', async ({
 test('theme activates on first click, persists overrides, and resets completely', async ({
   page,
 }) => {
+  await page.emulateMedia({ colorScheme: 'dark' });
   await page.goto('/settings/');
   const toggle = page.getByRole('button', { name: 'Dark theme', exact: true });
-  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
-  await toggle.click();
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
-  await expect(toggle).toHaveAttribute('aria-pressed', 'false');
+  await toggle.click();
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+  await expect(toggle).toHaveAttribute('aria-pressed', 'true');
   await page.getByLabel('Heading size').fill('61px');
   await page.getByLabel('Heading size').press('Tab');
   await expect(page.locator('h1')).toHaveCSS('font-size', '61px');
@@ -152,20 +153,21 @@ test('theme activates on first click, persists overrides, and resets completely'
     'rgb(221, 238, 255)'
   );
   await page.reload();
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
   await expect(page.locator('h1')).toHaveCSS('font-size', '61px');
   await expect(page.locator('body')).toHaveCSS(
     'background-color',
     'rgb(221, 238, 255)'
   );
   await page.getByRole('button', { name: 'Reset appearance' }).click();
-  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
   expect(
     await page.evaluate(() =>
       document.documentElement.style.getPropertyValue('--h1-font-size')
     )
   ).toBe('');
   await page.reload();
-  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
 });
 
 test('malformed or inaccessible storage recovers without page errors', async ({
@@ -183,6 +185,7 @@ test('malformed or inaccessible storage recovers without page errors', async ({
   ]) {
     await page.evaluate(value => localStorage.setItem('theme', value), value);
     await page.reload();
+    await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
     await expect(
       page.getByRole('button', { name: 'Reset appearance' })
     ).toBeVisible();
@@ -196,7 +199,7 @@ test('malformed or inaccessible storage recovers without page errors', async ({
   });
   await page.reload();
   await page.getByRole('button', { name: 'Dark theme', exact: true }).click();
-  await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
   expect(errors).toEqual([]);
 });
 
@@ -233,20 +236,19 @@ test('client navigation preserves theme and disclosure behavior', async ({
     await page.locator('.brand').click();
     await expect(page.locator('h1')).toContainText('Good ideas.');
   }
-  await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
   await page.getByLabel('Show services links').click();
   await expect(
     page.locator('.submenu a[href="/services/design"]')
   ).toBeVisible();
   await page.getByRole('button', { name: 'Dark theme', exact: true }).click();
-  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
 });
 
 test('primary pages stay usable in light theme with a modest script budget', async ({
   page,
 }) => {
   await page.goto('/');
-  await page.getByRole('button', { name: 'Dark theme', exact: true }).click();
   for (const route of [
     '/',
     '/services/design/',

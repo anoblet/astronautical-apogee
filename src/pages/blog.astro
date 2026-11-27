@@ -29,7 +29,7 @@ const readingPaths = [
       <nav class="reading-paths" aria-label="Start with a topic">
         {
           readingPaths.map(([label, id]) => (
-            <a href={'/blog/' + id}>{label} →</a>
+            <a href={'/blog/' + id}>{label} ↗</a>
           ))
         }
       </nav>
@@ -58,7 +58,7 @@ const readingPaths = [
                 href={'/blog/' + post.id}
                 aria-label={`Read ${post.data.title}`}
               >
-                Read article →
+                Read article ↗
               </a>
             </>
           </li>

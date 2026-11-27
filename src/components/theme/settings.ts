@@ -176,7 +176,7 @@ export class ThemeComponent extends Base {
       <p>
         Heading size updates when you leave the field. Other changes apply
         immediately and stay in this browser when local storage is available.
-        Reset restores the default dark theme and removes custom values.
+        Reset restores the default light theme and removes custom values.
       </p>
       <button type="button" @click=${resetTheme}>Reset appearance</button>
     </form>`;

@@ -31,7 +31,7 @@ export const getTheme = (): Theme => {
     stored && typeof stored === 'object'
       ? (stored as Record<string, unknown>)
       : {};
-  const name = record.name === 'light' ? 'light' : 'dark';
+  const name = record.name === 'dark' ? 'dark' : 'light';
   current = { ...presets[name] };
   for (const [key, value] of Object.entries(record)) {
     if (validValue(key, value)) current[key] = value;
@@ -40,7 +40,7 @@ export const getTheme = (): Theme => {
 };
 
 export const applyTheme = (theme: Theme, persist = true) => {
-  const name = theme.name === 'light' ? 'light' : 'dark';
+  const name = theme.name === 'dark' ? 'dark' : 'light';
   const next = { ...presets[name] };
   for (const [key, value] of Object.entries(theme)) {
     if (validValue(key, value)) next[key] = value;
@@ -85,7 +85,7 @@ export const resetTheme = () => {
   } catch {
     /* Reset also works without storage. */
   }
-  applyTheme(dark, false);
+  applyTheme(light, false);
 };
 export const subscribe = (callback: (theme: string) => void) => {
   subscribers.add(callback);

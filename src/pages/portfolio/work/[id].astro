@@ -18,7 +18,7 @@ const { project } = Astro.props;
 >
   <article class="editorial-page">
     <section class="editorial-section">
-      <a href="/portfolio/professional">← All professional work</a><div
+      <a href="/portfolio/professional">↖ All professional work</a><div
         class="section-heading"
       >
         <p class="eyebrow">{project.category}</p><h1 class="editorial-title">
@@ -34,7 +34,7 @@ const { project } = Astro.props;
           loading="eager"
         /><figcaption>
           <span>{project.contributions[0]}</span>
-          <a href={project.image.src}>View full screenshot →</a>
+          <a href={project.image.src}>View full screenshot ↗</a>
         </figcaption>
       </figure>
     </section>
@@ -50,7 +50,7 @@ const { project } = Astro.props;
         </p><h3>Technologies</h3><p>{project.technologies.join(' · ')}</p><p>
           This describes my contributions to the project. The current client
           website may have changed since that work.
-        </p><a href={project.url}>Visit {project.name} →</a>
+        </p><a href={project.url}>Visit {project.name} ↗</a>
       </div>
     </section>
     <ContactPanel title="Have a related challenge?" />
